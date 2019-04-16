@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    //= template/head.html
+</head>
+<body>
+<section class="top-panel">
+	<div class="container">
+		<div class="row">
+			<div class="col top-panel-content">
+	      <!-- <button class="link-btn select-city" data-toggle="modal" data-target="#select-city"><span>Ижевск</span></button> -->
+	      <button class="link-btn select-city" data-toggle="modal" data-target="#service-record"><span>Ижевск</span></button>
+	      <div class="top-links">
+	      	<a href="#">Для клиента</a>
+	      	<a href="#">Розничная сеть</a>
+	      	<a href="#">АКБ Мастер</a>
+	      	<a href="#">Рулевой</a>
+	      	<a href="#">Оптовым клиентам</a>
+				</div>
+				<a href="tel:+79658422003" class="top-phone"><span>+7 (965) 842 20 03</span></a>
+	      <button class="black-btn login" data-toggle="modal" data-target="#product-review"><span>Вход</span></button>
+	      <!-- <button class="black-btn login" data-toggle="modal" data-target="#login"><span>Вход</span></button> -->
+      	<div class="gray-icon heart"><span>5</span></div>
+      	<div class="gray-icon statistica"><span>5</span></div>
+      	<div class="gray-icon basket"><span>5</span></div>
+			</div>
+		</div>			
+	</div>	
+</section>
+<section class="main-navigation">
+	<nav class="navbar navbar-default navbar-static-top navbar-expand-lg ">
+		<div class="container px-3">
+			<div class="row flex-grow-1">
+				<div class="col main-search-form-container">
+				  <button class="navbar-toggler nav_mobile_button" type="button" data-toggle="collapse" data-target="#navMenuContent"><span class="nav_mobile_line"></span></button>
+				  <a class="navbar-brand logo " href="#"><img src="img/logo.png" alt=""></a>
+			    <form class="form-inline main-search-form hide_item animated">
+			      <div class="input-group">
+			      	<div class="nav-item dropdown d-none d-lg-flex">
+				        <a class="nav-link dropdown-toggle yellow-btn addcar" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Добавить авто в гараж</a>
+				        <div class="dropdown-menu">
+				          <a class="dropdown-item" href="#">Nissan Almera</a>
+				          <a class="dropdown-item" href="#">Skoda Octavia</a>
+				          <a class="dropdown-item" href="#">+ Добавить авто в гараж</a>
+				        </div>
+				      </div>
+						  <input type="text" class="form-control" placeholder="Поиск">
+						  <div class="input-group-append">
+								<button class="yellow-btn" type="button" id="button-addon2"></button>
+						  </div>
+						</div>
+			    </form>
+					<button class="top-search-btn nav_mobile_button-2" type="button" ><span class="nav_mobile_line-2"></span></button>
+				  	
+	  			<div class="top-gray-icons-zagl"></div>  
+				</div>
+			</div>
+		</div>
+		<article class="main-menu">
+			<div class="container">
+				<div class="row">
+				  <div class="collapse navbar-collapse col  " id="navMenuContent">
+				    <ul class="navbar-nav">
+			      	<div class="dropdown dropdown-submenu add2garazh ">
+				        <a href="#" class="dropdown-toggle yellow-btn addcar" data-toggle="dropdown">Добавить авто в гараж</a>
+				        <div class="dropdown-menu">
+				          <a class="dropdown-item" href="#">Nissan Almera</a>
+				          <a class="dropdown-item" href="#">Skoda Octavia</a>
+				          <a class="dropdown-item blue" href="#">+ Добавить авто в гараж</a>
+				        </div>
+				      </div>
+				      <li class="nav-item dropdown menu-catalog desk">
+				        <a href="#" class="nav-link dropright dropdown-toggle" id="Catalog" data-toggle="dropdown">Каталог</a>
+				        <div class="dropdown-menu submenu" data-toggleID='Catalog'>
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content mcatalog">
+												<div class="mcatalog-content">
+													<h4>Каталог</h4>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аккумуляторы</a>
+													  <div class="dropdown-menu akkum" >
+															//= template/desktop/mdm-akkum-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автохимия</a>
+													  <div class="dropdown-menu avtohim" >
+															//= template/desktop/mdm-avtohim-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автоэлектроника</a>
+													  <div class="dropdown-menu avtohim avto-el" >
+															//= template/desktop/mdm-avtoelectron-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аксессуары</a>
+													  <div class="dropdown-menu avtohim aksessuar" >
+															//= template/desktop/mdm-aksessuar-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Запчасти</a>
+													  <div class="dropdown-menu zapchasti" >
+															//= template/desktop/mdm-zapchasti-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Инструмент</a>
+													  <div class="dropdown-menu avtohim instrument" >
+															//= template/desktop/mdm-instument-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Масла и смазки</a>
+													  <div class="dropdown-menu akkum smazki" >
+															//= template/desktop/mdm-smazki-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Свечи зажигания</a>
+													  <div class="dropdown-menu zapchasti svechi" >
+															//= template/desktop/mdm-svechi-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Технические жидкости</a>
+													  <div class="dropdown-menu avtohim techzhid" >
+															//= template/desktop/mdm-techzhid-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Фильтры</a>
+													  <div class="dropdown-menu avtohim cat_filters" >
+															//= template/desktop/mdm-cat_filters-catalog.html
+														</div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Щетки стеклоочистителя</a>
+													  <div class="dropdown-menu avtohim shetki" >
+															//= template/desktop/mdm-shetki-catalog.html
+													  </div>
+													</div>
+
+													<h4>Разделы</h4>
+													<a class="dropdown-item" href="#">Акции</a>
+													<a class="dropdown-item" href="#">Видео</a>
+													<a class="dropdown-item" href="#">Запись на ремонт</a>
+													<a class="dropdown-item" href="#">Запрос по VIN</a>
+													<a class="dropdown-item" href="#">Новости Статьи</a>
+													<a class="dropdown-item" href="#">Товары недели</a>
+													<a class="dropdown-item" href="#">АКБ б/у</a>
+
+
+
+												</div>
+
+				        			</div>
+				        		</div>
+				        		</div>
+				        </div>
+				      </li>
+				      <li class="nav-item dropdown menu-catalog mob">
+				        <a href="#" class="nav-link dropright dropdown-toggle d-none" id="catalog-mobile" data-toggle="dropdown">Каталог</a>
+				        <div class="dropdown-menu submenu" data-toggleID='catalog-mobile'>
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content mcatalog">
+												<div class="mcatalog-content">
+													<h4>Каталог</h4>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аккумуляторы</a>
+													  <div class="dropdown-menu akkum" >
+															//= template/mobile/mmm-akkum-catalog.html
+														</div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автохимия</a>
+													  <div class="dropdown-menu avtohim" >
+															//= template/mobile/mmm-avtohim-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автоэлектроника</a>
+													  <div class="dropdown-menu avtohim avto-el" >
+															//= template/mobile/mmm-avtoelectron-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аксессуары</a>
+													  <div class="dropdown-menu avtohim aksessuar" >
+															//= template/mobile/mmm-aksessuar-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Запчасти</a>
+													  <div class="dropdown-menu zapchasti" >
+															//= template/mobile/mmm-zapchasti-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Инструмент</a>
+													  <div class="dropdown-menu avtohim instrument" >
+															//= template/mobile/mmm-instument-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Масла и смазки</a>
+													  <div class="dropdown-menu akkum smazki" >
+															//= template/mobile/mmm-smazki-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Свечи зажигания</a>
+													  <div class="dropdown-menu zapchasti" >
+															//= template/mobile/mmm-svechi-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Технические жидкости</a>
+													  <div class="dropdown-menu avtohim techzhid" >
+															//= template/mobile/mmm-techzhid-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Фильтры</a>
+													  <div class="dropdown-menu avtohim cat_filters" >
+															//= template/mobile/mmm-cat_filters-catalog.html
+													  </div>
+													</div>
+													<div class="dropdown dropdown-submenu">
+														<a href="#" class="dropdown-toggle" data-toggle="dropdown">Щетки стеклоочистителя</a>
+													  <div class="dropdown-menu avtohim shetki" >
+															//= template/mobile/mmm-shetki-catalog.html
+													  </div>
+													</div>
+													<h4>Разделы</h4>
+													<a class="dropdown-item" href="#">Акции</a>
+													<a class="dropdown-item" href="#">Видео</a>
+													<a class="dropdown-item" href="#">Запись на ремонт</a>
+													<a class="dropdown-item" href="#">Запрос по VIN</a>
+													<a class="dropdown-item" href="#">Новости Статьи</a>
+													<a class="dropdown-item" href="#">Товары недели</a>
+													<a class="dropdown-item" href="#">АКБ б/у</a>
+
+
+
+												</div>
+
+				        			</div>
+				        		</div>
+				        		</div>
+				        </div>
+				      </li>
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="Zapchasti" data-toggle="dropdown">Запчасти</a>
+				        <div class="dropdown-menu" data-toggleID="Zapchasti">
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content zapchasti">
+												//= template/desktop/mdm-zapchasti.html
+						        	</div>
+						        </div>
+				        	</div>
+				        </div>
+				      </li>
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="Akkum" data-toggle="dropdown">Аккумуляторы</a>
+				        <div class="dropdown-menu" data-toggleID="Akkum">
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content akkum">
+												//= template/desktop/mdm-akkum.html
+						        	</div>
+						        </div>
+				        	</div>
+				        </div>
+				      </li>
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="Smazki" data-toggle="dropdown">Масла и смазки</a>
+				        <div class="dropdown-menu" data-toggleID="Smazki">
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content smazki">
+												//= template/desktop/mdm-smazki.html
+						        	</div>
+						        </div>
+				        	</div>
+				        </div>
+				      </li>
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="Avtohim" data-toggle="dropdown">Автохимия</a>
+				        <div class="dropdown-menu" data-toggleID="Avtohim">
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content avtohim">
+												//= template/desktop/mdm-avtohim.html
+						        	</div>
+						        </div>
+				        	</div>
+				        </div>
+				      </li>
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="Aksessuar" data-toggle="dropdown">Аксессуары</a>
+				        <div class="dropdown-menu" data-toggleID="Aksessuar">
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content aksessuar">
+											//= template/desktop/mdm-aksessuar.html
+						        	</div>
+						        </div>
+				        	</div>
+				        </div>
+				      </li>
+				      <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="Instrument" data-toggle="dropdown">Инструменты</a>
+				        <div class="dropdown-menu" data-toggleID="Instrument">
+					        <div class="container">
+						        <div class="row">
+							        <div class="col menu-content instrument">
+											//= template/desktop/mdm-instument.html
+						        	</div>
+						        </div>
+				        	</div>
+				        </div>
+				      </li>
+				    </ul>
+				    <button class="red-btn vin d-none d-lg-flex" data-toggle="modal" data-target="#ask-vin">Запрос по VIN</button>
+				  </div>
+				</div>
+			</div>	
+		</article>			
+	</nav>	
+</section>
+
+<section class="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<nav class="col">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+			    <li class="breadcrumb-item active">Каталог Аккумуляторов</li>
+			  </ol>
+			</nav>
+		</div>
+	</div>
+</section>
+
+<section class="catalog-page">
+	<div class="container">
+		<div class="row h">
+			<div class="col header-flex">
+				<h1>Аккумуляторы</h1>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-12 col-lg-4 col-xl-3">
+				<div class="filter-container">
+					<div class="filter-top-groupe">
+						<button class="black-btn" type="button" data-toggle="collapse" data-target="#collapseFilter">Аккумуляторы</button>
+						<button class="red-btn" type="button" data-toggle="modal" data-target="#selection-by-car" >Подбор по авто</button>
+						<button class="filter-mobile-btn" type="button" data-toggle="collapse" data-target="#collapseFilter"></button>
+					</div>
+					<div class="filter-top-groupe2">
+						<h4>Аккумуляторы</h4>
+						<button class="rc-btn " type="button" data-toggle="collapse" data-target="#collapseFilter"></button>
+					</div>
+
+					<form class="filter-form collapse show" id="collapseFilter">
+					  <div class="card-body top">  
+							<label class="radio"><input type="radio" name="akk_type" value="all" checked><span class="radio-text">Все</span></label>
+							<label class="radio"><input type="radio" name="akk_type" value="cars"><span class="radio-text">Легковые</span></label>
+							<label class="radio"><input type="radio" name="akk_type" value="cargo"><span class="radio-text">Грузовые</span></label>
+							<label class="radio"><input type="radio" name="akk_type" value="moto"><span class="radio-text">Мото</span></label>
+							<label class="radio"><input type="radio" name="akk_type" value="boat"><span class="radio-text">Лодочные</span></label>
+							<label class="radio"><input type="radio" name="akk_type" value="ups"><span class="radio-text">ИБП/ГЗЫ</span></label>
+					  </div>
+						
+						<div id="filter-accordion">
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#producer-item">Производитель</button>
+						    <div id="producer-item" class="card-body border collapse" data-parent="">
+						    	<div class="filter-search">
+						    		<input type="text" class="form-control" placeholder="Поиск">
+						    		<a href="#" class="filter-search-btn"></a>
+						    	</div>
+						    	<div class="add-scroll">
+										<label class="radio"><input type="radio" name="producer" value="Titan" checked><span class="radio-text">Titan</span></label>
+										<label class="radio"><input type="radio" name="producer" value="Tubor"><span class="radio-text">Tubor</span></label>
+										<label class="radio"><input type="radio" name="producer" value="Titan"><span class="radio-text">Titan</span></label>
+										<label class="radio"><input type="radio" name="producer" value="Varta"><span class="radio-text">Varta</span></label>
+										<label class="radio"><input type="radio" name="producer" value="Тюмень"><span class="radio-text">Тюмень</span></label>
+										<label class="radio"><input type="radio" name="producer" value="Зверь"><span class="radio-text">Зверь</span></label>
+						    	</div>
+						    </div>
+						  </div>
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#polarity-item">Полярность</button>
+						    <div id="polarity-item" class="card-body collapse" data-parent="">
+									<label class="radio"><input type="radio" name="polarity" value="any" checked><span class="radio-text">Любая</span></label>
+									<label class="radio"><input type="radio" name="polarity" value="reverse"><span class="radio-text">Обратная</span></label>
+									<label class="radio"><input type="radio" name="polarity" value="direct"><span class="radio-text">Прямая</span></label>
+									<label class="radio"><input type="radio" name="polarity" value="universal"><span class="radio-text">Универсальная</span></label>
+						    </div>
+						  </div>
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#capacity-item">Ёмкость, Ач</button>
+						    <div id="capacity-item" class="card-body collapse" data-parent="">
+						    	<div class="range-description"><span class="range-min">10</span><span class="range-max">240</span></div>
+						    	<div class="range">
+						    	<input id="capacity" name="capacity" type="text" class="range" value="30,200" 
+						    			data-provide='slider'
+						    			data-slider-min="10" 
+						    			data-slider-max="240" 
+						    			data-slider-step="5" 
+						    			data-slider-value="[30,200]" 
+						    			data-slider-tooltip="hide"
+						    			data-slider-handle='square'
+						    			/>
+						    	</div>
+						    	<div class="range-description"><span>от</span><span>до</span></div>
+						    </div>
+						  </div>
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#dimensions-item">Габариты, мм</button>
+						    <div id="dimensions-item" class="card-body px-0 collapse" data-parent="">
+						    	<div class="dimensions">
+							    	<input name="dimensions-length" type="text" value="" placeholder="длина" />
+							    	<input name="dimensions-width" type="text" value="" placeholder="ширина" />
+							    	<input name="dimensions-height" type="text" value="" placeholder="высота" />
+						    	</div>
+						    </div>
+						  </div>
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#price-item">Цена, руб</button>
+						    <div id="price-item" class="card-body collapse" data-parent="">
+						    	<div class="range-description"><span class="range-min">0</span><span class="range-max">100 000</span></div>
+						    	<div class="range">
+						    	<input id="price" name="price" type="text" class="range" value="0,100000" 
+						    			data-provide='slider'
+						    			data-slider-min="0" 
+						    			data-slider-max="100000" 
+						    			data-slider-step="5" 
+						    			data-slider-value="[30000,100000]" 
+						    			data-slider-tooltip="hide"
+						    			data-slider-handle='square'
+						    			/>
+						    	</div>
+									<!-- <input id="ex2" type="text" class="span2" value="[250,450]" data-slider-min="10" 	data-slider-max="1000" data-slider-step="5" 	data-slider-value="[250,450]"	/>	 -->
+						    	<div class="range-description"><span>от</span><span>до</span></div>
+						    </div>
+						  </div>
+
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#cleat-item">Клеммы</button>
+						    <div id="cleat-item" class="card-body collapse" data-parent="">
+									<label class="radio"><input type="radio" name="cleat" value="euro" checked><span class="radio-text">Европейские (стандартные, утоплены)</span></label>
+									<label class="radio"><input type="radio" name="cleat" value="asia"><span class="radio-text">Азиатские (Стандартные, выступают над верхей крышкой)</span></label>
+						    </div>
+						  </div>
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#type_of_shell-item">Тип корпуса</button>
+						    <div id="type_of_shell-item" class="card-body border collapse" data-parent="">
+						    	<div class="add-scroll">
+										<label class="radio"><input type="radio" name="type_of_shell" value="b24asia" checked><span class="radio-text">B 24 ASIA</span></label>
+										<label class="radio"><input type="radio" name="type_of_shell" value="b19asia"><span class="radio-text">B 19 ASIA</span></label>
+										<label class="radio"><input type="radio" name="type_of_shell" value="d23asia"><span class="radio-text">D 23 ASIA</span></label>
+										<label class="radio"><input type="radio" name="type_of_shell" value="d26asia"><span class="radio-text">D 26 ASIA</span></label>
+							    </div>
+						    </div>
+						  </div>
+						 
+						  <div class="filter-block">
+						    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#pick_up_address-item">Где забрать?</button>
+						    <div id="pick_up_address-item" class="card-body border collapse" data-parent="">
+						    	<div class="filter-search">
+						    		<input type="text" class="form-control" placeholder="Поиск">
+						    		<a href="#" class="filter-search-btn"></a>
+						    	</div>
+						    	<div class="add-scroll">
+										<label class="radio"><input type="radio" name="pick_up_address" value="Воткинское шоссе, 12а" checked><span class="radio-text">Воткинское шоссе, 12а</span></label>
+										<label class="radio"><input type="radio" name="pick_up_address" value="Автозаводская, 5а"><span class="radio-text">Автозаводская, 5а</span></label>
+										<label class="radio"><input type="radio" name="pick_up_address" value="Ворошилова, 8, 1 этаж"><span class="radio-text">Ворошилова, 8, 1 этаж</span></label>
+										<label class="radio"><input type="radio" name="pick_up_address" value="Союзная, 161"><span class="radio-text">Союзная, 161</span></label>
+						    	</div>
+						    </div>
+						  </div>
+						</div>
+
+					  <div class="filter-block-btngroup">
+
+							<a href="#" id="clear_filters" class="white-btn" type="button" >Сбросить</a>
+							<button class="red-btn" type="button">Найти</button>
+						</div>
+					</form>				
+
+
+
+				</div>
+
+			</div>
+			<div class="col">
+				<div class="filter-section">
+					<div class="producer">
+						<div class="label">Производитель:</div>
+						<div class="items">
+							<label class="radio"><input type="radio" name="producer" value="Titan" checked><span class="radio-text">Titan</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Tubor"><span class="radio-text">Tubor</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Mutlu"><span class="radio-text">Mutlu</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Varta"><span class="radio-text">Varta</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Bosch"><span class="radio-text">Bosch</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Super president"><span class="radio-text">Super president</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Titan" checked><span class="radio-text">Titan</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Tubor"><span class="radio-text">Tubor</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Tyumen"><span class="radio-text">Tyumen</span></label>
+							<label class="radio"><input type="radio" name="producer" value="Bosch"><span class="radio-text">Bosch</span></label>
+							<a class="show-more" href="#">показать еще</a>
+						</div>
+					</div>
+					<div class="marka">
+						<div class="label">Марка:</div>
+						<div class="items">
+							<a class="find-link" href="#">Standart (14)</a>
+							<a class="find-link" href="#">Euro Silver (9)</a>
+							<a class="find-link" href="#">Arctic (7)</a>
+							<a class="find-link" href="#">Premium (11)</a>
+						</div>
+					</div>
+					<div class="filrers">
+						<div class="label">Фильтры:</div>
+						<div class="items">
+							<a class="show-more" href="#">сбросить фильтры</a>
+						</div>
+					</div>
+				</div>
+				<div class="sort-section">
+					<div class="sorting">
+						<div class="label">Сортировать:</div>
+						<div class="items">
+							<form action="" class="sorting-form">
+								<div class="sort-price">
+									<label class="radio"><input type="radio" name="price_type" value="Varta"><span class="radio-text">Дешевле</span></label>
+									<div> / </div>
+									<label class="radio"><input type="radio" name="price_type" value="Varta"><span class="radio-text">Дороже</span></label>
+								</div>
+								<div class="sort-capacity">
+									<label class="radio"><input type="radio" name="capacity_range" value="30-60"><span class="radio-text">30-60 Ач</span></label>
+									<label class="radio"><input type="radio" name="capacity_range" value="60-90"><span class="radio-text">60-90 Ач</span></label>
+									<label class="radio"><input type="radio" name="capacity_range" value="90-120"><span class="radio-text">90-120 Ач</span></label>
+									<label class="radio"><input type="radio" name="capacity_range" value="120-150"><span class="radio-text">120-150 Ач</span></label>
+									
+								</div>
+							</form>
+							<div class="view">
+								<button class="view-list-btn"></button>
+								<button class="view-title-btn"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content-section list">
+					//= template/catalog-product-card-akk.html
+					//= template/catalog-product-card-akk.html
+					//= template/catalog-product-card-akk.html
+					//= template/catalog-product-card-akk.html
+					//= template/catalog-product-card-akk.html
+					//= template/catalog-product-card-akk.html
+					//= template/catalog-product-card-akk.html
+					//= template/catalog-product-card-akk.html
+				</div>
+				<div class="pagination-section">
+					<div class="zaglushka"></div>
+				  <ul class="pagination">
+				    <li class="page-item"><a class="page-link prev" href="#"></a></li>
+				    <li class="page-item"><a class="page-link" href="#">1</a></li>
+				    <li class="page-item"><a class="page-link" href="#">2</a></li>
+				    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				    <li class="page-item"><a class="page-link" href="#">4</a></li>
+				    <li class="page-item"><a class="page-link next" href="#"></a></li>
+				    <li class="page-item"><a class="page-link" href="#">50</a></li>
+				  </ul>
+			  	<div class="page-select">
+			  		<span>товаров на странице</span>
+				  	<select class="selectpicker" name="page_num" id="page_num">
+				  		<option value="1">1</option>
+				  		<option value="2">2</option>
+				  		<option value="3">3</option>
+				  		<option value="4">4</option>
+				  		<option value="5">5</option>
+				  		<option value="6">6</option>
+				  		<option value="7">7</option>
+				  		<option value="8">8</option>
+				  		<option value="9">9</option>
+				  		<option value="10">10</option>
+				  	</select>
+			  		
+			  	</div>
+				</div>	
+
+			</div>
+
+			</div>
+		</div>		
+	
+</section>
+
+
+
+
+<section class="d-lg-none">
+	<div class="container">
+		<div class="row">
+			<div class="col advantages">
+				<div class="adv-item">
+					<div class="icon-clock"></div>
+					<div class="adv-description">Рассрочка онлайн за 1 минуту</div>
+				</div>
+				<div class="adv-item">
+					<div class="icon-portmone"></div>
+					<div class="adv-description">Гарантия лучшей цены</div>
+				</div>
+				<div class="adv-item">
+					<div class="icon-podarok"></div>
+					<div class="adv-description">Начисление бонусов за каждую покупку</div>
+				</div>
+				<div class="adv-item">
+					<div class="icon-naush"></div>
+					<div class="adv-description">Оперативная помощь в подборе товаров</div>
+				</div>
+				<div class="adv-item">
+					<div class="icon-dost"></div>
+					<div class="adv-description">Бесплатная доставка при заказе от 5 000 ₽</div>
+				</div>
+				<div class="adv-item zaglushka"></div>
+			</div>
+		</div>
+	</div>
+</section>			
+<section class="main-products catalog">
+	<div class="container">
+		<div class="row">
+			<div class="col header-flex">
+				<h1>Популярные товары</h1>
+				<!-- <div class="w-100 d-none d-lg-block d-xl-none"></div> -->
+		    <div class="slider-navigation product tab-1"><div class="slider-count">4 из 12</div></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col product-slider tab-1">
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+			</div>
+		</div>
+	</div>
+</section>
+<section class="main-products catalog">
+	<div class="container">
+		<div class="row">
+			<div class="col header-flex">
+				<h1>Вы недавно смотрели</h1>
+				<!-- <div class="w-100 d-none d-lg-block d-xl-none"></div> -->
+		    <div class="slider-navigation product tab-2"><div class="slider-count">4 из 12</div></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col product-slider tab-2">
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+				//= template/main-product-card.html
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div id="back-to-top" class="up"><div></div></div>
+				<div class="accordion d-md-none" id="footerMenu" >
+				  <div class="card">
+				    <div class="card-header" id="heading-1">
+			        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">Каталог</button>
+				    </div>
+				    <div id="collapse-1" class="collapse" aria-labelledby="heading-1" data-parent="#footerMenu">
+				      <div class="card-body">
+				       <a href="#">Аккумуляторы</a>
+				       <a href="#">Автохимия</a>
+				       <a href="#">Автоэлектроника</a>
+				       <a href="#">Запчасти</a>
+				       <a href="#">Инструменты </a>
+				       <a href="#">Масла и смазки</a>
+				       <a href="#">Свечи зажигания</a>
+				       <a href="#">Технические жидкости</a>
+				       <a href="#">Фильтры</a>
+				       <a href="#">Щетки стеклоотчистителя</a>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="heading-2">
+			        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Для клиента</button>
+				    </div>
+				    <div id="collapse-2" class="collapse" aria-labelledby="heading-2" data-parent="#footerMenu">
+				      <div class="card-body">
+				        <a href="#">О компании</a>
+				        <a href="#">Сертификаты</a>
+				        <a href="#">Услуги</a>
+				        <a href="#">Отзывы</a>
+				        <a href="#">Доставка и оплата</a>
+				        <a href="#">Вопрос-ответ</a>
+				        <a href="#">Последние новости</a>
+				        <a href="#">Бонусная система</a>
+				        <a href="#">Как заказать товар</a>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="heading-3">
+			        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">Оптовые продажи</button>
+				    </div>
+				    <div id="collapse-3" class="collapse" aria-labelledby="heading-3" data-parent="#footerMenu">
+				      <div class="card-body">
+				       <a href="#">Для оптовиков</a>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="heading-4">
+				        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">Розница</button>
+				    </div>
+				    <div id="collapse-4" class="collapse" aria-labelledby="heading-4" data-parent="#footerMenu">
+				      <div class="card-body">
+				       <a href="#">Адреса магазинов</a>
+				       <a href="#">Акции розничных магазинов</a>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="heading-5">
+			        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">Оплата</button>
+				    </div>
+				    <div id="collapse-5" class="collapse" aria-labelledby="heading-5" data-parent="#footerMenu">
+				      <div class="card-body">
+			       		<div class="pay-block">
+			       			<a class="visa" href="#"></a>
+			       			<a class="master-card" href="#"></a>
+			       		</div>
+			       		<button class="red-btn" data-toggle="modal" data-target="#write-us">написать нам</button>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="heading-6">
+				       <button class="btn btn-link collapsed noupicon" type="button">АКБ Мастер</button>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="heading-7">
+				      <button class="btn btn-link collapsed noupicon" type="button">Рулевой</button>
+				    </div>
+				  </div>
+					<div class="footer-contacts">
+						<div class="social-icons">
+							<a href="#"><img src="../img/telegram.png" alt=""></a>
+							<a href="#"><img src="../img/viber.png" alt=""></a>
+							<a href="#"><img src="../img/instagram.png" alt=""></a>
+							<a href="#"><img src="../img/whatsapp.png" alt=""></a>
+							<a href="#"><img src="../img/facebook.png" alt=""></a>
+							<a href="#"><img src="../img/vk.png" alt=""></a>
+							<a href="#"><img src="../img/youtube.png" alt=""></a>
+						</div>
+						<a class="phone" href="#">+7 (965) 842 20 03</a>
+						<a href="#">internetshop@bratskiy.ru</a>
+						<a class="web-electron" href="https://xn--18-mlcudogpr0i.xn--p1ai/"></a>
+					</div>
+
+				</div>
+				<div class="desktop d-none d-md-flex">
+	       <a class="footer-head" href="#">Каталог</a>
+	       <a href="#">Аккумуляторы</a>
+	       <a href="#">Автохимия</a>
+	       <a href="#">Автоэлектроника</a>
+	       <a href="#">Запчасти</a>
+	       <a href="#">Инструменты </a>
+					<div class="zaglushka"></div>
+					<div class="zaglushka"></div>
+	       <a href="#">Масла и смазки</a>
+	       <a href="#">Свечи зажигания</a>
+	       <a href="#">Технические жидкости</a>
+	       <a href="#">Фильтры</a>
+	       <a href="#">Щетки стеклоотчистителя</a>
+					<div class="zaglushka"></div>
+	       <a class="footer-head" href="#">Для клиента</a>
+	        <a href="#">О компании</a>
+	        <a href="#">Сертификаты</a>
+					<div class="zaglushka md"></div>
+	        <a href="#">Услуги</a>
+	        <a href="#">Отзывы</a>
+	        <a href="#">Доставка и оплата</a>
+	        <a href="#">Вопрос-ответ</a>
+					<div class="zaglushka"></div>
+	        <a href="#">Последние новости</a>
+	        <a href="#">Бонусная система</a>
+	        <a href="#">Как заказать товар</a>
+	       <a class="footer-head" href="#">Оптовые продажи</a>
+	       <a href="#">Для оптовиков</a>
+					<div class="zaglushka"></div>
+	       <a class="footer-head" href="#">Розница</a>
+	       <a href="#">Адреса магазинов</a>
+	       <a href="#">Акции розничных магазинов</a>
+	       <a class="footer-head" href="#">Оплата</a>
+	       <div>
+	       		<div class="pay-block">
+	       			<a class="visa" href="#"></a>
+	       			<a class="master-card" href="#"></a>
+	       		</div>
+	       		<button class="red-btn" data-toggle="modal" data-target="#write-us">написать нам</button>
+	       </div>
+	       <a class="footer-head" href="#">Контакты</a>
+					<div class="footer-contacts">
+						<div class="social-icons">
+							<a href="#" class="icon-telegram"></a>
+							<a href="#" class="icon-viber"></a>
+							<a href="#" class="icon-instagram"></a>
+							<a href="#" class="icon-whatsapp"></a>
+							<a href="#" class="icon-facebook"></a>
+							<a href="#" class="icon-vk"></a>
+							<a href="#" class="icon-youtube"></a>
+						</div>
+						<a class="phone" href="#">+7 (965) 842 20 03</a>
+						<a href="#">internetshop@bratskiy.ru</a>
+						<a class="web-electron" href="https://xn--18-mlcudogpr0i.xn--p1ai/"></a>
+					</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</footer>
+//= template/modal.html
+//= template/footer.html
+</body>
+</html>

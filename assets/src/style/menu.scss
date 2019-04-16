@@ -1,0 +1,880 @@
+// .navbar-collapse {
+// 	justify-content: space-between;
+// }
+.navbar-nav {
+	justify-content: space-between;
+	flex: 1 0 auto;
+	// margin-right: 20px;
+}
+.dn {display: none!important;} //для скрытия пунктов меню через скрипт
+
+.navbar-collapse, 
+.navbar-fixed-top .navbar-collapse { 
+//    max-height: none!important; 
+}
+.navbar-collapse.show {
+	padding-right: 0;
+	padding-left: 0;
+} 
+
+.main-menu { 
+	background: url(../img/skin2.png) top center no-repeat;
+	width: 100%;
+		.nav-item {
+			display: none;	
+				@include media-breakpoint-up(lg) {display: list-item;}
+			&.mob {
+				display: list-item;
+				@include media-breakpoint-up(lg) {display: none;}
+
+			}
+			&.show {
+					//======== Треугольник для Меню ==============================
+					 .dropdown-toggle:before {
+						content: '';
+						display: block;
+						position: absolute;
+						border-bottom: $menuTriangleWidth solid $yellow;
+						border-right: $menuTriangleWidth  solid transparent;
+						border-left: $menuTriangleWidth  solid transparent;
+						width: 0; 
+						height: 0;
+						top: 33px;
+					}
+			}
+		
+		}
+
+	 .nav-link {
+			@include setFont ($headFFamily,normal,normal,14px,$fontColor);
+				@include media-breakpoint-up(lg) {
+					@include setFont ($headFFamily,normal,bold,16px,#fff);
+				}	
+		}
+	.dropdown-menu { 
+		margin: 0;
+		border: none;
+		background-color: #fff;
+		padding: 0;
+		border-radius: 0;
+			&.show {
+					@include media-breakpoint-up(lg) {	
+						@include boxShadow4;
+						border-top: $menuBorderTop solid $yellow; 
+					}
+			}
+	}
+	//===============================================================
+	.dropdown-item { 
+		@include setFont ($textFFamily,normal,normal,13px,$fontColor);	
+		line-height: 35px;
+		padding: 0;
+		width: auto;
+			@include media-breakpoint-up(lg) {line-height: 24px;}
+			&:hover {font-weight: bold;}
+
+	}
+	.addcar.dropdown-toggle{
+				&:after{
+					content: '';
+					margin-left: auto;
+				}
+		}
+
+
+}
+.dropdown-item.red { color: $red;}
+.dropdown-item.bold { font-weight: bold;}
+.dropdown-item.red-dot {
+//	@include dFlex(flex-start,flex-start,row,nowrap);
+	display: block;
+//	margin-left: -13px;
+}	
+.dropdown-item.red-dot:before {
+	content: '';
+	display: block;
+	border-radius: 50%;
+	width: 7px;
+	height: 7px;
+	background: $red;
+ 	margin-right: 6px;
+ 	margin-top: 8px;
+	margin-left: -13px;
+	float: left;
+}
+
+.menu-content {
+	@include dFlex(flex-start,flex-start,row,nowrap);
+	align-content: stretch;
+	padding-top: $menuDesktopPT;
+//	max-height: calc( 100vh - 72px - 39px - 45px ); // 72px - высота панели Navbar 39px - высота кнопки "Добавить в гараж" 45px - высота нижней панети навигации
+	overflow: hidden;
+	padding-right: 0;
+		@include media-breakpoint-up(lg) {	max-height: $menuMaxHeight;	}	
+		h4{	padding-bottom: 0;	margin-top: 10px;	margin-bottom: 10px;}
+		.mcatalog-content {
+//			width: calc( 100% + 20px )!important;
+//			overflow-y: scroll;
+//			overflow-x: hidden;
+			flex: 0 0 auto;
+//			padding-right: 17px;
+
+		}
+
+}
+
+.mi-1 {
+	@include dFlex(space-between,flex-start,row,nowrap);
+	align-content: stretch;
+	align-self: stretch;
+	padding-left: 52px;
+	height: 100%;
+
+}
+.mi-2 {
+	@include dFlex(space-between,flex-start,row,nowrap);
+	flex: 1 0 auto;
+	padding-left: $menuZapchastiPL;
+	height: 100%;
+
+}
+.mi-1 .block-1{
+	@include dFlex(flex-start,flex-start,column,wrap);
+	align-self: stretch;
+	flex: 1 0 auto;
+	max-height: calc(100% - 40px);
+}
+.mi-2 .block-1 {
+	@include dFlex(flex-start,flex-start,column,wrap);
+	flex: 1 0 auto;
+	align-self: stretch;
+	max-height: calc(100% - 40px);
+	height: 100%;
+}
+.mi-2 .block-2{
+	@include dFlex(flex-start,flex-start,column,nowrap);
+	height: 100%;
+}
+.mi-2 .block-2 div {
+	@include dFlex(space-between,flex-start,row,wrap);
+	flex:1 0 auto;
+	width: 100%;
+}
+.mi-2 .block-2 div a {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-color: #fff;
+	display: block;
+	width: 82px;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.zapchasti {
+	@include setMenuContentBgr(#fff, $sectBgrGray1, $menuZapchastiGrayWidth_lg);
+	padding-bottom: $menuZapchastiPB;
+	padding-right: 15px;
+			@include media-breakpoint-up(xl) {
+				@include setMenuContentBgr(#fff, $sectBgrGray1, $menuZapchastiGrayWidth);
+			}	
+}	
+.zapchasti .mi-1 {	
+	width: 670px;
+	padding-left: 30px;
+		@include media-breakpoint-up(xl) {
+			padding-left: 52px;
+			width: $menuZapchastiGrayWidth - $menuMI_1PR_WKor;
+		}
+}	
+.zapchasti .mi-1 .block-1 {	
+	margin-right: 20px;
+	max-height: 100%; 
+	flex: 0 0 auto;
+		@include media-breakpoint-up(xl) {
+			margin-right: $menuZapchastiMR_block1;
+
+		}
+
+}	
+.zapchasti .block-2 {
+	@include dFlex(flex-start,flex-start,column,wrap);
+	flex: 1 0 auto;
+}
+
+.zapchasti .block-2>div{
+	@include dFlex(flex-start,flex-start,column,wrap);
+	height: $menuZapchastiHeight_block2;
+	width: 100%;
+}
+
+.akkum  {
+	@include setMenuContentBgr(#fff, $sectBgrGray1, $menuAkkumGrayWidth_lg);
+	padding-bottom: $menuAkkumPB;
+		@include media-breakpoint-up(xl) {
+			@include setMenuContentBgr(#fff, $sectBgrGray1, $menuAkkumGrayWidth);
+		}	
+}	
+.akkum .mi-1 {
+	@include dFlex(flex-start,flex-start,column,nowrap);
+	padding-left: 30px;
+	width: 300px;
+		@include media-breakpoint-up(xl) {
+			width: $menuAkkumGrayWidth - $menuMI_1PR_WKor;
+			padding-left: $menuAkkumPL;
+
+		}
+
+}
+
+.akkum .mi-2 {
+	padding-right: 15px;
+	padding-left: 20px;
+		@include media-breakpoint-up(xl) {
+			padding-right: $menuAkkumPR;
+			padding-left: $menuAkkumMI2_PL;
+		}	
+}
+.akkum .mi-2 .block-1{ max-height: 100%; }
+.akkum .mi-2 .block-2{ width: $menuAkkumBrandW; }
+
+.smazki  {
+	@include setMenuContentBgr(#fff, $sectBgrGray1, $menuSmazkiGrayWidth_lg);
+	padding-bottom: $menuSmazkiPB;
+		@include media-breakpoint-up(xl) {
+			@include setMenuContentBgr(#fff, $sectBgrGray1, $menuSmazkiGrayWidth);
+		}	
+		h4 {
+			white-space: normal;
+			max-width: 150px;
+				@include media-breakpoint-up(xl) {
+					white-space: nowrap;
+					max-width: none;
+				}
+
+		}
+		.mi-1 {
+			padding-left: $menuSmazkiPL;
+			width: $menuSmazkiGrayWidth - $menuMI_1PR_WKor;
+			flex-direction: column;
+			justify-content: flex-start;
+			//	> h4 { margin-bottom: 0; }
+		}
+		.mi-2 {
+			padding-left: $menuSmazkiMI2_PL;
+			padding-right: 15px;
+				@include media-breakpoint-up(xl) {	padding-right: $menuSmazkiPR;	}
+			 		.block-1{	
+			 				margin-right: 30px;
+							@include media-breakpoint-up(xl) {	margin-right: 0; }
+			 		}
+			 		.block-2{	width: $menuSmazkiBrandW;}
+		}
+		.dropdown-item{
+			white-space: normal;
+			display: block;
+			max-width: 150px;
+			margin-right: 20px;
+				@include media-breakpoint-up(xl) {
+					white-space: nowrap;
+					max-width: none;
+
+				}
+				.bold  {margin-top: 8px;}
+		}	
+}
+.avtohim  {
+	@include setMenuContentBgr(#fff, $sectBgrGray1, $menuAvtohimGrayWidth_lg);
+	padding-bottom: $menuAvtohimPB;
+		@include media-breakpoint-up(xl) { 
+			@include setMenuContentBgr(#fff, $sectBgrGray1, $menuAvtohimGrayWidth);
+		}
+	
+		.mi-1 {
+			padding-left: $menuAvtohimPL;
+			width: 370px;
+			flex-direction: column;
+			justify-content: flex-start;
+				@include media-breakpoint-up(xl) { 
+						width: $menuAvtohimGrayWidth - $menuMI_1PR_WKor;
+				}
+
+				>h4 { margin-bottom: 0; }
+				.block-1{ max-height: calc(100% - 15px); }	
+		}
+		.mi-2 {
+			padding-left: $menuAvtohim_MI2_PL;
+			padding-right: 15px;
+				@include media-breakpoint-up(xl) { 
+					padding-right: $menuAvtohimPR;
+				}
+
+				h4 { margin-bottom: 0; }
+				.block-1 { 
+					max-height: 100%;
+						div{
+							@include dFlex(flex-start,flex-start,column,wrap);
+							flex: 1 0 auto;
+							max-height: calc(100% - 35px);
+							align-self: stretch;
+						}
+				}
+				.block-2{	
+					width: $menuAvtohimBrandW;
+				 		div {	margin-top: 10px;}	
+				}
+		}
+		.dropdown-item.bold  {margin-top: 8px;}
+}
+.aksessuar  {
+	@include setMenuContentBgr(#fff, $sectBgrGray1, $menuAksessuarGrayWidth_lg);
+	padding-bottom: $menuAksessuarPB;
+		@include media-breakpoint-up(xl) { 
+			@include setMenuContentBgr(#fff, $sectBgrGray1, $menuAksessuarGrayWidth);
+		}
+		&.menu-content {
+			max-height: $menuAksessuarMH;
+				@include media-breakpoint-up(xl) { max-height: $menuMaxHeight;	}
+
+		}
+		.mi-1 {
+			padding-left: $menuAksessuarPL;
+			width: $menuAksessuarGrayWidth - $menuMI_1PR_WKor;
+			flex-direction: column;
+			justify-content: flex-start;
+				.block-1 {
+					max-height: calc(100% - 20px);
+						@include media-breakpoint-up(xl) { max-height: calc(100% - 40px);	}
+				}
+		}
+		.mi-2 {
+			flex-wrap: wrap;
+			padding-right: 15px;
+			padding-left: 35px;
+				@include media-breakpoint-up(xl) { 
+					padding-right: $menuAksessuarPR;
+					padding-left: $menuAksessuar_MI2_PL;
+				}
+				.block-1 {
+					max-height: calc(100% - 30px);
+						@include media-breakpoint-up(xl) { max-height: calc(100% - 40px);	}
+				}
+		}
+		.dropdown-item {
+			max-width: 150px;
+    	white-space: normal;
+    	margin-right: 20px;
+				@include media-breakpoint-up(xl) { 
+						max-width: none;
+			    	white-space: nowrap;
+			    	margin-right: 0;
+
+				}
+			
+				&.bold  {margin-top: 8px; }
+		}
+}
+.instrument  {
+	@include setMenuContentBgr(#fff, $sectBgrGray1, $menuInstrumentGrayWidth_lg);
+	padding-bottom: $menuInstrumentPB;
+		@include media-breakpoint-up(xl) { 
+			@include setMenuContentBgr(#fff, $sectBgrGray1, $menuInstrumentGrayWidth);
+		}
+		&.menu-content {
+			max-height: $menuInstrumentMH;
+				@include media-breakpoint-up(xl) { max-height: $menuMaxHeight;	}
+
+		}
+		.mi-1 {
+			padding-left: $menuInstrumentPL;
+			width: $menuInstrumentGrayWidth - $menuMI_1PR_WKor;
+			flex-direction: column;
+			justify-content: flex-start;
+				.block-1 {
+					max-height: calc(100% - 20px);
+						@include media-breakpoint-up(xl) { max-height: calc(100% - 40px);	}
+				}
+		}
+		.mi-2 {
+			flex-wrap: wrap;
+			padding-right: 15px;
+			padding-left: 35px;
+				@include media-breakpoint-up(xl) { 
+					padding-right: $menuInstrumentPR;
+					padding-left: $menuInstrument_MI2_PL;
+				}
+				.block-1 {
+					max-height: calc(100% - 30px);
+						@include media-breakpoint-up(xl) { max-height: calc(100% - 40px);	}
+				}
+		}
+		.dropdown-item {
+			max-width: 150px;
+    	white-space: normal;
+    	margin-right: 20px;
+				@include media-breakpoint-up(xl) { 
+						max-width: none;
+			    	white-space: nowrap;
+			    	margin-right: 0;
+
+				}
+			
+				&.bold  {margin-top: 8px; }
+		}
+}
+
+
+
+
+// .instrument  {
+// 	@include setMenuContentBgr(#fff, $sectBgrGray1, $menuInstrumentGrayWidth);
+// 	padding-bottom: $menuInstrumentPB;
+// }	
+// .instrument .mi-1 {
+// 	padding-left: $menuInstrumentPL;
+// 	width: $menuInstrumentGrayWidth - $menuMI_1PR_WKor;
+// 	flex-direction: column;
+// 	justify-content: flex-start;
+// }
+// .instrument .mi-1 > h4 { margin-bottom: 0; }
+// .instrument .mi-2 h4 { margin-bottom: 0; }
+	
+// .instrument .mi-2 {
+// 	flex-wrap: wrap;
+// 	padding-right: $menuInstrumentPR;
+// 	padding-left: $menuInstrument_MI2_PL;
+// }
+// .instrument .dropdown-item.bold  { margin-top: 8px; }
+
+
+
+
+
+
+//===================== Каталог ================================
+.dropdown-menu.show .nav-link {color:$fontColor;}
+.submenu.show .dropdown-toggle:before {display: none!important;}
+.submenu.show {
+	@include dFlex(flex-start,flex-start,column,nowrap);
+
+}
+
+.mcatalog {
+	background: $sectBgrGray1;
+	padding-top: 0;
+		@include media-breakpoint-up(lg) {
+			max-height: $menuCatalogHeight;
+			height: $menuCatalogHeight;
+			background: #fff;
+		//	padding-left: $menuCatalogPL;
+
+		}
+
+}
+.mcatalog-content {
+	@include dFlex(flex-start,flex-start,column,nowrap);
+	background: $sectBgrGray1;
+	padding-top: 0;
+	height: 100%;
+	width: 100%;
+		// @include media-breakpoint-up(xs) {
+		// }
+		@include media-breakpoint-up(lg) {
+			width: $menuCatalogGrayWidth;
+			padding-top: 15px;
+			padding-left: $menuCatalogContentPL;
+			@include boxShadowCatalogLeft;
+
+		}
+
+
+			.dropdown-menu.show {
+				//	top: 0;
+				border: none;
+				box-shadow: none;
+				background: #fff;
+			//	padding-top: 15px;
+			}
+			.akkum.show {
+				@include dFlex(flex-start,flex-start,row,wrap);
+				
+				.mi-1 {
+					height: $menuAkkumHeight;
+					@include media-breakpoint-up(lg) {
+						padding-left: 30px;
+						width: 300px;
+					}
+					@include media-breakpoint-up(xl) {
+						padding-left: $menuAkkumPL;
+						width: $menuAkkumGrayWidth;
+					}
+				}
+				.mi-2 {
+					height: $menuAkkumHeight;
+					@include media-breakpoint-up(lg) {
+						padding-left: 30px;
+						padding-right: 15px;
+					}
+					@include media-breakpoint-up(xl) {
+						padding-left: $menuAkkumPL;
+						padding-right: $menuAkkumPR;
+					}
+
+				}
+				.mi-3 {
+					@include dFlex(space-between,flex-start,row,wrap);
+					@include media-breakpoint-up(lg) {
+						padding-left: 30px;
+						padding-right: 15px;
+					}
+					@include media-breakpoint-up(xl) {
+						padding-left: $menuAkkumPL;
+						padding-right: $menuAkkumPR;
+						width: 845px;
+					}
+
+					a {
+						display: block;
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: contain;
+						width: 125px;
+						height: 40px;
+					}
+				}
+			}
+			.avtohim.show {
+				@include dFlex(flex-start,flex-start,row,wrap);
+				
+				.mi-1 {
+					@include dFlex(space-between,flex-start,column,wrap);
+					flex: 1 0 auto;
+					height: $menuAvtohimCatalogHeight;
+					@include media-breakpoint-up(lg) {
+						padding-left: 30px;
+						width: 300px;
+					}
+					@include media-breakpoint-up(xl) {
+						padding-left: $menuAvtohimPL;
+						width: $menuAvtohimGrayWidth;
+					}
+					>div {
+						margin-right: 20px;
+					}
+				}
+				.mi-2 {
+					height: $menuAkkumHeight;
+					@include media-breakpoint-up(lg) {
+						padding-left: 30px;
+						padding-right: 15px;
+					}
+					@include media-breakpoint-up(xl) {
+						padding-left: $menuAvtohimPL;
+						padding-right: $menuAvtohimPR;
+					}
+
+				}
+				.mi-3 {
+					@include dFlex(space-between,flex-start,row,wrap);
+					flex: 1 0 auto;
+
+					@include media-breakpoint-up(lg) {
+						padding-left: 30px;
+						padding-right: 15px;
+					}
+					@include media-breakpoint-up(xl) {
+					padding-left: $menuAvtohimPL;
+					padding-right: $menuAvtohimPR;
+					}
+
+					a {
+						display: block;
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: contain;
+						width: 125px;
+						height: 40px;
+					}
+				}
+			}
+			.techzhid.show {
+				.mi-1 {
+					justify-content: flex-start;
+					height: $menuTechZidCatalogHeight;
+				}
+			}
+			.cat_filters.show {
+				.mi-1 {
+					justify-content: flex-start;
+					height: $menuFiltersCatalogHeight;
+				}
+			}
+			.shetki.show {
+				.mi-1 {
+					justify-content: flex-start;
+					height: $menuShetkiCatalogHeight;
+				}
+			}
+		  .avto-el.show {
+		  	padding-top: 5px;
+		  	.mi-1 {
+		  		height: $menuCatalogAvtoElHeight;
+		  	}
+		  }
+			.aksessuar.show {
+				.mi-1 {
+					justify-content: flex-start;
+					height: $menuAksessuarCatalogH_lg;
+						@include media-breakpoint-up(xl) {
+							height: $menuAksessuarCatalogH_xl;
+						}
+
+				}
+			}
+			.instrument.show {
+				.mi-1 {
+					justify-content: flex-start;
+					height: $menuInstrumentCatalogHeight_lg;
+						@include media-breakpoint-up(xl) {
+							height: $menuInstrumentCatalogHeight_xl;
+						}
+				}
+			}
+			.zapchasti.show {
+				@include dFlex(flex-start,flex-start,row,wrap);
+					@include media-breakpoint-up(lg) {
+
+					}
+					@include media-breakpoint-up(xl) {
+						flex-wrap: nowrap;
+						
+					}
+				
+				.mi-1 {
+					@include dFlex(space-between,flex-start,column,wrap);
+					flex: 0 0 auto;
+
+							@include media-breakpoint-up(lg) {
+									height: $menuZapchastiCatalogHeight_MI1_lg;
+									width: 100%;
+									//	padding-left: 30px;
+									//	width: 300px;
+							}
+							@include media-breakpoint-up(xl) {
+									height: $menuZapchastiCatalogHeight_MI1_xl;
+									width: 510px;
+									flex: 0 0 auto;
+								//	padding-left: $menuZapchastiPL;
+								//	width: $menuZapchastiGrayWidth;
+							}
+							
+							>div {margin-right: 20px;	}
+				}
+				.mi-2 {
+					@include dFlex(flex-start,flex-start,row,wrap);
+
+					@include media-breakpoint-up(lg) {
+					height: $menuZapchastiCatalogHeight_MI2_lg;
+					width: 100%;
+					//	padding-left: 30px;
+					//	padding-right: 15px;
+					}
+					@include media-breakpoint-up(xl) {
+						height: $menuZapchastiCatalogHeight_MI2_xl;
+						width: auto;
+						padding-left: 10px;
+					//	padding-right: $menuZapchastiPR;
+					}
+
+					>div {
+						@include dFlex(flex-start,flex-start,column,wrap);
+						flex: 1 0 auto;
+						height: calc( 100% - 40px );
+					}
+
+				}
+			}
+			.smazki.show {
+				.mi-1 {
+					height: $menuSmazkiCatalogHeight;
+					flex: 1 0 auto;
+				}
+				.mi-2 {
+					height: $menuSmazkiCatalogHeight;
+					flex: 0 0 auto;
+					padding-left: 0;
+					padding-right: 0;
+						.block-1{
+							margin-right: 0;
+							margin-left: 20px;
+						}
+				}
+			}
+			.svechi.show {
+				.mi-1 {
+					flex-direction: column;
+					justify-content: flex-start;
+				}
+			}
+
+}
+
+.d-lg {
+	display: none;
+	@include media-breakpoint-up(lg) { display: inline;}
+	@include media-breakpoint-up(xl) { display: none;}
+}
+
+.dropdown-submenu {
+ 	width: 100%;
+ 	 .dropdown-menu.show {
+	 		background-color: $sectBgrGray1;
+			//padding-left: 15px;
+    	padding-right: 15px;
+		}	 		
+		
+		> a{
+				@include dFlex(space-between,center,row,nowrap);
+				@include setFont ($textFFamily,normal,normal,13px,$fontColor);	
+				line-height: $mobMenuLH;
+				width: 100%;
+					@include media-breakpoint-up(lg) { line-height: 24px;	}
+
+					&:hover  {	font-weight: bold; 
+					}	
+					&:hover:after {
+							border-top: 2px solid $fontColor;
+							border-left: 2px solid $fontColor;
+						 	
+					 }	
+					&:after{
+							@extend %menu-arrow-next;
+						 	// 	display:block;
+						 	// 	content:" ";
+						 	// 	width:7px;
+						 	// 	height:7px;
+						 	// 	border: none;
+								// border-top: 1px solid $fontColor;
+								// border-left: 1px solid $fontColor;
+								// transform: rotate(135deg);
+						 	// 	margin-right:18px;
+						 	}
+		}
+}	
+
+.add2garazh {
+	display: block;
+			@include media-breakpoint-up(lg) { display: none;}
+		&.dropdown-submenu {
+	 	  .dropdown-menu.show {
+				height: calc( 100vh - #{$topHeight} - 39px - #{$bottomHeight} ); // 72px - высота панели Navbar 39px - высота кнопки "Добавить в гараж" 45px - высота нижней панети навигации
+				padding-left: 15px;
+			}
+			.yellow-btn{border-radius: 0;}
+			.dropdown-toggle {
+				&:after {margin-right: 0;}
+			}
+	
+	}
+}
+.nav-item.desktop {
+	display: none;
+	@include media-breakpoint-up(lg) { display: list-item;}
+
+}
+
+.menu-catalog {
+	.nav-link {
+		@include media-breakpoint-up(xs) { display: none;}
+		@include media-breakpoint-up(lg) { display: block;}
+
+	}
+}
+
+.desk {
+	display: none;
+		@include media-breakpoint-up(lg) { 			display: list-item;		}
+		.mcatalog-content {
+			.dropdown-menu.show { padding-top: 15px;	background-color: #fff;
+//				border: 1px solid red;
+//				box-shadow: 8px 0 8px rgba(0,0,0,.1);
+				box-shadow: inset 8px 0 8px rgba(0,0,0,.1);
+				}
+		}
+
+
+}
+.mob {
+	//			display: list-item;
+		@include media-breakpoint-up(lg) { 	display: none;}
+		.menu-content {
+			height: calc( 100vh - #{$topHeight} - 39px - #{$bottomHeight} ); // 72px - высота панели Navbar 39px - высота кнопки "Добавить в гараж" 45px - высота нижней панети навигации
+			overflow: hidden;
+			padding-right: 0;
+				.mcatalog-content {
+					width: calc( 100% + 20px )!important;
+					overflow-y: scroll;
+					overflow-x: hidden;
+					flex: 0 0 auto;
+					padding-right: 17px;
+				}
+		}
+
+	 .dropdown {width: 100%;background-color: $sectBgrGray1;}
+	 .dropdown-menu.show {
+	 		background-color: $sectBgrGray1;
+	 		.dropdown-item {
+	 			width: 100%;
+		 			&:hover {
+		 				background: $sectBgrGray2;
+	 				}
+	 		}
+	 	}
+	 .dropdown-toggle{
+		 	@include dFlex(space-between,center,row,nowrap);
+		 	font-size: 13px;
+		 	line-height: $mobMenuLH;
+			width: 100%;
+	 			&:active {
+	 				//background: $sectBgrGray2;
+	 					&:after{
+	 						@include menuArrow (7px, 2px, $fontColor, 135deg, 18px );
+	 					}
+	 			}	
+			 	&:after {	
+			 		@extend %menu-arrow-next;	
+			 	}
+	 }
+	 .mcatalog-content {
+			 	.show {
+	 					>.dropdown-toggle{
+								@include setFont ($headFFamily,normal,bold,16px,$fontColor);	
+								flex-direction: row-reverse;
+    						justify-content: flex-end;
+										&:after {	@extend %menu-arrow-prev;	}
+
+	 					}	
+
+			 	}
+	 }	
+}
+
+//.mob .mcatalog-content .show>a.dropdown-toggle:after{	@extend %menu-arrow-prev;	}
+
+
+
+// 	.dropdown-menu.show {
+
+// 	}
+// }
+// .navbar-collapse.collapse.show {
+// 	.menu-catalog {
+
+// 	}
+// }
+//!!!!!!!!!!!!!============== Для плагина ??? ===================
+// .dropdown-submenu{position:relative;}
+// .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+// .dropdown-submenu:hover>a:after{border-left-color:#555;}
+// .dropdown-submenu.pull-left{float:none;}
+// .dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}

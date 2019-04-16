@@ -1,0 +1,35 @@
+{
+  "name": "bootstrap-4",
+  "version": "1.0.0",
+  "description": "Start project with use Bootstrap 4",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-select": "^1.13.8",
+    "bootstrap-slider": "^10.6.1",
+    "gijgo": "^1.9.13",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.14.7",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean-css": "^4.0.0",
+    "del": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "gulp-rename": "^1.4.0"
+  }
+}

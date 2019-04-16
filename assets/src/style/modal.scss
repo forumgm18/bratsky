@@ -1,0 +1,177 @@
+//====================== Modals =========================================
+.modal.show{
+		@include media-breakpoint-up(md) {display: flex!important;}
+}
+.modal-dialog{
+	margin: 0;
+	margin-top: 61px;
+	height: calc( 100vh - 61px - 45px );
+		@include media-breakpoint-up(sm) {
+			margin: .5rem; 
+			height: auto;
+			//margin-top: inherit;
+		}
+		@include media-breakpoint-up(md) {margin: auto;}
+}
+
+.modal-title{padding: 0;}
+.modal-content {
+	padding: 13px 34px 30px 34px;
+	border-radius: 0;
+	border: none;
+	background-color: $sectBgrGray1;
+	height: 100%;
+		@include media-breakpoint-up(md) {
+			width: 433px;
+			height: auto;
+			border: 1px solid rgba(0,0,0,.2);
+			background-color: #fff;
+
+		}	
+}
+.modal-header {
+	@include dFlex(space-between,center,row,nowrap);
+	border: none;
+	padding: 0;
+	margin-bottom: 15px;
+		.close {
+			&:hover,	&:focus {	outline: 0;	border: none;	 }
+			span {font-weight: normal;}
+		}
+		h2 {
+			font-size: 16px;
+				@include media-breakpoint-up(md) { font-size: 24px;}
+
+		}
+}
+.modal-footer {
+	border: none;
+	padding: 0;
+	margin-top: 10px;
+		.red-btn {
+			width: 370px;
+			margin: 0 auto;
+		}
+}
+.modal-body {
+	padding: 0;
+		label {	display: block;	width: 100%; }
+		input, textarea {
+			max-width: 370px;
+			width: 100%;
+			margin-bottom: 9px;
+		}
+		textarea { height: 105px;	}
+		.fz152-block {
+			@include dFlex(space-between,center,row,wrap);
+			margin-bottom: 5px;
+			margin-top: 10px;
+				@include media-breakpoint-up(md) { flex-wrap: nowrap;}
+
+				.recapcha {width: 194px;margin-right: 10px;margin-bottom: 15px;}
+				.fz152 {
+					@include setFont ($textFFamily,normal,normal,12px,$fontColorLight);
+					line-height: 16px;
+					margin-bottom: 15px;
+					a {color:$blue;}
+					br { 
+ 						display: none;
+							@include media-breakpoint-up(md) { display: block;}
+
+					}
+				}
+		}
+		.red-btn {width: 100%;}
+		.rating {margin-top: 5px;margin-bottom: 13px;}
+		.rating div {margin-bottom: 3px;}
+		.product-name-review {
+			@include setFont ($textFFamily,normal,bold,14px,$fontColor);
+			margin-bottom: 19px;
+		}
+		.modal-head-description {
+			@include setFont ($textFFamily,normal,bold,14px,$fontColor);
+			margin-bottom: 18px;
+
+		}
+}
+.modal-backdrop.show {
+    opacity: 0;
+			@include media-breakpoint-up(md) { opacity: .5;}
+}    
+.search-ico-modal {
+	@extend %tpl_border-effects-clear;
+	display: block;
+	width: 17px;
+	height: 17px;
+	background: url(../img/search-ico-modal.svg) center no-repeat;
+
+}
+
+.modal.select-city {
+	.modal-content {
+			@include media-breakpoint-up(md) {
+				max-width: 520px;
+				width: 100%;
+			}
+
+	}
+	.modal-body {
+		height: 97%;
+				@include media-breakpoint-up(md) { height: auto;}
+
+	}
+	.search-ico-modal {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+	}		
+	input {
+		padding-right: 35px;
+		width: 100%;
+		max-width: none;
+		border: 1px solid $borderGray3;
+	}
+	.city-links {
+			@include dFlex(flex-start,flex-start,column,wrap);
+			align-content: space-between;
+			height: 90%;
+    	overflow: hidden;			
+				@include media-breakpoint-up(md) {
+					height: 260px;
+					min-height: none;
+	    	}
+			a {
+				line-height: 26px;
+				font-size: 16px;
+				&.bold {font-weight: bold;}
+			}	
+
+	}
+}
+
+.modal.market-review {
+	.modal-dialog {height: auto;}
+	textarea.h70 {height: 70px;}
+}
+.modal.service-record {
+		.modal-content {
+				padding: 13px 28px 26px 28px;
+				@include media-breakpoint-up(md) {	width: 567px;}
+				input, textarea {max-width: 100%;}
+
+		}
+		.horizontal {
+				@include dFlex(space-between,center,row,nowrap);
+				width: 100%;
+				//input {width: 40%;}
+				.placeinput {flex: 1 0 auto;}
+				.w-30 {
+					width: 0px;
+						@include media-breakpoint-up(md) {	width: 30px; }
+				}
+				.recapcha {width: 194px;}
+				.red-btn {width: 300px;}
+		}
+		.fz152 br {display: none;}
+
+}
