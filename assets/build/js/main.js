@@ -13005,6 +13005,25 @@ $(document).ready(function(){
       ]    
   });
 
+//=========== Слайдер картинок в карточке товара ========================
+$('.full-img-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.mini-img-slider'
+});
+$('.mini-img-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.full-img-slider',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  centerMode: true,
+  centerPadding: '0px',
+});
+
 //================== Плагин выбора даты ===================
 
 $('#date-service').datepicker({
@@ -13108,8 +13127,28 @@ $('.view-title-btn').on('click',function(e){
   $('.content-section').removeClass('list');
 });
 
+// $('div[id^="reply-form-"]').on('show.bs.collapse', function (e) {
+//$('a[data-toggle="collapse"]').on('show.bs.collapse', function (e) {
+$('a[href^="#reply-form-"]').on('click', function (e) {
+  var formId = $(this).attr('href');//.substring(1);
+  var sib = $(this).parent().siblings('.name');
+  var ssize=$(this).parent().siblings('.name').length;
+
+  if ($(this).parent().siblings('.name').length) {
+    $(formId).find('textarea').val($(this).parent().siblings('.name').text()+', ');
+  } else {
+    var s= $(this).parent().parent().siblings('.avatar-block').children('.name').text();
+    
+    $(formId).find('textarea').val(s+', ');
+
+  }
+
+//.avatar-block
 
 
+
+
+});
 
 
 // $(window).resize(function() {

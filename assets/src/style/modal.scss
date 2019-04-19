@@ -153,24 +153,36 @@
 	.modal-dialog {height: auto;}
 	textarea.h70 {height: 70px;}
 }
+.gj-icon {
+	color: $fontColor;
+	top:50%!important;
+	right: 10px!important;
+	transform: translateY(-12px);
+}
 .modal.service-record {
 		.modal-content {
 				padding: 13px 28px 26px 28px;
 				@include media-breakpoint-up(md) {	width: 567px;}
 				input, textarea {max-width: 100%;}
-
+				input{border: 1px solid $borderGray3!important;background-color: #fff!important;}
+				
 		}
 		.horizontal {
-				@include dFlex(space-between,center,row,nowrap);
+				@include dFlex(space-between,center,row,wrap);
 				width: 100%;
-				//input {width: 40%;}
-				.placeinput {flex: 1 0 auto;}
-				.w-30 {
-					width: 0px;
-						@include media-breakpoint-up(md) {	width: 30px; }
-				}
-				.recapcha {width: 194px;}
-				.red-btn {width: 300px;}
+					@include media-breakpoint-up(md) {	flex-wrap: nowrap;}
+					.placeinput {flex: 1 0 auto;}
+					.w-30 {
+						width: 0px;
+							@include media-breakpoint-up(md) {	width: 30px; }
+					}
+					.recapcha {
+						width: 194px;
+						margin-bottom: 10px;
+							@include media-breakpoint-up(md) {margin-bottom: 0;}
+
+					}
+					.red-btn {width: 300px;}
 		}
 		.fz152 br {display: none;}
 

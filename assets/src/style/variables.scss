@@ -1,4 +1,15 @@
 // Variables Bootstrap 4
+$grid-breakpoints: (
+  xs: 0,
+  x450: 450px,
+  x480: 480px,
+  x550: 550px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
 
 $red:    #E30613;
 $green:  #2ecc71;
@@ -9,15 +20,21 @@ $blackBtn: #333333;
 $borderGray: #BDBDBD;
 $borderGray2: #EDEDED;
 $borderGray3: #E0E0E0;
+$borderGray4: #d9d9d9;
+$borderGray5: #828282;
+$sectBgrBlack: #333;
 $sectBgrGray1: #F6F6F6;
 $sectBgrGray2: #EDEDED;
 $sectBgrGray3: #e0e0e0;
+$sectBgrGray4: #4F4F4F;
 $bradius: 3px;
+$bradius2: 2px;
 $headFFamily: 'Montserrat Alternates', sans-serif;
 $textFFamily: 'PT Sans', sans-serif;
 $labelFFamily: 'Roboto', 'PT Sans', sans-serif;
 $fontColor: #333333;
 $fontColor2: #373736;
+$fontColor3: #232323;
 $fontColorLight: #828282;
 $fontColorLight2: #BDBDBD;
 $fontColorLight3: #C4C4C4;
@@ -143,6 +160,8 @@ $bottomHeight:45px;
 @mixin boxShadow2 (){	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);}	
 @mixin boxShadow3 (){	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);}	
 @mixin boxShadow4 (){	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);}	
+@mixin boxShadow5 (){	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);}	
+
 @mixin boxShadowCatalogLeft (){	box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.1);}	
 @mixin footerCardBgr (){	background: rgba(51, 51, 51, 0.5);}
 @mixin footerCardBgr2 (){	background: rgba(130, 130, 130, 0.5);}
