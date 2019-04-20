@@ -13031,6 +13031,10 @@ $('#date-service').datepicker({
         format: 'dd mmm yyyy'
     });
 
+//================== Плагин Таймер обратного отсчета ===================
+$('.timer').countdown({until: 491408, format: 'yowdHMS'});
+// $('.timer').countdown('pause');
+
 $(".filter-block .card-body .add-scroll").overlayScrollbars({ resize: "none" });
 
 //$("#capacity").slider();
@@ -13041,7 +13045,12 @@ $("input.range").on("slide", function(slideEvt) {
   descr.children(".range-max").text(formatStr(slideEvt.value[1]));
 });
 
+// $('#collapse-reviews').on('shown.bs.collapse',function(e){
+//       // e.preventDefault(); 
+//       // e.stopPropagation(); 
 
+//   $('#collapse-1').collapse('toggle');
+// });
 
 
 $('.main-products a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
