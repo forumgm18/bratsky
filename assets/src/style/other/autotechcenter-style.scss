@@ -1,0 +1,110 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+
+/* *** */
+
+.main {
+	max-width: $siteWidth;
+	margin: 0 auto;
+}
+
+
+/* *** */
+
+.main__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/*	margin-bottom: 19px;*/
+	margin-bottom: 1.188em;
+}
+
+.title-h1 {
+	font-family: $headFFamily;
+	font-weight: bold;
+	font-size: 2.250em;
+	line-height: normal;
+	color: $fontColor;
+	margin: 0;
+}
+
+.link-back {
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: .875em;
+	color: $blue;
+	line-height: normal;
+}
+
+.img-banner {
+	max-width: 100%;
+	max-height: 390px;
+}
+
+.text__wp {
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: .875em;
+	line-height: normal;
+	color: $fontColor;
+}
+
+.text__p {
+	/*	margin-top: 20px;*/
+	margin-top: 1.429em;
+}
+
+.price {
+	font-family: $headFFamily;
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 18px;*/
+	font-size: 1.125em;
+	line-height: normal;
+	color: $fontColor;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 30px 0 60px 0;
+}
+
+.price__number {
+	font-style: normal;
+	font-weight: bold;
+	/*	font-size: 24px;*/
+	font-size: 1.333em;
+	line-height: normal;
+	color: inherit;
+	/*	margin-left: 16px;*/
+	margin-left: .667em;
+}
+
+.price__link {
+	display: block;
+	font-family: $textFFamily;
+	font-style: normal;
+	font-weight: bold;
+	/*	font-size: 14px;*/
+	font-size: .778em;
+	line-height: normal;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	background: $red;
+	border-radius: .143em;
+	/*	width: 231px;*/
+	width: 16.5em;
+	/*	height: 41px;*/
+	height: 2.929em;
+	/*	line-height: 41px;*/
+	line-height: 2.929em;
+	/*	margin-left: 33px;*/
+	margin-left: 2.357em;
+}
+@include mainPaddingTop991();
+@import "autotechcenter-media";

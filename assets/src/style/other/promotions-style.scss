@@ -1,0 +1,65 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+@import "style/pagination";
+
+@import "promotions-media";
+
+
+/* *** */
+
+/* *** */
+
+.main {
+	max-width: $siteWidth;
+	margin: 0 auto;
+}
+
+/* *** */
+
+.title-h1 {
+	//	font-family: $headFFamily;
+	//	font-weight: bold;
+	font-size: 2.250em;
+	//	line-height: normal;
+	//	color: $fontColor;
+	//	margin-top: 0;
+	//	margin-bottom: .778em;
+}
+
+
+.arrow-icon {
+	display: inline-block;
+	position: relative;
+	transform: rotate(135deg);
+	user-select: none;
+}
+
+/* *** */
+@include saleBloks();
+
+.sale__list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 33px;
+	margin-bottom: 40px;
+}
+
+@include mediaSale();
+@include saleBloksMedia370px();
+
+/* *** */
+
+/* *** */
+@include pagination(990px);
+
+.pagination-section {
+	margin-bottom: 50px;
+}
+
+/* *** */
+@include mediaMain();
+@include mainPaddingTop991();

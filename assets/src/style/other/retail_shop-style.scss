@@ -1,0 +1,255 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+
+@import "retail_shop-media";
+
+
+/* *** */
+
+
+
+/* *** */
+
+.main {
+	max-width: $siteWidth;
+	margin: 0 auto;
+}
+
+/* *** */
+
+.title {
+	font-family: $headFFamily;
+	font-weight: bold;
+	font-size: 2.250em;
+	line-height: normal;
+	color: $fontColor;
+}
+
+.title-h1 {
+	margin: 0;
+}
+
+/* *** */
+
+/* *** */
+.shop {
+	display: grid;
+	grid-template: auto auto auto / 470px auto;
+	grid-template-areas:
+		"shop__header shop__header"
+		"slider contact"
+		"slider map-wp";
+	grid-column-gap: 30px;
+}
+
+.shop__header {
+	grid-area: shop__header;
+}
+
+.slider {
+	grid-area: slider;
+}
+
+.contact {
+	grid-area: contact;
+}
+
+.map-wp {
+	grid-area: map-wp;
+	align-self: flex-end;
+}
+
+.shop__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0 0 30px 0;
+	margin: 0;
+
+	.title {
+		max-width: 800px;
+		margin: 0;
+		padding-bottom: 25px;
+	}
+}
+
+.shop__link {
+	@include linkLikeBtn(44px, 224px, $red, #fff, 14px);
+	align-self: flex-end;
+}
+
+.shop__arrow {
+	display: inline-block;
+	border-left: 1px solid #fff;
+	border-top: 1px solid #fff;
+	height: 9px;
+	width: 9px;
+	transform: rotate(-45deg);
+	margin-right: 4px;
+}
+
+/* *** */
+
+
+/* *** */
+
+.slider {
+	width: 470px;
+	max-width: 470px;
+}
+
+.slider-for {
+	margin: 0 0 20px 0;
+}
+
+
+.slider-for__item {
+	height: 353px;
+	width: 470px;
+
+	img {
+		max-height: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
+
+
+// Если слайд-превью не нажат, то он затемняется
+.slider-nav {
+	margin: 0 -12px;
+
+	.slick-active {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(000, 000, 000, 0.5);
+		}
+	}
+
+	.slick-current::before {
+		background: none;
+	}
+}
+
+.slider-nav__item {
+	padding: 0;
+	margin: 0 12px;
+	height: 140px;
+	width: 140px;
+	max-width: 140px;
+
+	img {
+		padding: 0;
+		margin: 0 auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+/* *** */
+
+.contact {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	line-height: normal;
+	color: $fontColor;
+
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		&:last-of-type {
+			margin-bottom: 5px;
+		}
+	}
+
+	span {
+		display: block;
+	}
+}
+
+.contact__link {
+	color: inherit;
+	display: block;
+}
+
+.contact__cat {
+	color: $fontColorLight;
+	//	margin-top: 1em;
+	font-size: 14px;
+	line-height: 18px;
+	color: $fontColorLight;
+}
+
+.callback {
+	@include linkLikeBtnBorder(44px, 224px, $red, $red, 14px);
+}
+
+.map {
+	background-color: $mapBg;
+	width: 100%;
+	height: 217px;
+	display: block;
+	border: none;
+}
+
+/* *** */
+@include mediaShop();
+/* *** */
+
+.sale {
+	margin: 40px 0 50px 0;
+}
+
+.sale__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0 30px 0;
+
+	.title {
+		margin: 0;
+	}
+}
+
+.sale__link {
+	font-size: 14px;
+	line-height: 18px;
+	color: $blue;
+	align-self: flex-end;
+}
+
+.sale__list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 33px;
+}
+
+/* *** */
+@include saleBloks();
+@include mediaSale();
+@include saleBloksMedia370px();
+
+
+/* *** */
+@include mediaMain();
+@include mainPaddingTop991();

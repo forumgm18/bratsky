@@ -1,0 +1,244 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+/* *** */
+
+main {
+	max-width: $siteWidth;
+	margin: 0 auto;
+	padding-bottom: 93px;
+}
+
+/* *** */
+
+.title {
+	font-family: $headFFamily;
+	font-weight: bold;
+	/*	font-size: 36px;*/
+	font-size: 2.25em;
+	line-height: normal;
+	color: $fontColor;
+}
+
+.title-h1 {
+	font-family: $headFFamily;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	color: $fontColor;
+	margin: 0 0 29px 0;
+}
+
+/* *** */
+.search {
+	display: flex;
+	align-items: center;
+	margin-top: 33px;
+}
+
+.search-text {
+	font-family: $textFFamily2;
+	//	font-size: 14px;
+	font-size: .875em;
+	color: $fontColor;
+}
+
+.search__text {
+	font-family: $textFFamily2;
+	//	font-size: 18px;
+	font-size: 1.125em;
+	color: $fontColor;
+	margin: 0 30px 0 0;
+}
+
+.search__wp {
+	position: relative;
+	width: 100%;
+	max-width: 540px;
+	height: 43px;
+	margin: 0;
+}
+
+.search__input {
+	@include input(100%);
+	width: 100%;
+	//	padding-left: 11px;
+	padding-left: .786em;
+
+	&::placeholder {
+		color: $fontColorLight;
+	}
+}
+
+.search__btn {
+	position: absolute;
+	right: 19px;
+	top: 0;
+	height: 100%;
+	width: 15px;
+	background: none;
+	border: none;
+	background-image: url(../../img/search_grey_icon.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 15px;
+}
+
+/* *** */
+.feedback {
+	padding-top: 28px;
+	margin-top: 38px;
+	border-top: 1px solid $borderGray;
+}
+
+.feedback__header {
+	b {
+		font-style: normal;
+		font-weight: normal;
+		//		font-size: 18px;
+		font-size: 1.125em;
+		//		line-height: 23px;
+		line-height: 1.278em;
+		color: #000000;
+	}
+}
+
+.feedback__title {
+	// font-size: 36px;
+	margin-bottom: 48px;
+	margin-top: 12px;
+}
+
+.form {
+	display: grid;
+	grid-template: 1fr 1fr 1fr auto / 270px 370px;
+	grid-column-gap: 30px;
+	grid-row-gap: 9px;
+}
+
+.form__input {
+	height: 40px;
+	width: 100%;
+	max-width: 270px;
+}
+
+.form__input,
+.form__textarea {
+	font-size: 0.875em;
+	/*	padding-left: 10px;*/
+	padding-left: 0.714em;
+	background: $sectBgrGray1;
+	border: 1px solid $borderGray;
+	/*	border-radius: 2px;*/
+	border-radius: .143em;
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: 0.875em;
+	line-height: normal;
+	color: $fontColorLight;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+	color: $fontColorLight;
+}
+
+.form__textarea {
+	width: 100%;
+	/*	padding-top: 10px;*/
+	padding-top: 0.714em;
+	max-width: 370px;
+	resize: none;
+	grid-area: 1/2/3/3;
+}
+
+.form__text {
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 12px;*/
+	font-size: 0.75em;
+	line-height: normal;
+	color: $fontColorLight;
+	grid-area: 3/2/4/3;
+	margin: 0;
+}
+
+.form__link {
+	color: $blue;
+}
+
+/* *** */
+
+.form__wp {
+	position: relative;
+	overflow: hidden;
+	height: 40px;
+	height: 2.857em;
+	grid-column: 1/2;
+	max-height: 40px;
+}
+
+.form__placeholder {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	z-index: 100;
+	display: inline;
+	cursor: text;
+	user-select: none;
+	line-height: 40px;
+	margin: 0;
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: 0.875em;
+	color: $fontColorLight;
+}
+
+.form__wp .form__input:valid + .form__placeholder {
+	display: none;
+}
+
+.form__placeholder span {
+	padding-left: 0.5em;
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: 1em;
+	line-height: normal;
+	color: $red;
+}
+
+.g-recaptcha {
+	height: 49px;
+	width: 201px;
+	transform: scale(0.66);
+	transform-origin: 0 0;
+}
+
+.form__btn {
+	background: $red;
+	border-radius: 0.143em;
+	//	height: 44px;
+	height: 3.143em;
+	//	line-height: 44px;
+	line-height: 3.143em;
+	max-width: 301px;
+	width: 100%;
+	border: none;
+	font-size: 0.875em;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	grid-area: 4/2/5/3;
+	justify-self: flex-end;
+	align-self: flex-end;
+}
+
+
+/* *** */
+@include mainPaddingTop991();
+@import "not_found-media";

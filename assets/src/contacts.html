@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('./template/head.html')
+	<link rel="stylesheet" href="css/other/contacts-style.min.css">
+</head>
+
+<body>
+	@@include('./template/header.html')
+	<main class="main">
+		<div class="breadcrumb">
+			<div class="container">
+				<div class="row">
+					<nav class="col">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Главная</a></li>
+							<li class="breadcrumb-item active">Контакты</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<h1 class="title-h1 title">Контакты</h1>
+		<div class="contact">
+			<b class="contact__address">Офис "Братский", г. Ижевск, ул. Карла Либкнехта, 6</b>
+			<p>
+				<span class="contact__cat">Время работы:</span>
+				<span>пн-вс с 10:00 до 21:00</span>
+			</p>
+			<p>
+				<span class="contact__cat">Телфоны:</span>
+				<a href="tel: +74951234567">+7-965-842-20-03</a>
+				<a href="tel: +73412509898">8 (341) 250-98-98</a>
+			</p>
+			<p>
+				<span class="contact__cat">E-mail:</span>
+				<a href="mailto: internetshop@bratskiy.ru">internetshop@bratskiy.ru</a>
+			</p>
+			<p>
+				<ul class="social">
+					<li><a href="#"><img src="img/telegram.png" alt="telegram"></a></li>
+					<li><a href="#"><img src="img/viber.png" alt="viber"></a></li>
+					<li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+					<li><a href="#"><img src="img/whatsapp.png" alt="whatsapp"></a></li>
+					<li><a href="#"><img src="img/youtube.png" alt="youtube"></a></li>
+					<li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+					<li><a href="#"><img src="img/vk.png" alt="vk"></a></li>
+				</ul>
+				<p class="download-wp">
+					<a href="#" class="download">Скачать реквизиты компании</a>
+				</p>
+		</div>
+		<section class="feedback">
+			<h2 class="feedback__title title">Напишите нам</h2>
+			<form action="/" method="post" class="form" id="AUTOPARTS">
+				<label class="form__wp">
+					<input type="text" name="name" id="FEEDBACK-NAME" class="form__input" required>
+					<div class="form__placeholder">Ваше&nbsp;имя<span>*</span></div>
+				</label>
+				<label class="form__wp">
+					<input type="text" name="email" id="FEEDBACK-EMAIL" class="form__input" required>
+					<div class="form__placeholder">Ваш&nbsp;e-mail<span>*</span></div>
+				</label>
+				<input type="tel" name="tel" id="FEEDBACK-TEL" class="form__input" placeholder="+7 ( ___ ) ___-__-__" pattern="^[0-9-+\s()]*$">
+				<textarea name="message" id="FEEDBACK-MESSAGE" placeholder="Текст сообщения" class="form__textarea"></textarea>
+				<div class="g-recaptcha" data-sitekey="6LeTyJsUAAAAAM0ruN1_MGy4WIfdmzaLDq1KUOaL"></div>
+				<input type="submit" value="Отправить сообщение" class="form__btn">
+				<p class="form__text">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <a href="#" class="form__link">Узнать больше</a></p>
+			</form>
+		</section>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.5054147096976!2d53.20760041570537!3d56.83727408085728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e1394971386a17%3A0x43c96dd8e9eba6fd!2z0JHRgNCw0YLRgdC60LjQuQ!5e0!3m2!1sru!2sru!4v1556100333346!5m2!1sru!2sru" frameborder="0" allowfullscreen class="map"></iframe>
+	</main>
+	@@include('./template/footer-block.html')
+	@@include('./template/footer-scripts.html')
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+
+</html>

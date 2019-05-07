@@ -1,0 +1,78 @@
+@media screen and (max-width: 1220px) {
+  .akb, .feedback__content {
+    padding-left: $mainPaddingLeftRight;
+    padding-right: $mainPaddingLeftRight;
+  }
+}
+
+@media screen and (min-width: 671px) {
+  .img-wp {
+    display: block;
+    height: 304px;
+    background-image: url(../../img/banner_akb.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 26px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .table-img-wp {
+    display: block;
+  }
+  .table {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .title-h1 {
+    font-size: 1.5em !important;
+  }
+  .table-title {
+    font-size: 1.2em;
+  }
+  .feedback__title {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .form {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 2fr auto auto auto/ auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .form__input {
+    max-width: 100%;
+  }
+  .form__textarea {
+    grid-column: 1/2;
+    grid-row: auto;
+  }
+  .g-recaptcha {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+  .form__text {
+    grid-column: 1/2;
+    grid-row: auto;
+    margin-top: .5em;
+  }
+  .form__btn {
+    grid-column: 1/2;
+    grid-row: auto;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .g-recaptcha {
+    transform: scale(0.6);
+  }
+}

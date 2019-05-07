@@ -1,0 +1,55 @@
+@media screen and (max-width: 1220px) {
+	.main {
+		margin-left: $mainPaddingLeftRight;
+		margin-right: $mainPaddingLeftRight;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.main__header {
+		display: block;
+		margin-bottom: 1em;
+	}
+
+	.title-h1 {
+		margin-bottom: .528em;
+	}
+
+	.link-back {
+		text-align: right;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.price {
+		display: block;
+		text-align: right;
+	}
+
+	.price__link {
+		margin: 2em 0 2em auto;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.title-h1 {
+		font-size: 1.5em !important;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.price {
+		text-align: center;
+		font-size: 1em;
+	}
+
+	.price__number {
+		display: block;
+	}
+
+	.price__link {
+		margin: 2em 0 0 0;
+		width: 100%;
+	}
+}

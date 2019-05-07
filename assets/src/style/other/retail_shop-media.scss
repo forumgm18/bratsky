@@ -1,0 +1,143 @@
+@mixin mediaMain() {
+	@media screen and (max-width: 1220px) {
+		.main {
+			margin-left: $mainPaddingLeftRight;
+			margin-right: $mainPaddingLeftRight;
+		}
+	}
+
+	@media screen and (max-width:540px) {
+		.title {
+			font-size: 1.5em !important;
+		}
+	}
+}
+
+/* *** */
+@mixin mediaShop() {
+	@media screen and (max-width: 1080px) and (min-width: 900px) {
+		.shop {
+			grid-template: auto auto auto auto / 470px auto;
+			grid-template-areas:
+				"shop__header shop__header"
+				"slider contact"
+				"slider contact"
+				"map-wp map-wp";
+			grid-row-gap: 1.5em;
+		}
+	}
+
+	@media screen and (max-width: 1080px) {
+		.shop {
+			grid-template: auto auto auto auto / 470px auto;
+			grid-template-areas:
+				"shop__header shop__header"
+				"slider contact"
+				"slider contact"
+				"map-wp map-wp";
+			grid-column-gap: 30px;
+			grid-row-gap: 1.5em;
+		}
+
+		.shop__header {
+			flex-direction: column;
+			align-items: flex-start;
+
+			.title {
+				padding: 0;
+			}
+		}
+
+		.shop__link {
+			margin-top: 1em;
+			align-self: flex-end;
+		}
+	}
+
+	@media screen and (max-width: 900px) {
+		.shop {
+			grid-template: auto auto auto auto/ auto;
+			grid-template-areas:
+				"shop__header"
+				"slider"
+				"contact"
+				"map-wp";
+			grid-row-gap: 2em;
+		}
+
+		.slider {
+			justify-self: center;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.slider {
+			width: 300px;
+
+			max-width: 100%;
+		}
+
+		.slider-for__item {
+			width: 100%;
+			height: auto;
+			max-height: 250px;
+			max-width: 100%;
+		}
+
+		.slider-nav {
+			height: 90px;
+			margin: 0 -5px;
+		}
+
+		.slider-nav__item {
+			margin: 0 5px;
+			height: 100%;
+			width: 80px;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		.shop__link {
+			max-width: 100%;
+			font-size: 13px;
+		}
+
+		.slider {
+			width: 73vw;
+			max-width: 100%;
+		}
+	}
+}
+
+/* *** */
+@mixin mediaSale() {
+	@media screen and (max-width: 1220px) and (min-width: 990px) {
+		.sale__list {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.sale__header {
+			flex-direction: column;
+
+			.title {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 990px) and (min-width: 690px) {
+		.sale__list {
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: center;
+		}
+	}
+
+	@media screen and (max-width: 690px) {
+		.sale__list {
+			grid-template-columns: repeat(1, 1fr);
+			justify-items: center;
+		}
+	}
+}

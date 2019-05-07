@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('./template/head.html')
+	<link rel="stylesheet" href="css/other/personal_account-style.min.css">
+</head>
+
+<body>
+	@@include('./template/header.html')
+	<main class="main">
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-DATA" checked>
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-FAVORITES">
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-ORDERS">
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-ORDER-HISTORY">
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-GARAGE">
+		<div class="breadcrumb">
+			<div class="container">
+				<div class="row">
+					<nav class="col">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Главная</a></li>
+							<li class="breadcrumb-item"><a href="#">Личный кабинет</a></li>
+							<li class="breadcrumb-item active" id="BREAD-1">Мои данные</li>
+							<li class="breadcrumb-item active" id="BREAD-2">Избранное</li>
+							<li class="breadcrumb-item active" id="BREAD-3">Мои заказы</li>
+							<li class="breadcrumb-item active" id="BREAD-4">История заказов</li>
+							<li class="breadcrumb-item active" id="BREAD-5">Мой гараж</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<header class="main__header">
+			<h1 class="title title-h1">Мои данные</h1>
+			<h1 class="title title-h1">Избранное</h1>
+			<h1 class="title title-h1">Мои заказы</h1>
+			<h1 class="title title-h1">История заказов</h1>
+			<h1 class="title title-h1">Мой гараж</h1>
+		</header>
+		<nav class="personal-menu">
+			<ol class="personal-menu__list">
+				<li class="personal-menu__item"><label for="PERSONAL-DATA">Мои данные</label></li>
+				<li class="personal-menu__item"><label for="PERSONAL-FAVORITES">Избранное</label></li>
+				<li class="personal-menu__item"><label for="PERSONAL-ORDERS" class="personal-menu_border">Мои заказы (<span>1</span>)</label></li>
+				<li class="personal-menu__item"><label for="PERSONAL-ORDER-HISTORY">История заказов</label></li>
+				<li class="personal-menu__item"><label for="PERSONAL-GARAGE">Мой гараж</label></li>
+			</ol>
+		</nav>
+	</main>
+	@@include('./template/footer-block.html')
+	@@include('./template/footer-scripts.html')
+</body>
+
+</html>

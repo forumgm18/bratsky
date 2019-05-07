@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('./template/head.html')
+	<link rel="stylesheet" href="css/other/not_found-style.min.css">
+</head>
+
+<body>
+	@@include('./template/header.html')
+	<main class="main">
+		<div class="breadcrumb">
+			<div class="container">
+				<div class="row">
+					<nav class="col">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Главная</a></li>
+							<li class="breadcrumb-item active">Результаты поиска</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<h1 class="title title-h1">По вашему запросу ничего не найдено</h1>
+		<div class="search-wp">
+			<p class="search-text">К сожалению по вашему запросу ничего не найдено, попробуйте скорректировать ваш запрос.</p>
+			<form action="/" method="post" class="search">
+				<p class="search__text">Новый поиск</p>
+				<p class="search__wp">
+					<input type="search" name="search" placeholder="Введите поисковый запрос" class="search__input">
+					<input type="submit" value="" class="search__btn">
+				</p>
+			</form>
+		</div>
+		<section class="feedback">
+			<header class="feedback__header">
+				<b>Нужна помощь?</b>
+				<h2 class="feedback__title title">Напишите нам</h2>
+			</header>
+			<form action="/" method="post" class="form" id="AUTOPARTS">
+				<label class="form__wp">
+					<input type="text" name="name" id="FEEDBACK-NAME" class="form__input" required>
+					<div class="form__placeholder">Ваше&nbsp;имя<span>*</span></div>
+				</label>
+				<label class="form__wp">
+					<input type="text" name="email" id="FEEDBACK-EMAIL" class="form__input" required>
+					<div class="form__placeholder">Ваш&nbsp;e-mail<span>*</span></div>
+				</label>
+				<input type="tel" name="tel" id="FEEDBACK-TEL" class="form__input" placeholder="+7 ( ___ ) ___-__-__" pattern="^[0-9-+\s()]*$">
+				<textarea name="message" id="FEEDBACK-MESSAGE" placeholder="Текст сообщения" class="form__textarea"></textarea>
+				<div class="g-recaptcha" data-sitekey="6LeTyJsUAAAAAM0ruN1_MGy4WIfdmzaLDq1KUOaL"></div>
+				<input type="submit" value="Отправить сообщение" class="form__btn">
+				<p class="form__text">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <a href="#" class="form__link">Узнать больше</a></p>
+			</form>
+		</section>
+	</main>
+	@@include('./template/footer-block.html')
+	@@include('./template/footer-scripts.html')
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+
+</html>

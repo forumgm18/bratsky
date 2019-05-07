@@ -1,0 +1,322 @@
+<header>
+	<section class="top-panel">
+		<div class="container">
+			<div class="row">
+				<div class="col top-panel-content">
+					<!-- <button class="link-btn select-city" data-toggle="modal" data-target="#select-city"><span>Ижевск</span></button> -->
+					<button class="link-btn select-city" data-toggle="modal" data-target="#service-record"><span>Ижевск</span></button>
+					<div class="top-links">
+						<a href="#">Для клиента</a>
+						<a href="#">Розничная сеть</a>
+						<a href="#">Ремонт аккумуляторов</a>
+						<a href="#">Автосервис</a>
+						<a href="#">Оптовым клиентам</a>
+					</div>
+					<a href="tel:+79658422003" class="top-phone"><span>+7 (965) 842 20 03</span></a>
+					<button class="black-btn login" data-toggle="modal" data-target="#product-review"><span>Вход</span></button>
+					<!-- <button class="black-btn login" data-toggle="modal" data-target="#login"><span>Вход</span></button> -->
+					<div class="gray-icon heart"><span>5</span></div>
+					<div class="gray-icon statistica"><span>5</span></div>
+					<div class="gray-icon basket"><span>5</span></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="main-navigation">
+		<nav class="navbar navbar-default navbar-static-top navbar-expand-lg ">
+			<div class="container px-3">
+				<div class="row flex-grow-1">
+					<div class="col main-search-form-container">
+						<button class="navbar-toggler nav_mobile_button" type="button" data-toggle="collapse" data-target="#navMenuContent"><span class="nav_mobile_line"></span></button>
+						<a class="navbar-brand logo " href="#"><img src="img/logo.png" alt=""></a>
+						<form class="form-inline main-search-form hide_item animated">
+							<div class="input-group">
+								<div class="nav-item dropdown d-none d-lg-flex">
+									<a class="nav-link dropdown-toggle yellow-btn addcar" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Добавить авто в гараж</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Nissan Almera</a>
+										<a class="dropdown-item" href="#">Skoda Octavia</a>
+										<a class="dropdown-item" href="#">+ Добавить авто в гараж</a>
+									</div>
+								</div>
+								<input type="text" class="form-control" placeholder="Поиск">
+								<div class="input-group-append">
+									<button class="yellow-btn" type="button" id="button-addon2"></button>
+								</div>
+							</div>
+						</form>
+						<button class="top-search-btn nav_mobile_button-2" type="button"><span class="nav_mobile_line-2"></span></button>
+						<div class="top-gray-icons-zagl"></div>
+					</div>
+				</div>
+			</div>
+			<article class="main-menu">
+				<div class="container">
+					<div class="row">
+						<div class="collapse navbar-collapse col  " id="navMenuContent">
+							<ul class="navbar-nav">
+								<div class="dropdown dropdown-submenu add2garazh ">
+									<a href="#" class="dropdown-toggle yellow-btn addcar" data-toggle="dropdown">Добавить авто в гараж</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Nissan Almera</a>
+										<a class="dropdown-item" href="#">Skoda Octavia</a>
+										<a class="dropdown-item blue" href="#">+ Добавить авто в гараж</a>
+									</div>
+								</div>
+								<li class="nav-item dropdown menu-catalog desk">
+									<a href="#" class="nav-link dropright dropdown-toggle" id="Catalog" data-toggle="dropdown">Каталог</a>
+									<div class="dropdown-menu submenu" data-toggleID='Catalog'>
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content mcatalog">
+													<div class="mcatalog-content">
+														<h4>Каталог</h4>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аккумуляторы</a>
+															<div class="dropdown-menu akkum">
+																@@include('./template/desktop/mdm-akkum-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автохимия</a>
+															<div class="dropdown-menu avtohim">
+																@@include('./template/desktop/mdm-avtohim-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автоэлектроника</a>
+															<div class="dropdown-menu avtohim avto-el">
+																@@include('./template/desktop/mdm-avtoelectron-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аксессуары</a>
+															<div class="dropdown-menu avtohim aksessuar">
+																@@include('./template/desktop/mdm-aksessuar-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Запчасти</a>
+															<div class="dropdown-menu zapchasti">
+																@@include('./template/desktop/mdm-zapchasti-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Инструмент</a>
+															<div class="dropdown-menu avtohim instrument">
+																@@include('./template/desktop/mdm-instument-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Масла и смазки</a>
+															<div class="dropdown-menu akkum smazki">
+																@@include('./template/desktop/mdm-smazki-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Свечи зажигания</a>
+															<div class="dropdown-menu zapchasti svechi">
+																@@include('./template/desktop/mdm-svechi-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Технические жидкости</a>
+															<div class="dropdown-menu avtohim techzhid">
+																@@include('./template/desktop/mdm-techzhid-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Фильтры</a>
+															<div class="dropdown-menu avtohim cat_filters">
+																@@include('./template/desktop/mdm-cat_filters-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Щетки стеклоочистителя</a>
+															<div class="dropdown-menu avtohim shetki">
+																@@include('./template/desktop/mdm-shetki-catalog.html')
+															</div>
+														</div>
+														<h4>Разделы</h4>
+														<a class="dropdown-item" href="#">Акции</a>
+														<a class="dropdown-item" href="#">Видео</a>
+														<a class="dropdown-item" href="#">Запись на ремонт</a>
+														<a class="dropdown-item" href="#">Запрос по VIN</a>
+														<a class="dropdown-item" href="#">Новости Статьи</a>
+														<a class="dropdown-item" href="#">Товары недели</a>
+														<a class="dropdown-item" href="#">АКБ б/у</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown menu-catalog mob">
+									<a href="#" class="nav-link dropright dropdown-toggle d-none" id="catalog-mobile" data-toggle="dropdown">Каталог</a>
+									<div class="dropdown-menu submenu" data-toggleID='catalog-mobile'>
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content mcatalog">
+													<div class="mcatalog-content">
+														<h4>Каталог</h4>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аккумуляторы</a>
+															<div class="dropdown-menu akkum">
+																@@include('./template/mobile/mmm-akkum-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автохимия</a>
+															<div class="dropdown-menu avtohim">
+																@@include('./template/mobile/mmm-avtohim-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Автоэлектроника</a>
+															<div class="dropdown-menu avtohim avto-el">
+																@@include('./template/mobile/mmm-avtoelectron-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Аксессуары</a>
+															<div class="dropdown-menu avtohim aksessuar">
+																@@include('./template/mobile/mmm-aksessuar-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Запчасти</a>
+															<div class="dropdown-menu zapchasti">
+																@@include('./template/mobile/mmm-zapchasti-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Инструмент</a>
+															<div class="dropdown-menu avtohim instrument">
+																@@include('./template/mobile/mmm-instument-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Масла и смазки</a>
+															<div class="dropdown-menu akkum smazki">
+																@@include('./template/mobile/mmm-smazki-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Свечи зажигания</a>
+															<div class="dropdown-menu zapchasti">
+																@@include('./template/mobile/mmm-svechi-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Технические жидкости</a>
+															<div class="dropdown-menu avtohim techzhid">
+																@@include('./template/mobile/mmm-techzhid-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Фильтры</a>
+															<div class="dropdown-menu avtohim cat_filters">
+																@@include('./template/mobile/mmm-cat_filters-catalog.html')
+															</div>
+														</div>
+														<div class="dropdown dropdown-submenu">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown">Щетки стеклоочистителя</a>
+															<div class="dropdown-menu avtohim shetki">
+																@@include('./template/mobile/mmm-shetki-catalog.html')
+															</div>
+														</div>
+														<h4>Разделы</h4>
+														<a class="dropdown-item" href="#">Акции</a>
+														<a class="dropdown-item" href="#">Видео</a>
+														<a class="dropdown-item" href="#">Запись на ремонт</a>
+														<a class="dropdown-item" href="#">Запрос по VIN</a>
+														<a class="dropdown-item" href="#">Новости Статьи</a>
+														<a class="dropdown-item" href="#">Товары недели</a>
+														<a class="dropdown-item" href="#">АКБ б/у</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="Zapchasti" data-toggle="dropdown">Запчасти</a>
+									<div class="dropdown-menu" data-toggleID="Zapchasti">
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content zapchasti">
+													@@include('./template/desktop/mdm-zapchasti.html')
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="Akkum" data-toggle="dropdown">Аккумуляторы</a>
+									<div class="dropdown-menu" data-toggleID="Akkum">
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content akkum">
+													@@include('./template/desktop/mdm-akkum.html')
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="Smazki" data-toggle="dropdown">Масла и смазки</a>
+									<div class="dropdown-menu" data-toggleID="Smazki">
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content smazki">
+													@@include('./template/desktop/mdm-smazki.html')
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="Avtohim" data-toggle="dropdown">Автохимия</a>
+									<div class="dropdown-menu" data-toggleID="Avtohim">
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content avtohim">
+													@@include('./template/desktop/mdm-avtohim.html')
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="Aksessuar" data-toggle="dropdown">Аксессуары</a>
+									<div class="dropdown-menu" data-toggleID="Aksessuar">
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content aksessuar">
+													@@include('./template/desktop/mdm-aksessuar.html')
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="Instrument" data-toggle="dropdown">Инструменты</a>
+									<div class="dropdown-menu" data-toggleID="Instrument">
+										<div class="container">
+											<div class="row">
+												<div class="col menu-content instrument">
+													@@include('./template/desktop/mdm-instument.html')
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<button class="red-btn vin d-none d-lg-flex" data-toggle="modal" data-target="#ask-vin">Запрос по VIN</button>
+						</div>
+					</div>
+				</div>
+			</article>
+		</nav>
+	</section>
+</header>

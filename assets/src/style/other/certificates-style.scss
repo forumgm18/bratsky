@@ -1,0 +1,129 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+@import "style/pagination";
+
+/* *** */
+.arrow-icon {
+	display: inline-block;
+	position: relative;
+	transform: rotate(135deg);
+	user-select: none;
+}
+
+/* *** */
+
+.main {
+	max-width: $siteWidth;
+	margin: 0 auto;
+	display: grid;
+	grid-template: auto auto auto / auto auto;
+}
+
+.breadcrumb {
+	grid-area: 1/1/2/3;
+}
+
+
+/* *** */
+
+.title-h1 {
+	font-family: $headFFamily;
+	font-weight: bold;
+	font-size: 2.250em;
+	line-height: normal;
+	color: $fontColor;
+	margin-top: 0;
+	margin-bottom: .778em;
+	//	grid-area: 2/1/3/3;
+	grid-column: 1/3;
+}
+
+.client-menu {
+	font-weight: bold;
+	font-size: .875em;
+	line-height: normal;
+	color: $fontColor;
+	width: 300px;
+	grid-area: 3/1/5/2;
+
+	.active {
+		color: $fontColorLight;
+	}
+}
+
+.client-menu__list {
+	margin: 0;
+}
+
+.client-menu__item {
+	margin-bottom: 2em;
+}
+
+.client-menu__link {
+	color: inherit;
+}
+
+.text__wp {
+	font-style: normal;
+	font-weight: normal;
+	font-size: .875em;
+	line-height: normal;
+	color: $fontColor;
+	grid-column: 2/3;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.text__p {
+	margin-bottom: 1.846em;
+	margin-top: 0;
+}
+
+.certificates-section {
+	grid-column: 2/3;
+	text-align: center;
+	margin-bottom: 3.125em;
+}
+
+.certificates__item {
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 2.688em;
+	width: 192px;
+	margin-left: .6em;
+	margin-right: .6em;
+	vertical-align: top;
+}
+
+.certificates__img {
+	display: block;
+	margin: 0 auto;
+	width: 192px;
+	height: 277px;
+}
+
+.certificates__title {
+	font-family: $headFFamily;
+	font-style: normal;
+	font-weight: bold;
+	font-size: .875em;
+	line-height: normal;
+	text-align: center;
+	text-transform: capitalize;
+	color: $fontColor;
+	margin-top: 1.071em;
+	display: block;
+}
+
+@media screen and (min-width: 1220px) {
+	.pagination {
+		margin-right: 70px !important;
+	}
+}
+
+@include pagination(1220px);
+@include mainPaddingTop991();
+@import "certificates-media";

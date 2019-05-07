@@ -1,0 +1,305 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+
+/* *** */
+
+.wp {
+	max-width: $siteWidth;
+	margin: 0 auto;
+	padding-bottom: 16px;
+}
+
+/* *** */
+
+.title {
+	font-family: $headFFamily;
+	font-weight: bold;
+	/*	font-size: 36px;*/
+	font-size: 2.25em;
+	line-height: normal;
+	color: $fontColor;
+}
+
+.title-h1 {
+	margin: 0;
+	padding: 0;
+	font-family: $textFFamily2;
+}
+
+/* *** */
+.img-wp {
+	margin: 18px auto 42px auto;
+	background: $sectBgrGray1;
+	width: 100%;
+	max-width: 558px;
+	max-height: 315px;
+}
+
+img {
+	mix-blend-mode: multiply;
+	margin: 0 auto;
+	display: block;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.text {
+	font-style: normal;
+	font-weight: normal;
+	//	font-size: 13px;
+	font-size: .813em;
+	//	line-height: 17px;
+	line-height: 1.308em;
+	color: #000000;
+	//	margin-bottom: 16px;
+	margin-bottom: 1.231em;
+}
+
+/* *** */
+.feedback {
+	background: #FFFFFF;
+	padding: 31px 0 68px 0;
+}
+
+.feedback__header,
+.form {
+	max-width: $siteWidth;
+	margin: 0 auto;
+}
+
+
+.feedback__title {
+	//	 font-size: 36px;
+	margin: 0 0 31px 0;
+	text-align: center;
+}
+
+.form {
+	display: grid;
+	grid-template: auto auto auto auto / 370px 391px;
+	grid-column-gap: 30px;
+	grid-row-gap: 9px;
+	justify-content: center;
+}
+
+.form__input {
+	height: 40px;
+	width: 100%;
+	max-width: 370px;
+}
+
+.form__input,
+.form__textarea {
+	font-size: 0.875em;
+	/*	padding-left: 10px;*/
+	padding-left: 0.714em;
+	background: $sectBgrGray1;
+	border: 1px solid $borderGray;
+	/*	border-radius: 2px;*/
+	border-radius: .143em;
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: 0.875em;
+	line-height: normal;
+	color: $fontColorLight;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+	color: $fontColorLight;
+}
+
+.form__textarea {
+	width: 100%;
+	/*	padding-top: 10px;*/
+	padding-top: 0.714em;
+	max-width: 391px;
+	resize: none;
+	grid-area: 1/2/3/3;
+}
+
+.form__text {
+	grid-area: 4/1/5/2;
+	margin: 0;
+	font-size: 10px;
+	line-height: 13px;
+	color: $fontColorLight;
+	padding-left: 212px;
+}
+
+.form__link {
+	color: $blue;
+}
+
+/* *** */
+
+.form__wp {
+	position: relative;
+	overflow: hidden;
+	height: 40px;
+	height: 2.857em;
+	grid-column: 1/2;
+	max-height: 40px;
+}
+
+.form__placeholder {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	z-index: 100;
+	display: inline;
+	cursor: text;
+	user-select: none;
+	line-height: 40px;
+	margin: 0;
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: 0.875em;
+	color: $fontColorLight;
+}
+
+.form__wp .form__input:valid + .form__placeholder {
+	display: none;
+}
+
+.form__placeholder span {
+	padding-left: 0.5em;
+	font-style: normal;
+	font-weight: normal;
+	/*	font-size: 14px;*/
+	font-size: 1em;
+	line-height: normal;
+	color: $red;
+}
+
+.g-recaptcha {
+	height: 49px;
+	width: 201px;
+	transform: scale(0.66);
+	transform-origin: 0 0;
+	grid-area: 4/1/5/2;
+}
+
+.form__btn {
+	background: $red;
+	border-radius: 0.143em;
+	//	height: 44px;
+	height: 3.143em;
+	//	line-height: 44px;
+	line-height: 3.143em;
+	max-width: 301px;
+	width: 100%;
+	border: none;
+	font-size: 0.875em;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	grid-area: 4/2/5/3;
+	align-self: flex-end;
+}
+
+/* *** */
+.sort__arrow {
+	display: inline-block;
+	font-style: normal;
+	position: relative;
+	width: .5em;
+	height: .5em;
+	border-right: 1px solid $fontColor;
+	border-top: 1px solid $fontColor;
+	transform: rotate(135deg);
+	user-select: none;
+	margin-left: .625em;
+}
+
+.sort__list {
+	grid-area: 3/2/4/3;
+	margin: 0;
+	align-self: center;
+}
+
+.sort__item {
+	display: inline-block;
+	font-style: normal;
+	font-weight: normal;
+	//	font-size: 14px;
+	font-size: .875em;
+	//	margin-right: 24px;
+	margin-right: 1.714em;
+	color: $fontColor;
+}
+
+.sort__item:last-of-type {
+	margin-right: 0;
+}
+
+.sort__repair {
+	position: relative;
+	vertical-align: top;
+}
+
+.sort__repair-label {
+	display: flex;
+	align-items: center;
+}
+
+.sort__arrow {
+	display: inline-block;
+	font-style: normal;
+	position: relative;
+	width: .5em;
+	height: .5em;
+	border-right: 1px solid $fontColor;
+	border-top: 1px solid $fontColor;
+	user-select: none;
+	margin-left: .625em;
+}
+
+/* *** */
+.control {
+	position: relative;
+	padding-left: 20px;
+}
+
+.control_indicator {
+	position: absolute;
+	top: .250em;
+	top: 2px;
+	left: 0;
+	height: 13px;
+	width: 13px;
+	border: 1px solid $red;
+}
+
+.control .control_indicator {
+	border-radius: 50%;
+}
+
+.control_indicator:after {
+	box-sizing: unset;
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+.control input:checked ~ .control_indicator:after {
+	display: block;
+}
+
+.control .control_indicator:after {
+	left: 2px;
+	top: 2px;
+	height: 7px;
+	width: 7px;
+	border-radius: 50%;
+	background: $red;
+}
+
+/* *** */
+@include mainPaddingTop991();
+@import "wholesale_client-media";

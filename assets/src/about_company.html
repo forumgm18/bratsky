@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('./template/head.html')
+	<link rel="stylesheet" href="css/other/about_company-style.min.css">
+</head>
+
+<body>
+	@@include('./template/header.html')
+	<main class="main">
+		<div class="breadcrumb">
+			<div class="container">
+				<div class="row">
+					<nav class="col">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Главная</a></li>
+							<li class="breadcrumb-item"><a href="#">Для&nbsp;клиента</a></li>
+							<li class="breadcrumb-item active">О&nbsp;компании</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<header class="main__header">
+			<h1 class="title-h1 title">О компании</h1>
+		</header>
+		<nav class="client-menu">
+			<ul class="client-menu__list">
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Для клиента</a></li>
+				<li class="client-menu__item active">О компании</li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Сертификаты</a></li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Услуги</a></li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Отзывы</a></li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Доставка и оплата</a></li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Вопрос-ответ</a></li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Последние события</a></li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Бонусная система</a></li>
+				<li class="client-menu__item"><a href="#" class="client-menu__link">Как заказать товар</a></li>
+			</ul>
+		</nav>
+		<div class="text__wp"><img src="img/bratskiy_banner.png" alt="Фото магазина Братский" class="text__img">
+			<p class="text__p">И нет сомнений, что акционеры крупнейших компаний неоднозначны и будут заблокированы в рамках своих собственных рациональных ограничений. Для современного мира глубокий уровень погружения обеспечивает актуальность кластеризации усилий. Но явные признаки победы институциализации могут быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Значимость этих проблем настолько очевидна, что выбранный нами инновационный путь предоставляет широкие возможности для экспериментов, поражающих по своей масштабности и грандиозности. Банальные, но неопровержимые выводы, а также реплицированные с зарубежных источников, современные исследования и по сей день остаются уделом либералов, которые жаждут быть представлены в исключительно положительном свете. Лишь независимые государства объявлены нарушающими общечеловеческие нормы этики и морали.</p>
+			<p class="text__p">В целом, конечно, дальнейшее развитие различных форм деятельности предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. А еще интерактивные прототипы, вне зависимости от их уровня, должны быть указаны как претенденты на роль ключевых факторов. Господа, начало повседневной работы по формированию позиции напрямую зависит от направлений прогрессивного развития.</p>
+		</div>
+		<section class="advantages-section">
+			<h2 class="hidden">Преимущества</h2>
+			<ul class="advantages__list">
+				<li class="advantages__item">
+					<div class="advantages__wp">
+						<div class="advantages__icon advantages__icon-1"></div>
+						<div class="advantages__round"></div>
+					</div>
+					<p class="advantages__text">Рассрочка онлайн за 1&nbsp;минуту</p>
+				</li>
+				<li class="advantages__item">
+					<div class="advantages__wp">
+						<div class="advantages__icon advantages__icon-2"></div>
+						<div class="advantages__round"></div>
+					</div>
+					<p class="advantages__text">Гарантия лучшей цены</p>
+				</li>
+				<li class="advantages__item">
+					<div class="advantages__wp">
+						<div class="advantages__icon advantages__icon-3"></div>
+						<div class="advantages__round"></div>
+					</div>
+					<p class="advantages__text">Начисление бонусов за каждую покупку</p>
+				</li>
+				<li class="advantages__item">
+					<div class="advantages__wp">
+						<div class="advantages__icon advantages__icon-4"></div>
+						<div class="advantages__round"></div>
+					</div>
+					<p class="advantages__text">Оперативная помощь в подборе товаров</p>
+				</li>
+				<li class="advantages__item">
+					<div class="advantages__wp">
+						<div class="advantages__icon advantages__icon-5"></div>
+						<div class="advantages__round"></div>
+					</div>
+					<p class="advantages__text">Бесплатная доставка</p>
+				</li>
+			</ul>
+		</section>
+		<section class="main-events">
+			<div class="container">
+				<div class="row">
+					<div class="col header-flex">
+						<h2 class="title">Последние события</h2>
+						<ul id="tabs-events" class="nav nav-tabs" role="tablist">
+							<li class="nav-item"><a id="tab-all-event" href="#all-event" class="nav-link active" data-toggle="tab" role="tab">Все</a></li>
+							<li class="nav-item"><a id="tab-news-event" href="#news-event" class="nav-link" data-toggle="tab" role="tab">Новости</a></li>
+							<li class="nav-item"><a id="tab-art-event" href="#art-event" class="nav-link" data-toggle="tab" role="tab">Статьи</a></li>
+							<li class="nav-item"><a id="tab-press-event" href="#press-event" class="nav-link" data-toggle="tab" role="tab">Пресс-релизы</a></li>
+							<li class="nav-item"><a id="tab-video-event" href="#video-event" class="nav-link" data-toggle="tab" role="tab">Видео</a></li>
+							<li class="nav-item"><a id="tab-action-event" href="#action-event" class="nav-link" data-toggle="tab" role="tab">Акции</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div id="events" class="tab-content" role="tablist">
+							<div id="all-event" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-all-event">
+								<div class="card-header" role="tab" id="heading-all-event">
+									<a data-toggle="collapse" href="#collapse-all-event" aria-expanded="true" aria-controls="collapse-all-event">Все товары</a>
+								</div>
+								<div id="collapse-all-event" class="collapse show" data-parent="#events" role="tabpanel" aria-labelledby="heading-all-event">
+									<div class="card-body">
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Обзор автомобильного аккумулятора Bosch 75 Aч Прямая полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Обзор автомобильного аккумулятора Bosch 75 Aч Прямая полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Статьи</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Акция</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
+											</div>
+										</div>
+
+										<div class="w-100 bbgray"></div>
+									</div>
+								</div>
+							</div>
+
+							<div id="news-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-news-event">
+								<div class="card-header" role="tab" id="heading-news-event">
+									<a class="collapsed" data-toggle="collapse" href="#collapse-news-event" aria-expanded="false" aria-controls="collapse-news-event">Аккумуляторы</a>
+								</div>
+								<div id="collapse-news-event" class="collapse" data-parent="#events" role="tabpanel" aria-labelledby="heading-news-event">
+									<div class="card-body">
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Новости</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+									</div>
+								</div>
+							</div>
+
+							<div id="art-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-art-event">
+								<div class="card-header" role="tab" id="heading-art-event">
+									<a class="collapsed" data-toggle="collapse" href="#collapse-art-event" aria-expanded="false" aria-controls="collapse-art-event">Автомасла и автохимия</a>
+								</div>
+								<div id="collapse-art-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-art-event">
+									<div class="card-body">
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Статьи</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Статьи</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Статьи</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Статьи</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Статьи</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Статьи</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+									</div>
+								</div>
+							</div>
+							<div id="press-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-press-event">
+								<div class="card-header" role="tab" id="heading-press-event">
+									<a class="collapsed" data-toggle="collapse" href="#collapse-press-event" aria-expanded="false" aria-controls="collapse-press-event">Аксессуары</a>
+								</div>
+								<div id="collapse-press-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-press-event">
+									<div class="card-body">
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Пресс-релиз</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Пресс-релиз</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Пресс-релиз</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Пресс-релиз</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Пресс-релиз</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Россиян ждет повышение цен на иномарки.</a>
+												<a class="event-description" href="#">Эксперты утверждают, что грядет подорожание автомобилей с сентября 2018 года.</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/news2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Пресс-релиз</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
+												<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+									</div>
+								</div>
+							</div>
+							<div id="video-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-video-event">
+								<div class="card-header" role="tab" id="heading-video-event">
+									<a class="collapsed" data-toggle="collapse" href="#collapse-video-event" aria-expanded="false" aria-controls="collapse-video-event">Аксессуары</a>
+								</div>
+								<div id="collapse-video-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-video-event">
+									<div class="card-body">
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Автомобильный аккумулятор Varta Blue Dynamic 74 Aч 574012 Обратная полярность E11</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Обзор автомобильного аккумулятора Bosch 75 Aч Прямая полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Автомобильный аккумулятор Varta Blue Dynamic 74 Aч 574012 Обратная полярность E11</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Обзор автомобильного аккумулятора Bosch 75 Aч Прямая полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Автомобильный аккумулятор Varta Blue Dynamic 74 Aч 574012 Обратная полярность E11</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/video2-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Видео</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Обзор автомобильного аккумулятора Bosch 75 Aч Прямая полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+									</div>
+								</div>
+							</div>
+							<div id="action-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-action-event">
+								<div class="card-header" role="tab" id="heading-action-event">
+									<a class="collapsed" data-toggle="collapse" href="#collapse-action-event" aria-expanded="false" aria-controls="collapse-action-event">Аксессуары</a>
+								</div>
+								<div id="collapse-action-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-action-event">
+									<div class="card-body">
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Акция</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Акция</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Акция</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Акция</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Акция</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
+											</div>
+										</div>
+										<div class="main-event-card">
+											<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
+											<div class="content">
+												<a href="#">
+													<h5>Акция</h5>
+												</a>
+												<div class="event-date">07.08.2018</div>
+												<a class="event-h d-none" href="#"></a>
+												<a class="event-description" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
+											</div>
+										</div>
+										<div class="w-100 bbgray"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./template/footer-block.html')
+	@@include('./template/footer-scripts.html')
+</body>
+
+</html>
