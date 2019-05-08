@@ -9,10 +9,10 @@
 <body>
 	@@include('./template/header.html')
 	<main class="main">
-		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-DATA" checked>
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-DATA">
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-FAVORITES">
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-ORDERS">
-		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-ORDER-HISTORY">
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-HISTORY" checked>
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-GARAGE">
 		<div class="breadcrumb">
 			<div class="container">
@@ -42,14 +42,111 @@
 			<ol class="personal-menu__list">
 				<li class="personal-menu__item"><label for="PERSONAL-DATA">Мои данные</label></li>
 				<li class="personal-menu__item"><label for="PERSONAL-FAVORITES">Избранное</label></li>
-				<li class="personal-menu__item"><label for="PERSONAL-ORDERS" class="personal-menu_border">Мои заказы (<span>1</span>)</label></li>
-				<li class="personal-menu__item"><label for="PERSONAL-ORDER-HISTORY">История заказов</label></li>
+				<li class="personal-menu__item"><label for="PERSONAL-ORDERS">Мои заказы (<span>1</span>)</label></li>
+				<li class="personal-menu__item"><label for="PERSONAL-HISTORY">История заказов</label></li>
 				<li class="personal-menu__item"><label for="PERSONAL-GARAGE">Мой гараж</label></li>
 			</ol>
 		</nav>
+		<section class="garage-section">
+			<h2 class="hidden">Список автомобилей</h2>
+			<p class="garage__del-all-wp"><a href="#" class="garage__del-all">Удалить все</a></p>
+			<ol class="garage__list">
+				<li class="garage__item" tabindex="0">
+					<h3 class="garage__title">Nissan Almera</h3>
+					<div class="garage__data-wp">
+						<p class="garage__data">2006</p>
+						<p class="garage__data">Nissan</p>
+						<p class="garage__data">Almera</p>
+						<p class="garage__data">1.4</p>
+					</div>
+					<button class="garage__del-btn"></button>
+				</li>
+				<li class="garage__item" tabindex="0">
+					<h3 class="garage__title">Skoda Octavia</h3>
+					<div class="garage__data-wp">
+						<p class="garage__data">2006</p>
+						<p class="garage__data">Skoda</p>
+						<p class="garage__data">Octavia</p>
+						<p class="garage__data">2.0 TDi</p>
+					</div>
+					<button class="garage__del-btn"></button>
+				</li>
+				<li class="garage__item" tabindex="0">
+					<h3 class="garage__title">+ Добавить авто в гараж</h3>
+					<form action="/" class="garage__data-wp">
+						<input type="text" placeholder="Год" class="garage__data">
+						<input type="text" placeholder="Марка" class="garage__data">
+						<input type="text" placeholder="Модель" class="garage__data">
+						<input type="text" placeholder="Модификация" class="garage__data">
+					</form>
+				</li>
+			</ol>
+			<a href="#" class="garage__save">Сохранить</a>
+		</section>
+		<section class="history-section">
+			<h2 class="hidden">Информация прошлых заказах</h2>
+			<table class="history__table">
+				<thead>
+					<tr>
+						<th>Номер/дата заказа</th>
+						<th>Сумма</th>
+						<th>Статус заказа</th>
+						<th>Способ оплаты</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>10005/14.08.18</td>
+						<td>16 000 р</td>
+						<td>Заказ получен</td>
+						<td></td>
+						<td><button class="history__spoiler-btn">Подробнее</button></td>
+					</tr>
+					<tr class="history__spoiler-body">
+						<th>Наименование товара</th>
+						<th>Кол-во</th>
+						<th>Цена</th>
+						<th>Стоимость</th>
+						<th></th>
+					</tr>
+					<tr class="history__spoiler-body">
+						<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+						<td>2</td>
+						<td>8 000 р</td>
+						<td>16 000 р</td>
+						<td></td>
+					</tr>
+				</tbody>
+				<tbody>
+					<tr>
+						<td>10005/14.08.18</td>
+						<td>16 000 р</td>
+						<td>Заказ получен</td>
+						<td></td>
+						<td><button class="history__spoiler-btn">Подробнее</button></td>
+					</tr>
+					<tr class="history__spoiler-body">
+						<th>Наименование товара</th>
+						<th>Кол-во</th>
+						<th>Цена</th>
+						<th>Стоимость</th>
+						<th></th>
+					</tr>
+					<tr class="history__spoiler-body">
+						<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+						<td>2</td>
+						<td>8 000 р</td>
+						<td>16 000 р</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 	</main>
 	@@include('./template/footer-block.html')
 	@@include('./template/footer-scripts.html')
+	<script src="js/other/personal_account-script.js"></script>
 </body>
 
 </html>
