@@ -10,9 +10,9 @@
 	@@include('./template/header.html')
 	<main class="main">
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-DATA">
-		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-FAVORITES">
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-FAVORITES" checked>
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-ORDERS">
-		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-HISTORY" checked>
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-HISTORY">
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-GARAGE">
 		<div class="breadcrumb">
 			<div class="container">
@@ -47,6 +47,198 @@
 				<li class="personal-menu__item"><label for="PERSONAL-GARAGE">Мой гараж</label></li>
 			</ol>
 		</nav>
+		<section class="favorites-section">
+			<header>
+				<h2 class="hidden">Список избранных товаров</h2>
+				<a href="#" class="favorites__del-all">Удалить все товары</a>
+			</header>
+			<ul class="favorites__list">
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-akk.html')
+				</li>
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-maslo.html')
+				</li>
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-akk.html')
+				</li>
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-maslo.html')
+				</li>
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-akk.html')
+				</li>
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-maslo.html')
+				</li>
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-akk.html')
+				</li>
+				<li class="favorites__item">
+					@@include('./template/catalog-product-card-maslo.html')
+				</li>
+			</ul>
+			<div class="pagination-section">
+				<div class="zaglushka"></div>
+				<ul class="pagination">
+					<li class="page-item"><a class="page-link prev" href="#"></a></li>
+					<li class="page-item"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">3</a></li>
+					<li class="page-item"><a class="page-link" href="#">4</a></li>
+					<li class="page-item"><a class="page-link next" href="#"></a></li>
+					<li class="page-item"><a class="page-link" href="#">50</a></li>
+				</ul>
+				<div class="page-select">
+					<span>товаров на странице</span>
+					<select class="selectpicker" name="page_num" id="page_num">
+						<option value="20">20</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+					</select>
+				</div>
+			</div>
+		</section>
+		<section class="orders-section">
+			<h2 class="hidden">Информация о заказах</h2>
+			<div class="orders__table-wp">
+				<table class="account__table orders__table">
+					<thead>
+						<tr>
+							<th>Номер/дата заказа</th>
+							<th>Сумма</th>
+							<th>Статус заказа</th>
+							<th>Способ оплаты</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table_min_height">
+							<td>10005/14.08.18</td>
+							<td>16 000 р</td>
+							<td>Ожидает получения в магазине</td>
+							<td>
+								<label class="control control-radio">Оплата банковской картой
+									<input type="radio" name="payment_method" id="PAY-CARD" class="hidden">
+									<span class="control_indicator"></span>
+								</label>
+								<label class="control control-radio">Наличный расчет
+									<input type="radio" name="payment_method" id="PAY-CASH" class="hidden">
+									<span class="control_indicator"></span>
+								</label>
+							</td>
+							<td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
+						</tr>
+						<tr class="table__spoiler-body table_brder_top">
+							<th>Наименование товара</th>
+							<th>Кол-во</th>
+							<th>Цена</th>
+							<th>Стоимость</th>
+							<th>Срок резервирования товара</th>
+						</tr>
+						<tr class="table__spoiler-body">
+							<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+							<td>2</td>
+							<td>8 000 р</td>
+							<td>16 000 р</td>
+							<td>До 08.10</td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr class="table_min_height">
+							<td>10005/14.08.18</td>
+							<td>16 000 р</td>
+							<td>Ожидает получения в магазине</td>
+							<td><label class="control control-radio">Оплата банковской картой
+									<input type="radio" name="payment_method-2" id="PAY-CARD-2" class="hidden">
+									<span class="control_indicator"></span>
+								</label>
+								<label class="control control-radio">Наличный расчет
+									<input type="radio" name="payment_method-2" id="PAY-CASH-2" class="hidden">
+									<span class="control_indicator"></span>
+								</label></td>
+							<td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
+						</tr>
+						<tr class="table__spoiler-body table_brder_top">
+							<th>Наименование товара</th>
+							<th>Кол-во</th>
+							<th>Цена</th>
+							<th>Стоимость</th>
+							<th>Срок резервирования товара</th>
+						</tr>
+						<tr class="table__spoiler-body">
+							<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+							<td>2</td>
+							<td>8 000 р</td>
+							<td>16 000 р</td>
+							<td>До 08.10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<section class="history-section">
+			<h2 class="hidden">Информация о прошлых заказах</h2>
+			<div class="histoty__table-wp">
+				<table class="account__table histoty__table">
+					<thead>
+						<tr>
+							<th>Номер/дата заказа</th>
+							<th>Сумма</th>
+							<th>Статус заказа</th>
+							<th>Способ оплаты</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table_min_height">
+							<td>10005/14.08.18</td>
+							<td>16 000 р</td>
+							<td>Заказ получен</td>
+							<td></td>
+							<td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
+						</tr>
+						<tr class="table__spoiler-body table_brder_top">
+							<th>Наименование товара</th>
+							<th>Кол-во</th>
+							<th>Цена</th>
+							<th>Стоимость</th>
+							<th></th>
+						</tr>
+						<tr class="table__spoiler-body">
+							<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+							<td>2</td>
+							<td>8 000 р</td>
+							<td>16 000 р</td>
+							<td></td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr class="table_min_height">
+							<td>10005/14.08.18</td>
+							<td>16 000 р</td>
+							<td>Заказ получен</td>
+							<td></td>
+							<td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
+						</tr>
+						<tr class="table__spoiler-body table_brder_top">
+							<th>Наименование товара</th>
+							<th>Кол-во</th>
+							<th>Цена</th>
+							<th>Стоимость</th>
+							<th></th>
+						</tr>
+						<tr class="table__spoiler-body">
+							<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+							<td>2</td>
+							<td>8 000 р</td>
+							<td>16 000 р</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
 		<section class="garage-section">
 			<h2 class="hidden">Список автомобилей</h2>
 			<p class="garage__del-all-wp"><a href="#" class="garage__del-all">Удалить все</a></p>
@@ -82,66 +274,6 @@
 				</li>
 			</ol>
 			<a href="#" class="garage__save">Сохранить</a>
-		</section>
-		<section class="history-section">
-			<h2 class="hidden">Информация прошлых заказах</h2>
-			<table class="history__table">
-				<thead>
-					<tr>
-						<th>Номер/дата заказа</th>
-						<th>Сумма</th>
-						<th>Статус заказа</th>
-						<th>Способ оплаты</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>10005/14.08.18</td>
-						<td>16 000 р</td>
-						<td>Заказ получен</td>
-						<td></td>
-						<td><button class="history__spoiler-btn">Подробнее</button></td>
-					</tr>
-					<tr class="history__spoiler-body">
-						<th>Наименование товара</th>
-						<th>Кол-во</th>
-						<th>Цена</th>
-						<th>Стоимость</th>
-						<th></th>
-					</tr>
-					<tr class="history__spoiler-body">
-						<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-						<td>2</td>
-						<td>8 000 р</td>
-						<td>16 000 р</td>
-						<td></td>
-					</tr>
-				</tbody>
-				<tbody>
-					<tr>
-						<td>10005/14.08.18</td>
-						<td>16 000 р</td>
-						<td>Заказ получен</td>
-						<td></td>
-						<td><button class="history__spoiler-btn">Подробнее</button></td>
-					</tr>
-					<tr class="history__spoiler-body">
-						<th>Наименование товара</th>
-						<th>Кол-во</th>
-						<th>Цена</th>
-						<th>Стоимость</th>
-						<th></th>
-					</tr>
-					<tr class="history__spoiler-body">
-						<td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-						<td>2</td>
-						<td>8 000 р</td>
-						<td>16 000 р</td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
 		</section>
 	</main>
 	@@include('./template/footer-block.html')
