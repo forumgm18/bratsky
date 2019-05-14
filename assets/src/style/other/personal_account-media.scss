@@ -25,7 +25,105 @@
 			width: 100%;
 		}
 	}
-} 
+}
+
+@mixin mediaMyData {
+	@media screen and (max-width: 920px) and (min-width: 770px) {
+
+		.my-data__details,
+		.my-data__form {
+			grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+			grid-template-areas:
+				"fio fio"
+				"sex birth"
+				"tel email"
+				"inn-wp inn-wp";
+		}
+	}
+
+	@media screen and (max-width: 900px) and (min-width: 400px) {
+		.my-data__social-list {
+			display: block;
+
+			li {
+				display: grid;
+				grid-template-columns: 110px 1fr;
+				justify-content: flex-start;
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.my-data__login-wp {
+			display: block;
+
+			.my-data__edit-btn {
+				margin: 24px 0 0 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: 770px) {
+
+		.my-data__details,
+		.my-data__form {
+			grid-template: repeat(5, 1fr) auto/ 1fr;
+			grid-template-areas:
+				"fio"
+				"sex"
+				"birth"
+				"tel"
+				"email"
+				"inn-wp";
+		}
+
+		.my-data__inn-wp {
+			display: block;
+
+			.input-inn {
+				max-width: 100%;
+				width: 100%;
+				margin: 0 0 24px 0;
+			}
+
+			.my-data__save-btn {
+				max-width: 100%;
+			}
+
+			.my-data__edit-btn {
+				margin: 24px 0 0 0;
+				max-width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		#PERSONAL-DATA:checked ~ .my-data-section {
+			display: block;
+		}
+
+		.my-data__photo-bonus {
+			margin-bottom: 40px;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		.my-data__social-list {
+			display: block;
+
+			li {
+				display: block;
+				margin-bottom: 24px;
+
+				.my-data__connect-btn {
+					margin-top: 1em;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
 
 @mixin mediaFavorites {
 	@media screen and (max-width: 1220px) {
@@ -55,7 +153,7 @@
 			max-width: 100%;
 		}
 	}
-} 
+}
 
 @mixin mediaOrders {
 	@media screen and (max-width: 700px) {

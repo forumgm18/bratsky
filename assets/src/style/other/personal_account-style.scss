@@ -163,13 +163,6 @@
 	grid-column-gap: 30px;
 }
 
-//.my-data__photo {
-//	grid-area: photo;
-//}
-//
-//.my-data__bonus {
-//	grid-area: bonus;
-//}
 .my-data__photo-bonus {
 	grid-area: photo-bonus;
 }
@@ -186,9 +179,7 @@
 	grid-area: social;
 }
 
-.my-data__details {
-	display: none;
-}
+
 
 .my-data__photo {
 	background: #FFFFFF;
@@ -294,15 +285,24 @@
 	}
 }
 
+.my-data__details {
+	//	display: none;
+}
+
+.my-data__details,
 .my-data__form {
 	display: grid;
-	grid-template: 1fr 1fr 1fr / 170px auto 170px;
+	grid-template: 1fr 1fr auto / 170px auto 170px;
 	grid-column-gap: 30px;
 	grid-row-gap: 24px;
 	grid-template-areas:
 		"fio fio sex"
 		"birth tel email"
 		"inn-wp inn-wp inn-wp";
+}
+
+.my-data__form {
+	display: none;
 }
 
 .input-fio {
@@ -331,9 +331,23 @@
 	display: flex;
 }
 
-.input-inn {
-	margin-right: 30px;
-	max-width: 270px;
+.my-data__form {
+	.input-inn {
+		margin-right: 30px;
+		max-width: 270px;
+	}
+}
+
+.my-data__details {
+	.input-inn {
+		margin-right: 30px;
+		max-width: 270px;
+		width: 270px;
+	}
+}
+
+.my-data__edit-btn {
+	margin-left: 21px;
 }
 
 .my-data__login-wp {
@@ -360,6 +374,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		p {
+			margin: 0;
+		}
 	}
 }
 
@@ -367,6 +385,7 @@
 	@include linkLikeBtn(44px, 201px, #FFCD19, #333333, 14px);
 }
 
+@include mediaMyData;
 /* END my-data-section */
 /* ************** */
 
