@@ -163,20 +163,20 @@
 		}
 
 		.orders__table {
-			width: 700px;
+			width: 700px !important;
 		}
 	}
 }
 
 @mixin mediaHistoty {
-	@media screen and (max-width: 640px) {
+	@media screen and (max-width: 660px) {
 		.histoty__table-wp {
-			max-width: 640px;
+			max-width: 660px;
 			overflow-x: scroll;
 		}
 
 		.histoty__table {
-			width: 640px;
+			width: 660px;
 		}
 	}
 }

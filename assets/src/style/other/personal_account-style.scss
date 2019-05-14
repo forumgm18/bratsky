@@ -187,9 +187,9 @@
 	box-sizing: border-box;
 	width: 170px;
 	height: 170px;
+	position: relative;
 
-	label {
-		cursor: pointer;
+	p {
 		font-family: PT Sans;
 		font-style: normal;
 		font-weight: normal;
@@ -197,11 +197,9 @@
 		line-height: 18px;
 		text-align: center;
 		color: #333333;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 100%;
+		display: block;
+		margin: 45% 0 0 0;
+		user-select: none;
 	}
 
 	img {
@@ -210,9 +208,24 @@
 	}
 }
 
+.my-data__file-photo {
+	display: none;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 99;
+}
+
 .my-data__bonus {
 	margin-top: 16px;
 	display: block;
+
+	.my-data__text {
+		margin-bottom: 0;
+	}
 }
 
 .my-data__text,
@@ -260,6 +273,7 @@
 
 .my-data__edit-btn {
 	@include linkLikeBtnBorder(44px, 224px, $red, $red, 14px);
+	padding: 0;
 }
 
 .my-data__input {
@@ -285,9 +299,9 @@
 	}
 }
 
-.my-data__details {
-	//	display: none;
-}
+//.my-data__details {
+//	display: none;
+//}
 
 .my-data__details,
 .my-data__form {
@@ -299,6 +313,16 @@
 		"fio fio sex"
 		"birth tel email"
 		"inn-wp inn-wp inn-wp";
+}
+
+.my-data__details {
+	.my-data__txt_grey {
+		margin-top: 0;
+	}
+
+	.my-data__text {
+		margin-bottom: 0;
+	}
 }
 
 .my-data__form {
@@ -385,6 +409,8 @@
 	@include linkLikeBtn(44px, 201px, #FFCD19, #333333, 14px);
 }
 
+
+
 @include mediaMyData;
 /* END my-data-section */
 /* ************** */
@@ -466,13 +492,12 @@
 }
 
 .control-radio .control_indicator:after {
-	left: .125em;
-	top: .125em;
+	left: 1px;
+	top: 0;
+	margin-top: -3px;
 	height: 5px;
-	width: 5px;
-	content: "V";
-	color: $red;
-	font-weight: bold;
+	width: 7px;
+	content: url(../../img/check_mark_red.svg);
 }
 
 /* *** */
@@ -517,30 +542,40 @@
 	border: none;
 
 	tbody {
-		background: #FFFFFF; //убрать потом
-		box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); //убрать потом
-	}
+		tr {
+			padding: 28px 6px 8px 6px;
+			background: #FFFFFF;
+			box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+		}
 
-	tr {
-		padding: 28px 6px 8px 6px;
-		//		margin-bottom: 30px;
-		//		display: block; //попробовать другие параметры
-		//		background: #FFFFFF;
-	}
+		.separator {
+			height: 10px;
+			background: none;
+			box-shadow: none;
+		}
 
-
-	th {
-		font-size: 13px;
-		color: #828282;
-		font-weight: normal;
-		//		padding: 17px 11px 14px 11px;
-		padding: 17px 0px 14px 11px;
-		vertical-align: top;
+		th {
+			font-size: 13px;
+			color: #828282;
+			font-weight: normal;
+			padding: 17px 6px 14px 11px;
+			vertical-align: top;
+		}
 	}
 
 	thead {
+		tr {
+			padding: 0 6px 0 0;
+		}
+
 		th {
-			padding: 17px 11px 14px 11px;
+			background: none;
+			box-shadow: none;
+			font-size: 13px;
+			color: #828282;
+			font-weight: normal;
+			padding: 0 6px 14px 11px;
+			vertical-align: top;
 		}
 	}
 
@@ -718,10 +753,12 @@
 	position: absolute;
 	right: 0;
 	bottom: 26px;
+	background-image: url(../../img/delite_icon_red.svg);
+	background-repeat: no-repeat;
+	background-position: center;
 
 	&:hover,
 	&:focus {
-		border: 1px solid darken($red, 5%);
 		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 	}
 }
