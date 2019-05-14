@@ -483,7 +483,7 @@ button:hover, button:focus {
 	padding-right: 0;
 			@include media-breakpoint-up(sm) {height: 410px;}
 }
-.product-item {	height: 400px;}
+.product-item {	height: 405px;}
 .slick-list.draggable {height: 100%;}
 .main-product-card {
 		position: relative;
@@ -2023,6 +2023,9 @@ footer {
 									.filter-option-inner-inner {
 										@include setFont ($labelFFamily,normal,normal,13px,#fff);	
 										text-align: center;
+										// Правки 05.05.2019
+										// для firefox
+										line-height: 2em;
 									}
 					}
 					.dropdown-item{
