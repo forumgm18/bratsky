@@ -878,3 +878,14 @@
 // .dropdown-submenu:hover>a:after{border-left-color:#555;}
 // .dropdown-submenu.pull-left{float:none;}
 // .dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+// Правки 05.05.19
+// Треуголтные кнопки
+.navbar-nav {
+	.dropdown-toggle {
+		&::after {
+			vertical-align: .1em;
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+}

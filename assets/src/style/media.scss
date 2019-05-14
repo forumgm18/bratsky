@@ -2,7 +2,11 @@
 
 	.main-baner {display: none;}
 	.main-menu {background:$sectBgrGray1;}
-	.main-navigation .logo {	margin: 0 15px;	}
+//	.main-navigation .logo {	margin: 0 15px;	}
+	// 05.05.19
+	.main-navigation .logo {margin: 0 15px 0 0;	}
+	.main-navigation .logo img {height: 37px;width: 171px}
+	//
 	.top-gray-icons-zagl{display: none;}
 	.top-gray-icons {position: relative;right: 0px;top: 0px;}
 	.top-panel .link-btn.select-city {width: 20px;}
@@ -36,7 +40,9 @@
 	// .main-feedback .contact-us .red-btn { width: 100%;}
 }
 @media(min-width:450px){
-	.main-feedback .contact-us .fz152 {align-self: flex-end; width: 45%;height: 60px;margin-bottom: 20px;margin-top: 0;}
+	.main-feedback .contact-us .fz152 {align-self: flex-end; 
+		//width: 45%;height: 60px;
+		margin-bottom: 20px;margin-top: 0;}
 	// .рroduct-сard .mini-img-slider {
 		// height: 120px;
 			// .slide-item	{width: 100px;	height: 100px;}
@@ -165,4 +171,39 @@
 	.main-vkurse form button { width: 201px;}
 
 
+}
+
+// Правки 05.05.19
+
+@media (min-width:1200px) {
+	.main-feedback {
+		padding-bottom: 25px !important
+	}
+}
+
+.main-feedback .container {
+	margin-bottom: 25px !important
+}
+
+.footer__link_lh {
+	line-height: 18px !important;
+	margin-bottom: 6px !important;
+}
+
+.filter-form {
+	padding: 0 15px 0 15px !important
+}
+
+.slick-active:focus {
+	outline: none !important
+}
+
+.analogs .filter-top-groupe .black-btn.collapsed {
+	margin-bottom: 0 !important
+}
+
+.web-electron {
+	content: normal !important;
+	margin-top: 10px !important;
+    color: #6e6e6e !important;
 }

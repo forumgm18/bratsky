@@ -32,6 +32,12 @@ h1{
 		@include media-breakpoint-up(lg) { font-size: 36px;}
 
 }
+// Правки 05.05.2019 
+.рroduct-сard {
+	h1 {
+		@include media-breakpoint-up(lg) { font-size: 34px;}
+	}
+}
 h2{font-size: 24px;}
 h3{font-size: 18px;}
 h4{font-size: 16px;}
@@ -480,14 +486,19 @@ button:hover, button:focus {
 .product-item {	height: 400px;}
 .slick-list.draggable {height: 100%;}
 .main-product-card {
-	position: relative;
+		position: relative;
 	background-color: #fff;
 	@include boxShadow2;
 	@include dFlex(flex-start,flex-start,column,nowrap);
 	border: none;
 	width: 211px;
-	height: 394px;
-	padding: 15px 10px 24px 10px;
+// Правки 05.05.2019
+//	height: 394px;
+//	padding: 15px 10px 24px 10px;
+	
+	height: 405px;
+	padding: 15px 10px 35px 10px;
+	
 	margin: 0 auto;
 		&:hover {@include boxShadow;}	
 	.b1 {width: 100%;}	
@@ -3027,7 +3038,9 @@ footer {
 				min-width: 160px;
 				@include media-breakpoint-up(md) {width: 200px;}
 				@include media-breakpoint-up(lg) {width: 160px;}
-				@include media-breakpoint-up(xl) {width: 250px;}
+				// Правки 05.05.19
+				// @include media-breakpoint-up(xl) {width: 250px;}
+				@include media-breakpoint-up(xl) {width: 240px;}
 
 				h3 {
 					margin-bottom: 0;
@@ -3048,7 +3061,9 @@ footer {
 				min-width: 140px; 
 					@include media-breakpoint-up(md) {width: 120px;}
 					@include media-breakpoint-up(lg) {min-width: 120px;}
-					@include media-breakpoint-up(xl) {width: 170px;}
+				// Правки 05.05.19
+				// @include media-breakpoint-up(xl) {width: 170px;}
+					@include media-breakpoint-up(xl) {width: 160px;}
 
 				// a{@include media-breakpoint-up(md) {display: block;height: 35px;}}
 			}
@@ -3073,7 +3088,9 @@ footer {
 				display: block;
 				position: absolute;
 				right: 15px;
-				bottom: 15px;
+				// Правки 05.05.19
+				// bottom: 15px;
+				bottom: 10px;
 					@include media-breakpoint-up(md) {display: none;}
 			}
 			.stars-block {
