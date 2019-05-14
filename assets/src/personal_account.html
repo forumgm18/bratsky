@@ -9,8 +9,8 @@
 <body>
 	@@include('./template/header.html')
 	<main class="main">
-		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-DATA">
-		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-FAVORITES" checked>
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-DATA" checked>
+		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-FAVORITES">
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-ORDERS">
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-HISTORY">
 		<input type="radio" name="personal_menu" class="hidden" id="PERSONAL-GARAGE">
@@ -47,6 +47,92 @@
 				<li class="personal-menu__item"><label for="PERSONAL-GARAGE">Мой гараж</label></li>
 			</ol>
 		</nav>
+		<section class="my-data-section">
+			<div class="my-data__photo-bonus">
+				<div class="my-data__photo">
+					<label>Загрузить ваше фото
+						<input type="file" class="hidden">
+					</label>
+				</div>
+				<div class="my-data__bonus">
+					<p class="my-data__text">Бонусов на счету</p>
+					<strong class="my-data__count">480</strong>
+					<p><a href="#" class="my-data__how-link">Как получить?</a></p>
+					<p><a href="#" class="my-data__how-link">Как потратить?</a></p>
+				</div>
+			</div>
+			<div class="my-data__personal-wp">
+				<p class="my-data__text">Личные данные</p>
+				<form action="/" class="my-data__form">
+					<input type="text" placeholder="Ваше ФИО" class="my-data__input input-fio">
+					<select name="sex-select" id="SEX" class="my-data__input input-sex">
+						<option value="default">Ваш пол</option>
+						<option value="man">Мужской</option>
+						<option value="woman">Женский</option>
+					</select>
+					<input type="text" placeholder="Дата рождения" class="my-data__input input-birth">
+					<input type="tel" placeholder="Дополнительный номер для связи" class="my-data__input input-tel">
+					<input type="email" placeholder="E-mail" class="my-data__input input-email">
+					<div class="my-data__inn-wp">
+						<input type="text" placeholder="ИНН" class="my-data__input input-inn">
+						<input type="submit" value="Сохранить" class="my-data__save-btn">
+					</div>
+				</form>
+				<div class="my-data__details">
+					<p class="my-data__txt_grey">Ваше ФИО</p>
+					<p class="my-data__text">Иванов Иван Иванович</p>
+					<p class="my-data__txt_grey">Ваш пол</p>
+					<p class="my-data__text">Мужской</p>
+					<p class="my-data__txt_grey">Дата рождения</p>
+					<p class="my-data__text">18.09.2018</p>
+					<p class="my-data__txt_grey">Дополнительный номер для связи</p>
+					<p class="my-data__text">+ 7 (912) 456-78-90</p>
+					<p class="my-data__txt_grey">E-mail</p>
+					<p class="my-data__text">login@gmail.com</p>
+					<p class="my-data__txt_grey">ИНН</p>
+					<p class="my-data__text">123987123098</p>
+					<a href="#" class="my-data__save-btn">Сохранить</a>
+					<a href="#" class="my-data__edit-btn">Изменить данные</a>
+				</div>
+			</div>
+			<div class="my-data__login-wp">
+				<div>
+					<p class="my-data__txt_grey">Логин</p>
+					<p class="my-data__text">+ 7 (912) 456-78-90</p>
+				</div>
+				<a href="#" class="my-data__edit-btn">Изменить пароль</a>
+			</div>
+			<div class="my-data__social">
+				<p class="my-data__text">Привязать соцсети</p>
+				<p class="my-data__txt_grey">Подключите свой профиль в социальной сети, чтобы авторизоваться без ввода пароля в дальнейшем.</p>
+				<ul class="my-data__social-list">
+					<li>
+						<p class="my-data__txt_grey">ВКонтакте</p>
+						<a href="#" class="my-data__connect-btn">Привязать</a>
+					</li>
+					<li>
+						<p class="my-data__txt_grey">Facebook</p>
+						<a href="#" class="my-data__connect-btn">Привязать</a>
+					</li>
+					<li>
+						<p class="my-data__txt_grey">Twitter</p>
+						<a href="#" class="my-data__connect-btn">Привязать</a>
+					</li>
+					<li>
+						<p class="my-data__txt_grey">Google+</p>
+						<a href="#" class="my-data__connect-btn">Привязать</a>
+					</li>
+					<li>
+						<p class="my-data__txt_grey">Mail.ru</p>
+						<a href="#" class="my-data__connect-btn">Привязать</a>
+					</li>
+					<li>
+						<p class="my-data__txt_grey">Yandex</p>
+						<a href="#" class="my-data__connect-btn">Привязать</a>
+					</li>
+				</ul>
+			</div>
+		</section>
 		<section class="favorites-section">
 			<header>
 				<h2 class="hidden">Список избранных товаров</h2>
