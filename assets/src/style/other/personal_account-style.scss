@@ -3,6 +3,7 @@
 //@import "../../style/variables.part2";
 @import "style/other";
 @import "style/breadcrumb";
+@import "style/pagination";
 
 @import "personal_account-media";
 
@@ -327,6 +328,18 @@
 
 .my-data__form {
 	display: none;
+
+	select {
+		appearance: none;
+		background: url(../../img/down.svg);
+		background-repeat: no-repeat;
+		background-size: 17px 10px;
+		background-position: 90% 45%;
+	}
+
+	.input-sex {
+		background-color: #fff;
+	}
 }
 
 .input-fio {
@@ -430,11 +443,36 @@
 .favorites__list {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	//	grid-column-gap: 8px;
 	grid-row-gap: 13px;
+
+	.favorites__item {
+		.product-item {
+			height: 415px;
+		}
+
+		.main-product-card {
+			height: 415px;
+		}
+	}
 }
 
 @include mediaFavorites;
+
+.pagination-section {
+	font-size: 14px;
+}
+
+@include pagination(800px);
+
+.pagination {
+	margin-right: 85px;
+}
+@media screen and (max-width: 800px) {
+		.pagination {
+			margin-right: 0;
+		}
+	}
+
 /* END favorites-section */
 /* ************** */
 
