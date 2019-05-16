@@ -26,34 +26,34 @@
 			<strong class="form__title">Как с вами связаться</strong>
 			<label class="form__wp">
 				<input type="text" name="name" id="FORM-NAME" class="form__input" required maxlength='50'>
-				<div class="form__placeholder">Имя<span>*</span></div>
+				<span class="form__placeholder">Имя<span>*</span></span>
 			</label>
 			<label class="form__wp">
 				<input type="text" name="surname" id="FORM-SURNAME" class="form__input" required maxlength='50'>
-				<div class="form__placeholder">Фамилия<span>*</span></div>
+				<span class="form__placeholder">Фамилия<span>*</span></span>
 			</label>
 			<label class="form__wp">
 				<input type="text" name="patronymic" id="FORM-PATRONYMIC" class="form__input" required maxlength='50'>
-				<div class="form__placeholder">Отчество<span>*</span></div>
+				<span class="form__placeholder">Отчество<span>*</span></span>
 			</label>
 			<label class="form__wp">
 				<input type="text" name="email" id="FORM-EMAIL" class="form__input" required maxlength='50'>
-				<div class="form__placeholder">Email<span>*</span></div>
+				<span class="form__placeholder">Email<span>*</span></span>
 			</label>
 			<label class="form__wp">
 				<input type="text" name="tel" id="FORM-TEL" class="form__input" required maxlength='15'>
-				<div class="form__placeholder">Номер&nbsp;телефона<span>*</span></div>
+				<span class="form__placeholder">Номер&nbsp;телефона<span>*</span></span>
 			</label>
 		</form>
 		<form action="/" method="post" class="form" id="VEHICLE">
 			<strong class="form__title">Данные автомобиля</strong>
 			<label class="form__wp">
 				<input type="text" name="vin" id="FORM-VIN" class="form__input" required maxlength="17">
-				<div class="form__placeholder">VIN&nbsp;номер<span>*</span></div>
+				<span class="form__placeholder">VIN&nbsp;номер<span>*</span></span>
 			</label>
 			<label class="form__wp">
 				<input type="text" name="manufacturer" id="FORM-MANUFACTURER" class="form__input" required>
-				<div class="form__placeholder">Производитель<span>*</span></div>
+				<span class="form__placeholder">Производитель<span>*</span></span>
 			</label>
 			<input type="text" name="model" id="FORM-MODEL" class="form__input" placeholder="Модель">
 			<input type="text" name="production_date" id="FORM-PRODUCTION-DATE" class="form__input" placeholder="Дата производства">
@@ -63,11 +63,11 @@
 			<strong class="form__title">Необходимые вам запчасти и их количество</strong>
 			<label class="form__wp">
 				<input type="text" name="part_name" id="FORM-PART-NAME" class="form__input" required>
-				<div class="form__placeholder">Название&nbsp;детали<span>*</span></div>
+				<span class="form__placeholder">Название&nbsp;детали<span>*</span></span>
 			</label>
 			<label class="form__wp">
 				<input type="text" name="part_model" id="FORM-PART-MODEL" class="form__input" required>
-				<div class="form__placeholder">Модель<span>*</span></div>
+				<span class="form__placeholder">Модель<span>*</span></span>
 			</label>
 			<div class="form__select-wp">
 				<select size="1" class="form__select">
@@ -82,6 +82,7 @@
 		<input type="submit" value="Отправить запрос" class="form__btn">
 	</main>
 	@@include('./template/footer-block.html')
+	@@include('./template/modal.html')
 	@@include('./template/footer-scripts.html')
 </body>
 

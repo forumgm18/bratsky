@@ -125,7 +125,7 @@
 #PERSONAL-ORDERS:checked ~ .personal-menu .personal-menu__list .personal-menu__item:nth-of-type(3),
 #PERSONAL-HISTORY:checked ~ .personal-menu .personal-menu__list .personal-menu__item:nth-of-type(4),
 #PERSONAL-GARAGE:checked ~ .personal-menu .personal-menu__list .personal-menu__item:nth-of-type(5) {
-	background: #333333;
+	background: $fontColor;
 	color: #FFFFFF;
 }
 
@@ -184,7 +184,7 @@
 
 .my-data__photo {
 	background: #FFFFFF;
-	border: 1px solid #BDBDBD;
+	border: 1px solid $borderGray;
 	box-sizing: border-box;
 	width: 170px;
 	height: 170px;
@@ -197,7 +197,7 @@
 		font-size: 14px;
 		line-height: 18px;
 		text-align: center;
-		color: #333333;
+		color: $fontColor;
 		display: block;
 		margin: 45% 0 0 0;
 		user-select: none;
@@ -243,7 +243,7 @@
 }
 
 .my-data__txt_grey {
-	color: #828282;
+	color: $fontColorLight;
 }
 
 .my-data__count {
@@ -253,7 +253,7 @@
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 31px;
-	color: #333333;
+	color: $fontColor;
 }
 
 .my-data__how-link {
@@ -263,7 +263,7 @@
 	font-size: 14px;
 	line-height: 18px;
 	text-decoration-line: underline;
-	color: #333333;
+	color: $fontColor;
 }
 
 .my-data__save-btn {
@@ -280,7 +280,7 @@
 .my-data__input {
 	width: 100%;
 	background: #FFFFFF;
-	border: 1px solid #BDBDBD;
+	border: 1px solid $borderGray;
 	box-sizing: border-box;
 	font-family: PT Sans;
 	font-style: normal;
@@ -288,11 +288,11 @@
 	font-size: 14px;
 	line-height: 45px;
 	height: 45px;
-	color: #828282;
+	color: $fontColorLight;
 	padding-left: 8px;
 
 	&::placeholder {
-		color: #828282;
+		color: $fontColorLight;
 		font-family: PT Sans;
 		font-style: normal;
 		font-weight: normal;
@@ -419,7 +419,7 @@
 }
 
 .my-data__connect-btn {
-	@include linkLikeBtn(44px, 201px, #FFCD19, #333333, 14px);
+	@include linkLikeBtn(44px, 201px, #FFCD19, $fontColor, 14px);
 }
 
 
@@ -544,14 +544,14 @@
 	border: none;
 	font-size: 13px;
 	text-decoration-line: underline;
-	color: #333333;
+	color: $fontColor;
 	display: block;
 	margin-bottom: 6px;
 	padding-left: 0;
 
 
 	&:hover {
-		color: darken(#333333, 5%);
+		color: darken($fontColor, 5%);
 	}
 }
 
@@ -594,7 +594,7 @@
 
 		th {
 			font-size: 13px;
-			color: #828282;
+			color: $fontColorLight;
 			font-weight: normal;
 			padding: 17px 6px 14px 11px;
 			vertical-align: top;
@@ -610,7 +610,7 @@
 			background: none;
 			box-shadow: none;
 			font-size: 13px;
-			color: #828282;
+			color: $fontColorLight;
 			font-weight: normal;
 			padding: 0 6px 14px 11px;
 			vertical-align: top;
@@ -620,7 +620,7 @@
 	td {
 		font-size: 12px;
 		line-height: 16px;
-		color: #333333;
+		color: $fontColor;
 		padding: 17px 11px 18px 11px;
 		vertical-align: top;
 	}
@@ -642,19 +642,19 @@
 	border: none;
 	font-size: 13px;
 	text-decoration-line: underline;
-	color: #3B70C6;
+	color: $blue;
 	display: inline;
 	padding-left: 0;
 
 
 	&:hover {
-		color: darken(#3B70C6, 5%);
+		color: darken($blue, 5%);
 	}
 
 }
 
 .table_brder_top {
-	border-top: 1px solid #BDBDBD;
+	border-top: 1px solid $borderGray;
 }
 
 .histoty__table {
@@ -721,12 +721,12 @@
 
 	&:focus {
 		.garage__data-wp {
-			border: 2px solid #333333;
+			border: 2px solid $fontColor;
 		}
 
 		.garage__title {
 			font-weight: bold;
-			color: #333333;
+			color: $fontColor;
 		}
 	}
 }
@@ -737,7 +737,7 @@
 	font-weight: normal;
 	font-size: 24px;
 	line-height: 31px;
-	color: #828282;
+	color: $fontColorLight;
 }
 
 .garage__data-wp {
@@ -759,7 +759,7 @@
 	line-height: (40px-2px);
 	font-style: normal;
 	font-weight: normal;
-	color: #828282;
+	color: $fontColorLight;
 	border: 1px solid #F0F0F0;
 	padding: 0 11px;
 	margin: 0 14px 0 0;
@@ -779,7 +779,7 @@
 	}
 
 	&::placeholder {
-		color: #828282;
+		color: $fontColorLight;
 	}
 }
 

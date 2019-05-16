@@ -6,7 +6,7 @@
 <body>
 	@@include('./template/header.html')
 
-<section class="breadcrumb">
+<div class="breadcrumb">
 	<div class="container">
 		<div class="row">
 			<nav class="col">
@@ -17,7 +17,7 @@
 			</nav>
 		</div>
 	</div>
-</section>
+</div>
 <section class="catalog-page">
 	<div class="container">
 		<div class="row h">
@@ -161,8 +161,8 @@
 
 					  <div class="filter-block-btngroup">
 
-							<a href="#" id="clear_filters" class="white-btn" type="button" >Сбросить</a>
-							<button class="red-btn" type="button">Найти</button>
+							<a href="#" id="clear_filters" class="white-btn">Сбросить</a>
+							<button class="red-btn">Найти</button>
 						</div>
 					</form>				
 
@@ -175,7 +175,7 @@
 				<div class="filter-section">
 					<div class="producer">
 						<div class="label">Производитель:</div>
-						<form action="">
+						<form action="/">
 							<div class="items">
 								<label class="radio"><input type="radio" name="producer" value="Titan" checked><span class="radio-text">Titan</span></label>
 								<label class="radio"><input type="radio" name="producer" value="Tubor"><span class="radio-text">Tubor</span></label>
@@ -202,7 +202,7 @@
 					</div>
 					<div class="filrers">
 						<div class="label">Фильтры:</div>
-						<form action="">
+						<form action="/">
 							<div class="items">
 								<a class="show-more" href="#">сбросить фильтры</a>
 							</div>
@@ -214,7 +214,7 @@
 					<div class="sorting">
 						<div class="label">Сортировать:</div>
 						<div class="items">
-							<form action="" class="sorting-form">
+							<form action="/" class="sorting-form">
 								<div class="sort-price">
 									<label class="radio"><input type="radio" name="price_type" value="Varta"><span class="radio-text">Дешевле</span></label>
 									<div> / </div>
@@ -280,6 +280,7 @@
 		</div>		
 </section>
 <section class="d-lg-none sect-bgr-gray1">
+<h2 style="display: none;">Преимущества</h2>
 	<div class="container">
 		<div class="row">
 			<div class="col advantages">

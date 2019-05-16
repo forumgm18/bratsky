@@ -59,7 +59,9 @@ textarea::placeholder, input::placeholder { color: $fontColorLight2;}
     position: absolute;
     z-index: 100;    
     cursor: text;   
-    top: 10px;
+//  Правки 17.05.19
+//  top: 10px;
+    top: 7px;
     left: 10px;
     width: 100%;    
     display: none;

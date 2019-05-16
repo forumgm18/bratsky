@@ -27,7 +27,7 @@
 .title-h1 {
 	margin: 0 0 18px 0;
 	padding: 0;
-	font-family: $textFFamily2;
+	font-family: $headFFamily;
 }
 
 /* *** */
@@ -552,7 +552,7 @@ img {
 	line-height: 17px;
 	text-align: center;
 	text-transform: capitalize;
-	color: #333333;
+	color: $fontColor;
 	margin: 1em 0 0 0;
 }
 
