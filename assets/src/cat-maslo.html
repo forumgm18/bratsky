@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  @@include('./template/head.html')
+  <link rel="stylesheet" href="css/other/cat-maslo-style.min.css">
+</head>
+
+<body>
+  @@include('./template/header.html')
+  <main class="main">
+    <section class="breadcrumb">
+      <div class="container">
+        <div class="row">
+          <nav class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item active">Каталог масел и смазки</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section class="catalog-page">
+      <div class="container">
+        <div class="row h">
+          <div class="col header-flex">
+            <h1>Масла и смазки</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4 col-xl-3">
+            <div class="filter-container">
+              <div class="filter-top-groupe">
+                <button class="black-btn" type="button" data-toggle="collapse" data-target="#collapseFilter">Масла и жидкости</button>
+                <button class="red-btn" type="button" data-toggle="modal" data-target="#selection-by-car">Подбор по авто</button>
+                <button class="filter-mobile-btn" type="button" data-toggle="collapse" data-target="#collapseFilter"></button>
+              </div>
+              <div class="filter-top-groupe2">
+                <h4>Масла и жидкости</h4>
+                <button class="rc-btn " type="button" data-toggle="collapse" data-target="#collapseFilter"></button>
+              </div>
+              <form class="filter-form collapse show" id="collapseFilter">
+                <div class="card-body top" id="MASLO-INPUTS-FILTER">
+                  <label class="radio"><input type="radio" name="maslo_type" value="maslo_grease" checked><span class="radio-text">Масла и смазки</span></label>
+                  <label class="radio"><input type="radio" name="maslo_type" value="fluid"><span class="radio-text">Жидкости для ГУР Гидравлические жидкости Присадки</span></label>
+                  <label class="radio"><input type="radio" name="maslo_type" value="antifreeze"><span class="radio-text">Антифризы</span></label>
+                  <label class="radio"><input type="radio" name="maslo_type" value="tosol"><span class="radio-text">Тосол</span></label>
+                  <label class="radio"><input type="radio" name="maslo_type" value="brake_fluid"><span class="radio-text">Тормозные жидкости</span></label>
+                </div>
+                <div id="filter-accordion">
+                  <div class="filter-block appointment-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#appointment-item">Назначение</button>
+                    <div id="appointment-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="appointment" value="all" checked><span class="radio-text">Все</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="auto"><span class="radio-text">Автомобили</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="truck"><span class="radio-text">Грузовики, комбайны, трактора</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="motorcycle"><span class="radio-text">Мотоциклы</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="boats"><span class="radio-text">Катера, лодки, гидроциклы</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="quad-bike"><span class="radio-text">Квадроциклы</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="chain-saw"><span class="radio-text">Цепные пилы</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="lawnmower"><span class="radio-text">Газонокосилки, триммеры</span></label>
+                        <label class="radio"><input type="radio" name="appointment" value="lubrications"><span class="radio-text">Смазки</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block oil-type-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#oil-type-item">Тип масла</button>
+                    <div id="oil-type-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="oil-type" value="all" checked><span class="radio-text">Все</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-2t"><span class="radio-text">2Т</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-4t"><span class="radio-text">4Т</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-motor"><span class="radio-text">Моторное</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-lineshaft"><span class="radio-text">Трансмиссионное</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-mkpp"><span class="radio-text">МКПП</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-akpp"><span class="radio-text">АКПП</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-variable-speed"><span class="radio-text">Вариаторное</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-gear"><span class="radio-text">Редукторное</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-forklift"><span class="radio-text">Вилочное</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-industrial"><span class="radio-text">Индустриальное</span></label>
+                        <label class="radio"><input type="radio" name="oil-type" value="oil-etc"><span class="radio-text">Прочее</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block viscosity-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#viscosity-item">Вязкость</button>
+                    <div id="viscosity-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="viscosity" value="ow-16" checked><span class="radio-text">0W-16</span></label>
+                        <label class="radio"><input type="radio" name="viscosity" value="ow-20"><span class="radio-text">0W-20</span></label>
+                        <label class="radio"><input type="radio" name="viscosity" value="ow-30"><span class="radio-text">0W-30</span></label>
+                        <label class="radio"><input type="radio" name="viscosity" value="ow-40"><span class="radio-text">0W-40</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block manufacturer-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#manufacturer-item">Производитель</button>
+                    <div id="manufacturer-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="manufacturer" value="eni" checked><span class="radio-text">ENI</span></label>
+                        <label class="radio"><input type="radio" name="manufacturer" value="castrol"><span class="radio-text">CASTROL</span></label>
+                        <label class="radio"><input type="radio" name="manufacturer" value="shell"><span class="radio-text">SHELL</span></label>
+                        <label class="radio"><input type="radio" name="manufacturer" value="mobil"><span class="radio-text">MOBIL</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block composition-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#composition-item">Состав</button>
+                    <div id="composition-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="composition" value="synthetic" checked><span class="radio-text">Синтетическое</span></label>
+                        <label class="radio"><input type="radio" name="composition" value="semi-synthetic"><span class="radio-text">Полусинтетическое</span></label>
+                        <label class="radio"><input type="radio" name="composition" value="mineral"><span class="radio-text">Минеральное</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block engine-type-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#engine-type-item">Тип двигателя</button>
+                    <div id="engine-type-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="engine-type" value="petrol" checked><span class="radio-text">Бензиновый</span></label>
+                        <label class="radio"><input type="radio" name="engine-type" value="hybrid"><span class="radio-text">Гибридный</span></label>
+                        <label class="radio"><input type="radio" name="engine-type" value="gas"><span class="radio-text">Газовый</span></label>
+                        <label class="radio"><input type="radio" name="engine-type" value="diesel"><span class="radio-text">Дизельный</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block brand-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#brand-item">Бренд</button>
+                    <div id="brand-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="brand" value="castrol" checked><span class="radio-text">Castrol</span></label>
+                        <label class="radio"><input type="radio" name="brand" value="amsoil"><span class="radio-text">AMSOIL</span></label>
+                        <label class="radio"><input type="radio" name="brand" value="chevron"><span class="radio-text">Chevron</span></label>
+                        <label class="radio"><input type="radio" name="brand" value="febi"><span class="radio-text">FEBI</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block brand-2-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#brand-2-item">Бренд</button>
+                    <div id="brand-2-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="brand-2" value="Niagara" checked><span class="radio-text">Ниагара</span></label>
+                        <label class="radio"><input type="radio" name="brand-2" value="Polar"><span class="radio-text">Полярник</span></label>
+                        <label class="radio"><input type="radio" name="brand-2" value="Dzerzhinsky"><span class="radio-text">Дзержинский</span></label>
+                        <label class="radio"><input type="radio" name="brand-2" value="Obninsk"><span class="radio-text">Обнинск</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block specification-2-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#specification-2-item">Спецификации</button>
+                    <div id="specification-2-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="specification-2" value="dot-3" checked><span class="radio-text">DOT 3</span></label>
+                        <label class="radio"><input type="radio" name="specification-2" value="dot-4"><span class="radio-text">DOT 4</span></label>
+                        <label class="radio"><input type="radio" name="specification-2" value="dot-4-plus"><span class="radio-text">DOT 4+</span></label>
+                        <label class="radio"><input type="radio" name="specification-2" value="dot-5"><span class="radio-text">DOT 5</span></label>
+                        <label class="radio"><input type="radio" name="specification-2" value="dot-5.1"><span class="radio-text">DOT 5.1</span></label>
+                        <label class="radio"><input type="radio" name="specification-2" value="dot-6"><span class="radio-text">DOT 6</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block class-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#class-item">Класс</button>
+                    <div id="class-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="class" value="zh-k" checked><span class="radio-text">ОЖ-К (концентрат)</span></label>
+                        <label class="radio"><input type="radio" name="class" value="zh-40"><span class="radio-text">ОЖ-40</span></label>
+                        <label class="radio"><input type="radio" name="class" value="zh-65"><span class="radio-text">ОЖ-65</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block specification-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#specification-item">Спецификации</button>
+                    <div id="specification-item" class="card-body collapse" data-parent="">
+                      <label class="radio"><input type="radio" name="polarity" value="bmw-01-fe" checked><span class="radio-text">BMW Longlife-01 FE</span></label>
+                      <label class="radio"><input type="radio" name="polarity" value="bmw-01"><span class="radio-text">BMW Longlife-01</span></label>
+                      <label class="radio"><input type="radio" name="polarity" value="bmw-04"><span class="radio-text">BMW Longlife-04</span></label>
+                      <label class="radio"><input type="radio" name="polarity" value="bmw-04"><span class="radio-text">BMW Longlife-04</span></label>
+                    </div>
+                  </div>
+                  <div class="filter-block access-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#access-item">Допуски</button>
+                    <div id="access-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="access" value="allison-c-3" checked><span class="radio-text">Allison C-3</span></label>
+                        <label class="radio"><input type="radio" name="access" value="allison-c-4"><span class="radio-text">Allison C-4</span></label>
+                        <label class="radio"><input type="radio" name="access" value="caterpillar-to-2"><span class="radio-text">Caterpillar TO-2</span></label>
+                        <label class="radio"><input type="radio" name="access" value="caterpillar-to-2"><span class="radio-text">Caterpillar TO-2</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block color-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#color-item">Цвет</button>
+                    <div id="color-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="color" value="yellow" checked><span class="radio-text">Желтый</span></label>
+                        <label class="radio"><input type="radio" name="color" value="green"><span class="radio-text">Зеленый</span></label>
+                        <label class="radio"><input type="radio" name="color" value="red"><span class="radio-text">Красный</span></label>
+                        <label class="radio"><input type="radio" name="color" value="another"><span class="radio-text">Другой</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#price-item">Цена, руб</button>
+                    <div id="price-item" class="card-body collapse" data-parent="">
+                      <div class="range-description"><span class="range-min">0</span><span class="range-max">100 000</span></div>
+                      <div class="range">
+                        <input id="price" name="price" type="text" class="range" value="0,100000" data-provide='slider' data-slider-min="0" data-slider-max="100000" data-slider-step="5" data-slider-value="[0,100000]" data-slider-tooltip="hide" data-slider-handle='square' />
+                      </div>
+                      <div class="range-description"><span>от</span><span>до</span></div>
+                    </div>
+                  </div>
+                  <div class="filter-block">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#capacity-item">Объем упаковки, л</button>
+                    <div id="capacity-item" class="card-body collapse" data-parent="">
+                      <div class="range-description"><span class="range-min">0,1</span><span class="range-max">1000</span></div>
+                      <div class="range">
+                        <input id="capacity" name="capacity" type="text" class="range" value="0.1,1000" data-provide='slider' data-slider-min="0.1" data-slider-max="1000" data-slider-step="5" data-slider-value="[60,1000]" data-slider-tooltip="hide" data-slider-handle='square' />
+                      </div>
+                      <div class="range-description"><span>от</span><span>до</span></div>
+                    </div>
+                  </div>
+                  <div class="filter-block specification-acea-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#specification-acea-item">Спецификация ACEA</button>
+                    <div id="specification-acea-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="spec-acea" value="acea-a1-b1" checked><span class="radio-text">А1/В1</span></label>
+                        <label class="radio"><input type="radio" name="spec-acea" value="acea-a2"><span class="radio-text">А2</span></label>
+                        <label class="radio"><input type="radio" name="spec-acea" value="acea-a2-b2"><span class="radio-text">А2/В2</span></label>
+                        <label class="radio"><input type="radio" name="spec-acea" value="acea-a2-b2"><span class="radio-text">А2/В2</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block specification-api-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#specification-api-item">Спецификация API</button>
+                    <div id="specification-api-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="spec-api" value="api-cb" checked><span class="radio-text">CB</span></label>
+                        <label class="radio"><input type="radio" name="spec-api" value="api-cc"><span class="radio-text">CC</span></label>
+                        <label class="radio"><input type="radio" name="spec-api" value="api-cd"><span class="radio-text">CD</span></label>
+                        <label class="radio"><input type="radio" name="spec-api" value="api-cf"><span class="radio-text">CF</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-block specification-oem-filter">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#specification-oem-item">Спецификация OEM</button>
+                    <div id="specification-oem-item" class="card-body border collapse" data-parent="">
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="spec-oem" value="oem-bmw-01-fe" checked><span class="radio-text">BMW Longlife-01 FE</span></label>
+                        <label class="radio"><input type="radio" name="spec-oem" value="oem-bmw-01"><span class="radio-text">BMW Longlife-01</span></label>
+                        <label class="radio"><input type="radio" name="spec-oem" value="oem-bmw-04"><span class="radio-text">BMW Longlife-04</span></label>
+                        <label class="radio"><input type="radio" name="spec-oem" value="oem-bmw-12"><span class="radio-text">BMW Longlife-12 FE</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-block-btngroup">
+                  <a href="#" id="clear_filters" class="white-btn" type="button">Сбросить</a>
+                  <button class="red-btn" type="button">Найти</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col">
+            <div class="filter-section">
+              <div class="producer">
+                <div class="label">Производитель:</div>
+                <form action="">
+                  <div class="items">
+                    <label class="radio"><input type="radio" name="producer" value="Eni" checked><span class="radio-text">Eni</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Shell"><span class="radio-text">Shell</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Castrol"><span class="radio-text">Castrol</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Motul"><span class="radio-text">Motul</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Elf"><span class="radio-text">Elf</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Total"><span class="radio-text">Total</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Idemitsu" checked><span class="radio-text">Idemitsu</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Eni"><span class="radio-text">Eni</span></label>
+                    <label class="radio"><input type="radio" name="producer" value="Shell"><span class="radio-text">Shell</span></label>
+                    <a class="show-more" href="#">показать еще</a>
+                  </div>
+                </form>
+              </div>
+              <div class="marka">
+                <div class="label">Марка:</div>
+                <div class="items">
+                  <a class="find-link" href="#">2100 & 4100 (12)</a>
+                  <a class="find-link" href="#">6100 (7)</a>
+                  <a class="find-link" href="#">8100 (9)</a>
+                  <a class="find-link" href="#">Hybrid (3)</a>
+                  <a class="find-link" href="#">Specific(5)</a>
+                  <a class="find-link" href="#">LCV (1)</a>
+                </div>
+              </div>
+              <div class="filrers">
+                <div class="label">Фильтры:</div>
+                <form action="">
+                  <div class="items">
+                    <a class="show-more" href="#">сбросить фильтры</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="sort-section">
+              <div class="sorting">
+                <div class="label">Сортировать:</div>
+                <div class="items">
+                  <form action="" class="sorting-form">
+                    <div class="sort-price">
+                      <label class="radio"><input type="radio" name="price_type" value="Varta"><span class="radio-text">Дешевле</span></label>
+                      <div> / </div>
+                      <label class="radio"><input type="radio" name="price_type" value="Varta"><span class="radio-text">Дороже</span></label>
+                    </div>
+                    <div class="sort-capacity">
+                      <label class="radio"><input type="radio" name="capacity_range" value="30-60"><span class="radio-text">30-60 Ач</span></label>
+                      <label class="radio"><input type="radio" name="capacity_range" value="60-90"><span class="radio-text">60-90 Ач</span></label>
+                      <label class="radio"><input type="radio" name="capacity_range" value="90-120"><span class="radio-text">90-120 Ач</span></label>
+                      <label class="radio"><input type="radio" name="capacity_range" value="120-150"><span class="radio-text">120-150 Ач</span></label>
+
+                    </div>
+                    <div class="view">
+                      <button class="view-list-btn"></button>
+                      <button class="view-title-btn"></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="content-section list">
+              @@include('./template/catalog-product-card-akk2.html')
+              @@include('./template/catalog-product-card-akk2.html')
+              @@include('./template/catalog-product-card-akk2.html')
+              @@include('./template/catalog-product-card-akk2.html')
+              @@include('./template/catalog-product-card-akk2.html')
+              @@include('./template/catalog-product-card-akk2.html')
+              @@include('./template/catalog-product-card-akk2.html')
+              @@include('./template/catalog-product-card-akk2.html')
+            </div>
+            <div class="pagination-section">
+              <div class="zaglushka"></div>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link prev" href="#"></a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link next" href="#"></a></li>
+                <li class="page-item"><a class="page-link" href="#">50</a></li>
+              </ul>
+              <div class="page-select">
+                <span>товаров на странице</span>
+                <select class="selectpicker" name="page_num" id="page_num">
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('./template/footer-block.html')
+  @@include('./template/modal.html')
+  @@include('./template/footer-scripts.html')
+  <script src="js/other/cat-maslo-script.js"></script>
+</body>
+
+</html>
