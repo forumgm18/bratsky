@@ -2424,7 +2424,7 @@ footer {
 		}
 		th:last-child{
 			padding-right: 75px;
-			color: $fontColorLight4;
+			// color: $fontColorLight4;
 					@include media-breakpoint-up(md) {padding-right: 40px;}
 					@include media-breakpoint-up(lg) {padding-right: 75px;}
 		}

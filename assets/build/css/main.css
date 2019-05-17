@@ -13726,8 +13726,7 @@ footer {
       .product-tabs th:first-child {
         padding-left: 75px; } }
   .product-tabs th:last-child {
-    padding-right: 75px;
-    color: #4F4F4F; }
+    padding-right: 75px; }
     @media (min-width: 768px) {
       .product-tabs th:last-child {
         padding-right: 40px; } }
