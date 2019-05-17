@@ -59,9 +59,7 @@ textarea::placeholder, input::placeholder { color: $fontColorLight2;}
     position: absolute;
     z-index: 100;    
     cursor: text;   
-//  Правки 17.05.19
-//  top: 10px;
-    top: 7px;
+    top: 10px;
     left: 10px;
     width: 100%;    
     display: none;
@@ -2073,7 +2071,7 @@ footer {
 .рroduct-сard-page {
 	background-color: $sectBgrGray1;
 		.breadcrumb {padding: 0;}
-		section.breadcrumb {
+		div.breadcrumb {
 			padding: 0 15px;
 			height: 20px;
 			margin-top: 17px;

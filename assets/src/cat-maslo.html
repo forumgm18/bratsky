@@ -9,7 +9,7 @@
 <body>
   @@include('./template/header.html')
   <main class="main">
-    <section class="breadcrumb">
+    <div class="breadcrumb">
       <div class="container">
         <div class="row">
           <nav class="col">
@@ -20,7 +20,7 @@
           </nav>
         </div>
       </div>
-    </section>
+    </div>
     <section class="catalog-page">
       <div class="container">
         <div class="row h">
@@ -268,7 +268,7 @@
             <div class="filter-section">
               <div class="producer">
                 <div class="label">Производитель:</div>
-                <form action="">
+                <form action="/">
                   <div class="items">
                     <label class="radio"><input type="radio" name="producer" value="Eni" checked><span class="radio-text">Eni</span></label>
                     <label class="radio"><input type="radio" name="producer" value="Shell"><span class="radio-text">Shell</span></label>
@@ -296,7 +296,7 @@
               </div>
               <div class="filrers">
                 <div class="label">Фильтры:</div>
-                <form action="">
+                <form action="/">
                   <div class="items">
                     <a class="show-more" href="#">сбросить фильтры</a>
                   </div>
@@ -307,7 +307,7 @@
               <div class="sorting">
                 <div class="label">Сортировать:</div>
                 <div class="items">
-                  <form action="" class="sorting-form">
+                  <form action="/" class="sorting-form">
                     <div class="sort-price">
                       <label class="radio"><input type="radio" name="price_type" value="Varta"><span class="radio-text">Дешевле</span></label>
                       <div> / </div>

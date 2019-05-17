@@ -32,29 +32,29 @@
 }
 
 .client-menu {
-	font-weight: bold;
-	font-size: .875em;
-	line-height: normal;
-	color: $fontColor;
-	width: 300px;
+//	font-weight: bold;
+//	font-size: .875em;
+//	line-height: normal;
+//	color: $fontColor;
+//	width: 300px;
 	grid-area: 3/1/5/2;
 
-	.active {
-		color: $fontColorLight;
-	}
+//	.active {
+//		color: $fontColorLight;
+//	}
 }
-
-.client-menu__list {
-	margin: 0;
-}
-
-.client-menu__item {
-	margin-bottom: 2em;
-}
-
-.client-menu__link {
-	color: inherit;
-}
+//
+//.client-menu__list {
+//	margin: 0;
+//}
+//
+//.client-menu__item {
+//	margin-bottom: 2em;
+//}
+//
+//.client-menu__link {
+//	color: inherit;
+//}
 
 .arrow-icon {
 	display: inline-block;
