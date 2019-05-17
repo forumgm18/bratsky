@@ -1,96 +1,84 @@
 @media screen and (max-width: 1220px) {
-	.main {
-		margin-left: $mainPaddingLeftRight;
-		margin-right: $mainPaddingLeftRight;
-	}
+  .main {
+    margin-left: $mainPaddingLeftRight;
+    margin-right: $mainPaddingLeftRight;
+  }
 
-	.recent-event {
-		margin-top: 0;
-	}
+  .header-wp {
+    justify-content: space-between;
+  }
 
-	#EVENT-ALL:checked ~ .recent-event__all,
-	#EVENT-NEWS:checked ~ .recent-event__news,
-	#EVENT-ARTICLES:checked ~ .recent-event__articles,
-	#EVENT-PRESS-RELEASES:checked ~ .recent-event__press-releases,
-	#EVENT-VIDEO:checked ~ .recent-event__video,
-	#EVENT-PROMOTIONS:checked ~ .recent-event__promotions {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-column-gap: 11px;
-		grid-row-gap: 29px;
-	}
+  .recent-event__header {
+    margin-left: 30px;
+  }
 
-	.recent-event__header {
-		display: block;
-		margin-bottom: 30px;
-	}
-
-	.recent-event__title {
-		margin-right: 0;
-	}
 }
 
-//@media screen and (max-width: 1110px) {
-//	.pagination-wp {
-//		padding-right: 0;
-//		padding-left: 0;
-//		flex-direction: column;
-//	}
-//
-//	.percount {
-//		position: relative;
-//		justify-content: flex-end;
-//		width: 100%;
-//		margin-top: 1em;
-//	}
-//}
+@media screen and (max-width: 992px) {
+  .client-menu {
+    grid-area: 2/1/3/3;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+  }
 
-@media screen and (max-width: 950px) {
-	.client-menu {
-		grid-column: 1/3;
-		text-align: center;
-		width: 100%;
-		margin-bottom: 1em;
-	}
+  .client-menu__item {
+    display: inline-block;
+    padding: .5em;
+    margin-bottom: 1em;
+  }
 
-	.client-menu__item {
-		display: inline-block;
-		padding: .5em;
-		margin-bottom: 1em;
-	}
+  .recent-event {
+    grid-column: 1/3;
+  }
 
-	.recent-event {
-		grid-column: 1/3;
-	}
+  .recent-event__header {
+    margin-left: 0;
+  }
+
+  .header-wp {
+    display: block;
+  }
+
+  .header-wp__h1 {
+    display: none;
+  }
+
+  .main-header {
+    display: block;
+    margin-bottom: 1.250em;
+  }
 }
+
+
 
 @media screen and (max-width: 540px) {
-	.title {
-		font-size: 1.5em !important;
-	}
+  .title {
+    font-size: 1.5em !important;
+  }
 }
 
 @media screen and (max-width: 599px) {
-	.event {
-		min-height: auto;
-	}
+  .event {
+    min-height: auto;
+  }
 
-	.event__img-wp {
-		display: block;
-		margin: 0 auto;
-		position: relative;
-	}
+  .event__img-wp {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
 
-	.event__content {
-		padding-left: 0;
-	}
+  .event__content {
+    padding-left: 0;
+  }
 
-	.event__category {
-		margin-top: 1em;
-		text-align: center;
-	}
+  .event__category {
+    margin-top: 1em;
+    text-align: center;
+  }
 
-	.recent-event__list {
-		text-align: center;
-	}
+  .recent-event__list {
+    text-align: center;
+  }
 }
