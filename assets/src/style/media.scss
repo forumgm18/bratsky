@@ -2,7 +2,7 @@
 
 	.main-baner {display: none;}
 	.main-menu {background:$sectBgrGray1;}
-//	.main-navigation .logo {	margin: 0 15px;	}
+	//	.main-navigation .logo {	margin: 0 15px;	}
 	// 05.05.19
 	.main-navigation .logo {margin: 0 15px 0 0;	}
 	.main-navigation .logo img {height: 37px;width: 171px}
@@ -28,8 +28,8 @@
 
 	.vin.red-btn {width: 100%;border-radius: $bradius;margin-bottom: 21px;}
 
-	.bs-select {width: 100%!important;}
-	.bs-select-first {width: 100%!important;}
+	.frm-filter .bs-select {width: 100%!important;}
+	.frm-filter .bs-select-first {width: 100%!important;}
 	.z1{display: block;}
 	// .main-feedback .contact-us .recapcha { position: absolute; top: 280px;}
 	// .main-feedback .contact-us .fz152 {align-self: flex-end; width: 100%;height: 40px;margin-bottom: 20px;margin-top: 60px;}
@@ -124,7 +124,7 @@
 	.top-phone {margin-right: 30px;}
 	.top-phone:before{content: url(../img/phone-red.svg);}
 	.top-phone span {display: inline;} 
-	.top-panel .black-btn {background: $blackBtn;	width: 169px;	height: 30px;}
+	.top-panel .black-btn {background: $blackBtn;	width: 100px;	height: 30px;}
 	.top-panel .black-btn span {display: inline;}
 	.top-panel {
 	  position: relative;
@@ -137,8 +137,8 @@
 	.brand-item.slick-slide {width: 187px;}
 	.product-item .slick-slide {width: 240px;}
 	.record {justify-content: space-around;}
-	.bs-select, .bs-select-first {width: 129px!important;}
-	.bs-select-first {width: 80px!important;}
+	.frm-filter .bs-select, .frm-filter .bs-select-first {width: 129px!important;}
+	.frm-filter .bs-select-first {width: 80px!important;}
 
 	.main-vkurse form { width: 600px; flex-wrap: nowrap;}
 	.main-vkurse form input { flex-grow: 1;}
@@ -163,8 +163,8 @@
 	// .main-feedback .contact-us form .message-container { margin-left: 30px;width: 370px;}
 	// .main-feedback .contact-us input { width: 270px;}
 	// .main-feedback .contact-us .red-btn { width: 300px;}
-	.bs-select, .bs-select-first {width: 159px!important;}
-	.bs-select-first {width: 100px!important;}
+	.frm-filter .bs-select, .frm-filter .bs-select-first {width: 159px!important;}
+	.frm-filter .bs-select-first {width: 100px!important;}
 
 	.main-vkurse form { width: 720px;}
 	.main-vkurse form input { flex-grow: 1;}

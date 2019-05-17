@@ -18,25 +18,29 @@ var path = {
         html: 'assets/build/',
           js: 'assets/build/js/',
          css: 'assets/build/css/',
-       jsOther: 'assets/build/js/other',
-      cssOther: 'assets/build/css/other', // путь для  остальных файлов
+     jsOther: 'assets/build/js/other',
+    cssOther: 'assets/build/css/other', // путь для  остальных файлов
          img: 'assets/build/img/',
-       fonts: 'assets/build/fonts/'
+       fonts: 'assets/build/fonts/',
+         tpl: 'assets/build/tpl'  
     },
     src: {
         baseDir: 'assets/src',
-           html: 'assets/src/*.html',
+            tpl: 'assets/src/tpl/*.html',  
+           html: ['assets/src/*.html','!assets/src/tpl/**'],
              js: 'assets/src/js/main.js',
       jsplugins: 'assets/src/js/plugins/*.js',
           style: 'assets/src/style/main.scss',
      cssplugins: 'assets/src/style/plugins/*.css',
-       jsOther: 'assets/src/js/other/*.js',
-scssOtherPages: 'assets/src/style/other/*-style.scss', // стили остальных файлов
+        jsOther: 'assets/src/js/other/*.js',
+ scssOtherPages: 'assets/src/style/other/*-style.scss', // стили остальных файлов
             img: 'assets/src/img/**/*.*',
           fonts: 'assets/src/fonts/**/*.*'
     },
     watch: {
-        html: 'assets/src/**/*.html',
+        // html: 'assets/src/**/*.html',
+        html: ['assets/src/**/*.html','!assets/src/tpl/**'],
+         tpl: 'assets/src/tpl/*.html',  
           js: 'assets/src/js/**/*.js',
          css: 'assets/src/style/**/*.scss',
          img: 'assets/src/img/**/*.*',
@@ -47,9 +51,7 @@ scssOtherPages: 'assets/src/style/other/*-style.scss', // стили остал�
 
 /* настройки сервера */
 var config = {
-    server: {
-        baseDir: './assets/build'
-    },
+    server: { baseDir: './assets/build' },
     notify: false
 };
 
@@ -86,6 +88,18 @@ gulp.task('html:build', function () {
               basepath: path.src.baseDir
             }))        
         .pipe(gulp.dest(path.build.html)) // выкладывание готовых файлов
+        .pipe(webserver.reload({ stream: true })); // перезагрузка сервера
+});
+
+// сбор html tpl
+gulp.task('tpl:build', function () {
+    return gulp.src(path.src.tpl) // выбор всех html файлов по указанному пути
+        .pipe(plumber()) // отслеживание ошибок
+        .pipe(fileinclude({ // импорт вложений
+              prefix: '@@',
+              basepath: path.src.baseDir
+            }))        
+        .pipe(gulp.dest(path.build.tpl)) // выкладывание готовых файлов
         .pipe(webserver.reload({ stream: true })); // перезагрузка сервера
 });
 
@@ -193,6 +207,7 @@ gulp.task('cache:clear', function () {
 gulp.task('build',
     gulp.series('clean:build',
         gulp.parallel(
+            'tpl:build',
             'html:build',
             'css:build',
             'cssplugins:build',
@@ -209,6 +224,7 @@ gulp.task('build',
 // запуск задач при изменении файлов
 gulp.task('watch', function () {
     gulp.watch(path.watch.html, gulp.series('html:build'));
+    gulp.watch(path.watch.tpl, gulp.series('tpl:build'));
     gulp.watch(path.watch.css, gulp.series('css:build'));
     gulp.watch(path.watch.css, gulp.series('scssOtherPages:build'));
     gulp.watch(path.watch.css, gulp.series('cssplugins:build'));

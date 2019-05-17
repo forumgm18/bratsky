@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500,700|PT+Sans:400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 <link rel="stylesheet" href="css/gijgo.min.css">
@@ -10,11 +10,11 @@
 <link rel="stylesheet" href="css/main.min.css">
 
 <title>Братский Авто</title>
-	<link rel="stylesheet" href="css/other/recent_event-style.min.css">
+  <link rel="stylesheet" href="css/other/recent_event-style.min.css">
 </head>
 
 <body>
-	<header>
+  <header>
 	<section class="top-panel">
 		<div class="container">
 			<div class="row">
@@ -52,13 +52,45 @@
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Nissan Almera</a>
 										<a class="dropdown-item" href="#">Skoda Octavia</a>
-										<a class="dropdown-item" href="#">+ Добавить авто в гараж</a>
+										<a class="dropdown-item blue" href="#">+ Добавить авто в гараж</a>
 									</div>
 								</div>
-								<input type="text" class="form-control" placeholder="Поиск">
+								<input type="text" class="form-control" name="serch__query" placeholder="Поиск">
 								<div class="input-group-append">
 									<button class="yellow-btn" type="button" id="button-addon2"></button>
 								</div>
+								<div class="search__tooptip dn">
+	<div class="search__add2garazh">
+		<a class="item bold" href="#">Nissan Almera</a>
+		<a class="item" href="#">Skoda Octavia</a>
+		<a class="item blue" href="#">+ Добавить авто в гараж</a>
+	</div>
+	<div class="popular__variants">
+		<div class="red">Популярные запчасти</div>
+		<div class="w-100"></div>	
+		<a href="" class="popular__link">Свечи зажигания</a>
+		<a href="" class="popular__link">Тормозные колодки и колодки</a>
+		<a href="" class="popular__link">Тормозные Роторы</a>
+		<a href="" class="popular__link">Автомобильные аккумуляторы</a>
+		<a href="" class="popular__link">Щетки стеклоочистителя</a>
+		<a href="" class="popular__link">Воздушные фильтры</a>
+		<a href="" class="popular__link">Моторное масло</a>
+		<a href="" class="popular__link">Масляные фильтры</a>
+		<a href="" class="popular__link">Охлаждающая жидкость и антифриз</a>
+		<a href="" class="popular__link">Воздушные фильтры</a>
+		<a href="" class="popular__link">Компоненты катушки зажигания</a>
+		<a href="" class="popular__link">Ремни </a>
+		<a href="" class="popular__link">Колесные подшипники</a>
+		<a href="" class="popular__link">Очистители тормозов и жидкости</a>
+		<a href="" class="popular__link">Разное Лампы и Лампы</a>
+		<a href="" class="popular__link">Тормозные суппорты датчиков</a>
+		<a href="" class="popular__link">Амортизаторы</a>
+		<a href="" class="popular__link">Провода свечи зажигания</a>
+	</div>
+
+</div>
+
+
 							</div>
 						</form>
 						<button class="top-search-btn nav_mobile_button-2" type="button"><span class="nav_mobile_line-2"></span></button>
@@ -2378,60 +2410,71 @@
 		</nav>
 	</section>
 </header>
-	<main class="main">
-		<div class="breadcrumb">
-			<div class="container">
-				<div class="row">
-					<nav class="col">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Главная</a></li>
-							<li class="breadcrumb-item"><a href="#">Для&nbsp;клиента</a></li>
-							<li class="breadcrumb-item active">Последние&nbsp;события</li>
-						</ol>
-					</nav>
-				</div>
-			</div>
-		</div>
-		<h1 class="title-h1 title">Последние события</h1>
-		<nav class="client-menu">
-			<ul class="client-menu__list">
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Для клиента</a></li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">О компании</a></li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Сертификаты</a></li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Услуги</a></li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Отзывы</a></li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Доставка и оплата</a></li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Вопрос-ответ</a></li>
-				<li class="client-menu__item active">Последние события</li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Бонусная система</a></li>
-				<li class="client-menu__item"><a href="#" class="client-menu__link">Как заказать товар</a></li>
-			</ul>
-		</nav>
-		<section class="recent-event">
-			<h2 class="hidden">Список последних событий</h2>
-			<header class="recent-event__header">
-				<ul id="tabs-events" class="nav nav-tabs" role="tablist">
-					<li class="nav-item"><a id="tab-all-event" href="#all-event" class="nav-link active" data-toggle="tab" role="tab">Все</a></li>
-					<li class="nav-item"><a id="tab-news-event" href="#news-event" class="nav-link" data-toggle="tab" role="tab">Новости</a></li>
-					<li class="nav-item"><a id="tab-art-event" href="#art-event" class="nav-link" data-toggle="tab" role="tab">Статьи</a></li>
-					<li class="nav-item"><a id="tab-press-event" href="#press-event" class="nav-link" data-toggle="tab" role="tab">Пресс-релизы</a></li>
-					<li class="nav-item"><a id="tab-video-event" href="#video-event" class="nav-link" data-toggle="tab" role="tab">Видео</a></li>
-					<li class="nav-item"><a id="tab-action-event" href="#action-event" class="nav-link" data-toggle="tab" role="tab">Акции</a></li>
-				</ul>
-			</header>
-			<section class="main-events">
-				<div class="container">
-					<div class="row">
-						<div class="row">
-							<div class="col">
-								<div id="events" class="tab-content" role="tablist">
-									<div id="all-event" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-all-event">
-										<div class="card-header" role="tab" id="heading-all-event">
-											<a data-toggle="collapse" href="#collapse-all-event" aria-expanded="true" aria-controls="collapse-all-event">Все товары</a>
-										</div>
-										<div id="collapse-all-event" class="collapse show" data-parent="#events" role="tabpanel" aria-labelledby="heading-all-event">
-											<div class="card-body">
-																				 	<div class="main-event-card">
+  <main class="main">
+    <div class="breadcrumb">
+      <div class="container">
+        <div class="row">
+          <nav class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item"><a href="#">Для&nbsp;клиента</a></li>
+              <li class="breadcrumb-item active">Последние&nbsp;события</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <header class="hidden main-header">
+      <h1 class="title-h1 title">Последние события</h1>
+    </header>
+    <div class="header-wp">
+      <h1 class="title-h1 title header-wp__h1">Последние события</h1>
+      <header class="recent-event__header">
+        <ul id="tabs-events" class="nav nav-tabs" role="tablist">
+          <li class="nav-item"><a id="tab-all-event" href="#all-event" class="nav-link active" data-toggle="tab" role="tab">Все</a></li>
+          <li class="nav-item"><a id="tab-news-event" href="#news-event" class="nav-link" data-toggle="tab" role="tab">Новости</a></li>
+          <li class="nav-item"><a id="tab-art-event" href="#art-event" class="nav-link" data-toggle="tab" role="tab">Статьи</a></li>
+          <li class="nav-item"><a id="tab-press-event" href="#press-event" class="nav-link" data-toggle="tab" role="tab">Пресс-релизы</a></li>
+          <li class="nav-item"><a id="tab-video-event" href="#video-event" class="nav-link" data-toggle="tab" role="tab">Видео</a></li>
+          <li class="nav-item"><a id="tab-action-event" href="#action-event" class="nav-link" data-toggle="tab" role="tab">Акции</a></li>
+        </ul>
+      </header>
+    </div>
+    <nav class="client-menu">
+      <ul class="client-menu__list">
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Для клиента</a></li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">О компании</a></li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Сертификаты</a></li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Услуги</a></li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Отзывы</a></li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Доставка и оплата</a></li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Вопрос-ответ</a></li>
+        <li class="client-menu__item active">Последние события</li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Бонусная система</a></li>
+        <li class="client-menu__item"><a href="#" class="client-menu__link">Как заказать товар</a></li>
+      </ul>
+    </nav>
+
+    <section class="recent-event">
+      <h2 class="hidden">Список последних событий</h2>
+      <section class="main-events">
+        <!--
+        <div class="container">
+          <div class="row">
+            <div class="row">
+              <div class="col">
+-->
+        <div id="events" class="tab-content" role="tablist">
+          <div id="all-event" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-all-event">
+            <div class="card-header" role="tab" id="heading-all-event">
+              <a data-toggle="collapse" href="#collapse-all-event" aria-expanded="true" aria-controls="collapse-all-event">Все товары</a>
+            </div>
+            <div id="collapse-all-event" class="collapse show" data-parent="#events" role="tabpanel" aria-labelledby="heading-all-event">
+              <div class="card-body">
+
+                <!--								 	Тоже самое, но тут текста меньше
+                                       ...2019 года повышение акциза на бензин. -->
+								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2456,7 +2499,7 @@
 								 			<a href="#"><h5>Новости</h5></a>
 								 			<div class="event-date">07.08.2018</div>
 								 			<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
-								 			<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
+								 			<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин.</a>
 								 		</div>
 								 	</div>
 								 	<div class="main-event-card">
@@ -2490,17 +2533,17 @@
 								 	
 								 	<div class="w-100 bbgray"></div>		
 
-											</div>
-										</div>
-									</div>
+              </div>
+            </div>
+          </div>
 
-									<div id="news-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-news-event">
-										<div class="card-header" role="tab" id="heading-news-event">
-											<a class="collapsed" data-toggle="collapse" href="#collapse-news-event" aria-expanded="false" aria-controls="collapse-news-event">Аккумуляторы</a>
-										</div>
-										<div id="collapse-news-event" class="collapse" data-parent="#events" role="tabpanel" aria-labelledby="heading-news-event">
-											<div class="card-body">
-																				 	<div class="main-event-card">
+          <div id="news-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-news-event">
+            <div class="card-header" role="tab" id="heading-news-event">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-news-event" aria-expanded="false" aria-controls="collapse-news-event">Аккумуляторы</a>
+            </div>
+            <div id="collapse-news-event" class="collapse" data-parent="#events" role="tabpanel" aria-labelledby="heading-news-event">
+              <div class="card-body">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2520,7 +2563,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2540,7 +2583,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2560,17 +2603,17 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-											</div>
-										</div>
-									</div>
+              </div>
+            </div>
+          </div>
 
-									<div id="art-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-art-event">
-										<div class="card-header" role="tab" id="heading-art-event">
-											<a class="collapsed" data-toggle="collapse" href="#collapse-art-event" aria-expanded="false" aria-controls="collapse-art-event">Автомасла и автохимия</a>
-										</div>
-										<div id="collapse-art-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-art-event">
-											<div class="card-body">
-																				 	<div class="main-event-card">
+          <div id="art-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-art-event">
+            <div class="card-header" role="tab" id="heading-art-event">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-art-event" aria-expanded="false" aria-controls="collapse-art-event">Автомасла и автохимия</a>
+            </div>
+            <div id="collapse-art-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-art-event">
+              <div class="card-body">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Статьи</h5></a>
@@ -2590,7 +2633,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Статьи</h5></a>
@@ -2610,7 +2653,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Статьи</h5></a>
@@ -2630,16 +2673,16 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-											</div>
-										</div>
-									</div>
-									<div id="press-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-press-event">
-										<div class="card-header" role="tab" id="heading-press-event">
-											<a class="collapsed" data-toggle="collapse" href="#collapse-press-event" aria-expanded="false" aria-controls="collapse-press-event">Аксессуары</a>
-										</div>
-										<div id="collapse-press-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-press-event">
-											<div class="card-body">
-																				 	<div class="main-event-card">
+              </div>
+            </div>
+          </div>
+          <div id="press-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-press-event">
+            <div class="card-header" role="tab" id="heading-press-event">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-press-event" aria-expanded="false" aria-controls="collapse-press-event">Аксессуары</a>
+            </div>
+            <div id="collapse-press-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-press-event">
+              <div class="card-body">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Пресс-релиз</h5></a>
@@ -2659,7 +2702,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Пресс-релиз</h5></a>
@@ -2679,7 +2722,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Пресс-релиз</h5></a>
@@ -2699,16 +2742,16 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-											</div>
-										</div>
-									</div>
-									<div id="video-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-video-event">
-										<div class="card-header" role="tab" id="heading-video-event">
-											<a class="collapsed" data-toggle="collapse" href="#collapse-video-event" aria-expanded="false" aria-controls="collapse-video-event">Аксессуары</a>
-										</div>
-										<div id="collapse-video-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-video-event">
-											<div class="card-body">
-																				 	<div class="main-event-card">
+              </div>
+            </div>
+          </div>
+          <div id="video-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-video-event">
+            <div class="card-header" role="tab" id="heading-video-event">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-video-event" aria-expanded="false" aria-controls="collapse-video-event">Аксессуары</a>
+            </div>
+            <div id="collapse-video-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-video-event">
+              <div class="card-body">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Видео</h5></a>
@@ -2728,7 +2771,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Видео</h5></a>
@@ -2748,7 +2791,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Видео</h5></a>
@@ -2768,16 +2811,16 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-											</div>
-										</div>
-									</div>
-									<div id="action-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-action-event">
-										<div class="card-header" role="tab" id="heading-action-event">
-											<a class="collapsed" data-toggle="collapse" href="#collapse-action-event" aria-expanded="false" aria-controls="collapse-action-event">Аксессуары</a>
-										</div>
-										<div id="collapse-action-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-action-event">
-											<div class="card-body">
-																				 	<div class="main-event-card">
+              </div>
+            </div>
+          </div>
+          <div id="action-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-action-event">
+            <div class="card-header" role="tab" id="heading-action-event">
+              <a class="collapsed" data-toggle="collapse" href="#collapse-action-event" aria-expanded="false" aria-controls="collapse-action-event">Аксессуары</a>
+            </div>
+            <div id="collapse-action-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-action-event">
+              <div class="card-body">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Акция</h5></a>
@@ -2797,7 +2840,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Акция</h5></a>
@@ -2817,7 +2860,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-																				 	<div class="main-event-card">
+                								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Акция</h5></a>
@@ -2837,40 +2880,42 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+              </div>
+            </div>
+          </div>
+        </div>
+-->
+      </section>
 
 
-			<div class="pagination-section">
-				<div class="zaglushka"></div>
-				<ul class="pagination">
-					<li class="page-item"><a class="page-link prev" href="#"></a></li>
-					<li class="page-item"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item"><a class="page-link" href="#">4</a></li>
-					<li class="page-item"><a class="page-link next" href="#"></a></li>
-					<li class="page-item"><a class="page-link" href="#">50</a></li>
-				</ul>
-				<div class="page-select">
-					<span>товаров на странице</span>
-					<select class="selectpicker" name="page_num" id="page_num">
-						<option value="20">20</option>
-						<option value="25">25</option>
-						<option value="30">30</option>
-					</select>
-				</div>
-			</div>
-		</section>
-	</main>
-	<footer>
+      <div class="pagination-section">
+        <div class="zaglushka"></div>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link prev" href="#"></a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link next" href="#"></a></li>
+          <li class="page-item"><a class="page-link" href="#">50</a></li>
+        </ul>
+        <div class="page-select">
+          <span>товаров на странице</span>
+          <select class="selectpicker" name="page_num" id="page_num">
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+          </select>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -3038,7 +3083,308 @@
 		</div>
 
 	</footer>
-	<script src="js/jquery.min.js"></script>
+  <!-- #selection-by-car" >Подбор по авто -->
+
+<div class="modal select-city" id="select-city" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Выберите свой город</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <input required type="text" name="search-town" placeholder="Поиск" />
+          <button class="search-ico-modal" data-dismiss="modal"></button>
+        </form>
+        <div class="city-links">
+          <a class= "bold" href="#">Ижевск</a>
+          <a href="#">Москва</a>
+          <a href="#">Казань</a>
+          <a href="#">Новосибирск</a>
+          <a href="#">Екатеринбург</a>
+          <a href="#">Астрахань</a>
+          <a href="#">Барнаул</a>
+          <a href="#">Волгоград</a>
+          <a href="#">Воронеж</a>
+          <a href="#">Иркутск</a>
+          <a href="#">Краснодар</a>
+          <a href="#">Самара</a>
+          <a href="#">Саратов</a>
+          <a href="#">Красноярск</a>
+          <a href="#">Набережные</a>
+          <a href="#">Челны</a>
+          <a href="#">Нижний</a>
+          <a href="#">Новгород</a>
+          <a href="#">Омск</a>
+          <a href="#">Оренбург</a>
+          <a href="#">Пермь</a>
+          <a href="#">Ростов-на-Дону</a>
+          <a href="#">Ставрополь</a>
+          <a href="#">Тольяти</a>
+          <a href="#">Тула</a>
+          <a href="#">Тюмень</a>
+          <a href="#">Ульяновск</a>
+          <a href="#">Уфа</a>
+          <a href="#">Челябинск</a>
+          <a href="#">Ярославль</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="change-password" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Изменить пароль</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <input required type="password" name="old-passw" placeholder="Старый пароль" />
+          <input required type="password" name="new-passw" placeholder="Новый пароль"/>
+          <input required type="password" name="confirm-passw" placeholder="Повторите пароль">
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Сохранить пароль</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="subscribe" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Подписка</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <p>Вы успешно подписались.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn red-btn" data-dismiss="modal">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="write-us" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Написать нам</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваше имя <span>*</span></span>
+          </label>          
+          <label class="placeinput">
+            <input required type="text" name="eml"/>
+            <span class="place_holder">Ваш e-mail <span>*</span></span>
+          </label>          
+          <input type="tel" placeholder="Ваш номер телефона">
+          
+          <label class="placeinput">
+            <textarea required name="message" cols="30" rows="10"></textarea>         
+            <span class="place_holder">Ваш вопрос <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="ask-us" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Задать вопрос</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваше имя <span>*</span></span>
+          </label>          
+          <label class="placeinput">
+            <input required type="text" name="eml"/>
+            <span class="place_holder">Ваш e-mail <span>*</span></span>
+          </label>          
+          <input type="tel" placeholder="Ваш номер телефона">
+          
+          <label class="placeinput">
+            <textarea required name="message" cols="30" rows="10"></textarea>         
+            <span class="place_holder">Ваш вопрос <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="product-review" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Оставить отзыв о товаре</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="product-name-review">Название товара</div>
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваше имя <span>*</span></span>
+          </label>          
+          <label class="placeinput">
+            <input required type="text" name="eml"/>
+            <span class="place_holder">Ваш e-mail <span>*</span></span>
+          </label>          
+          <input type="tel" placeholder="Ваш номер телефона">
+          <div class="rating">
+            <div>Поставьте вашу оценку по пятибальной шкале</div>
+            <div class="stars">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-white.svg" alt="">
+            </div>
+          </div>
+          <label class="placeinput">
+            <textarea required name="message" cols="30" rows="10"></textarea>         
+            <span class="place_holder">Текст отзыва <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Оставить отзыв</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal market-review" id="market-review" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Оставить отзыв о магазине</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="product-name-review">Название товара</div>
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваше имя <span>*</span></span>
+          </label>          
+          <label class="placeinput">
+            <input required type="text" name="eml"/>
+            <span class="place_holder">Ваш e-mail <span>*</span></span>
+          </label>          
+          <input type="tel" placeholder="Ваш номер телефона">
+          <div class="rating">
+            <div>Поставьте вашу оценку по пятибальной шкале</div>
+            <div class="stars">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-yellow.svg" alt="">
+              <img src="img/star-white.svg" alt="">
+            </div>
+          </div>
+          <label class="placeinput">
+            <textarea class="h70" required name="merits" cols="30" rows="10"></textarea>         
+            <span class="place_holder">Опишите достоинства</span>
+          </label>          
+          <label class="placeinput">
+            <textarea class="h70" required name="limitations" cols="30" rows="10"></textarea>         
+            <span class="place_holder">Опишите выявленные недостатки</span>
+          </label>          
+          <label class="placeinput">
+            <textarea required name="message" cols="30" rows="10"></textarea>         
+            <span class="place_holder">Текст отзыва <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br> <a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Оставить отзыв</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal service-record" id="service-record" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Записаться на услугу</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-head-description" >Услуга № 1</div>
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="date" id="date-service" />
+            <span class="place_holder">Выберите желаемую дату</span>
+          </label>          
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваше имя <span>*</span></span>
+          </label>          
+          <div class="horizontal">
+            <div class="placeinput">
+              <input required type="text" name="eml"/>
+              <span class="place_holder">Ваш e-mail <span>*</span></span>
+            </div>
+            <div class="w-30"></div>          
+            <div class="placeinput">
+              <input required type="tel" name="tel"/>
+              <span class="place_holder">Ваш номер телефона <span>*</span></span>
+            </div>          
+          </div>
+          
+          <label class="placeinput">
+            <textarea required name="message" cols="30" rows="10"></textarea>         
+            <span class="place_holder">Текст сообщения <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <div class="horizontal">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <button class="btn red-btn" data-dismiss="modal">Отправить</button>
+          </div>  
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/jquery.min.js"></script>
 <script src="js/gijgo.min.js"></script>
 <script src="js/messages.ru-ru.min.js"></script>
 <script src="js/jquery.overlayScrollbars.min.js"></script>
@@ -3048,8 +3394,8 @@
 <script src="js/jquery.countdown-ru.js"></script>
 <script src="js/main.min.js"></script>
 
-	<!--	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>-->
-	<script src="js/other/recent_event-script.js"></script>
+  <!--	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>-->
+  <script src="js/other/recent_event-script.js"></script>
 </body>
 
 </html>

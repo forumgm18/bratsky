@@ -567,7 +567,7 @@ button:hover, button:focus {
 
 .price-block  {	
 	@include dFlex(space-between,center,row,nowrap);	
-	height: 44px;
+	// height: 44px;
 	width: 100%;
 	margin-top: 13px;
 		>div {line-height: 20px;}
@@ -1563,16 +1563,7 @@ footer {
 
 .catalog-page {
 	background-color: $sectBgrGray1;
-	// .col{
-	// 	@include media-breakpoint-up(lg) {
-	// 		padding-left: 0;
-	// 		padding-right: 0;
-	// 	}	
-	// 	@include media-breakpoint-up(xl) {
-	// 		padding-left: 15px;
-	// 		padding-right: 15px;
-	// 	}	
-	// }
+
 	.header-flex {
 		h1 {
 			padding-top: 11px;
@@ -2265,13 +2256,7 @@ footer {
 					
 			}
 	}
-	input {
-		@include setFont ($headFFamily,normal,normal,14px,#000);
-		@include Border($sectBgrGray3);
-		height: 35px;
-		background-color: $sectBgrGray3;
-		&:focus {outline: 0;box-shadow: none;background-color: $sectBgrGray3;}
-	}
+}
 	.stepper--style-2 {
 		max-width: 117px;
 		margin-bottom: 25px;
@@ -2279,13 +2264,18 @@ footer {
 		.stepper__input {
 			padding-left: 28px;
 			padding-right: 28px;
-				&:focus {outline: 0;box-shadow: none;}
+		@include setFont ($headFFamily,normal,normal,14px,#000);
+		@include Border($sectBgrGray3);
+		height: 35px;
+		background-color: $sectBgrGray3;
+		&:focus {outline: 0;box-shadow: none;background-color: $sectBgrGray3;}
+				// &:focus {outline: 0;box-shadow: none;}
 		}
 	}
 	.stepper__controls {
-		button {width: 28px; @include Border($sectBgrGray3);color:$sectBgrGray3;}
+ 			[spinner-button=down], 
+ 			[spinner-button=up]		{width: 28px; @include Border($sectBgrGray3);color:$sectBgrGray3;}
 	}
-}
 
 .btn-block {
 	@include dFlex(space-between,center,row,nowrap);
@@ -2841,7 +2831,10 @@ footer {
 			padding: 0 0 15px 15px;
 		}	
 }
-.b-yellow {border: 2px solid $yellow!important;}
+.b-yellow {
+	border: 2px solid $yellow!important;
+	box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
+}
 .analogs {
 	padding-bottom: 30px;
 	.container {
@@ -3018,15 +3011,21 @@ footer {
 			&:last-child{border-radius: 0 0 $bradius2 $bradius2}
 			div {
 				@include setFont ($textFFamily,normal,normal,14px,$fontColor);
-					@include media-breakpoint-up(sm) {font-size: 18px;}
+					@include media-breakpoint-up(sm) {font-size: 16px;}
 					@include media-breakpoint-up(lg) {font-size: 15px;}
-					@include media-breakpoint-up(xl) {font-size: 18px;}
+					@include media-breakpoint-up(xl) {font-size: 16px;}
 
 			}
 			>div {
 				@include dFlex(flex-start,flex-start,row,nowrap);
+				margin-right: 10px;
+				margin-bottom: 10px;
+					@include media-breakpoint-up(md) {margin-bottom: 0;}
+					@include media-breakpoint-up(xl) {margin-right: 20px;}
+
 				>div {min-width: 70px;}
 				>div:first-child {
+					width: 100px;
 					@include setFont ($headFFamily,normal,600,14px,$fontColor);
 					@include media-breakpoint-up(md) {display: none;}
 
@@ -3038,35 +3037,37 @@ footer {
 			}
 			>div:nth-child(1){
 				width: 100%;
-				min-width: 160px;
-				@include media-breakpoint-up(md) {width: 200px;}
-				@include media-breakpoint-up(lg) {width: 160px;}
-				// Правки 05.05.19
-				// @include media-breakpoint-up(xl) {width: 250px;}
-				@include media-breakpoint-up(xl) {width: 240px;}
 
-				h3 {
-					margin-bottom: 0;
-					font-size: 14px;
-					@include media-breakpoint-up(sm) {font-size: 18px;}
-					@include media-breakpoint-up(md) {margin-bottom: 8px;font-size: 18px;}
-				}
+				min-width: 100px;
+				// width: 100px;
+				// @include media-breakpoint-up(md) {width: 100px;}
+				@include media-breakpoint-up(lg) {width: 100px;}
+				@include media-breakpoint-up(xl) {margin-right: 50px;}
+
+				img {width: 100px;height: auto;margin-bottom: 10px;}
 
 			}
 			>div:nth-child(2){
 				width: 100%;
 				min-width: 120px;
-					@include media-breakpoint-up(lg) {min-width: 100px;width: 100px;}
-					@include media-breakpoint-up(xl) {width: 170px;}
+				flex-grow: 1;
+				// flex-wrap: wrap;
+					// @include media-breakpoint-up(lg) {min-width: 100px;width: 100px;}
+					// @include media-breakpoint-up(xl) {width: 170px;}
+				h3 {
+					margin-bottom: 0;
+					font-size: 14px;
+					@include media-breakpoint-up(sm) {font-size: 18px;}
+					// @include media-breakpoint-up(md) {font-size: 18px;}
+				}
+
 			}
 			>div:nth-child(3){
 				width: 100%;
-				min-width: 140px; 
+				min-width: 110px; 
 					@include media-breakpoint-up(md) {width: 120px;}
-					@include media-breakpoint-up(lg) {min-width: 120px;}
-				// Правки 05.05.19
-				// @include media-breakpoint-up(xl) {width: 170px;}
-					@include media-breakpoint-up(xl) {width: 160px;}
+					@include media-breakpoint-up(lg) {min-width: 110px;width: 110px;}
+					@include media-breakpoint-up(xl) {min-width: 140px;width: 140px;}
 
 				// a{@include media-breakpoint-up(md) {display: block;height: 35px;}}
 			}
@@ -3074,16 +3075,20 @@ footer {
 				width: 100%;
 				min-width: 110px;
 					@include media-breakpoint-up(md) {width: 130px;}
-					@include media-breakpoint-up(lg) {min-width: 85px;width: 85px;}
-					@include media-breakpoint-up(xl) {width: 100px;}
+					@include media-breakpoint-up(lg) {min-width: 75px;width: 75px;}
+					@include media-breakpoint-up(xl) {min-width: 100px;width: 100px;}
 			}
 			>div:nth-child(5){
 				width: 100%;
-					@include media-breakpoint-up(lg) {width: 100px;}
-					@include media-breakpoint-up(xl) {width: 100px;}
+				min-width: 70px;
+					@include media-breakpoint-up(lg) {min-width: 70px;width: 70px;}
+					@include media-breakpoint-up(xl) {min-width: 80px;width: 80px;}
 			}
 			>div:nth-child(6){
-				flex-grow: 1;min-width: 50px;
+				// flex-grow: 1;
+				margin-right: 0;
+				min-width: 46px;
+				width: 46px;
 				display: none;
 					@include media-breakpoint-up(md) {display: flex;}
 			}
@@ -3091,12 +3096,11 @@ footer {
 				display: block;
 				position: absolute;
 				right: 15px;
-				// Правки 05.05.19
-				// bottom: 15px;
-				bottom: 10px;
+				bottom: 15px;
 					@include media-breakpoint-up(md) {display: none;}
 			}
 			.stars-block {
+					margin-top: 5px;
 					max-width: 120px;
 
 					@include media-breakpoint-up(md) {width: 90px;}//margin: 0 auto;}
@@ -3132,6 +3136,8 @@ footer {
 				align-items: center;
 				padding-bottom: 0;
 				padding-top: 0;
+					@include media-breakpoint-up(lg) {height: 71px;}
+					@include media-breakpoint-up(xl) {height: 51px;}
 				div{
 					@include setFont ($headFFamily,normal,600,14px,#fff);
 					line-height: normal;
@@ -3168,4 +3174,49 @@ footer {
 				@include media-breakpoint-up(md) {line-height: 25px;}
 			}
 		}
-} 
+}
+.input-group {position: relative;} 
+.search__tooptip {
+	@include dFlex(flex-start,flex-start,row,nowrap);
+	@include setFont ($textFFamily,normal,normal,14px,$fontColor);
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 0px 0px 3px 3px;
+	top: 39px;
+	padding: 15px;
+	z-index: 999;
+	&.dn{display: none;}
+	
+		.search__add2garazh {
+			flex-shrink: 0;
+			display: none;
+					@include media-breakpoint-up(lg) {display: block;}
+				.item {
+					display: block;
+					color: $fontColorLight;
+					font-size: 12px;
+					&.bold {font-weight: bold;color: $fontColor;}
+				}
+
+		}
+		.popular__variants {
+			@include dFlex(flex-start,flex-start,row,wrap);
+
+				.popular__link {
+					display: block;
+					text-decoration: none;
+						width: 100%;
+						@include media-breakpoint-up(sm) {width: 50%;}
+						@include media-breakpoint-up(lg) {width: 100%;}
+						@include media-breakpoint-up(xl) {width: 50%;}
+
+				}
+		}
+
+
+
+
+
+	.red {color:$red;font-weight: bold;}
+}
