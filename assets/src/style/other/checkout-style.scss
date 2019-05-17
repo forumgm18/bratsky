@@ -1,0 +1,384 @@
+@import "../variables";
+@import "../../../../node_modules/bootstrap/scss/_mixins";
+
+.body {
+		.gj-picker-bootstrap {
+			@include setFont ($textFFamily,normal,normal,14px,$fontColor);
+			table tr td.today div {color:#000;}
+			table tr td.selected.gj-cursor-pointer div	{background-color: $red;color: #fff;}
+		}
+
+}		
+.checkout__page {
+	background-color: $sectBgrGray1;
+		.radio-text:before {border-color: $red;width: 13px;height: 13px;}
+		.radio-text:after {background: $red;width: 7px;height: 7px;}
+		.df {@include dFlex(flex-start,flex-start,column,nowrap);}
+		.pickup {margin-bottom: 10px;}
+		.red-transparent-btn, .red-btn, .yellow-btn {
+			width: 218px;
+			height: 44px;
+			cursor: pointer;
+			font-size: 14px;
+			border-radius: 2px;
+		}
+		.red-transparent-btn {color: $red!important;}
+}
+
+.summary__order {
+	@include setFont ($textFFamily,normal,normal,14px,$fontColor);
+	@include boxShadow2;
+	line-height: 18px;
+	background-color: #fff;
+	padding: 15px 0 5px 0;
+	margin-bottom: 30px;
+		@include media-breakpoint-up(xl) {padding: 25px 0 5px 0;}
+		>div {
+			padding: 0 15px;
+				@include media-breakpoint-up(xl) {padding: 0 25px;}
+		}
+		.h {color: $fontColorLight4;text-transform: uppercase;font-size: 18px;font-weight: bold;margin-bottom: 15px;}
+		.label {
+			margin-bottom: 5px;
+					span {
+						color: $fontColorLight;
+						text-transform: uppercase;
+						margin-right: 5px;
+					}
+		}
+		input {	
+			width: 70px; 
+			height: 18px; 
+			border: 1px solid $borderGray5; 
+				@include media-breakpoint-up(md) {width: 60px;}
+				@include media-breakpoint-up(lg) {width: 70px;}
+
+		}
+		.summary {
+			@include dFlex(space-between,center,row,nowrap);
+			padding-top: 10px;
+			margin-top: 15px;
+			line-height: 25px;
+			border-top: 1px solid $borderGray;
+				@include media-breakpoint-up(md) {flex-wrap: wrap;}
+				@include media-breakpoint-up(lg) {flex-wrap: nowrap;}
+		}
+
+		&.ur {
+				.label {
+					display: none;
+					&.ur {display: block;}
+				}			
+			.summary {
+				height: 85px;
+				>div {
+					display: flex;
+					width: 100%; 
+					font-weight: bold;
+					br {display: none;}
+					&:first-child {display: none;}
+					span {margin-left: auto;}
+				}	
+
+			}	
+
+		}
+
+
+}
+
+.tab__head {
+	.nav-item {
+		max-width: 270px;
+		width: 50%;
+		height: 67px;
+		text-align: center;
+
+			@include media-breakpoint-up(lg) {width: 270px;}//margin: 0 auto;}
+
+		.nav-link {
+			@include dFlex(center,center,row,nowrap);
+			@include setFont ($textFFamily,normal,bold,14px,$fontColor);
+
+			width: 100%;
+			height: 100%;
+			position: relative;
+				&.active {
+					background-color: #fff;
+					color: $fontColor;
+					&:after {
+						position: absolute;
+						bottom: -25px;
+						left: calc( 50% - 25px );
+						content: '';
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 25px 25px 0 25px;
+						border-color: #fff transparent transparent transparent;
+					}
+				}	
+		}
+	}
+}
+.checkout__content {
+	border-bottom: 1px solid $borderGray3;
+	padding-bottom: 45px;
+	margin-bottom: 24px;
+	.tab-pane {
+		padding-top: 47px;	
+			.placeinput {width: 100%;}
+			input {width: 100%; margin-bottom: 8px;}
+			textarea {width: 100%; flex-grow: 1;margin-bottom: 8px;}
+			&.active {}
+
+	}
+}
+.checkout__pay {
+	@include dFlex(space-between,center,row,wrap);
+	border-bottom: 1px solid $borderGray3;
+	padding-bottom: 36px;
+	margin-bottom: 24px;
+			@include media-breakpoint-up(xl) {flex-wrap: nowrap;}
+	label {
+		max-width: 270px;
+		margin-bottom: 15px;
+			@include media-breakpoint-up(xl) {margin-bottom: 0;}
+
+	}
+	a{
+		text-decoration: underline;
+		margin-left: 20px;
+			@include media-breakpoint-up(xl) {margin-left: 0;}
+	}
+
+}
+.how__getting {
+	@include dFlex(space-between,center,row,wrap);
+	background-color: #fff;
+	border-bottom: 1px solid $borderGray3;
+	padding: 15px;
+	margin-bottom: 3px;
+			@include media-breakpoint-up(lg) {flex-wrap: nowrap; height: 69px;padding-left: 15px 10px 15px 20px;}
+
+		label {
+				margin-bottom: 15px;
+				@include media-breakpoint-up(lg) {margin-bottom: 0;}
+		}
+		div {
+			@include setFont ($textFFamily,normal,normal,14px,$fontColorLight);
+			margin-bottom: 15px;
+			margin-left: 20px;
+				@include media-breakpoint-up(lg) {margin-bottom: 0;margin-left: 0;}
+		}
+			.yellow-btn {
+					width: 100%;
+						@include media-breakpoint-up(lg) {width: 218px;}
+
+				}
+
+		&.prime {
+			margin-bottom: 15px;
+			justify-content: flex-start;
+				label {margin-right: 55px;}
+				>div {margin-right: 55px;}
+				a {
+					width: 100%;
+						@include media-breakpoint-up(lg) {width: 218px; margin-left: auto;}
+
+				}
+
+		}
+		&.variant {
+			border: 1px solid #fff;
+			input[type="radio"] {display: none;}
+			div {@include setFont ($textFFamily,normal,normal,14px,$fontColor);}
+		}
+		&.red {
+			border: 1px solid $red;
+			div {color: $red;}
+		}
+	&.available {
+		flex-direction: column;
+		height: auto;
+		margin-bottom: 15px;
+		padding: 20px 15px;
+		>div {
+			border: 1px solid $borderGray3;
+			border-top: none;
+			width: 100%;
+			padding: 10px;
+			margin: 0;
+			&:first-child{border-top: 1px solid $borderGray3;}
+		}
+		span {font-weight: bold;}
+		.radio-text {font-weight: normal;}
+		.select {
+			@include dFlex(flex-start,center,row,wrap);
+			border: none;
+			padding: 15px 10px 0 10px;
+				@include media-breakpoint-up(lg) {flex-wrap: nowrap;}
+
+			label {
+				margin-bottom: 15px;
+				@include media-breakpoint-up(lg) {margin-right: 100px;margin-bottom: 0;}
+
+			}
+		}
+	}
+	&.courier {
+		margin-bottom: 22px;
+		justify-content: flex-start;
+		label {margin-right: 55px;}
+		>div {margin-right: 55px;}
+		&.dm {
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+}
+.delivery {
+	background-color: #fff;
+	border-bottom: 1px solid $borderGray3;
+	margin-bottom: 22px;	
+	padding: 20px;
+	padding-top: 0;
+		.header-flex {padding: 0 0 20px 0;}
+		.delivery__addr {
+			@include dFlex(flex-start,center,row,wrap);
+				.place_holder {
+					top: 3px;
+						span {
+							position: absolute;
+					    top: 3px;
+					    padding-left: 3px;
+						}
+				}
+				input {margin-bottom: 30px;margin-right: 30px;width: 110px;height: 27px;}
+				input[name="street"] {
+					width: 100%;
+					@include media-breakpoint-up(md) {width: 270px;}
+					@include media-breakpoint-up(lg) {width: 260px;}
+					@include media-breakpoint-up(xl) {width: 270px;}
+
+				}
+				select {width: 270px;}
+				.bootstrap-select {
+					margin-bottom: 30px;
+					border: 1px solid $borderGray;
+					height: 27px;
+					.bs-select-first{
+						height: 100%;
+					 	width: 100%;
+					 	padding: 3px 12px;
+					 	&:focus{outline: 0!important; box-shadow: none;}
+					 	&:after{
+					 		background: url(/img/select-down2.svg) center no-repeat;
+					 		width: 8px;
+					 		height: 4px;
+					 		border: none;
+					 	}
+
+					}
+				}
+				.placeinput {
+					max-width: 270px;
+					width: 100%;
+						@include media-breakpoint-up(sm) {width: 270px;}
+				}
+				.dom__kv {
+					@include dFlex(space-between,center,row,nowrap);
+					max-width: 270px;
+					width: 100%;
+						@include media-breakpoint-up(sm) {width: 270px;}
+						@include media-breakpoint-up(lg) {margin-left: 30px;}
+						@include media-breakpoint-up(xl) {margin-left: 35px;}
+						input {
+							margin-right: 0;
+							// width: 48%;
+							@include media-breakpoint-up(lg) {margin-right: 30px;}
+
+						} 
+					.placeinput {
+							width: auto;
+							@include media-breakpoint-up(sm) {width: auto;}
+					}
+
+				}
+		}
+		.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+			width: 270px;
+		}
+}
+.delivery__date {
+	@include dFlex(flex-start,center,row,wrap);
+		@include media-breakpoint-up(lg) {flex-wrap: nowrap;}
+
+	>div {
+		@include dFlex(center,center,column,nowrap);
+		@include setFont ($textFFamily,normal,normal,14px,$fontColor);
+		border: 1px solid $borderGray3;
+		width: 94px;
+		height: 49px;
+		cursor: pointer;
+		padding-top: 2px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		&:last-child {margin-right: auto;}
+
+	}
+		
+	.red {border: 2px solid $red;}
+	input[type="radio"] {display: none;}
+	.delivery-price {font-weight: bold;font-size: 18px;}
+	.other {
+		position: relative;
+		input {
+			border: none;
+			height: 45px; 
+			opacity: 0;
+			cursor: pointer;
+			font-size: 14px;
+			padding: 0;
+			text-transform: capitalize;
+			text-align: center;
+		}
+		span {display: none;}
+		.gj-icon {display: none;}
+		.default__date {display: block;z-index: 0;position: absolute;text-align: center;}
+		>div {z-index: 1;}
+		&.ds {
+			span {display: block;}
+			input {height: 21px; opacity: 1;cursor: initial;}
+			.input-group-append {display: none;}
+			.default__date {display: none;}
+		}
+	}	
+
+}
+.btn__group {
+	@include dFlex(space-between,center,row,wrap);
+		@include media-breakpoint-up(lg) {flex-wrap: nowrap;}
+
+	margin-bottom: 50px;
+		>div {
+			@include setFont ($textFFamily,normal,normal,12px,$fontColorLight);
+			width: 100%;
+			
+			margin-bottom: 15px;
+
+			a {color: $blue;}
+				@include media-breakpoint-up(lg) {margin: 0 15px;text-align: right;}
+				@include media-breakpoint-up(xl) {width: 218px; }
+
+		}
+		.red-transparent-btn, .red-btn {
+			margin-bottom: 15px;
+			width: 100%;
+			min-width: 190px;
+				@include media-breakpoint-up(lg) {width: 190px;margin: 0;}
+				@include media-breakpoint-up(xl) {width: 218px;}
+		}
+
+
+}

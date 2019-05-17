@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	@@include('./template/head.html')
+	<link rel="stylesheet" href="css/other/checkout-style.min.css">
+<title>Братский Авто - Оформление заказа</title>
+
+</head>
+<body class="body">
+	@@include('./template/header.html')
+<main class="checkout__page">
+	
+
+<section class="breadcrumb">
+	<div class="container">
+		<div class="row">
+			<nav class="col">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+			    <li class="breadcrumb-item"><a href="#">Корзина</a></li>
+			    <li class="breadcrumb-item active">Оформление заказа</li>
+			  </ol>
+			</nav>
+		</div>
+	</div>
+</section>
+<section class="">
+	<div class="container">
+		<div class="row"><div class="col header-flex"><h1>Оформление заказа</h1></div></div>		
+		<form action="" name="checkout__form">
+			<div class="row">
+				<div class="col-12 col-md-4 order-md-2">
+					<div class="summary__order">
+						<div class="h">Ваш заказ:</div>
+						<div class="label ur"><span>Состав:</span>3 товара (3 809 &#8381;)</div>
+						<div class="label"><span>Бонусов на счету:</span>5000</div>
+						<div class="label"><span>Доступно для списания:</span>1000</div>
+						<div class="label"><span>Списать:</span><input type="text"/> бонусов</div>
+						<div class="label ur"><span>Доставка:</span>200 &#8381;</div>
+						<div class="summary">
+							<div>
+								Бонусы за покупку:<br>
+								<span class="new-price">480</span>
+							</div>
+							<div>
+								Итого к оплате:<br>
+								<span class="new-price">99 800 &#8381;</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-8 order-md-1">
+						<ul class="nav nav-pills tab__head" id="pills-tab" role="tablist">
+						  <li class="nav-item"><a class="nav-link active" id="individual-tab" data-toggle="pill" href="#individual" role="tab">Физическое лицо</a></li>
+						  <li class="nav-item"><a class="nav-link" id="entity-tab" data-toggle="pill" href="#entity" role="tab">Юридическое лицо</a></li>
+						</ul>
+						<div class="tab-content checkout__content" id="tabContent">
+						  <div class="tab-pane fade show active" id="individual" role="tabpanel">
+						  	<div class="row">
+						  		<div class="col-12 col-sm-6 df">
+										<label class="placeinput">
+											<input required type="text" id="name" />
+											<div class="place_holder">Ваше имя <span>*</span></div>
+										</label>					
+										<label class="placeinput">
+											<input required type="tel"/>
+											<div class="place_holder">+7 ( ___ ) ___-__-__ <span>*</span></div>
+										</label>					
+										<label class="placeinput">
+											<input required type="text" id="eml"/>
+											<div class="place_holder">Ваш e-mail</div>
+										</label>					
+						  		</div>
+						  		<div class="col-12 col-sm-6 df">
+						  			<textarea name="message" id="message" placeholder="Комментарий к заказу" cols="" rows=""></textarea>
+						  		</div>
+						  	</div>
+						  </div>
+						  <div class="tab-pane fade" id="entity" role="tabpanel">
+						  	<div class="row">
+						  		<div class="col-12 col-sm-6 df">
+										<label class="placeinput">
+											<input required type="text" id="name" />
+											<div class="place_holder">Название организации <span>*</span></div>
+										</label>					
+										<label class="placeinput">
+											<input required type="text" id="name" />
+											<div class="place_holder">ИНН <span>*</span></div>
+										</label>					
+										<label class="placeinput">
+											<input required type="tel"/>
+											<div class="place_holder">Ваш телефон <span>*</span></div>
+										</label>					
+						  		</div>
+						  		<div class="col-12 col-sm-6 df">
+										<label class="placeinput">
+											<input required type="text" id="eml"/>
+											<div class="place_holder">Ваш e-mail <span>*</span></div>
+										</label>					
+						  			<textarea name="message" id="message" placeholder="Комментарий к заказу" cols="" rows=""></textarea>
+						  		</div>
+						  	</div>
+						  </div>
+						</div>
+						
+						<div class="row">
+							<div class="col-12 header-flex"><h2>Способ оплаты</h2></div>
+							<div class="col-12">
+								<div class="checkout__pay">  
+									<label class="radio"><input type="radio" name="pay__type" value="nal" checked><span class="radio-text">Оплата при получении товара (наличными или банковской картой)</span></label>
+									<label class="radio"><input type="radio" name="pay__type" value="card"><span class="radio-text">Онлайн-оплата платежной картой Visa, MasterCard, Visa Electron, Maestro</span></label>
+									<div class="w-100 d-xl-none"></div>
+									<a href="">Скачать счет на оплату</a>
+							  </div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12 header-flex"><h2>Способ получения</h2></div>
+							<div class="col-12">
+								<div class="how__getting prime">  
+									<label class="radio"><input type="radio" name="getting__type" value="pickup" checked><span class="radio-text">Самовывоз из магазина</span></label>
+									<div>Бесплатно</div>
+									<div class="w-100 d-lg-none m-0"></div>
+									<a class="red-transparent-btn" data-toggle="collapse" href="#collapse_pickup" role="button">Выбрать пункт выдачи</a>
+							  </div>
+							</div>
+							<div class="col-12">
+								<div class="collapse pickup" id="collapse_pickup">
+									<div class="how__getting variant">  
+										<input type="radio" name="getting__market" value="ул. Карла Либкнехта, 6">
+										<div>ул. Карла Либкнехта, 6</div>
+										<a class="yellow-btn">Выбрать</a>
+								  </div>
+									<div class="how__getting variant">  
+										<input type="radio" name="getting__market" value="ул. Карла Либкнехта, 6">
+										<div>ул. Карла Либкнехта, 6</div>
+										<a class="yellow-btn">Выбрать</a>
+								  </div>
+									<div class="how__getting variant">  
+										<input type="radio" name="getting__market" value="ул. Карла Либкнехта, 6">
+										<div>ул. Карла Либкнехта, 6</div>
+										<a class="yellow-btn">Выбрать</a>
+								  </div>
+									<div class="how__getting available">  
+										<div>Товар 1 будет доступен - <span>10.09.2018</span></div>
+										<div>Товар 2 будет доступен - <span>15.09.2018</span></div>
+										<div>Товар 3 будет доступен - <span>30.09.2018</span></div>
+										<div class="select">
+											<label class="radio"><input type="radio" name="getting__available" value="one_day" checked><span class="radio-text">Получить товар в один день <span>30.09.2018</span></span></label>
+											<label class="radio"><input type="radio" name="getting__available" value="upon_receipt" checked><span class="radio-text">Получить товар по мере поступления</span></label>
+										</div>
+								  </div>
+
+								</div>
+							</div>
+
+							</div>
+							<div class="row">				
+								<div class="col-12">
+									<div class="how__getting courier">  
+										<label class="radio"><input type="radio" name="getting__type" value="courier_delivery"><span class="radio-text">Доставка курьером</span></label>
+										<div>От 300 руб.</div>
+										<div>После 30.09.2018</div>
+								  </div>
+								</div>
+								<div class="col-12 ">
+									<div class="collapse delivery" id="collapse_courier">
+										<div class="header-flex"><h2>Адрес доставки</h2></div>
+										<div class="delivery__addr">
+											<select class="selectpicker" data-style="bs-select-first" title="Населенный пункт" name="town" id="town">
+												<option value="Ижевск">Ижевск</option>
+												<option value="Воткинск">г.Воткинск</option>
+												<option value="Можга">г.Можга</option>
+												<option value="Сарапул">г.Сарапул</option>
+												<option value="Игра">п.Игра</option>
+												<option value="Ува">п.Ува</option>
+											</select>	
+											<div class="w-100"></div>
+											<label class="placeinput">
+												<input required type="text" name="street" id="street" />
+												<div class="place_holder">Улица <span>*</span></div>
+											</label>					
+											<div class="dom__kv">
+											<label class="placeinput">
+												<input required type="text" name="house" id="house" />
+												<div class="place_holder">Дом <span>*</span></div>
+											</label>					
+											<label class="placeinput">
+												<input required type="text" name="kv" id="kv" />
+												<div class="place_holder">Квартира</div>
+											</label>					
+											</div>
+										</div>	
+										<div class="header-flex"><h2>Выберите желаемую дату доставки</h2></div>
+										<div class="delivery__date">
+											<div>
+												<input type="radio" name="delivery__date" value="30.08.2019">
+												<span>Чт 30.08</span>
+												<span class="delivery-price">200 &#8381;</span>
+											</div>
+											<div>
+												<input type="radio" name="delivery__date" value="01.09.2019">
+												<span>Пт 01.09</span>
+												<span class="delivery-price">200 &#8381;</span>
+											</div>
+											<div>
+												<input type="radio" name="delivery__date" value="02.09.2019">
+												<span>Сб 02.09</span>
+												<span class="delivery-price">200 &#8381;</span>
+											</div>
+											<div>
+												<input type="radio" name="delivery__date" value="03.09.2019">
+												<span>Вс 03.09</span>
+												<span class="delivery-price">200 &#8381;</span>
+											</div>
+											<div>
+												<input type="radio" name="delivery__date" value="04.09.2019">
+												<span>Пн 04.09</span>
+												<span class="delivery-price">200 &#8381;</span>
+											</div>
+											<div>
+												<input type="radio" name="delivery__date" value="05.09.2019">
+												<span>Вт 05.09</span>
+												<span class="delivery-price">200 &#8381;</span>
+											</div>
+											<div class="other">
+												<input type="text" name="delivery__date" id="other__delivery__date" value="">
+												<span class="default__date">Другая<br>дата</span>
+												<span class="delivery-price">200 &#8381;</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						<div class="row">
+							<div class="col-12">
+								<div class="btn__group">  
+									<a class="red-transparent-btn" href="/basket1.html">Вернуться в корзину</a>
+									<div>Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <a href="#">Узнать больше</a></div>
+									<button class="red-btn">Выбрать пункт выдачи</button>
+							  </div>
+							</div>
+						</div>
+				</div>
+			</div>
+	</form>			
+	</div>		
+</section>
+
+</main>
+@@include('./template/footer-block.html')
+@@include('./template/modal.html')
+@@include('./template/footer-scripts.html')
+</body>
+</html>
