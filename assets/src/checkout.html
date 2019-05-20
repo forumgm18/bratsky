@@ -28,7 +28,7 @@
 <section class="">
 	<div class="container">
 		<div class="row"><div class="col header-flex"><h1>Оформление заказа</h1></div></div>		
-		<form action="" name="checkout__form">
+		<form name="checkout__form">
 			<div class="row">
 				<div class="col-12 col-md-4 order-md-2">
 					<div class="summary__order">
@@ -61,20 +61,20 @@
 						  	<div class="row">
 						  		<div class="col-12 col-sm-6 df">
 										<label class="placeinput">
-											<input required type="text" id="name" />
-											<div class="place_holder">Ваше имя <span>*</span></div>
+											<input required type="text" id="name" name="name" />
+											<span class="place_holder">Ваше имя <span>*</span></span>
 										</label>					
 										<label class="placeinput">
-											<input required type="tel"/>
-											<div class="place_holder">+7 ( ___ ) ___-__-__ <span>*</span></div>
+											<input required type="tel" id="tel" name="tel"/>
+											<span class="place_holder">+7 ( ___ ) ___-__-__ <span>*</span></span>
 										</label>					
 										<label class="placeinput">
 											<input required type="text" id="eml"/>
-											<div class="place_holder">Ваш e-mail</div>
+											<span class="place_holder">Ваш e-mail</span>
 										</label>					
 						  		</div>
 						  		<div class="col-12 col-sm-6 df">
-						  			<textarea name="message" id="message" placeholder="Комментарий к заказу" cols="" rows=""></textarea>
+						  			<textarea name="message" id="message" placeholder="Комментарий к заказу" ></textarea>
 						  		</div>
 						  	</div>
 						  </div>
@@ -82,24 +82,24 @@
 						  	<div class="row">
 						  		<div class="col-12 col-sm-6 df">
 										<label class="placeinput">
-											<input required type="text" id="name" />
-											<div class="place_holder">Название организации <span>*</span></div>
+											<input required type="text" id="org_name" name="org_name" />
+											<span class="place_holder">Название организации <span>*</span></span>
 										</label>					
 										<label class="placeinput">
-											<input required type="text" id="name" />
-											<div class="place_holder">ИНН <span>*</span></div>
+											<input required type="text" id="inn" name="inn"  />
+											<span class="place_holder">ИНН <span>*</span></span>
 										</label>					
 										<label class="placeinput">
-											<input required type="tel"/>
-											<div class="place_holder">Ваш телефон <span>*</span></div>
+											<input required type="tel" id="org_tel" name="org_tel" />
+											<span class="place_holder">Ваш телефон <span>*</span></span>
 										</label>					
 						  		</div>
 						  		<div class="col-12 col-sm-6 df">
 										<label class="placeinput">
-											<input required type="text" id="eml"/>
-											<div class="place_holder">Ваш e-mail <span>*</span></div>
+											<input required type="text" id="org_eml" name="org_eml"/>
+											<span class="place_holder">Ваш e-mail <span>*</span></span>
 										</label>					
-						  			<textarea name="message" id="message" placeholder="Комментарий к заказу" cols="" rows=""></textarea>
+						  			<textarea name="org_message" id="org_message" placeholder="Комментарий к заказу" ></textarea>
 						  		</div>
 						  	</div>
 						  </div>
@@ -180,16 +180,16 @@
 											<div class="w-100"></div>
 											<label class="placeinput">
 												<input required type="text" name="street" id="street" />
-												<div class="place_holder">Улица <span>*</span></div>
+												<span class="place_holder">Улица <span>*</span></span>
 											</label>					
 											<div class="dom__kv">
 											<label class="placeinput">
 												<input required type="text" name="house" id="house" />
-												<div class="place_holder">Дом <span>*</span></div>
+												<span class="place_holder">Дом <span>*</span></span>
 											</label>					
 											<label class="placeinput">
 												<input required type="text" name="kv" id="kv" />
-												<div class="place_holder">Квартира</div>
+												<span class="place_holder">Квартира</span>
 											</label>					
 											</div>
 										</div>	
