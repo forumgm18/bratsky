@@ -93,6 +93,23 @@
 			margin-bottom: 18px;
 
 		}
+		.frm-filter {
+			background-color: transparent;
+			flex-direction: column;
+			padding: 0;
+			height: auto;
+			margin-bottom: 0;
+
+				.bootstrap-select{
+					margin-bottom: 10px;
+					width: 100%;
+					border: 1px solid $borderGray;
+				}
+			
+			.bs-select, .bs-select-first {width: 100%!important; border-radius: 0;}
+			.red-btn {height: 44px;font-weight: normal;text-transform: uppercase;}
+
+		}
 }
 .modal-backdrop.show {
     opacity: 0;

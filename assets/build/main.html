@@ -48,7 +48,8 @@
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Nissan Almera</a>
 										<a class="dropdown-item" href="#">Skoda Octavia</a>
-										<a class="dropdown-item blue" href="#">+ Добавить авто в гараж</a>
+										<!-- <a class="dropdown-item blue" href="#" data-toggle="modal" data-target="#add_to_garazh">+ Добавить авто в гараж</a> -->
+										<button class="dropdown-item blue btn-link" data-toggle="modal" data-target="#add_to_garazh">+ Добавить авто в гараж</button>
 									</div>
 								</div>
 								<input type="text" class="form-control" name="serch__query" placeholder="Поиск">
@@ -104,7 +105,7 @@
 									<div class="dropdown-menu">
 										<a class="dropdown-item" href="#">Nissan Almera</a>
 										<a class="dropdown-item" href="#">Skoda Octavia</a>
-										<a class="dropdown-item blue" href="#">+ Добавить авто в гараж</a>
+										<button class="dropdown-item blue btn-link" data-toggle="modal" data-target="#add_to_garazh">+ Добавить авто в гараж</button>
 									</div>
 								</li>
 								<li class="nav-item dropdown menu-catalog desk">
@@ -2803,8 +2804,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -2847,16 +2848,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -2868,8 +2873,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -2914,12 +2924,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -2931,8 +2944,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -2975,16 +2988,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -2996,8 +3013,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3042,12 +3064,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3059,8 +3084,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -3103,16 +3128,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -3124,8 +3153,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3170,12 +3204,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3187,8 +3224,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -3231,16 +3268,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -3252,8 +3293,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3298,12 +3344,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3315,8 +3364,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -3359,16 +3408,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -3380,8 +3433,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3426,12 +3484,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3443,8 +3504,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -3487,16 +3548,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -3508,8 +3573,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3554,12 +3624,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3578,8 +3651,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -3622,16 +3695,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -3643,8 +3720,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3689,12 +3771,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3706,8 +3791,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -3750,16 +3835,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -3771,8 +3860,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3817,12 +3911,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3834,8 +3931,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -3878,16 +3975,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -3899,8 +4000,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -3945,12 +4051,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -3962,8 +4071,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4006,16 +4115,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4027,8 +4140,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4073,12 +4191,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4090,8 +4211,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4134,16 +4255,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4155,8 +4280,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4201,12 +4331,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4218,8 +4351,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4262,16 +4395,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4283,8 +4420,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4329,12 +4471,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4353,8 +4498,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4397,16 +4542,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4418,8 +4567,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4464,12 +4618,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4481,8 +4638,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4525,16 +4682,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4546,8 +4707,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4592,12 +4758,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4609,8 +4778,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4653,16 +4822,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4674,8 +4847,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4720,12 +4898,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4737,8 +4918,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4781,16 +4962,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4802,8 +4987,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4848,12 +5038,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4865,8 +5058,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -4909,16 +5102,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -4930,8 +5127,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -4976,12 +5178,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -4993,8 +5198,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -5037,16 +5242,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -5058,8 +5267,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -5104,12 +5318,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -5128,8 +5345,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -5172,16 +5389,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -5193,8 +5414,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -5239,12 +5465,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -5256,8 +5485,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -5300,16 +5529,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -5321,8 +5554,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -5367,12 +5605,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -5384,8 +5625,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -5428,16 +5669,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -5449,8 +5694,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -5495,12 +5745,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -5512,8 +5765,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -5556,16 +5809,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -5577,8 +5834,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -5623,12 +5885,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -5640,8 +5905,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -5684,16 +5949,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -5705,8 +5974,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -5751,12 +6025,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -5768,8 +6045,8 @@
 								  		</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
-								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
-								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/varta-mob.png" alt=""></a>
@@ -5812,16 +6089,20 @@
 												  <img src="img/star-white.svg" alt="">
 												</div>
 									  		<div class="otziv">5 Отзыв</div>
+									  		<div class="w-100 order-2 d-md-none"></div>
+
 								  		</div>
 								  		<div class="price-block">
-								  			<div>
+								  			<!-- <div> -->
+								  				<span class="new-price">4 900 &#8381;</span>
 								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
-								  				<span class="new-price">4 900 &#8381;</span><br>
 								  				<a href="#" class="obmen">при обмене</a>
-								  			</div>
-								  			<button class="btn red-btn"></button>
+								  			<!-- </div> -->
 								  		</div>
-								  		
+								  		<div class="btn-block">
+								  			<button class="red-btn"><span>В корзину</span></button>
+								  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
+								  		</div>
 								  		</div>
 								  	</div>
 									</div>
@@ -5833,8 +6114,13 @@
 								  	</div>
 								  	<div class="main-product-card">
 								  		<div class="icons-block">
+<!-- 
 								  			<a href="#"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#"><img src="img/heart.svg" alt=""></a>
+ -->
+ 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
+								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
+
 								  		</div>
 								  		<div class="b1">
 									  		<a class="img-link" href="#"><img src="img/maslo2.png" alt=""></a>
@@ -5879,12 +6165,15 @@
 										  		<div class="otziv">5 Отзыв</div>
 									  		</div>
 									  		<div class="price-block">
-									  			<div>
+									  			<!-- <div> -->
+									  				<span class="new-price">2 200 &#8381;</span>
 									  				<span class="old-price"><s>2 450 &#8381;</s></span><br>
-									  				<span class="new-price">2 200 &#8381;</span><br>
 									  				<a href="#" class="obmen">при обмене</a>
-									  			</div>
-									  			<button class="btn red-btn"></button>
+									  			<!-- </div> -->
+									  		</div>
+									  		<div class="btn-block">
+									  			<button class="red-btn"><span>В корзину</span></button>
+									  			<button class="yellow-btn" data-toggle="modal" data-target="#buy_one_click">Купить в один клик</button>
 									  		</div>
 									  	</div>
 								  	</div>
@@ -7513,16 +7802,16 @@
 		<div class="row">
 			<div class="col record">
 				<div class="record-block avto">
-					<h3>Автотехцентр “Рулевой”</h3>
+					<a href="#"><h3>Автосервис “Рулевой”</h3></a>
 					<div class="rec-description">Повышенный срок гарантии на все виды ремонтных работ в автотехцентре “Рулевой”, при условии приобретения запчастей в интернет-магазине <a href="#">www.bratskiy.ru</a></div>
 					<div class="rec-addr">ул. Автозаводская, 5а,<br>тел.: (3412) 47-97-20</div>
-					<button class="red-btn" data-toggle="modal" data-target="#record4repair">Записаться на ремонт</button>
+					<button class="red-btn" data-toggle="modal" data-target="#service-record">Записаться на ремонт</button>
 				</div>
 				<div class="record-block akb">
-					<h3>Ремонт аккумуляторов “АКБ-Мастер”</h3>
+					<a href="#"><h3>Ремонт аккумуляторов “АКБ-Мастер”</h3></a>
 					<div class="rec-description">Восстановление даже самых безнадежных б/у аккумуляторов с экономией до 90% от стоимости<br>покупки нового аккумулятора</div>
 					<div class="rec-addr">ул. Автозаводская, 5а,<br>тел.: (3412) 47-97-20</div>
-					<button class="red-btn" data-toggle="modal" data-target="#record4repair">Записаться на ремонт</button>
+					<button class="red-btn" data-toggle="modal" data-target="#service-record">Записаться на ремонт</button>
 				</div>
 			</div>
 		</div>
@@ -7782,7 +8071,36 @@
 		</div>
 
 	</footer>
-<!-- #selection-by-car" >Подбор по авто -->
+<!-- 
+  #selection-by-car     > Подбор по авто 
+  #buy_one_click        > Купить в 1 клик 
+  #select-city          > Выбор города
+  #change-password      > Сменить пароль
+  #password-changed     > Пароль изменен
+  #subscribe            > Подписка
+  #write-us             > Написать нам
+  #ask-us               > Задать вопрос
+  #product-review       > Оставить отзыв о товаре
+  #market-review        > Оставить отзыв о магазине
+  #service-record       > Записаться на услугу
+  #order_cancellation   > Отмена заказа
+  #add_to_garazh        > Добавить авто в гараж
+
+-->
+
+<div class="popover" role="tooltip" id="add2Favorites" style="display: none;">
+  <div class="arrow"></div>
+  <div class="popover-header">Товар добавлен в Избранное</div>
+  <div class="popover-body">
+    Войдите в профиль, чтобы сохранить список. Несохраненный список будет очищен через 7 дней.
+    <div class='popover-btn-block'>
+      <a id="fv_close" class='blue'>Понятно, закрыть</a>
+      <a class='red-btn' data-toggle='modal' data-target='#ask-us'>Вход</a>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="modal select-city" id="select-city" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -7850,6 +8168,23 @@
           </div>
           <button class="btn red-btn" data-dismiss="modal">Сохранить пароль</button>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="password-changed" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Пароль изменен</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <p>Ваш пароль успешно изменен.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn red-btn" data-dismiss="modal">Закрыть окно</button>
       </div>
     </div>
   </div>
@@ -8082,6 +8417,166 @@
     </div>
   </div>
 </div>
+
+<div class="modal" id="buy_one_click" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Купить в один клик</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-head-description" >Название товара</div>
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваше имя <span>*</span></span>
+          </label>          
+          <label class="placeinput">
+            <input required type="tel" >
+            <span class="place_holder">Ваш номер телефона <span>*</span></span>
+          </label>          
+          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="order_cancellation" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Отмена заказа</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <p>Для отмены заявки оставьте свои данные и в течении 15 минут Вам перезвонит менеджер.</p>
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваше имя <span>*</span></span>
+          </label>          
+          <label class="placeinput">
+            <input required type="tel" >
+            <span class="place_holder">Ваш номер телефона <span>*</span></span>
+          </label>          
+          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="selection-by-car" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Подбор по авто</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="frm-filter" >
+          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year" id="year">
+            <option value="2000">2000г.</option>
+            <option value="2001">2000г.</option>
+            <option value="2002">2002г.</option>
+            <option value="2003">2003г.</option>
+            <option value="2004">2004г.</option>
+            <option value="2005">2005г.</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka" id="marka">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модель" name="model" id="model">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" id="modif">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <button type="button" class="btn red-btn" data-dismiss="modal">Добавить</button>
+        </form>
+      </div>
+      <!-- <div class="modal-footer">    </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="add_to_garazh" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Добавить авто в гараж</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="frm-filter" >
+          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year" id="year">
+            <option value="2000">2000г.</option>
+            <option value="2001">2000г.</option>
+            <option value="2002">2002г.</option>
+            <option value="2003">2003г.</option>
+            <option value="2004">2004г.</option>
+            <option value="2005">2005г.</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka" id="marka">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модель" name="model" id="model">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" id="modif">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Категория товара" name="category" id="category">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <button type="button" class="btn red-btn" data-dismiss="modal">Добавить</button>
+        </form>
+      </div>
+      <!-- <div class="modal-footer">    </div> -->
+    </div>
+  </div>
+</div>
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/gijgo.min.js"></script>

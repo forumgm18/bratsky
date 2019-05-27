@@ -120,6 +120,7 @@ function basketСlose(e) {
   $(e.currentTarget.parentElement).remove(); // удаляем "строку"
 };
 
+ 
 $(document).ready(function(){
   $('.product-slider.tab-1').slick({
     dots: false,
@@ -133,7 +134,7 @@ $(document).ready(function(){
         { breakpoint: 1200, settings: { slidesToShow: 4 } },
         { breakpoint: 992,  settings: { slidesToShow: 3 } },
         { breakpoint: 768,  settings: { slidesToShow: 2 } },
-        { breakpoint: 575,  settings: { slidesToShow: 1 } }
+        { breakpoint: 480,  settings: { slidesToShow: 1 } }
       ]    
   });
   $('.product-slider.tab-2').slick({
@@ -149,7 +150,7 @@ $(document).ready(function(){
         { breakpoint: 1200, settings: { slidesToShow: 4 } },
         { breakpoint: 992,  settings: { slidesToShow: 3 } },
         { breakpoint: 768,  settings: { slidesToShow: 2 } },
-        { breakpoint: 575,  settings: { slidesToShow: 1 } }
+        { breakpoint: 480,  settings: { slidesToShow: 1 } }
       ]    
   });
   $('.product-slider.tab-3').slick({
@@ -165,7 +166,7 @@ $(document).ready(function(){
         { breakpoint: 1200, settings: { slidesToShow: 4 } },
         { breakpoint: 992,  settings: { slidesToShow: 3 } },
         { breakpoint: 768,  settings: { slidesToShow: 2 } },
-        { breakpoint: 575,  settings: { slidesToShow: 1 } }
+        { breakpoint: 480,  settings: { slidesToShow: 1 } }
       ]    
   });
   $('.product-slider.tab-4').slick({
@@ -181,7 +182,7 @@ $(document).ready(function(){
         { breakpoint: 1200, settings: { slidesToShow: 4 } },
         { breakpoint: 992,  settings: { slidesToShow: 3 } },
         { breakpoint: 768,  settings: { slidesToShow: 2 } },
-        { breakpoint: 575,  settings: { slidesToShow: 1 } }
+        { breakpoint: 480,  settings: { slidesToShow: 1 } }
       ]    
   });
   
@@ -297,6 +298,90 @@ $('#other__delivery__date').datepicker({
 
 //================== Плагин Таймер обратного отсчета ===================
 $('.timer').countdown({until: 491408, format: 'yowdHMS'});
+//================== Плагин Таймер обратного отсчета Конец ===================
+
+//================== Инициализация Поповеров ===================
+  
+function update_popper(refEl, x, y) {
+        
+        new Popper(refEl, $("#add2Favorites"), {
+            placement: 'bottom',
+            html: true,
+            trigger: 'click',
+
+            modifiers: {
+                offset: {
+                    enabled: true,
+                    // offset: (x - 150) + ',' + (-1 * (y - 140))
+                    offset: x + ',' + y
+                },
+                flip: {
+                    behavior: ['left', 'bottom', 'top']
+                },
+                preventOverflow: {
+                    enabled: true,
+                    padding: 10,
+                    escapeWithReference: false,
+                }
+            },
+        });
+      // Popper.scheduleUpdate();
+
+    }
+
+// $('.icons-block .add_to_favorites').on('click',function(e){
+// e.preventDefault();
+//   update_popper($(this), -120, 0);
+
+// });
+// $("#add2Favorites").hide();
+
+  var reference = $('.add_to_favorites');
+  var popover = $("#add2Favorites");
+  popover.hide();
+  popover.popover();
+
+$(document).on('click touchend', function(e) {
+  var target = $(e.target).parent();
+  if(target.is(popover) || target.is(reference)) { 
+    return; 
+  }  else {
+    popover.hide();
+    $(".add_to_favorites.atf_active").removeClass("atf_active");
+  }
+ });
+  
+$(".add_to_favorites").on('click touchend', function(e) {
+  e.preventDefault();
+  update_popper($(this), -115, 10);
+
+  var l = $(this).offset().left;   // позиция инициализирующего элемента 
+  var pa = l - 10;
+
+  if ($(this).hasClass("atf_active")) {
+    popover.hide();
+    $(this).removeClass("atf_active");
+  } else {
+    if (l > 260) { pa = 250 } 
+    $(popover).find('.arrow').css("left", pa + "px");
+    $(".add_to_favorites.atf_active").removeClass("atf_active");
+    popover.show();
+    $(this).addClass("atf_active");
+  }
+
+  // $(this).toggleClass("atf_active");
+ 
+  });
+  
+  $('#fv_close').on('click',function(e){
+    e.preventDefault();
+    popover.hide();
+    $(".atf_active").removeClass("atf_active");
+  
+  });
+
+//================== Инициализация Поповеров Конец ===================
+
 
 $(".filter-block .card-body .add-scroll").overlayScrollbars({ resize: "none" });
 
@@ -485,13 +570,19 @@ $('form.filter-form input[type="radio"]').on('change',function(e){
 });
 
 $('.view-list-btn').on('click',function(e){
+  e.preventDefault();
   if (!$('.content-section').hasClass('list')){
     $('.content-section').addClass('list');
+    $(this).addClass("bl");
+    $('.view-title-btn').removeClass("bl");
   }
 
 });
 $('.view-title-btn').on('click',function(e){
+  e.preventDefault();
   $('.content-section').removeClass('list');
+  $(this).addClass("bl");
+  $('.view-list-btn').removeClass("bl");
 });
 
 $('a[href^="#reply-form-"]').on('click', function (e) {
@@ -536,7 +627,8 @@ $(window).on('load resize', function(){
   if ($(window).width()<768) {
       $('.main-products .nav-tabs a[href="#all-prod"]').tab('show'); 
   }
-  if ($(window).width()<576) {
+  // if ($(window).width()<576) {
+  if ($(window).width()<480) {
       $('.main-products .tab-content').addClass('list'); 
   } else {
       $('.main-products .tab-content').removeClass('list'); 

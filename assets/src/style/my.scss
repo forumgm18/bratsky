@@ -74,6 +74,9 @@ textarea::placeholder, input::placeholder { color: $fontColorLight2;}
 .place_holder span {color: red;}
 //=======================================================
 
+.btn-link {
+@extend %tpl_border-effects-clear;	
+}
 
 .red-btn, .red-transparent-btn, .black-btn, .yellow-btn, .white-btn {
 	border-radius: $bradius;
@@ -205,12 +208,17 @@ textarea::placeholder, input::placeholder { color: $fontColorLight2;}
 	background-position: center;
 }
 .view-title-btn {
-	background-image: url(../img/view-tile.svg);
+	background-color: transparent;	
+	background-image: url(../img/view-tile-gray.svg);
+		&.bl {background-image: url(../img/view-tile-black.svg);}
 }
- .view-list-btn {
-	background-image: url(../img/view-list.svg);
+.view-list-btn  {
+	background-color: transparent;	
+	background-image: url(../img/view-list-gray.svg);
+		&.bl {background-image: url(../img/view-list-black.svg);	}
 }
 
+.btn-link:hover, .btn-link:focus, 
 .view-list-btn:hover, .view-list-btn:focus, 
 .view-title-btn:hover, .view-title-btn:focus, 
 .filter-mobile-btn:hover, .filter-mobile-btn:focus, 
@@ -260,7 +268,7 @@ button:hover, button:focus {
 		.bootstrap-select{
 				>.dropdown-toggle.bs-placeholder {color: $fontColor;}
 			 .dropdown-toggle:focus, 
-				>select.mobile-device:focus+.dropdown-toggle {outline: 0!important;}
+				>select.mobile-device:focus+.dropdown-toggle {outline: 0!important;box-shadow: none;}
 		}	
 		.frm-head {
 			@include dFlex(center,center,row,nowrap);
@@ -478,31 +486,60 @@ button:hover, button:focus {
 }
 
 .product-slider{
-	height: 190px;
+	// height: 460px;
 	padding-left: 0;
 	padding-right: 0;
-			@include media-breakpoint-up(sm) {height: 410px;}
+			// @include media-breakpoint-up(sm) {height: 485px;}
+			@include media-breakpoint-up(x480) {height: 485px;}
 }
-.product-item {	height: 405px;}
+.product-item {	
+	// height: 469px;
+	margin-bottom: 10px;
+			@include media-breakpoint-up(x480) {height: 472px;}
+}
 .slick-list.draggable {height: 100%;}
 .main-product-card {
 		position: relative;
 	background-color: #fff;
 	@include boxShadow2;
-	@include dFlex(flex-start,flex-start,column,nowrap);
+	@include dFlex(space-between,flex-start,column,nowrap);
 	border: none;
 	width: 211px;
 // Правки 05.05.2019
 //	height: 394px;
 //	padding: 15px 10px 24px 10px;
 	
-	height: 405px;
-	padding: 15px 10px 35px 10px;
+	// height: 405px;
+	height: 100%;
+	padding: 15px 10px 5px 10px;
 	
 	margin: 0 auto;
 		&:hover {@include boxShadow;}	
 	.b1 {width: 100%;}	
-	.b3 {width: 100%;}	
+	.b3 {width: 100%;margin-bottom: 5px;}	
+			button {
+				width: 100%;
+				height: 32px;
+				margin-bottom: 5px;
+			}
+	.btn-block {
+		@include dFlex(space-between,center,column,nowrap);
+		margin-top: 5px;
+		.red-btn{
+			width: 100%;
+			height: 32px;
+			&:before {
+				content:url(../img/basket-white.svg);
+				margin-right: 10px;
+			}
+		}
+		.yellow-btn{
+			width: 100%;
+			height: 32px;
+			&:before {display: none;}
+		}
+	}		
+
 }
 
 .icons-block {
@@ -564,10 +601,87 @@ button:hover, button:focus {
 				span:last-child {color:#000;}
 		}	
 }
+.popover {
+	@include setFont ($textFFamily,normal,normal,14px,$fontColor);	
+	@include boxShadow4;	
+	@include Border($borderGray2);
+	padding: 25px;
+	background: #fff;
+	max-width: 292px;
+	border-radius: 0;
+		&[x-placement^=bottom]{
+			top: 10px!important;
+					>.arrow {
+						top: calc((15px + 1px) * -1);
+						&:before, &:after { border-width: 0 11px 15px 11px;}
+						&:before {border-color: transparent transparent $borderGray2 transparent;}
+						&:after {
+							top: 1px;
+							border-color: transparent transparent #fff transparent;
+						}
+					}
+		}
+		&[x-placement^=top]{
+			top: -10px!important;
+				>.arrow {
+				  bottom: calc((15px + 1px) * -1);
+					&:before, &:after {border-width: 15px 11px 0 11px;}
+					&:before {border-color: $borderGray2 transparent transparent transparent;	}
+					&:after {
+						bottom: 1px;
+						border-color: #fff transparent transparent transparent;				
+					}
+				}
+		}
 
+		.popover-header {
+			font-weight: bold;
+			background: none;		
+			border: none;
+			border-radius: 0;
+			padding: 0;
+			margin: 0 0 5px 0;
+
+		}
+		.popover-body {
+			margin: 0;
+			padding: 0;
+		}
+		.arrow {
+			margin: 0;
+			// margin-left: -5px;
+			width: 22px;
+			height: 15px;
+			// left: initial!important;;
+			// right: 20px!important;
+
+			&:before, &:after {
+				width: 0;
+				height: 0;
+				border-style: solid;
+			}
+
+		}
+		.popover-btn-block {
+			@include dFlex(space-between,flex-end,row,nowrap);	
+			margin-top: 10px;
+				a{cursor: pointer;}
+			 .red-btn {
+			 	width: 107px;
+			 	height: 32px;
+			 	color: #fff;
+			 	cursor: pointer;
+			 	&:hover {color:#fff;}
+			 }
+
+		}
+}
 .price-block  {	
-	@include dFlex(space-between,center,row,nowrap);	
+	// @include dFlex(space-between,center,row,nowrap);	
+	// @include dFlex(space-between,flex-start,column,nowrap);	
+	@include dFlex(space-between,baseline ,row,wrap);	
 	// height: 44px;
+	// height: 100%;
 	width: 100%;
 	margin-top: 13px;
 		>div {line-height: 20px;}
@@ -575,19 +689,31 @@ button:hover, button:focus {
 			@include setFont ($headFFamily,normal,normal,14px,$fontColorLight2);	
 		  text-decoration-line: line-through;
 		}
-		.new-price{	@include setFont ($headFFamily,normal,bold,24px,$fontColor); }
+		.new-price{	@include setFont ($headFFamily,normal,bold,24px,$fontColor); margin-right: 10px;}
 		.obmen {
 			@include setFont ($textFFamily,normal,normal,13px,$fontColor);
 			line-height: 14px;
 			text-decoration-line: underline;
 		}
 		.red-btn{
-			width: 46px;
+			// width: 46px;
+			width: 100%;
 			height: 32px;
-			background: $red url(../img/basket-white.svg) center 4px no-repeat;
+			background: $red;
+				&:before {
+						content: "";
+						background: url(../img/basket-white.svg) center no-repeat;
+						margin-right: 10px;
+						width: 21px;
+						height: 21px;
+				}
 				&:hover,
 				&:focus {	@extend %tpl_border-effects-clear;	}
-		}	
+		}
+		.yellow-btn	{
+			width: 100%;
+			height: 32px;
+		}
 }
 
 
@@ -1824,26 +1950,36 @@ footer {
 	}
 	
 		.product-item {
+				@include dFlex(space-between,flex-start,column,nowrap);
+				background-color: #fff;
 			width: 100%;
-			height: 190px;
+			// height: 190px;
+			height: 255px;
 			margin-bottom: 10px;
+				@include media-breakpoint-up(x400) {height: 190px;}
 				@include media-breakpoint-up(md) {height: 156px;}
+				@include media-breakpoint-up(lg) {height: 165px;}
+				@include media-breakpoint-up(xl) {height: 156px;}
 		}
 		.b0	{	
 			background-color: #fff;	
 			padding: 15px 15px 0 15px;
 			display: block;
 			@include media-breakpoint-up(md) {display: none;}
-
+			
 		}	
 		.main-product-card {
-			height: 150px;
+			// height: 156px;
 			min-width: 100%;
 			flex-direction: row;
 			box-shadow: none;
 			border-bottom: 1px solid $borderGray4;
-			padding: 15px;
-				@include media-breakpoint-up(md) {border: none;@include boxShadow2;height: 156px;}
+			padding: 0 15px 70px 15px;
+			height: 210px;
+				@include media-breakpoint-up(x400) {height: 150px;padding-bottom: 15px;}
+				@include media-breakpoint-up(md) {border: none;@include boxShadow2;height: 156px;padding: 15px;}
+				@include media-breakpoint-up(lg) {height: 165px;}
+				@include media-breakpoint-up(xl) {height: 156px;}
 			.img-link {
 				min-height: unset;
 				height: 100px;
@@ -1851,18 +1987,19 @@ footer {
 			.b1 {
 				width: auto;
 				margin-right: 20px;
-				@include media-breakpoint-up(md) {margin-right: 30px;min-width: 170px;}
-				@include media-breakpoint-up(lg) {margin-right: 30px;min-width: 135px;}
+				@include media-breakpoint-up(sm) {margin-right: 30px;}
+				@include media-breakpoint-up(md) {min-width: 150px;}
+				@include media-breakpoint-up(lg) {min-width: 100px;}
 				@include media-breakpoint-up(xl) {margin-right: 50px;min-width: 180px;}
 
 			}
 			.b2 {
 				margin-right: 50px;
 				display: none;
-				@include media-breakpoint-up(sm) {display: block;margin-right: 20px;margin-top: auto;}
-				@include media-breakpoint-up(md) {display: block;margin-right: 50px;margin-top: 0;}
-				@include media-breakpoint-up(lg) {margin-right: 20px;}
-				@include media-breakpoint-up(xl) {margin-right: 50px;}
+				// @include media-breakpoint-up(sm) {display: block;margin-right: 20px;margin-top: auto;}
+				@include media-breakpoint-up(md) {display: block;margin-right: 20px;margin-top: 0;}
+				@include media-breakpoint-up(lg) {margin-right: 10px;}
+				@include media-breakpoint-up(xl) {margin-right: 65px;}
 				.prod-name {
 					display: none;
 					@include media-breakpoint-up(md) {display: flex;}
@@ -1872,34 +2009,56 @@ footer {
 			.b3 {
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
+				margin-bottom: 0;
 				//margin-right: 10px;
 				height: 100%;
 				width: auto;
 				margin-left: auto;
-				@include media-breakpoint-up(md) {left: 170px;margin-left: initial;}
+				flex-grow: 1;
+				@include media-breakpoint-up(md) {flex-grow: 0;min-width: 220px;}
+				@include media-breakpoint-up(lg) {min-width: 180px;}
+				@include media-breakpoint-up(xl) {min-width: 240px;}
 			}
 			.prod-name {display: flex;margin-bottom: 10px;height: auto;}
 			.icons-block {
 				right: 10px;
 				left: auto;
+				top: 0;
 				width: 55px;
 				flex-direction: row;
-				@include media-breakpoint-up(md) {left: 150px;right: auto; flex-direction: column;}
-				@include media-breakpoint-up(lg) {left: 135px;}
-				@include media-breakpoint-up(xl) {left: 180px;}
+				height: auto;
+				@include media-breakpoint-up(sm) {height: 47px;top: 12px}
+				@include media-breakpoint-up(md) {left: 140px;right: auto; flex-direction: column;}
+				@include media-breakpoint-up(lg) {left: 103px;}
+				@include media-breakpoint-up(xl) {left: 160px;}
 
 			}
 			.for_list {
-				display: block;
+				// display: block;
+				display: flex;
 				&.stars-block {
-					flex-direction: column;
+					// flex-direction: column;
 					align-items: flex-start;
-					.otziv{margin-left: 0;}
+					flex-wrap: wrap;
+						@include media-breakpoint-up(md) {flex-wrap: nowrap;}
+						@include media-breakpoint-up(lg) {flex-wrap: wrap;}
+						@include media-breakpoint-up(xl) {flex-wrap: nowrap;}
+					.otziv{
+						margin-left: 0;
+						margin-bottom: 25px;
+							order: 1;
+							@include media-breakpoint-up(x400) {margin-bottom: 10px;}
+							@include media-breakpoint-up(sm) {margin-bottom: 10px;}
+							@include media-breakpoint-up(md) {order: 2;margin-bottom: 0;}
+
+					}
 					.stars {
-						position: absolute;
+						// position: absolute;
+							order: 3;
 						  bottom: 15px;
 							@include media-breakpoint-up(sm) {left: 145px;top: 15px;bottom: initial; }
-							@include media-breakpoint-up(md) {position: relative;left: initial; top: initial;}
+							@include media-breakpoint-up(md) {position: relative;left: initial; top: initial;order: 1;}
 					}
 					
 				}
@@ -1910,17 +2069,70 @@ footer {
 			}
 			.for_title {display: none;}
 			.price-block {
-				margin-top: 15px;
-				width: 144px;
+				flex-direction: row;
+				align-items: baseline;
+				justify-content: flex-start;
+				margin-top: 0;
 				height: auto;
-				@include media-breakpoint-up(md) {width: 165px;margin-top: 25px;}
-				@include media-breakpoint-up(lg) {width: 165px;margin-top: auto;}
-				@include media-breakpoint-up(xl) {width: 180px;}
+				flex-wrap: wrap;
+				@include media-breakpoint-up(x400) {margin-bottom: 5px;}
+				@include media-breakpoint-up(sm) {margin-bottom: 0;}
+				@include media-breakpoint-up(md) {flex-wrap: wrap;margin-bottom: 8px;}
+				@include media-breakpoint-up(xl) {flex-wrap: nowrap;margin-bottom: 0;justify-content: space-between;}
 					.new-price{
 						font-size: 18px;
+						margin-bottom: 5px;
+						@include media-breakpoint-up(x400) {margin-bottom: 0;}
 						@include media-breakpoint-up(md) {flex-direction: 24px;}
-
 					}
+					.old-price {margin-right: 10px;}
+					 br {@include media-breakpoint-up(xl) {display: none;}	}
+					 .obmen {
+					 		// margin-left: auto;
+								@include media-breakpoint-up(x400) {margin-left: auto;}
+								@include media-breakpoint-up(lg) {margin-left: 0;}
+					 }
+
+
+			}
+			.btn-block {
+				position: absolute;
+				right: 15px;
+				bottom: 20px;
+				margin-bottom: 0;
+				width: calc(100vw - 30px);
+				flex-direction: row;
+						@include media-breakpoint-up(x400) {position: relative;width: auto;bottom: initial;right: initial;}
+						@include media-breakpoint-up(lg) {flex-direction: column;}
+						@include media-breakpoint-up(xl) {flex-direction: row;}
+				.yellow-btn {
+					order: 1;
+					flex-grow: 1;
+					margin-right: 10px;
+					margin-bottom: 0;
+					height: 32px;
+						@include media-breakpoint-up(sm) {margin-right: 10px;margin-bottom: 0;}
+						@include media-breakpoint-up(lg) {width: 100%;margin-right: 0;margin-bottom: 5px;}
+						@include media-breakpoint-up(xl) {margin-right: 10px;margin-bottom: 0;}
+
+					&:before {display: none;}	
+				}
+				.red-btn {
+					order: 2;
+					width: 46px;
+					margin-bottom: 0;
+						// @include media-breakpoint-up(sm) {width: 46px;}
+						@include media-breakpoint-up(lg) {width: 100%;}
+						@include media-breakpoint-up(xl) {width: 46px;}
+					span {
+						display: none;
+						// @include media-breakpoint-up(sm) {display: none;}
+						@include media-breakpoint-up(lg) {display: inline-block;margin-left: 5px;}
+						@include media-breakpoint-up(xl) {display: none;}
+					}
+
+					&:before {margin-right: 0;}
+				}
 			}
 		}
 }
@@ -2298,11 +2510,15 @@ footer {
 		@include media-breakpoint-up(md) {margin-bottom: 15px;}
 
 	.dostavka-label {
-		@include dFlex(space-between,center,row,nowrap);
+		@include dFlex(space-between,baseline,row,nowrap);
 		@include setFont ($textFFamily,normal,bold,14px,$fontColor);
-			span {
+			>span {
 				line-height: 30px;
 				&:first-child {font-weight: normal;color: $fontColorLight4;text-decoration-line: underline;}
+				&.text-right {
+					line-height: 18px;
+					span {font-weight: normal;}
+				}
 			}	
 	}
 }	
