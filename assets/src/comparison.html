@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @@include('./template/head.html')
+  <link rel="stylesheet" href="css/other/comparison-style.min.css">
+</head>
+
+<body>
+  @@include('./template/header.html')
+  <main class="main">
+    <div class="breadcrumb">
+      <div class="container">
+        <div class="row">
+          <nav class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item active">Сравнение товара</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h1 class="title-h1 title">Сравнение товара</h1>
+    </header>
+    <a href="#">Аккумуялторы (2)</a>
+    <a href="#">Электроника (4)</a>
+    <div class="comparison__fixed">
+      <div>
+        <p>Только различающиеся параметры</p>
+        <button class="comparison__clean-list">Очистить список</button>
+      </div>
+      <ul class="comparison__list">
+        <li class="comparison__item">@@include('./template/catalog-product-card-akk.html')</li>
+        <li class="comparison__item">@@include('./template/catalog-product-card-akk.html')</li>
+        <li class="comparison__item">@@include('./template/catalog-product-card-akk.html')</li>
+        <li class="comparison__item">@@include('./template/catalog-product-card-akk.html')</li>
+        <li class="comparison__item">@@include('./template/catalog-product-card-akk.html')</li>
+        <li class="comparison__item">@@include('./template/catalog-product-card-akk.html')</li>
+        <li class="comparison__item">@@include('./template/catalog-product-card-akk.html')</li>
+      </ul>
+      <div class="slider-arrows">
+        <button class="prev-comparison"><span></span></button>
+        <p>4 из 12</p>
+        <button class="next-comparison"><span></span></button>
+      </div>
+    </div>
+    <table class="comparison__table">
+      <tr class="table__spoiler-check">
+        <th colspan="100%">Общие параметры</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tbody class="table__spoiler-body">
+        <tr class="table__grey">
+          <td>Параметр</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+        </tr>
+      </tbody>
+      <tr class="table__spoiler-check">
+        <th colspan="100%">Конструкция</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tbody class="table__spoiler-body">
+        <tr class="table__grey">
+          <td>Полярность</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>прямая [+...-]</td>
+          <td>прямая [+...-]</td>
+          <td>прямая [+...-]</td>
+          <td>прямая [+...-]</td>
+          <td>прямая [+...-]</td>
+        </tr>
+        <tr class="table__grey">
+          <td>Тип корпуса</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>европейский</td>
+          <td>европейский</td>
+          <td>европейский</td>
+          <td>европейский</td>
+          <td>европейский</td>
+        </tr>
+        <tr class="table__grey">
+          <td>Типоразмер клемм</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>T1</td>
+          <td>T1</td>
+          <td>T1</td>
+          <td>T1</td>
+          <td>T1</td>
+        </tr>
+        <tr class="table__grey">
+          <td>Буртик</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>нет</td>
+          <td>нет</td>
+          <td>нет</td>
+          <td>нет</td>
+          <td>нет</td>
+        </tr>
+      </tbody>
+      <tr class="table__spoiler-check">
+        <th colspan="100%">Электрические характеристики</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tbody class="table__spoiler-body">
+        <tr class="table__grey">
+          <td>Параметр</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+        </tr>
+      </tbody>
+      <tr class="table__spoiler-check">
+        <th colspan="100%">Габариты, вес</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tbody class="table__spoiler-body">
+        <tr class="table__grey">
+          <td>Параметр</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+          <td>текст</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  @@include('./template/footer-block.html')
+  @@include('./template/modal.html')
+  @@include('./template/footer-scripts.html')
+  <script src="js/slick.min.js"></script>
+  <script src="js/other/comparison-script.js"></script>
+</body>
+
+</html>

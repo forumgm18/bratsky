@@ -1,0 +1,84 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+
+@import "../slick";
+
+
+
+.main {
+  max-width: $siteWidth;
+  margin: 0 auto;
+}
+
+.comparison__fixed {
+  padding: 20px 0;
+}
+
+// СЛАЙДЕР
+.slider-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 140px;
+}
+
+.prev-comparison {
+  @include sliderControlPrev($fontColor);
+  position: relative;
+}
+
+.next-comparison {
+  @include sliderControlNext($fontColor);
+  position: relative;
+}
+
+// END СЛАЙДЕР
+
+
+
+
+// ТАБЛИЦА 
+.comparison__table-spoiler {
+  display: none;
+}
+
+.comparison__table-body {
+  display: none;
+}
+
+.comparison__table {
+  td {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px; //identical to box height
+    color: #333333;
+  }
+}
+
+.table__spoiler-check {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px; //identical to box height
+  color: #333333;
+}
+
+.table__grey {
+  td {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px; //identical to box height
+    color: #828282;
+  }
+}
+
+// END ТАБЛИЦА
