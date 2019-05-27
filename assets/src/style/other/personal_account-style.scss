@@ -445,15 +445,15 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-row-gap: 13px;
 
-	.favorites__item {
-		.product-item {
-			height: 415px;
-		}
-
-		.main-product-card {
-			height: 415px;
-		}
-	}
+//	.favorites__item {
+//		.product-item {
+//			height: 415px;
+//		}
+//
+//		.main-product-card {
+//			height: 415px;
+//		}
+//	}
 }
 
 @include mediaFavorites;
