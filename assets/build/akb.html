@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col top-panel-content">
 					<!-- <button class="link-btn select-city" data-toggle="modal" data-target="#select-city"><span>Ижевск</span></button> -->
-					<button class="link-btn select-city" data-toggle="modal" data-target="#service-record"><span>Ижевск</span></button>
+					<button class="link-btn select-city" data-toggle="modal" data-target="#restore_password3"><span>Ижевск</span></button>
 					<div class="top-links">
 						<a href="#">Для клиента</a>
 						<a href="#">Розничная сеть</a>
@@ -2662,19 +2662,25 @@
 
 	</footer>
 	<!-- 
-  #selection-by-car     > Подбор по авто 
-  #buy_one_click        > Купить в 1 клик 
-  #select-city          > Выбор города
-  #change-password      > Сменить пароль
-  #password-changed     > Пароль изменен
-  #subscribe            > Подписка
-  #write-us             > Написать нам
-  #ask-us               > Задать вопрос
-  #product-review       > Оставить отзыв о товаре
-  #market-review        > Оставить отзыв о магазине
-  #service-record       > Записаться на услугу
-  #order_cancellation   > Отмена заказа
-  #add_to_garazh        > Добавить авто в гараж
+  #selection-by-car             > Подбор по авто 
+  #buy_one_click                > Купить в 1 клик 
+  #select-city                  > Выбор города
+  #change-password              > Сменить пароль
+  #password-changed             > Пароль изменен
+  #password-changed2            > Пароль изменен
+  #subscribe                    > Подписка
+  #write-us                     > Написать нам
+  #ask-us                       > Задать вопрос
+  #product-review               > Оставить отзыв о товаре
+  #market-review                > Оставить отзыв о магазине
+  #service-record               > Записаться на услугу
+  #order_cancellation           > Отмена заказа
+  #add_to_garazh                > Добавить авто в гараж
+  #restore_password             > Восстановить пароль (запрос кода подтверждения)
+  #restore_password2            > Восстановить пароль (проверка кода подтверждения)
+  #restore_password3            > Смена пароля 
+  #export_email                 > Экспорт e-mail 
+  #subscribe_price_change       > Подписаться на изменения цены 
 
 -->
 
@@ -2779,6 +2785,24 @@
     </div>
   </div>
 </div>
+
+<div class="modal" id="password-changed2" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Пароль изменен</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <p>Изменить пароль можно в личном кабинете</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn red-btn" data-dismiss="modal">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="modal" id="subscribe" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
@@ -3167,6 +3191,145 @@
   </div>
 </div>
 
+<div class="modal" id="restore_password" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Восстановить пароль</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">Ваш e-mail или номер телефона <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Получить код</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal restore_password" id="restore_password2" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Восстановить пароль</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" />
+            <span class="place_holder">89121234567</span>
+          </label>          
+          <label class="placeinput">
+            <input required type="text" name="kod" />
+            <span class="place_holder">Код </span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Подтвердить</button>
+        </form>
+        <div class="modal-footer">
+          <p>Вы можете получить повторное смс через 40 сек</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal restore_password" id="restore_password3" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Восстановить пароль</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="name" value="89121234567" />
+            <span class="place_holder">Ваш логин или номер телефона</span>
+          </label>          
+          <label class="placeinput">
+            <input required type="text" name="kod" value="506040" />
+            <span class="place_holder">Код </span>
+          </label> 
+          <label class="placeinput">
+            <input required type="password" name="new-passw" />
+            <span class="place_holder">Придумайте пароль </span>
+          </label> 
+          <label class="placeinput">
+            <input required type="password" name="confirm-passw"/>
+            <span class="place_holder">Повторите пароль </span>
+          </label> 
+
+
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Подтвердить</button>
+        </form>
+        <div class="modal-footer">
+          <p>Вы можете получить повторное смс через 40 сек</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="export_email" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Экспорт e-mail</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="eml"/>
+            <span class="place_holder">Ваш e-mail <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="subscribe_price_change" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Подписаться на изменения цены</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="/">
+          <label class="placeinput">
+            <input required type="text" name="eml"/>
+            <span class="place_holder">Ваш e-mail <span>*</span></span>
+          </label>          
+          <div class="fz152-block">
+            <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+            <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+          </div>
+          <button class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 	<script src="js/jquery.min.js"></script>
 <script src="js/gijgo.min.js"></script>

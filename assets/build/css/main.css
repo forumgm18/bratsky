@@ -16348,6 +16348,13 @@ footer {
   height: 17px;
   background: url(../img/search-ico-modal.svg) center no-repeat; }
 
+.gj-icon {
+  color: #333333;
+  top: 50% !important;
+  right: 10px !important;
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px); }
+
 @media (min-width: 768px) {
   .modal.select-city .modal-content {
     max-width: 520px;
@@ -16401,13 +16408,6 @@ footer {
 .modal.market-review textarea.h70 {
   height: 70px; }
 
-.gj-icon {
-  color: #333333;
-  top: 50% !important;
-  right: 10px !important;
-  -webkit-transform: translateY(-12px);
-          transform: translateY(-12px); }
-
 .modal.service-record .modal-content {
   padding: 13px 28px 26px 28px; }
   @media (min-width: 768px) {
@@ -16454,6 +16454,21 @@ footer {
 
 .modal.service-record .fz152 br {
   display: none; }
+
+.modal.restore_password input {
+  margin-bottom: 19px; }
+
+.modal.restore_password .fz152-block {
+  margin-top: 0; }
+
+.modal.restore_password .modal-content {
+  padding-bottom: 15px; }
+
+.modal.restore_password .modal-footer {
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .modal.restore_password .modal-footer p {
+    margin-bottom: 0; }
 
 .main-baner {
   display: none; }

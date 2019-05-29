@@ -123,8 +123,15 @@
 	background: url(../img/search-ico-modal.svg) center no-repeat;
 
 }
+.gj-icon {
+	color: $fontColor;
+	top:50%!important;
+	right: 10px!important;
+	transform: translateY(-12px);
+}
 
-.modal.select-city {
+.modal {
+	&.select-city {
 	.modal-content {
 			@include media-breakpoint-up(md) {
 				max-width: 520px;
@@ -164,19 +171,13 @@
 			}	
 
 	}
-}
+	}
 
-.modal.market-review {
+	&.market-review {
 	.modal-dialog {height: auto;}
 	textarea.h70 {height: 70px;}
-}
-.gj-icon {
-	color: $fontColor;
-	top:50%!important;
-	right: 10px!important;
-	transform: translateY(-12px);
-}
-.modal.service-record {
+	}
+	&.service-record {
 		.modal-content {
 				padding: 13px 28px 26px 28px;
 				@include media-breakpoint-up(md) {	width: 567px;}
@@ -202,5 +203,14 @@
 					.red-btn {width: 300px;}
 		}
 		.fz152 br {display: none;}
-
+	}
+	&.restore_password {
+		input {margin-bottom: 19px;}
+		.fz152-block {margin-top: 0;}
+		.modal-content {padding-bottom: 15px;}
+		.modal-footer {
+			justify-content: center;
+			p {margin-bottom: 0;}
+		}
+	}
 }
