@@ -7,14 +7,99 @@
 @import "../slick";
 
 
+//.main {
+//  max-width: $siteWidth;
+//  margin: 0 auto;
+//}
 
-.main {
+
+
+.wp-block {
   max-width: $siteWidth;
   margin: 0 auto;
 }
 
+.price-block {
+  flex-direction: row-reverse;
+
+  .obmen {
+    display: block;
+    margin: 0 auto 0 0;
+  }
+}
+
+.comparison__empty-block {
+  //  display: none;
+  height: 500px;
+}
+
+.comparison__category {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration-line: underline;
+  color: #828282;
+}
+
+.comparison__category-list {
+  input {
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 55px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    .active {
+      text-decoration-line: none;
+      color: #000000;
+    }
+  }
+}
+
 .comparison__fixed {
   padding: 20px 0;
+
+}
+
+
+
+
+.main-product-card {
+  position: relative;
+}
+
+.btn-item-delite {
+  position: absolute;
+  background: none;
+  left: 0;
+  top: 0;
+  width: 18px;
+  max-width: 18px;
+  height: 18px;
+  max-height: 18px;
+  //  z-index: 100;
+  display: block;
+  border: 1px solid #E30613;
+  background-image: url(../../img/delite_icon_red.svg);
+  background-repeat: none;
+  background-position: center;
+}
+
+.btn-item-delite-fixed {
+  display: none;
+  //  height: 19px;
+  //  width: 16px;
+  ////  z-index: 999;
+  //  background-image: url(../../img/garbage_icon.svg);
+  //  background-repeat: none;
+  //  background-position: center;
 }
 
 // СЛАЙДЕР
@@ -24,6 +109,7 @@
   align-items: center;
   position: relative;
   width: 140px;
+  margin: 29px 0 0 auto;
 }
 
 .prev-comparison {
@@ -42,22 +128,24 @@
 
 
 // ТАБЛИЦА 
-.comparison__table-spoiler {
-  display: none;
+.comparison__table {
+  margin-bottom: 50px;
 }
 
-.comparison__table-body {
-  display: none;
-}
 
 .comparison__table {
+  width: 100%;
+
   td {
+    width: 20%;
     font-family: PT Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 18px; //identical to box height
     color: #333333;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #BDBDBD;
   }
 }
 
@@ -68,7 +156,37 @@
   font-size: 18px;
   line-height: 23px; //identical to box height
   color: #333333;
+  border-bottom: 1px solid #828282;
+
+  th {
+    padding: 25px 5px 25px 0;
+
+    &::after {
+      content: '';
+      margin-left: 10px;
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      background-image: url(../../img/down_icon_black.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
 }
+
+.comparison__table {
+  .open-position {
+    th {
+      border-bottom: 1px solid #BDBDBD;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+
 
 .table__grey {
   td {
@@ -78,7 +196,223 @@
     font-size: 14px;
     line-height: 18px; //identical to box height
     color: #828282;
+    padding: 28px 5px 16px 0;
+    border-bottom: none;
   }
 }
 
 // END ТАБЛИЦА
+
+
+// comparison__list-functions 
+.comparison__list-functions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+// ON/OFF  переключатель
+// Только различающиеся параметры
+.different-form {
+  display: flex;
+  display: grid;
+  grid-template: auto / 48px auto;
+
+  .active {
+    background-color: #333333;
+  }
+}
+
+.different-form__text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0;
+}
+
+.different-form__switch {
+  text-align: left;
+  margin: 0 8px 0 0;
+  width: 40px;
+  height: 22px;
+  border-radius: 60px;
+  background-color: #828282;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding: 0 0 0 3px;
+
+  > .different-form__input {
+    display: none;
+  }
+
+  > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+    }
+  }
+}
+
+.different-form__switch > span:before {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.different-form__switch > span:after {
+  top: 50%;
+  z-index: 3;
+  transition: transform .4s cubic-bezier(0.44, -0.12, 0.07, 1.15);
+  width: 17px;
+  height: 17px;
+  transform: translate3d(0, -50%, 0);
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.different-form__switch > .different-form__input:checked {
+  ~ span:before {
+    //    transform: scale(0);
+    //    opacity: .7;
+  }
+
+  ~ span:after {
+    transform: translate3d(100%, -50%, 0);
+  }
+}
+
+// ON/OFF  переключатель
+// Только различающиеся параметры
+// *** КОНЕЦ ***
+
+
+.comparison__clean-list {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  background: none;
+  border: none;
+
+  &::before {
+    content: '';
+    margin-right: 6px;
+    display: inline-block;
+    background-image: url(../../img/garbage_icon.svg);
+    width: 13px;
+    height: 14px;
+    background-position: bottom;
+  }
+}
+
+// END comparison__list-functions 
+
+
+// Фиксированный список сравниваемых товаров
+.fixed {
+  position: fixed;
+  display: block;
+
+  top: 0;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 18px;
+
+  .comparison__fixed-content {
+    max-width: $siteWidth;
+    margin: 0 auto;
+  }
+
+  .slider-arrows {
+    margin-top: 10px;
+  }
+
+  .comparison__clean-list {
+    display: none;
+  }
+
+  .product-item {
+
+    .btn-item-delite,
+    .stars-block,
+    .for_title,
+    .for_list,
+    .yellow-btn,
+    .red-btn > span,
+    .show_feedback,
+    .sale-card {
+      display: none;
+    }
+  }
+
+  .product-item {
+
+
+
+    .btn-item-delite-fixed {
+      display: block;
+      border: none;
+      background: none;
+
+      img {
+        height: 19px;
+        width: 16px;
+      }
+    }
+
+    .b3 {
+      display: grid;
+      grid-template: auto / auto 50px;
+    }
+
+    .price-block {
+      display: block;
+      margin: 9px 0 0 0;
+
+      .old-price {
+        display: block;
+        margin-bottom: -10px;
+      }
+    }
+
+    .red-btn {
+      width: 45px;
+      max-width: 45px;
+
+      &::before {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.btn-block {
+  margin-bottom: 0;
+}
+
+.display-block {
+  display: block;
+}
+
+
+@import "comparison-media";
