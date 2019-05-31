@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  @@include('./template/head.html')
+  <link rel="stylesheet" href="css/other/spare_parts_search-style.min.css">
+</head>
+
+<body class="рroduct-сard-page">
+  <!--<body>-->
+  @@include('./template/header.html')
+    <main class="search__page main">
+  <!--  <main class="main">-->
+<!--  <main>-->
+    <div class="breadcrumb">
+      <div class="container">
+        <div class="row">
+          <nav class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item"><a href="#">Каталог запчастей</a></li>
+              <li class="breadcrumb-item"><a href="#">Nissan Almera</a></li>
+              <li class="breadcrumb-item"><a href="#">Двигатель</a></li>
+              <li class="breadcrumb-item"><a href="#">Головка цилиндра</a></li>
+              <li class="breadcrumb-item"><a href="#">Крышка головки цилиндра, прокладка</a></li>
+              <li class="breadcrumb-item"><a href="#">Блок цилиндров и поддон картера</a></li>
+              <li class="breadcrumb-item active">Тормозные колодки</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <section class="recom__sect">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 header-flex">
+            <h1>Тормозные колодки для (марка авто/артикул)</h1>
+          </div>
+          <!--          <div class="col-12 search__query">Тормозные колодки для (марка авто/артикул)</div>-->
+        </div>
+        <div class="row analog-section">
+          <div class="col-12 col-lg-4">
+            <div class="recomendation">
+              <div class="flag">
+                <div class="biggs">
+                  <div class="b-left"></div><span>аналог</span>
+                  <div class="b-right"></div>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="text-bold">Братский рекомендует</div>
+                <div class="text">Колодки тормозные, передние FENOX BP43075</div>
+                <div class="text">В наличии: <a href="#select-city" data-toggle="modal"><span>6 магазинов</span></a></div>
+              </div>
+              <div class="price-block">
+                <div class="new-price">350 &#8381;</div>
+                <button class="red-btn"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <div class="recomendation b-yellow">
+              <div class="flag">
+                <div class="biggs">
+                  <div class="b-left"></div><span>оригинал</span>
+                  <div class="b-right"></div>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="text-bold">Самая низкая цена</div>
+                <div class="text">Колодки тормозные, передние FENOX BP43075</div>
+                <div class="text">Доставка: <a href="#select-city" data-toggle="modal"><span>7 дней</span></a></div>
+              </div>
+              <div class="price-block">
+                <div class="new-price">350 &#8381;</div>
+                <!-- <div></div> -->
+                <button class="red-btn"></button>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="recomendation">
+              <div class="flag">
+                <div class="biggs">
+                  <div class="b-left"></div><span>аналог</span>
+                  <div class="b-right"></div>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="text-bold">Самая низкая цена</div>
+                <div class="text">Колодки тормозные, передние FENOX BP43075</div>
+                <div class="text">Доставка: <a href="#select-city" data-toggle="modal"><span>7 дней</span></a></div>
+              </div>
+              <div class="price-block">
+                <div class="new-price">350 &#8381;</div>
+                <!-- <div></div> -->
+                <button class="red-btn"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="analogs">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4 col-xl-3">
+            <div class="filter-container">
+              <div class="filter-top-groupe">
+                <button class="black-btn" type="button" data-toggle="collapse" data-target="#collapseFilter">Фильтры поиска</button>
+                <!-- <button class="red-btn" type="button" data-toggle="modal" data-target="#selection-by-car" >Подбор по авто</button> -->
+                <!-- <button class="filter-mobile-btn" type="button" data-toggle="collapse" data-target="#collapseFilter"></button> -->
+              </div>
+              <form class="filter-form collapse show" id="collapseFilter">
+                <div class="card-body top">
+                  <div class="filter-search">
+                    <input type="text" class="form-control" placeholder="Поиск">
+                    <a href="#" class="filter-search-btn"></a>
+                  </div>
+                </div>
+
+                <div id="filter-accordion">
+                  <div class="filter-block">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#price-item">Цена, руб</button>
+                    <div id="price-item" class="card-body collapse" data-parent="">
+                      <div class="range-description"><span class="range-min">0</span><span class="range-max">3642</span></div>
+                      <div class="range">
+                        <input id="price" name="price" type="text" class="range" value="0,3642" data-provide='slider' data-slider-min="0" data-slider-max="3642" data-slider-step="5" data-slider-value="[100,3642]" data-slider-tooltip="hide" data-slider-handle='square' />
+                      </div>
+                      <!-- <input id="ex2" type="text" class="span2" value="[250,450]" data-slider-min="10" 	data-slider-max="1000" data-slider-step="5" 	data-slider-value="[250,450]"	/>	 -->
+                      <div class="range-description"><span>от</span><span>до</span></div>
+                    </div>
+                  </div>
+                  <div class="filter-block">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#delivery-time-item">Срок поставки, дней</button>
+                    <div id="delivery-time-item" class="card-body collapse" data-parent="">
+                      <div class="range-description"><span class="range-min">1</span><span class="range-max">50</span></div>
+                      <div class="range">
+                        <input id="delivery-time" name="delivery_time" type="text" class="range" value="1,50" data-provide='slider' data-slider-min="1" data-slider-max="50" data-slider-step="1" data-slider-value="[1,50]" data-slider-tooltip="hide" data-slider-handle='square' />
+                      </div>
+                      <div class="range-description"><span>от</span><span>до</span></div>
+                    </div>
+                  </div>
+                  <div class="filter-block">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#availability-item">Наличие, шт</button>
+                    <div id="availability-item" class="card-body collapse" data-parent="">
+                      <div class="range-description"><span class="range-min">1000</span><span class="range-max">9999</span></div>
+                      <div class="range">
+                        <input id="availability" name="availability" type="text" class="range" value="30,200" data-provide='slider' data-slider-min="0" data-slider-max="9999" data-slider-step="1" data-slider-value="[1000,9999]" data-slider-tooltip="hide" data-slider-handle='square' />
+                      </div>
+                      <div class="range-description"><span>от</span><span>до</span></div>
+                    </div>
+                  </div>
+                  <!-- 						  
+						  <div class="filter-block">
+								<label class="radio"><input type="checkbox" name="artikul" value="artikul"><span class="radio-text">Искомый артикул</span></label>
+								<label class="radio"><input type="checkbox" name="artikul" value="artikul_other"><span class="radio-text">Замена искомого артикула</span></label>
+								<label class="radio"><input type="checkbox" name="artikul" value="analog"><span class="radio-text">Аналоги</span></label>
+							</div>
+						 -->
+                  <div class="filter-block">
+                    <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#pick_up_address-item">Где забрать?</button>
+                    <div id="pick_up_address-item" class="card-body border collapse" data-parent="">
+                      <div class="filter-search">
+                        <input type="text" class="form-control" placeholder="Поиск">
+                        <a href="#" class="filter-search-btn"></a>
+                      </div>
+                      <div class="add-scroll">
+                        <label class="radio"><input type="radio" name="pick_up_address" value="Воткинское шоссе, 12а" checked><span class="radio-text">Воткинское шоссе, 12а</span></label>
+                        <label class="radio"><input type="radio" name="pick_up_address" value="Автозаводская, 5а"><span class="radio-text">Автозаводская, 5а</span></label>
+                        <label class="radio"><input type="radio" name="pick_up_address" value="Ворошилова, 8, 1 этаж"><span class="radio-text">Ворошилова, 8, 1 этаж</span></label>
+                        <label class="radio"><input type="radio" name="pick_up_address" value="Союзная, 161"><span class="radio-text">Союзная, 161</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-block-btngroup">
+
+                  <a href="#" id="clear_filters" class="white-btn">Сбросить</a>
+                  <button class="red-btn" type="button">Найти</button>
+                </div>
+              </form>
+
+
+
+            </div>
+          </div>
+          <div class="col col-lg-8 col-xl-9">
+            <div class="row analog-btn-block">
+              <div class="col-6 pr-1 pr-sm-3"><button class="yellow-transparent-btn">Товары в наличии</button></div>
+              <div class="col-6 pl-1 pl-sm-3"><button class="yellow-btn">Все предложения</button></div>
+            </div>
+            <div class="row analog-section d-none d-md-block">
+              <div class="col-12">
+                <div class="analog-tab bg-black">
+                  <div>Бренд</div>
+                  <div>Вероятность поставки</div>
+                  <div>Склад</div>
+                  <div>Срок</div>
+                  <div>Цена</div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="row analog-section">
+              <div class="col-12">
+                <h5 class="analog-tab bg-yellow">Оригинальный производитель</h5>
+              </div>
+              <div class="col-12">
+                @@include('./template/search-res-row4.html')
+              </div>
+            </div>
+            <div class="row analog-section">
+              <div class="col-12">
+                <h5 class="analog-tab bg-yellow">Аналоги в наличии</h5>
+              </div>
+              <div class="col-12">
+                @@include('./template/search-res-row3.html')
+                @@include('./template/search-res-row3.html')
+              </div>
+            </div>
+            <div class="row analog-section">
+              <div class="col-12">
+                <h5 class="analog-tab bg-yellow">Аналоги под заказ</h5>
+              </div>
+              <div class="col-12">
+                @@include('./template/search-res-row4.html')
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- </div>		 -->
+    </section>
+
+  </main>
+  @@include('./template/footer-block.html')
+  @@include('./template/modal.html')
+  @@include('./template/footer-scripts.html')
+</body>
+
+</html>

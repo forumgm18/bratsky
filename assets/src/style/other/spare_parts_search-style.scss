@@ -1,0 +1,85 @@
+//@import "../../style/normalize";
+@import "../variables";
+//@import "../../style/variables.part2";
+@import "style/other";
+@import "style/breadcrumb";
+
+
+//.main {
+//  max-width: $siteWidth;
+//  margin: 0 auto;
+//}
+
+
+
+
+// Тормозные колодки
+.рroduct-сard-page div.breadcrumb {
+  height: auto;
+  max-width: $siteWidth;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sort__item div label input {
+  display: none;
+}
+
+.recomendation {
+  .price-block .red-btn {
+    width: 38px;
+
+    &::before {
+      margin-right: 0;
+    }
+  }
+}
+
+.analog-tab {
+  .price-block .red-btn {
+    width: 46px;
+
+    &::before {
+      margin-right: 0;
+    }
+  }
+
+}
+
+
+//.analog-tab > div:nth-child(1) {
+//  min-width: 215px;
+//}
+
+@media (min-width: 992px) {
+  .analog-tab > div:nth-child(1) {
+    width: 215px;
+  }
+}
+
+.analog-tab > div:nth-child(2) {
+  min-width: 130px;
+}
+
+@media (min-width: 992px) {
+  .analog-tab > div:nth-child(2) {
+    width: 130px;
+  }
+}
+
+.blue-link {
+  color: $blue;
+  margin-top: 0;
+}
+
+.analog-tab {
+  .list-line-height_min {
+    line-height: 26px;
+  }
+}
+
+
+@import "spare_parts_search-media";
