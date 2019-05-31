@@ -1020,6 +1020,7 @@ button:hover, button:focus {
 		}
 }
 
+.social-icons {@include dFlex(flex-start,flex-start,row,wrap);}
 
 footer {
 	background: url(../img/skin.png), url(../img/skin.png); 
@@ -1107,7 +1108,7 @@ footer {
 			margin-bottom: 15px;	
 		}
 		.social-icons {
-			@include dFlex(flex-start,flex-start,row,wrap);
+			// @include dFlex(flex-start,flex-start,row,wrap);
 			margin-top: 9px;
 			margin-bottom: 10px;	
 			width: 157px;

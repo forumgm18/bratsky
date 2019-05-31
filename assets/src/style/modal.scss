@@ -1,4 +1,6 @@
 //====================== Modals =========================================
+.bborder {border-bottom: 1px solid $borderGray2;}
+
 .modal.show{
 		@include media-breakpoint-up(md) {display: flex!important;}
 }
@@ -107,8 +109,12 @@
 				}
 			
 			.bs-select, .bs-select-first {width: 100%!important; border-radius: 0;}
+			.bs-placeholder .filter-option-inner-inner {color: $fontColorLight2;}
 			.red-btn {height: 44px;font-weight: normal;text-transform: uppercase;}
-
+			.bborder {
+					// border-bottom: 1px solid $borderGray2;
+					margin: 5px -34px 15px -34px;
+				}
 		}
 }
 .modal-backdrop.show {
@@ -212,5 +218,121 @@
 			justify-content: center;
 			p {margin-bottom: 0;}
 		}
+	}
+	&.leaving_already {
+			.radio {
+				margin-bottom: 5px;
+
+					.radio-text {
+						&:before {border-color: $red;}
+						&:after  {background-color: $red;}
+					}
+					input:checked+.radio-text {color: $red;}
+				
+					&.your_answer {
+						textarea {display: none;}
+						input:checked + span + textarea { display: block;margin-top: 10px;color:#333;}
+					}
+			}
+	}
+	&.product_availability {
+		.modal-content {
+			max-width: 700px;
+			width: 700px;
+		}
+		.nav-tabs {
+			@include dFlex(flex-start,center,row,nowrap);
+
+		}
+		.nav-item {
+			width: 184px;
+			height: 44px;
+			border: 1px solid $blackBtn;
+			border-radius: 0;
+
+		}
+		.nav-link {
+			@include dFlex(center,center,row,nowrap);
+			@include setFont ($textFFamily,normal,normal,14px,$fontColor);
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
+			&.active {
+				background-color: $blackBtn;
+				color: #fff;
+			}
+		}
+		.tab-pane {
+			border: 1px solid $blackBtn;
+			padding: 10px 20px;
+			
+
+		}
+		.table_head{
+				@include dFlex(space-between,center,row,nowrap);
+				padding: 5px;
+					div {max-width: 145px;}
+		}
+		.table_row {
+			cursor: pointer;
+			input {display: none;}
+			>span{
+				@include dFlex(space-between,center,row,nowrap);
+				border: 1px solid $borderGray;
+				height: 65px;
+				padding: 5px;	
+					span {max-width: 145px;}
+			}
+			input:checked + span {
+				border-color: $red;
+				color: red;
+			}
+		}
+	}
+	&.lk {
+		.head_text {font-size: 18px;color: #000;line-height: 26px;}
+		.nav-tabs {
+			@include dFlex(flex-start,center,row,nowrap);
+		}
+		.nav-item {
+			width: 50%;
+			height: 44px;
+			border: 1px solid $yellow;
+			border-radius: 0;
+
+		}
+		.nav-link {
+			@include dFlex(center,center,row,nowrap);
+			@include setFont ($textFFamily,normal,normal,14px,$fontColor);
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
+			&.active {
+				background-color: $yellow;
+				// color: #fff;
+			}
+		}
+		.tab-pane {
+			padding-top: 24px;
+			.link_row {
+			@include dFlex(center,center,row,nowrap);
+				
+			}
+
+			
+
+		}
+		.social-icons {
+			justify-content: space-between;
+			a {transform: scale(1.4);}
+		}
+		.bborder {margin: 20px 0;border-color: $borderGray;}
+		.red-btn {margin-bottom: 20px;}
 	}
 }

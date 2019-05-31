@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col top-panel-content">
 					<!-- <button class="link-btn select-city" data-toggle="modal" data-target="#select-city"><span>Ижевск</span></button> -->
-					<button class="link-btn select-city" data-toggle="modal" data-target="#restore_password3"><span>Ижевск</span></button>
+					<button class="link-btn select-city" data-toggle="modal" data-target="#product_availability"><span>Ижевск</span></button>
 					<div class="top-links">
 						<a href="#">Для клиента</a>
 						<a href="#">Розничная сеть</a>
@@ -28,7 +28,7 @@
 						<a href="#">Оптовым клиентам</a>
 					</div>
 					<a href="tel:+79658422003" class="top-phone"><span>+7 (965) 842 20 03</span></a>
-					<button class="black-btn login" data-toggle="modal" data-target="#product-review"><span>Вход</span></button>
+					<button class="black-btn login" data-toggle="modal" data-target="#lk"><span>Вход</span></button>
 					<!-- <button class="black-btn login" data-toggle="modal" data-target="#login"><span>Вход</span></button> -->
 					<div class="gray-icon heart"><span>5</span></div>
 					<div class="gray-icon statistica"><span>5</span></div>
@@ -2627,6 +2627,10 @@
   #restore_password3            > Смена пароля 
   #export_email                 > Экспорт e-mail 
   #subscribe_price_change       > Подписаться на изменения цены 
+  #choose_another_car           > Выбрать другое авто 
+  #leaving_already              > Вы уже уходите? 
+  #product_availability         > Наличие товара 
+  #lk                           > Личный кабинет
 
 -->
 
@@ -3276,6 +3280,220 @@
     </div>
   </div>
 </div>
+
+<div class="modal" id="choose_another_car" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Выбрать другое авто</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="frm-filter" >
+          <select class="selectpicker" data-style="bs-select" title="Мои авто" name="my_avto" id="my_avto">
+            <option value="BMV">Nissan Almera</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <div class="bborder"></div>
+          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year" id="year">
+            <option value="2000">2000г.</option>
+            <option value="2001">2000г.</option>
+            <option value="2002">2002г.</option>
+            <option value="2003">2003г.</option>
+            <option value="2004">2004г.</option>
+            <option value="2005">2005г.</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka" id="marka">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модель" name="model" id="model">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" id="modif">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <button type="button" class="btn red-btn" data-dismiss="modal">Выбрать авто</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal leaving_already" id="leaving_already" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Вы уже уходите?</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <p>Ответьте на вопрос «почему» и получите <a href="#" class="blue">100 бонусных баллов!</a></p>
+          <label class="radio"><input type="radio" name="reason" value="order_later"><span class="radio-text">Сделаю заказ позже</span></label>
+          <label class="radio"><input type="radio" name="reason" value="not_find"><span class="radio-text">Не нашел нужного товара</span></label>
+          <label class="radio"><input type="radio" name="reason" value="high_prices"><span class="radio-text">Высокие цены</span></label>
+          <label class="radio your_answer">
+            <input type="radio" name="reason" value="your_answer"><span class="radio-text">Свой ответ в комментарии</span>
+            <textarea required name="message" placeholder="Комментарий"></textarea>         
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal product_availability" id="product_availability" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Наличие товара</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="true">список</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="false">карта</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+              <div class="table_head">
+                <div>Адрес магазина</div>
+                <div>Время работы/телефон</div>
+                <div>Кол-во товара/доставка</div>
+              </div>
+              <label class="table_row">
+                <input type="radio" name="market" value="г. Ижевск Салютовская д.73">
+                <span>
+                  <span><strong>г. Ижевск</strong><br>Салютовская д.73</span>
+                  <span><strong>пн-вс с 10:00 до 21:00</strong><br>тел. +7-965-842-20-03</span>
+                  <span><strong>8 шт.</strong><br>сегодня</span>
+                </span>
+              </label>
+              <label class="table_row">
+                <input type="radio" name="market" value="г. Ижевск Салютовская д.73">
+                <span>
+                  <span><strong>г. Ижевск</strong><br>Салютовская д.73</span>
+                  <span><strong>пн-вс с 10:00 до 21:00</strong><br>тел. +7-965-842-20-03</span>
+                  <span><strong>под заказ</strong><br>3-4 дня</span>
+                </span>
+              </label>
+              <label class="table_row">
+                <input type="radio" name="market" value="г. Ижевск Салютовская д.73">
+                <span>
+                  <span><strong>г. Ижевск</strong><br>Салютовская д.73</span>
+                  <span><strong>пн-вс с 10:00 до 21:00</strong><br>тел. +7-965-842-20-03</span>
+                  <span><strong>8 шт.</strong><br>сегодня</span>
+                </span>
+              </label>
+            </div>
+            <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+              
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal lk" id="lk" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Личный кабинет</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <p class="head_text">Чтобы получить свои бонусы - войдите в свой аккаунт или зарегистрируйтесь.</p>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item"><a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">вход</a></li>
+            <li class="nav-item"><a class="nav-link" id="reg-tab" data-toggle="tab" href="#reg" role="tab" aria-controls="reg" aria-selected="false">регистрация</a></li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+              <label class="placeinput">
+                <input required type="text" name="name" />
+                <span class="place_holder">Ваш e-mail или номер телефона <span>*</span></span>
+              </label>          
+              <label class="placeinput">
+                <input required type="password" name="password" />
+                <span class="place_holder">Пароль</span>
+              </label>          
+              <div class="fz152-block">
+                <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+              </div>
+              <button type="button" class="red-btn" data-dismiss="modal">Войти</button>
+              <div class="link_row"><a href="" >Забыли пароль ?</a></div>
+              <div class="bborder"></div>
+              <p>Войти через соцсеть</p>
+              <div class="social-icons">
+                <a href="#" class="icon-telegram"></a>
+                <a href="#" class="icon-viber"></a>
+                <a href="#" class="icon-instagram"></a>
+                <a href="#" class="icon-whatsapp"></a>
+                <a href="#" class="icon-facebook"></a>
+                <a href="#" class="icon-vk"></a>
+                <a href="#" class="icon-youtube"></a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="reg" role="tabpanel" aria-labelledby="reg-tab">
+              <label class="placeinput">
+                <input required type="text" name="name" value="89121234567" />
+                <span class="place_holder">Ваш логин или номер телефона</span>
+              </label>          
+              <label class="placeinput">
+                <input required type="text" name="kod" value="506040" />
+                <span class="place_holder">Код </span>
+              </label> 
+              <label class="placeinput">
+                <input required type="password" name="new-passw" />
+                <span class="place_holder">Придумайте пароль </span>
+              </label> 
+              <label class="placeinput">
+                <input required type="password" name="confirm-passw"/>
+                <span class="place_holder">Повторите пароль </span>
+              </label> 
+              <p>Пароль должен быть от 6 до 32 символов.</p>         
+              <div class="fz152-block">
+                <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+                <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+              </div>
+              <button type="button" class="red-btn d-none" data-dismiss="modal">Получить код</button>
+              <button type="button" class="red-btn d-none" data-dismiss="modal">Подтвердить</button>
+              <button type="button" class="red-btn" data-dismiss="modal">Зарегистрироваться</button>
+              <p class="text-center mb-0">Укажите номер телефона или E-mail, и мы пришлем сообщение с кодом доступа.</p>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
 
 	<script src="js/jquery.min.js"></script>
 <script src="js/gijgo.min.js"></script>

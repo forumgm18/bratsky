@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col top-panel-content">
 					<!-- <button class="link-btn select-city" data-toggle="modal" data-target="#select-city"><span>Ижевск</span></button> -->
-					<button class="link-btn select-city" data-toggle="modal" data-target="#restore_password3"><span>Ижевск</span></button>
+					<button class="link-btn select-city" data-toggle="modal" data-target="#product_availability"><span>Ижевск</span></button>
 					<div class="top-links">
 						<a href="#">Для клиента</a>
 						<a href="#">Розничная сеть</a>
@@ -28,7 +28,7 @@
 						<a href="#">Оптовым клиентам</a>
 					</div>
 					<a href="tel:+79658422003" class="top-phone"><span>+7 (965) 842 20 03</span></a>
-					<button class="black-btn login" data-toggle="modal" data-target="#product-review"><span>Вход</span></button>
+					<button class="black-btn login" data-toggle="modal" data-target="#lk"><span>Вход</span></button>
 					<!-- <button class="black-btn login" data-toggle="modal" data-target="#login"><span>Вход</span></button> -->
 					<div class="gray-icon heart"><span>5</span></div>
 					<div class="gray-icon statistica"><span>5</span></div>
@@ -2411,7 +2411,7 @@
 	</section>
 </header>
   <main class="main">
-    <div class="breadcrumb">
+    <div class="breadcrumb wp-block">
       <div class="container">
         <div class="row">
           <nav class="col">
@@ -2423,23 +2423,42 @@
         </div>
       </div>
     </div>
-    <header>
+    <header class="wp-block">
       <h1 class="title-h1 title">Сравнение товара</h1>
     </header>
-    <a href="#">Аккумуялторы (2)</a>
-    <a href="#">Электроника (4)</a>
-    <div class="comparison__fixed">
-      <div>
-        <p>Только различающиеся параметры</p>
-        <button class="comparison__clean-list">Очистить список</button>
-      </div>
-      <ul class="comparison__list">
-        <li class="comparison__item">								  <div class="product-item">
+    <ul class="comparison__category-list wp-block">
+      <li>
+        <label class="comparison__category active">Аккумуялторы (2)
+          <input type="radio" name="category_product" checked>
+        </label>
+      </li>
+      <li>
+        <label class="comparison__category">Электроника (4)
+          <input type="radio" name="category_product">
+        </label>
+      </li>
+    </ul>
+    <div class="comparison__fixed wp-block">
+      <div class="comparison__fixed-content">
+        <div class="comparison__list-functions">
+          <form action="/" method="get" class="different-form">
+            <label class="different-form__switch">
+              <input type="checkbox" class="different-form__input" id="DIFFERENT-PRODUCTS">
+              <span></span>
+            </label>
+            <p class="different-form__text">Только различающиеся параметры</p>
+          </form>
+          <button class="comparison__clean-list">Очистить список</button>
+        </div>
+        <div class="comparison__list">
+          								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
 								  	<div class="main-product-card">
+                                    <button class="btn-item-delite"></button>
 								  		<div class="icons-block">
+                                            <button class="btn-item-delite-fixed"><img src="img/garbage_icon.svg" alt=""></button>
 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
@@ -2489,8 +2508,8 @@
 								  		</div>
 								  		<div class="price-block">
 								  			<!-- <div> -->
+								  				<span class="old-price"><s>5 100 &#8381;</s></span>
 								  				<span class="new-price">4 900 &#8381;</span>
-								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
 								  				<a href="#" class="obmen">при обмене</a>
 								  			<!-- </div> -->
 								  		</div>
@@ -2502,13 +2521,15 @@
 								  	</div>
 									</div>
 									
-</li>
-        <li class="comparison__item">								  <div class="product-item">
+
+          								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
 								  	<div class="main-product-card">
+                                    <button class="btn-item-delite"></button>
 								  		<div class="icons-block">
+                                            <button class="btn-item-delite-fixed"><img src="img/garbage_icon.svg" alt=""></button>
 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
@@ -2558,8 +2579,8 @@
 								  		</div>
 								  		<div class="price-block">
 								  			<!-- <div> -->
+								  				<span class="old-price"><s>5 100 &#8381;</s></span>
 								  				<span class="new-price">4 900 &#8381;</span>
-								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
 								  				<a href="#" class="obmen">при обмене</a>
 								  			<!-- </div> -->
 								  		</div>
@@ -2571,13 +2592,15 @@
 								  	</div>
 									</div>
 									
-</li>
-        <li class="comparison__item">								  <div class="product-item">
+
+          								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
 								  	<div class="main-product-card">
+                                    <button class="btn-item-delite"></button>
 								  		<div class="icons-block">
+                                            <button class="btn-item-delite-fixed"><img src="img/garbage_icon.svg" alt=""></button>
 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
@@ -2627,8 +2650,8 @@
 								  		</div>
 								  		<div class="price-block">
 								  			<!-- <div> -->
+								  				<span class="old-price"><s>5 100 &#8381;</s></span>
 								  				<span class="new-price">4 900 &#8381;</span>
-								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
 								  				<a href="#" class="obmen">при обмене</a>
 								  			<!-- </div> -->
 								  		</div>
@@ -2640,13 +2663,15 @@
 								  	</div>
 									</div>
 									
-</li>
-        <li class="comparison__item">								  <div class="product-item">
+
+          								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
 								  	<div class="main-product-card">
+                                    <button class="btn-item-delite"></button>
 								  		<div class="icons-block">
+                                            <button class="btn-item-delite-fixed"><img src="img/garbage_icon.svg" alt=""></button>
 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
@@ -2696,8 +2721,8 @@
 								  		</div>
 								  		<div class="price-block">
 								  			<!-- <div> -->
+								  				<span class="old-price"><s>5 100 &#8381;</s></span>
 								  				<span class="new-price">4 900 &#8381;</span>
-								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
 								  				<a href="#" class="obmen">при обмене</a>
 								  			<!-- </div> -->
 								  		</div>
@@ -2709,13 +2734,15 @@
 								  	</div>
 									</div>
 									
-</li>
-        <li class="comparison__item">								  <div class="product-item">
+
+          								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
 								  	<div class="main-product-card">
+                                    <button class="btn-item-delite"></button>
 								  		<div class="icons-block">
+                                            <button class="btn-item-delite-fixed"><img src="img/garbage_icon.svg" alt=""></button>
 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
@@ -2765,8 +2792,8 @@
 								  		</div>
 								  		<div class="price-block">
 								  			<!-- <div> -->
+								  				<span class="old-price"><s>5 100 &#8381;</s></span>
 								  				<span class="new-price">4 900 &#8381;</span>
-								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
 								  				<a href="#" class="obmen">при обмене</a>
 								  			<!-- </div> -->
 								  		</div>
@@ -2778,13 +2805,15 @@
 								  	</div>
 									</div>
 									
-</li>
-        <li class="comparison__item">								  <div class="product-item">
+
+          								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
 								  	<div class="main-product-card">
+                                    <button class="btn-item-delite"></button>
 								  		<div class="icons-block">
+                                            <button class="btn-item-delite-fixed"><img src="img/garbage_icon.svg" alt=""></button>
 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
@@ -2834,8 +2863,8 @@
 								  		</div>
 								  		<div class="price-block">
 								  			<!-- <div> -->
+								  				<span class="old-price"><s>5 100 &#8381;</s></span>
 								  				<span class="new-price">4 900 &#8381;</span>
-								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
 								  				<a href="#" class="obmen">при обмене</a>
 								  			<!-- </div> -->
 								  		</div>
@@ -2847,13 +2876,15 @@
 								  	</div>
 									</div>
 									
-</li>
-        <li class="comparison__item">								  <div class="product-item">
+
+          								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
 								  	<div class="main-product-card">
+                                    <button class="btn-item-delite"></button>
 								  		<div class="icons-block">
+                                            <button class="btn-item-delite-fixed"><img src="img/garbage_icon.svg" alt=""></button>
 								  			<a href="#" class="show_feedback"><img src="img/otziv.svg" alt=""></a>
 								  			<a href="#" class="add_to_favorites"><img src="img/heart.svg" alt=""></a>
 								  		</div>
@@ -2903,8 +2934,8 @@
 								  		</div>
 								  		<div class="price-block">
 								  			<!-- <div> -->
+								  				<span class="old-price"><s>5 100 &#8381;</s></span>
 								  				<span class="new-price">4 900 &#8381;</span>
-								  				<span class="old-price"><s>5 100 &#8381;</s></span><br>
 								  				<a href="#" class="obmen">при обмене</a>
 								  			<!-- </div> -->
 								  		</div>
@@ -2916,150 +2947,110 @@
 								  	</div>
 									</div>
 									
-</li>
-      </ul>
-      <div class="slider-arrows">
-        <button class="prev-comparison"><span></span></button>
-        <p>4 из 12</p>
-        <button class="next-comparison"><span></span></button>
+
+        </div>
+        <div class="slider-arrows">
+          <button class="prev-comparison"><span></span></button>
+          <p>4 из 12</p>
+          <button class="next-comparison"><span></span></button>
+        </div>
       </div>
     </div>
-    <table class="comparison__table">
-      <tr class="table__spoiler-check">
-        <th colspan="100%">Общие параметры</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tbody class="table__spoiler-body">
-        <tr class="table__grey">
-          <td>Параметр</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+    <div class="comparison__empty-block wp-block"></div>
+    <div class="wp-block">
+      <table class="comparison__table">
+        <tr class="table__spoiler-check">
+          <th colspan="5">Общие параметры</th>
         </tr>
-        <tr>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
+        <tbody class="table__spoiler-body">
+          <tr class="table__grey">
+            <td colspan="5">Параметр</td>
+          </tr>
+          <tr>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+          </tr>
+        </tbody>
+        <tr class="table__spoiler-check">
+          <th colspan="5">Конструкция</th>
         </tr>
-      </tbody>
-      <tr class="table__spoiler-check">
-        <th colspan="100%">Конструкция</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tbody class="table__spoiler-body">
-        <tr class="table__grey">
-          <td>Полярность</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tbody class="table__spoiler-body">
+          <tr class="table__grey">
+            <td colspan="5">Полярность</td>
+          </tr>
+          <tr>
+            <td>прямая [+...-]</td>
+            <td>прямая [+...-]</td>
+            <td>прямая [+...-]</td>
+            <td>прямая [+...-]</td>
+            <td>прямая [+...-]</td>
+          </tr>
+          <tr class="table__grey">
+            <td colspan="5">Тип корпуса</td>
+          </tr>
+          <tr>
+            <td>европейский</td>
+            <td>европейский</td>
+            <td>европейский</td>
+            <td>европейский</td>
+            <td>европейский</td>
+          </tr>
+          <tr class="table__grey">
+            <td colspan="5">Типоразмер клемм</td>
+          </tr>
+          <tr>
+            <td>T1</td>
+            <td>T1</td>
+            <td>T1</td>
+            <td>T1</td>
+            <td>T1</td>
+          </tr>
+          <tr class="table__grey">
+            <td colspan="5">Буртик</td>
+          </tr>
+          <tr>
+            <td>нет</td>
+            <td>нет</td>
+            <td>нет</td>
+            <td>нет</td>
+            <td>нет</td>
+          </tr>
+        </tbody>
+        <tr class="table__spoiler-check">
+          <th colspan="5">Электрические характеристики</th>
         </tr>
-        <tr>
-          <td>прямая [+...-]</td>
-          <td>прямая [+...-]</td>
-          <td>прямая [+...-]</td>
-          <td>прямая [+...-]</td>
-          <td>прямая [+...-]</td>
+        <tbody class="table__spoiler-body">
+          <tr class="table__grey">
+            <td colspan="5">Параметр</td>
+          </tr>
+          <tr>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+          </tr>
+        </tbody>
+        <tr class="table__spoiler-check">
+          <th colspan="5">Габариты, вес</th>
         </tr>
-        <tr class="table__grey">
-          <td>Тип корпуса</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>европейский</td>
-          <td>европейский</td>
-          <td>европейский</td>
-          <td>европейский</td>
-          <td>европейский</td>
-        </tr>
-        <tr class="table__grey">
-          <td>Типоразмер клемм</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>T1</td>
-          <td>T1</td>
-          <td>T1</td>
-          <td>T1</td>
-          <td>T1</td>
-        </tr>
-        <tr class="table__grey">
-          <td>Буртик</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>нет</td>
-          <td>нет</td>
-          <td>нет</td>
-          <td>нет</td>
-          <td>нет</td>
-        </tr>
-      </tbody>
-      <tr class="table__spoiler-check">
-        <th colspan="100%">Электрические характеристики</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tbody class="table__spoiler-body">
-        <tr class="table__grey">
-          <td>Параметр</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-        </tr>
-      </tbody>
-      <tr class="table__spoiler-check">
-        <th colspan="100%">Габариты, вес</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tbody class="table__spoiler-body">
-        <tr class="table__grey">
-          <td>Параметр</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-          <td>текст</td>
-        </tr>
-      </tbody>
-    </table>
+        <tbody class="table__spoiler-body">
+          <tr class="table__grey">
+            <td colspan="5">Параметр</td>
+          </tr>
+          <tr>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+            <td>текст</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </main>
   <footer>
 		<div class="container">
@@ -3249,6 +3240,10 @@
   #restore_password3            > Смена пароля 
   #export_email                 > Экспорт e-mail 
   #subscribe_price_change       > Подписаться на изменения цены 
+  #choose_another_car           > Выбрать другое авто 
+  #leaving_already              > Вы уже уходите? 
+  #product_availability         > Наличие товара 
+  #lk                           > Личный кабинет
 
 -->
 
@@ -3899,6 +3894,220 @@
   </div>
 </div>
 
+<div class="modal" id="choose_another_car" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Выбрать другое авто</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <div class="modal-body">
+        <form class="frm-filter" >
+          <select class="selectpicker" data-style="bs-select" title="Мои авто" name="my_avto" id="my_avto">
+            <option value="BMV">Nissan Almera</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <div class="bborder"></div>
+          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year" id="year">
+            <option value="2000">2000г.</option>
+            <option value="2001">2000г.</option>
+            <option value="2002">2002г.</option>
+            <option value="2003">2003г.</option>
+            <option value="2004">2004г.</option>
+            <option value="2005">2005г.</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka" id="marka">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модель" name="model" id="model">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" id="modif">
+            <option value="BMV">BMV</option>
+            <option value="KIA">KIA</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Renault">Renault</option>
+            <option value="Lada">Lada</option>
+          </select> 
+          <button type="button" class="btn red-btn" data-dismiss="modal">Выбрать авто</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal leaving_already" id="leaving_already" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Вы уже уходите?</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <p>Ответьте на вопрос «почему» и получите <a href="#" class="blue">100 бонусных баллов!</a></p>
+          <label class="radio"><input type="radio" name="reason" value="order_later"><span class="radio-text">Сделаю заказ позже</span></label>
+          <label class="radio"><input type="radio" name="reason" value="not_find"><span class="radio-text">Не нашел нужного товара</span></label>
+          <label class="radio"><input type="radio" name="reason" value="high_prices"><span class="radio-text">Высокие цены</span></label>
+          <label class="radio your_answer">
+            <input type="radio" name="reason" value="your_answer"><span class="radio-text">Свой ответ в комментарии</span>
+            <textarea required name="message" placeholder="Комментарий"></textarea>         
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn red-btn" data-dismiss="modal">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal product_availability" id="product_availability" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Наличие товара</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="true">список</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="false">карта</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+              <div class="table_head">
+                <div>Адрес магазина</div>
+                <div>Время работы/телефон</div>
+                <div>Кол-во товара/доставка</div>
+              </div>
+              <label class="table_row">
+                <input type="radio" name="market" value="г. Ижевск Салютовская д.73">
+                <span>
+                  <span><strong>г. Ижевск</strong><br>Салютовская д.73</span>
+                  <span><strong>пн-вс с 10:00 до 21:00</strong><br>тел. +7-965-842-20-03</span>
+                  <span><strong>8 шт.</strong><br>сегодня</span>
+                </span>
+              </label>
+              <label class="table_row">
+                <input type="radio" name="market" value="г. Ижевск Салютовская д.73">
+                <span>
+                  <span><strong>г. Ижевск</strong><br>Салютовская д.73</span>
+                  <span><strong>пн-вс с 10:00 до 21:00</strong><br>тел. +7-965-842-20-03</span>
+                  <span><strong>под заказ</strong><br>3-4 дня</span>
+                </span>
+              </label>
+              <label class="table_row">
+                <input type="radio" name="market" value="г. Ижевск Салютовская д.73">
+                <span>
+                  <span><strong>г. Ижевск</strong><br>Салютовская д.73</span>
+                  <span><strong>пн-вс с 10:00 до 21:00</strong><br>тел. +7-965-842-20-03</span>
+                  <span><strong>8 шт.</strong><br>сегодня</span>
+                </span>
+              </label>
+            </div>
+            <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+              
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal lk" id="lk" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Личный кабинет</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <p class="head_text">Чтобы получить свои бонусы - войдите в свой аккаунт или зарегистрируйтесь.</p>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item"><a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">вход</a></li>
+            <li class="nav-item"><a class="nav-link" id="reg-tab" data-toggle="tab" href="#reg" role="tab" aria-controls="reg" aria-selected="false">регистрация</a></li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+              <label class="placeinput">
+                <input required type="text" name="name" />
+                <span class="place_holder">Ваш e-mail или номер телефона <span>*</span></span>
+              </label>          
+              <label class="placeinput">
+                <input required type="password" name="password" />
+                <span class="place_holder">Пароль</span>
+              </label>          
+              <div class="fz152-block">
+                <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+              </div>
+              <button type="button" class="red-btn" data-dismiss="modal">Войти</button>
+              <div class="link_row"><a href="" >Забыли пароль ?</a></div>
+              <div class="bborder"></div>
+              <p>Войти через соцсеть</p>
+              <div class="social-icons">
+                <a href="#" class="icon-telegram"></a>
+                <a href="#" class="icon-viber"></a>
+                <a href="#" class="icon-instagram"></a>
+                <a href="#" class="icon-whatsapp"></a>
+                <a href="#" class="icon-facebook"></a>
+                <a href="#" class="icon-vk"></a>
+                <a href="#" class="icon-youtube"></a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="reg" role="tabpanel" aria-labelledby="reg-tab">
+              <label class="placeinput">
+                <input required type="text" name="name" value="89121234567" />
+                <span class="place_holder">Ваш логин или номер телефона</span>
+              </label>          
+              <label class="placeinput">
+                <input required type="text" name="kod" value="506040" />
+                <span class="place_holder">Код </span>
+              </label> 
+              <label class="placeinput">
+                <input required type="password" name="new-passw" />
+                <span class="place_holder">Придумайте пароль </span>
+              </label> 
+              <label class="placeinput">
+                <input required type="password" name="confirm-passw"/>
+                <span class="place_holder">Повторите пароль </span>
+              </label> 
+              <p>Пароль должен быть от 6 до 32 символов.</p>         
+              <div class="fz152-block">
+                <div class="recapcha"><img src="img/recaptcha.png" alt=""></div>
+                <div class="fz152">Нажимая на кнопку, вы даете свое согласие на обработку персональных данных. <br><a href="#">Узнать больше</a></div>
+              </div>
+              <button type="button" class="red-btn d-none" data-dismiss="modal">Получить код</button>
+              <button type="button" class="red-btn d-none" data-dismiss="modal">Подтвердить</button>
+              <button type="button" class="red-btn" data-dismiss="modal">Зарегистрироваться</button>
+              <p class="text-center mb-0">Укажите номер телефона или E-mail, и мы пришлем сообщение с кодом доступа.</p>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
   <script src="js/jquery.min.js"></script>
 <script src="js/gijgo.min.js"></script>
 <script src="js/messages.ru-ru.min.js"></script>
@@ -3909,7 +4118,7 @@
 <script src="js/jquery.countdown-ru.js"></script>
 <script src="js/main.min.js"></script>
 
-  <script src="js/slick.min.js"></script>
+  <!--  <script src="js/slick.min.js"></script>-->
   <script src="js/other/comparison-script.js"></script>
 </body>
 
