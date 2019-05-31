@@ -1,232 +1,232 @@
 @mixin mediaMain {
-	@media screen and (max-width: 1220px) {
-		.main {
-			//			margin-left: $mainPaddingLeftRight;
-			//			margin-right: $mainPaddingLeftRight;
-			padding-left: $mainPaddingLeftRight;
-			padding-right: $mainPaddingLeftRight;
-			max-width: $siteWidth;
-			margin: 0 auto;
-			display: block;
-		}
+  @media screen and (max-width: 1220px) {
+    .main {
+      //			margin-left: $mainPaddingLeftRight;
+      //			margin-right: $mainPaddingLeftRight;
+      padding-left: $mainPaddingLeftRight;
+      padding-right: $mainPaddingLeftRight;
+      max-width: $siteWidth;
+      margin: 0 auto;
+      display: block;
+    }
 
-	}
+  }
 }
 
 @mixin personalMenuMedia() {
-	@media screen and (max-width: 1220px) {
-		.personal-menu {
-			margin-bottom: 30px;
-		}
-	}
+  @media screen and (max-width: 1220px) {
+    .personal-menu {
+      margin-bottom: 30px;
+    }
+  }
 
-	@media screen and (max-width: 490px) {
-		.personal-menu {
-			width: 100%;
-		}
-	}
+  @media screen and (max-width: 490px) {
+    .personal-menu {
+      width: 100%;
+    }
+  }
 }
 
 @mixin mediaMyData {
-	@media screen and (max-width: 920px) and (min-width: 770px) {
+  @media screen and (max-width: 920px) and (min-width: 770px) {
 
-		.my-data__details,
-		.my-data__form {
-			grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
-			grid-template-areas:
-				"fio fio"
-				"sex birth"
-				"tel email"
-				"inn-wp inn-wp";
-		}
-	}
+    .my-data__details,
+    .my-data__form {
+      grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+      grid-template-areas:
+        "fio fio"
+        "sex birth"
+        "tel email"
+        "inn-wp inn-wp";
+    }
+  }
 
-	@media screen and (max-width: 900px) and (min-width: 400px) {
-		.my-data__social-list {
-			display: block;
+  @media screen and (max-width: 900px) and (min-width: 400px) {
+    .my-data__social-list {
+      display: block;
 
-			li {
-				display: grid;
-				grid-template-columns: 110px 1fr;
-				justify-content: flex-start;
-				margin-bottom: 24px;
-			}
-		}
-	}
+      li {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        justify-content: flex-start;
+        margin-bottom: 24px;
+      }
+    }
+  }
 
-	@media screen and (max-width: 800px) {
-		.my-data__login-wp {
-			display: block;
+  @media screen and (max-width: 800px) {
+    .my-data__login-wp {
+      display: block;
 
-			.my-data__edit-btn {
-				margin: 24px 0 0 0;
-			}
-		}
-	}
+      .my-data__edit-btn {
+        margin: 24px 0 0 0;
+      }
+    }
+  }
 
-	@media screen and (max-width: 770px) {
+  @media screen and (max-width: 770px) {
 
-		.my-data__details,
-		.my-data__form {
-			grid-template: repeat(5, 1fr) auto/ 1fr;
-			grid-template-areas:
-				"fio"
-				"sex"
-				"birth"
-				"tel"
-				"email"
-				"inn-wp";
-		}
+    .my-data__details,
+    .my-data__form {
+      grid-template: repeat(5, 1fr) auto/ 1fr;
+      grid-template-areas:
+        "fio"
+        "sex"
+        "birth"
+        "tel"
+        "email"
+        "inn-wp";
+    }
 
-		.my-data__inn-wp {
-			display: block;
+    .my-data__inn-wp {
+      display: block;
 
-			.input-inn {
-				max-width: 100%;
-				width: 100%;
-				margin: 0 0 24px 0;
-			}
+      .input-inn {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 24px 0;
+      }
 
-			.my-data__save-btn {
-				max-width: 100%;
-			}
+      .my-data__save-btn {
+        max-width: 100%;
+      }
 
-			.my-data__edit-btn {
-				margin: 24px 0 0 0;
-				max-width: 100%;
-			}
-		}
-	}
+      .my-data__edit-btn {
+        margin: 24px 0 0 0;
+        max-width: 100%;
+      }
+    }
+  }
 
-	@media screen and (max-width: 600px) {
-		#PERSONAL-DATA:checked ~ .my-data-section {
-			display: block;
-		}
+  @media screen and (max-width: 600px) {
+    #PERSONAL-DATA:checked ~ .my-data-section {
+      display: block;
+    }
 
-		.my-data__photo-bonus {
-			margin-bottom: 40px;
-		}
-	}
+    .my-data__photo-bonus {
+      margin-bottom: 40px;
+    }
+  }
 
-	@media screen and (max-width: 400px) {
-		.my-data__social-list {
-			display: block;
+  @media screen and (max-width: 400px) {
+    .my-data__social-list {
+      display: block;
 
-			li {
-				display: block;
-				margin-bottom: 24px;
+      li {
+        display: block;
+        margin-bottom: 24px;
 
-				.my-data__connect-btn {
-					margin-top: 1em;
-					max-width: 100%;
-				}
-			}
-		}
-	}
+        .my-data__connect-btn {
+          margin-top: 1em;
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @mixin mediaFavorites {
-	@media screen and (max-width: 1220px) {
-		.favorites-section {
-			margin-top: 0;
-		}
+  @media screen and (max-width: 1220px) {
+    .favorites-section {
+      margin-top: 0;
+    }
 
-		.favorites__list {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
+    .favorites__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
-	@media screen and (max-width: 790px) {
-		.favorites__list {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
+  @media screen and (max-width: 790px) {
+    .favorites__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
-	@media screen and (max-width: 550px) {
-		.favorites__list {
-			grid-template-columns: 1fr;
-		}
-	}
+  @media screen and (max-width: 550px) {
+    .favorites__list {
+      grid-template-columns: 1fr;
+    }
+  }
 
-	@media screen and (max-width: 400px) {
-		.favorites__del-all {
-			max-width: 100%;
-		}
-	}
+  @media screen and (max-width: 400px) {
+    .favorites__del-all {
+      max-width: 100%;
+    }
+  }
 }
 
 @mixin mediaOrders {
-	@media screen and (max-width: 700px) {
-		.orders__table-wp {
-			max-width: 700px;
-			overflow-x: scroll;
-		}
+  @media screen and (max-width: 700px) {
+    .orders__table-wp {
+      max-width: 700px;
+      overflow-x: scroll;
+    }
 
-		.orders__table {
-			width: 700px !important;
-		}
-	}
+    .orders__table {
+      width: 700px !important;
+    }
+  }
 }
 
 @mixin mediaHistoty {
-	@media screen and (max-width: 660px) {
-		.histoty__table-wp {
-			max-width: 660px;
-			overflow-x: scroll;
-		}
+  @media screen and (max-width: 660px) {
+    .histoty__table-wp {
+      max-width: 660px;
+      overflow-x: scroll;
+    }
 
-		.histoty__table {
-			width: 660px;
-		}
-	}
+    .histoty__table {
+      width: 660px;
+    }
+  }
 }
 
 @mixin garageMedia() {
-	@media screen and (max-width: 530px) {
-		.garage__data-wp {
-			display: block;
-		}
+  @media screen and (max-width: 530px) {
+    .garage__data-wp {
+      display: block;
+    }
 
-		.garage__item {
-			padding-right: 0;
-		}
+    .garage__item {
+      padding-right: 0;
+    }
 
-		.garage__title {
-			padding-right: 35px;
-		}
+    .garage__title {
+      padding-right: 35px;
+    }
 
-		.garage__data {
-			&:nth-of-type(n) {
-				width: 100%;
-				margin: 0 0 14px 0;
-			}
+    .garage__data {
+      &:nth-of-type(n) {
+        width: 100%;
+        margin: 0 0 14px 0;
+      }
 
-			&:last-of-type {
-				margin: 0;
-			}
-		}
+      &:last-of-type {
+        margin: 0;
+      }
+    }
 
-		.garage__del-btn {
-			position: absolute;
-			right: 0;
-			top: 10px;
-		}
-	}
+    .garage__del-btn {
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
 
-	@media screen and (max-width: 460px) {
-		.garage__save {
-			max-width: 100%;
-			width: 100%;
-		}
+  @media screen and (max-width: 460px) {
+    .garage__save {
+      max-width: 100%;
+      width: 100%;
+    }
 
-		.garage__title {
-			padding-top: 25px;
-		}
-	}
+    .garage__title {
+      padding-top: 25px;
+    }
+  }
 }
 
 @media screen and (max-width: 540px) {
-	.title-h1 {
-		font-size: 1.5em !important;
-	}
+  .title-h1 {
+    font-size: 1.5em !important;
+  }
 }
