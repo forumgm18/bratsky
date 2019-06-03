@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500,700|PT+Sans:400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500,700%7CPT+Sans:400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 <link rel="stylesheet" href="css/gijgo.min.css">
 <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
 <link rel="stylesheet" href="css/main.min.css">
@@ -16,6 +16,7 @@
 <body>
 	<header>
 	<section class="top-panel">
+	<h2 style="display:none">Верхняя панель меню</h2>
 		<div class="container">
 			<div class="row">
 				<div class="col top-panel-content">
@@ -39,6 +40,7 @@
 		</div>
 	</section>
 	<section class="main-navigation">
+	<h2 style="display:none">Гланая навигация</h2>
 		<nav class="navbar navbar-default navbar-static-top navbar-expand-lg ">
 			<div class="container px-3">
 				<div class="row flex-grow-1">
@@ -2446,11 +2448,11 @@
 			<form action="/" method="post" class="form" id="AUTOPARTS">
 				<label class="form__wp">
 					<input type="text" name="name" id="FEEDBACK-NAME" class="form__input" required>
-					<div class="form__placeholder">Ваше&nbsp;имя<span>*</span></div>
+					<span class="form__placeholder">Ваше&nbsp;имя<span>*</span></span>
 				</label>
 				<label class="form__wp">
 					<input type="text" name="email" id="FEEDBACK-EMAIL" class="form__input" required>
-					<div class="form__placeholder">Ваш&nbsp;e-mail<span>*</span></div>
+					<span class="form__placeholder">Ваш&nbsp;e-mail<span>*</span></span>
 				</label>
 				<input type="tel" name="tel" id="FEEDBACK-TEL" class="form__input" placeholder="+7 ( ___ ) ___-__-__" pattern="^[0-9-+\s()]*$">
 				<textarea name="message" id="FEEDBACK-MESSAGE" placeholder="Текст сообщения" class="form__textarea"></textarea>
