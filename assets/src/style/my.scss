@@ -602,6 +602,7 @@ button:hover, button:focus {
 		}	
 }
 .popover {
+// .add2Favorites {
 	@include setFont ($textFFamily,normal,normal,14px,$fontColor);	
 	@include boxShadow4;	
 	@include Border($borderGray2);
@@ -676,6 +677,9 @@ button:hover, button:focus {
 
 		}
 }
+
+.new-price{	@include setFont ($headFFamily,normal,bold,24px,$fontColor); margin-right: 10px;}
+
 .price-block  {	
 	// @include dFlex(space-between,center,row,nowrap);	
 	// @include dFlex(space-between,flex-start,column,nowrap);	
@@ -689,7 +693,7 @@ button:hover, button:focus {
 			@include setFont ($headFFamily,normal,normal,14px,$fontColorLight2);	
 		  text-decoration-line: line-through;
 		}
-		.new-price{	@include setFont ($headFFamily,normal,bold,24px,$fontColor); margin-right: 10px;}
+		// .new-price{	@include setFont ($headFFamily,normal,bold,24px,$fontColor); margin-right: 10px;}
 		.obmen {
 			@include setFont ($textFFamily,normal,normal,13px,$fontColor);
 			line-height: 14px;

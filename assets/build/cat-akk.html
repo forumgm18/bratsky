@@ -17,7 +17,7 @@
 			<div class="row">
 				<div class="col top-panel-content">
 					<!-- <button class="link-btn select-city" data-toggle="modal" data-target="#select-city"><span>Ижевск</span></button> -->
-					<button class="link-btn select-city" data-toggle="modal" data-target="#product_availability"><span>Ижевск</span></button>
+					<button class="link-btn select-city" data-toggle="modal" data-target="#added_to_basket"><span>Ижевск</span></button>
 					<div class="top-links">
 						<a href="#">Для клиента</a>
 						<a href="#">Розничная сеть</a>
@@ -13572,10 +13572,12 @@
   #leaving_already              > Вы уже уходите? 
   #product_availability         > Наличие товара 
   #lk                           > Личный кабинет
+  #akb_exchange                 > Обмен АКБ б/у
+  #added_to_basket              > Товар добавлен в корзину
 
 -->
 
-<div class="popover" role="tooltip" id="add2Favorites" style="display: none;">
+<div class="popover add2Favorites" role="tooltip" id="add2Favorites" style="display: none;">
   <div class="arrow"></div>
   <div class="popover-header">Товар добавлен в Избранное</div>
   <div class="popover-body">
@@ -13583,6 +13585,67 @@
     <div class='popover-btn-block'>
       <a id="fv_close" class='blue'>Понятно, закрыть</a>
       <a class='red-btn' data-toggle='modal' data-target='#ask-us'>Вход</a>
+    </div>
+  </div>
+</div>
+
+<div class="popover basket_items" role="tooltip" id="basket_items" style="display: none;">
+  <!-- <div class="arrow"></div> -->
+  <div class="popover-header">
+    <span>Корзина</span>
+    <a href="" class="del_all_items" >очистить все</a>
+  </div>
+  <div class="popover-body">
+    <div class="item-row">
+      <img src="/img/tumen.png" alt="">
+      <div class="info_block">
+        <p>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</p>
+        <div>
+          <span class="new-price">4 900 &#8381;</span>
+          <span>1 шт.</span>
+        </div>
+      </div>
+      <a href="" class="del_item"></a>
+    </div>
+    <div class="item-row">
+      <img src="/img/zver.png" alt="">
+      <div class="info_block">
+        <p>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</p>
+        <div>
+          <span class="new-price">4 900 &#8381;</span>
+          <span>1 шт.</span>
+        </div>
+      </div>
+      <a href="" class="del_item"></a>
+    </div>
+    <div class="item-row">
+      <img src="/img/tumen.png" alt="">
+      <div class="info_block">
+        <p>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</p>
+        <div>
+          <span class="new-price">4 900 &#8381;</span>
+          <span>1 шт.</span>
+        </div>
+      </div>
+      <a href="" class="del_item"></a>
+    </div>
+    <div class="item-row">
+      <img src="/img/zver.png" alt="">
+      <div class="info_block">
+        <p>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</p>
+        <div>
+          <span class="new-price">4 900 &#8381;</span>
+          <span>1 шт.</span>
+        </div>
+      </div>
+      <a href="" class="del_item"></a>
+    </div>
+    
+      <a href="" class="blue">Перейти в корзину</a>
+    
+    <div class='popover-btn-block'>
+      <span class="new-price">4 900 &#8381;</span>
+      <a class='red-btn' >оформить заказ</a>
     </div>
   </div>
 </div>
@@ -13992,7 +14055,7 @@
       </div>
       <div class="modal-body">
         <form class="frm-filter" >
-          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year" id="year">
+          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year">
             <option value="2000">2000г.</option>
             <option value="2001">2000г.</option>
             <option value="2002">2002г.</option>
@@ -14000,21 +14063,21 @@
             <option value="2004">2004г.</option>
             <option value="2005">2005г.</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka" id="marka">
+          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
             <option value="Renault">Renault</option>
             <option value="Lada">Lada</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Модель" name="model" id="model">
+          <select class="selectpicker" data-style="bs-select" title="Модель" name="model">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
             <option value="Renault">Renault</option>
             <option value="Lada">Lada</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" id="modif">
+          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
@@ -14038,7 +14101,7 @@
       </div>
       <div class="modal-body">
         <form class="frm-filter" >
-          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year" id="year">
+          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year">
             <option value="2000">2000г.</option>
             <option value="2001">2000г.</option>
             <option value="2002">2002г.</option>
@@ -14046,28 +14109,28 @@
             <option value="2004">2004г.</option>
             <option value="2005">2005г.</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka" id="marka">
+          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
             <option value="Renault">Renault</option>
             <option value="Lada">Lada</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Модель" name="model" id="model">
+          <select class="selectpicker" data-style="bs-select" title="Модель" name="model">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
             <option value="Renault">Renault</option>
             <option value="Lada">Lada</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" id="modif">
+          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
             <option value="Renault">Renault</option>
             <option value="Lada">Lada</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Категория товара" name="category" id="category">
+          <select class="selectpicker" data-style="bs-select" title="Категория товара" name="category">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
@@ -14231,7 +14294,7 @@
       </div>
       <div class="modal-body">
         <form class="frm-filter" >
-          <select class="selectpicker" data-style="bs-select" title="Мои авто" name="my_avto" id="my_avto">
+          <select class="selectpicker" data-style="bs-select" title="Мои авто" name="my_avto">
             <option value="BMV">Nissan Almera</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
@@ -14239,7 +14302,7 @@
             <option value="Lada">Lada</option>
           </select> 
           <div class="bborder"></div>
-          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year" id="year">
+          <select class="selectpicker" data-style="bs-select-first" title="Год" name="year">
             <option value="2000">2000г.</option>
             <option value="2001">2000г.</option>
             <option value="2002">2002г.</option>
@@ -14247,21 +14310,21 @@
             <option value="2004">2004г.</option>
             <option value="2005">2005г.</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka" id="marka">
+          <select class="selectpicker" data-style="bs-select" title="Марка" name="marka">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
             <option value="Renault">Renault</option>
             <option value="Lada">Lada</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Модель" name="model" id="model">
+          <select class="selectpicker" data-style="bs-select" title="Модель" name="model">
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
             <option value="Renault">Renault</option>
             <option value="Lada">Lada</option>
           </select> 
-          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" id="modif">
+          <select class="selectpicker" data-style="bs-select" title="Модификация" name="modif" >
             <option value="BMV">BMV</option>
             <option value="KIA">KIA</option>
             <option value="Mazda">Mazda</option>
@@ -14301,6 +14364,7 @@
   </div>
 </div>
 
+
 <div class="modal product_availability" id="product_availability" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -14315,7 +14379,7 @@
               <a class="nav-link active" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="true">список</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="false">карта</a>
+              <a class="nav-link" id="map-tab" data-toggle="tab" href="#modal_map" role="tab" aria-controls="modal_map" aria-selected="false">карта</a>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
@@ -14350,8 +14414,8 @@
                 </span>
               </label>
             </div>
-            <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
-              
+            <div class="tab-pane fade modal_map" id="modal_map" role="tabpanel" aria-labelledby="map-tab">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.5054147096976!2d53.20760041570537!3d56.83727408085728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e1394971386a17%3A0x43c96dd8e9eba6fd!2z0JHRgNCw0YLRgdC60LjQuQ!5e0!3m2!1sru!2sru!4v1556100333346!5m2!1sru!2sru" width="630" height="272" allowfullscreen class="map"></iframe>
             </div>
           </div>
         </div>
@@ -14435,6 +14499,65 @@
   </div>
 </div>
 
+<div class="modal akb_exchange" id="akb_exchange" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Обмен АКБ б/у</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <p>При обмене стоимость будет зависеть от емкости АКБ б/у.</p>
+          <table>
+            <thead>
+              <tr><th>Ёмкость АКБ</th><th>Стоимость</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>0 - 30 Ач</td><td> 300 &#8381;</td>
+              <tr><td>30 - 55 Ач</td><td> 500 &#8381;</td>
+              <tr><td>55 - 75 Ач</td><td> 600 &#8381;</td>
+              <tr><td>75 - 90 Ач</td><td> 700 &#8381;</td>
+              <tr><td>90 - 120 Ач</td><td> 800 &#8381;</td>
+              <tr><td>120-190 Ач</td><td> 900 &#8381;</td>
+              <tr><td>более 190 Ач</td><td> 2000 &#8381;</td>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn red-btn" data-dismiss="modal">Подробнее</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal added_to_basket" id="added_to_basket" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Товар добавлен в корзину</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+      </div>
+      <form >
+        <div class="modal-body">
+          <img src="/img/tumen.png" alt="">
+          <div class="info_block">
+            <p>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</p>
+            <div>
+              <span class="new-price">4 900 &#8381;</span>
+              <span>1 шт.</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="red-transparent-btn" data-dismiss="modal">Продолжить покупки</button>
+          <button type="button" class="red-btn" data-dismiss="modal">Перейти в корзину</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/gijgo.min.js"></script>

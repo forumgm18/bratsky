@@ -302,9 +302,10 @@ $('.timer').countdown({until: 491408, format: 'yowdHMS'});
 
 //================== Инициализация Поповеров ===================
   
-function update_popper(refEl, x, y) {
+
+function update_popper(refEl, popperId,x, y) {
         
-        new Popper(refEl, $("#add2Favorites"), {
+        new Popper(refEl, $(popperId), {
             placement: 'bottom',
             html: true,
             trigger: 'click',
@@ -329,31 +330,37 @@ function update_popper(refEl, x, y) {
 
     }
 
-// $('.icons-block .add_to_favorites').on('click',function(e){
-// e.preventDefault();
-//   update_popper($(this), -120, 0);
+function popoversHide() {
+  $("#basket_items").hide();
+  $("#add2Favorites").hide();
+  $(".atf_active").removeClass("atf_active");
 
-// });
-// $("#add2Favorites").hide();
+}
+
 
   var reference = $('.add_to_favorites');
+  var basket = $(".basket");
+  var basket_popover = $("#basket_items");
   var popover = $("#add2Favorites");
   popover.hide();
   popover.popover();
 
 $(document).on('click touchend', function(e) {
   var target = $(e.target).parent();
-  if(target.is(popover) || target.is(reference)) { 
+ 
+  // if(target.is(popover)  || target.is(reference) || target.is(basket)) { 
+  if(target.prevObject.hasClass('popover')  || target.closest('.popover').length  || target.is(reference) ) { 
     return; 
   }  else {
-    popover.hide();
-    $(".add_to_favorites.atf_active").removeClass("atf_active");
+    // popover.hide();
+    // $(".add_to_favorites.atf_active").removeClass("atf_active");
+    popoversHide();
   }
  });
   
 $(".add_to_favorites").on('click touchend', function(e) {
   e.preventDefault();
-  update_popper($(this), -115, 10);
+  update_popper($(this), "#add2Favorites", -115, 10);
 
   var l = $(this).offset().left;   // позиция инициализирующего элемента 
   var pa = l - 10;
@@ -379,6 +386,37 @@ $(".add_to_favorites").on('click touchend', function(e) {
     $(".atf_active").removeClass("atf_active");
   
   });
+
+
+
+$(".basket").on('click touchend', function(e) {
+  e.stopPropagation()
+
+  update_popper($(this), "#basket_items", 0, 0);
+
+  if ($(this).hasClass("atf_active")) {
+    $("#basket_items").hide();
+    $(this).removeClass("atf_active");
+  } else {
+    $("#basket_items").show();
+    $(this).addClass("atf_active");
+  }
+
+});
+
+  $('.del_item').on('click',function(e){
+    e.preventDefault();
+    e.stopPropagation()
+    $(this).parent().remove();
+  });
+  
+  $('.del_all_items').on('click',function(e){
+    e.preventDefault();
+    e.stopPropagation()
+    $(this).parent().siblings(".popover-body").find(".item-row").remove();
+    popoversHide();
+  });
+
 
 //================== Инициализация Поповеров Конец ===================
 

@@ -29,3 +29,5 @@
 
 // Импортируем другие js-файлы
 @@include('./assets/src/js/my.js')
+// Импортируем Google-Map
+// @ @ include('./assets/src/js/map.js') 
