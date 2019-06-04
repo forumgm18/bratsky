@@ -13110,10 +13110,11 @@ $('.timer').countdown({until: 491408, format: 'yowdHMS'});
 //================== Инициализация Поповеров ===================
   
 
-function update_popper(refEl, popperId,x, y) {
+function update_popper(refEl, popperId, plcmnt, pdng, x, y) {
         
         new Popper(refEl, $(popperId), {
-            placement: 'bottom',
+            // placement: 'bottom',
+            placement: plcmnt,
             html: true,
             trigger: 'click',
 
@@ -13128,9 +13129,19 @@ function update_popper(refEl, popperId,x, y) {
                 },
                 preventOverflow: {
                     enabled: true,
-                    padding: 10,
+                    // enabled: false,
+                    padding: pdng,
                     escapeWithReference: false,
-                }
+                    // boundariesElement:'viewport'
+                    // boundariesElement:'window'
+                    // boundariesElement:'.top-panel'
+                },
+                // KeepTogether: {enabled: false}
+                // computeStyle: {
+                //   x: 'top',
+                //   y: 'right',
+                // }
+
             },
         });
       // Popper.scheduleUpdate();
@@ -13141,6 +13152,7 @@ function popoversHide() {
   $("#basket_items").hide();
   $("#add2Favorites").hide();
   $(".atf_active").removeClass("atf_active");
+  $("body").removeClass("scroll_off");
 
 }
 
@@ -13167,7 +13179,7 @@ $(document).on('click touchend', function(e) {
   
 $(".add_to_favorites").on('click touchend', function(e) {
   e.preventDefault();
-  update_popper($(this), "#add2Favorites", -115, 10);
+  update_popper($(this), "#add2Favorites",'bottom', 10, -115, 10);
 
   var l = $(this).offset().left;   // позиция инициализирующего элемента 
   var pa = l - 10;
@@ -13197,9 +13209,10 @@ $(".add_to_favorites").on('click touchend', function(e) {
 
 
 $(".basket").on('click touchend', function(e) {
+    e.preventDefault();
   e.stopPropagation()
 
-  update_popper($(this), "#basket_items", 0, 0);
+  update_popper($(this), "#basket_items", 'top', 0, -236, 0);
 
   if ($(this).hasClass("atf_active")) {
     $("#basket_items").hide();
@@ -13207,9 +13220,19 @@ $(".basket").on('click touchend', function(e) {
   } else {
     $("#basket_items").show();
     $(this).addClass("atf_active");
+    $("body").addClass("scroll_off");
+
   }
 
 });
+$("#basket_items .red-btn").on('click', function(e) {
+  e.preventDefault();
+  popoversHide(); 
+});    
+
+// $('#basket_items').on('mouseover', function (e) {
+//     e.stopPropagation();
+// });    
 
   $('.del_item').on('click',function(e){
     e.preventDefault();

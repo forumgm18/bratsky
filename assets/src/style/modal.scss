@@ -407,12 +407,16 @@
 }
 
 .basket_items {
-	width: 472px;
+	width: 100%;
 	max-width: none;
 	padding-bottom: 5px;
-		&[x-placement^=bottom]{
-			top: 8px!important;
-		}	
+	z-index: 1020;
+	max-height: calc( 100vh - #{$topHeight} - #{$bottomHeight} );
+	overflow-y:scroll; 
+		@include media-breakpoint-up(x480) {width: 472px;}
+
+		&[x-placement^=bottom]{top: 8px!important;}	
+		&[x-placement^=top]   {	top: -8px!important;}
 
 		.popover-header {
 			@include dFlex(space-between,center,row,nowrap);
@@ -427,23 +431,48 @@
 			// @include dFlex(space-between,center,row,nowrap);
 			@include setFont ($textFFamily,normal,normal,14px,$fontColor);
 			.item-row {
-				@include dFlex(space-between,center,row,nowrap);
+				@include dFlex(space-between,flex-end,row,nowrap);
 				border-bottom: 1px solid $borderGray3;
-				padding-top: 20px;
+				padding-bottom: 5px;
+				padding-top: 5px;
+				position: relative;
+				height: 195px;
+					@include media-breakpoint-up(x450) {height: auto;align-items: center;padding-top: 20px;padding-bottom: 0;}
+
 			}
 			img {
-				margin-right: 48px;
-				width: 105px;
-				height: auto;
+				margin-right: 15px;
+				width: 103px;
+				height: 103px;
+					@include media-breakpoint-up(x450) {margin-right: 25px;}
+					@include media-breakpoint-up(x480) {margin-right: 48px;}
+
 			}
 				.info_block {
-					margin-right: 40px;
+					
+					@include media-breakpoint-up(x450) {margin-right: 40px;}
+
 					div {
-						@include dFlex(flex-start,baseline,row,nowrap);
-							.new-price {margin-right: 33px;}
+						@include dFlex(flex-start,flex-end,column,nowrap);
+							@include media-breakpoint-up(x450) {flex-direction: row;align-items: baseline;}
+
+							.new-price {
+								order:2;
+									@include media-breakpoint-up(x450) {order:unset; margin-right: 33px;}
+							}
+					}
+					p {
+						position: absolute;
+						left: 0;
+						top: 15px;
+							@include media-breakpoint-up(x450) {position: relative;top:initial;left: initial;}
+
 					}
 				}
-			>a {margin-left: 146px;}
+			>a {
+				@include media-breakpoint-up(x450) {margin-left: 126px;}
+				@include media-breakpoint-up(x480) {margin-left: 146px;}
+			}
 			.del_item {
 				content: url(../img/reply-form-close.svg);
 				display: block;
@@ -451,10 +480,17 @@
 			}	
 		}
 		.popover-btn-block {
+			flex-wrap: wrap;
 			align-items: center;
 			margin-top: 0;
-			.new-price {font-size: 36px;}
-			.red-btn {width: 218px;}
+			padding-bottom: 10px;
+				@include media-breakpoint-up(x450) {flex-wrap: nowrap;padding-bottom: 0;}
+
+				.new-price {font-size: 36px;}
+				.red-btn {
+					width: 100%;
+						@include media-breakpoint-up(x450) {width: 218px;}
+				}
 
 			} 
 }
