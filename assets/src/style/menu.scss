@@ -17,9 +17,20 @@
 	padding-left: 0;
 } 
 
+.navbar-expand-lg .navbar-nav .nav-link {
+		@include media-breakpoint-up(lg) {padding-left: 0;font-size: 14px;}
+		@include media-breakpoint-up(xl) {padding-left: 0.5rem ;font-size: 16px;}
+}		
+
+
+
+
 .main-menu { 
-	background: url(../img/skin2.png) top center no-repeat;
+	// background: url(../img/skin2.png) top center no-repeat;
 	width: 100%;
+	background-color:$sectBgrGray1;
+		@include media-breakpoint-up(lg) {background: url(../img/skin2.png) top center no-repeat;}
+
 		.nav-item {
 			display: none;	
 				@include media-breakpoint-up(lg) {display: list-item;}
