@@ -1,0 +1,360 @@
+//* {
+//	box-sizing: border-box
+//}
+
+.headline {
+  margin-top: 18px;
+    @include media-breakpoint-up(lg) {margin-top: 0;}
+      &.pb0 {
+        margin-bottom: 15px;
+        h1 { padding-bottom: 0; margin-bottom: 0;}
+      }
+
+}
+
+body {
+  font-size: 16px;
+  font-family: $textFFamily;
+  background: $sectBgrGray1;
+}
+
+
+//.main {
+//	max-width: $siteWidth;
+//	margin: 0 auto;
+//}
+
+// @mixin mainPaddingTop991() {
+//   @media screen and (max-width: 991px) {
+//     .main {
+//       padding-top: 40px;
+//     }
+//   }
+// }
+
+ol,
+ul {
+  list-style: none;
+  padding-left: 0
+}
+
+
+// .hidden {  display: none;}
+
+// ======== Клиентское меню ===========
+.client-menu {
+   @include setFont ($textFFamily,normal,bold,14px,$fontColor);
+
+     @include media-breakpoint-up(lg) {}
+
+  .active {  color: $fontColorLight; }
+}
+
+.client-menu__list {  margin: 0;}
+.client-menu__item { 
+  margin-bottom: 15px;
+  padding: 5px;  
+  display: inline-block;
+    @include media-breakpoint-up(md) {padding: 0;display: block;}
+
+}
+.client-menu__link {  color: inherit;}
+
+
+// ===================
+
+
+
+@mixin input($height) {
+  border: 1px solid $borderGray;
+  border-radius: .143em;
+  height: $height;
+  background: $sectBgrGray1;
+  color: $fontColorLight;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+// Ссылка, которая выглядит как кнопка
+@mixin linkLikeBtn($height, $maxWidth, $bg, $color, $fontSize) {
+  display: block;
+  border-radius: 2px;
+  height: $height;
+  line-height: $height;
+  width: 100%;
+  max-width: $maxWidth;
+  background: $bg;
+  color: $color;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $fontSize;
+  transition: all .2s;
+
+  &:hover,
+  &:disabled,
+  &:focus {
+    color: $color;
+    background: darken($bg, 5%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+// Ссылка, которая выглядит как кнопка
+// без фона, с border
+@mixin linkLikeBtnBorder($height, $maxWidth, $borderColor, $color, $fontSize) {
+  display: block;
+  border-radius: 2px;
+  height: $height;
+  line-height: $height;
+  width: 100%;
+  max-width: $maxWidth;
+  background: none;
+  border: 1px solid $borderColor;
+  color: $color;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $fontSize;
+  transition: all .2s;
+
+  &:hover,
+  &:disabled,
+  &:focus {
+    color: #fff;
+    background: lighten($borderColor, 3%);
+    border: 1px solid lighten($borderColor, 3%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin sliderControl($bg) {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid $bg;
+
+  span {
+    display: block;
+    user-select: none;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -(9px/2);
+    border-right: 1px solid $bg;
+    border-top: 1px solid $bg;
+  }
+
+  &:hover {
+    background: $bg;
+
+    span {
+      border-right: 1px solid #fff;
+      border-top: 1px solid #fff;
+    }
+  }
+
+  &:focus {
+    background: $bg;
+
+    span {
+      border-right: 1px solid #fff;
+      border-top: 1px solid #fff;
+    }
+  }
+}
+
+@mixin sliderControlPrev($bg) {
+  @include sliderControl($bg);
+
+  span {
+    transform: rotate(-135deg);
+    margin-left: -(9px/2-2px);
+  }
+}
+
+@mixin sliderControlNext($bg) {
+  @include sliderControl($bg);
+
+  span {
+    transform: rotate(45deg);
+    margin-left: -(9px/2+2px);
+  }
+}
+
+
+/* Карточки акций магазинов */
+/* х2 mixin */
+@mixin saleBloks() {
+  .sale__list {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .sale__item {
+    width: 270px;
+    padding: 23px;
+    background: #FFFFFF;
+    transition: all .3s;
+    @include boxShadow2;
+
+    &:hover {
+      @include boxShadow;
+    }
+  }
+
+  .sale__link-wp {
+    font-family: $textFFamily2;
+    font-style: normal;
+  }
+
+  .sale__img {
+    max-width: 224px;
+    max-height: 157px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .sale__title {
+    font-weight: 500;
+    //	font-size: 14px;
+    font-size: .875em;
+    //	line-height: 16px;
+    line-height: 1.143em;
+    color: $fontColor;
+    //	margin-bottom: 10px;
+    margin-bottom: .714em;
+    //	margin-top: 13px;
+    margin-top: .929em;
+  }
+
+  .sale__address {
+    //	font-size: 12px;
+    font-size: .750em;
+    //	line-height: 14px;
+    line-height: 1.167em;
+    color: $fontColorLight2;
+  }
+
+  .sale__text {
+    margin-bottom: 0;
+    //	font-size: 12px;
+    font-size: .750em;
+    //	line-height: 14px;
+    line-height: 1.167em;
+    color: $fontColorLight;
+  }
+}
+
+@mixin saleBloksMedia370px() {
+  @media screen and (max-width: 370px) {
+    .sale__item {
+      width: 100%;
+      max-width: 100%;
+
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+/* Розничная сеть выбор города (как выбор к-ва товаров на странице) */
+@mixin citySelect($height, $width) {
+
+  .city-section .city-select .dropdown-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    padding: 0 30px 0 21px;
+    background: $fontColor;
+    border: none;
+    color: #fff;
+    border-radius: 0;
+    width: $width;
+    height: $height;
+  }
+
+  .city-section .city-select .dropdown-toggle:focus {
+    outline: 0 !important
+  }
+
+  .city-section .city-select .dropdown-toggle:active {
+    background: $fontColor;
+    border: none;
+    color: #fff
+  }
+
+  .city-section .city-select .dropdown-toggle:after {
+    background: none;
+    margin: 0;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(45deg);
+    margin-top: -2px;
+  }
+
+  .city-section .city-select .show .dropdown-toggle::after {
+    transform: rotate(225deg);
+  }
+
+  .city-section .city-select .dropdown-toggle .filter-option {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    flex-grow: 1;
+  }
+
+  .city-section .city-select .dropdown-toggle .filter-option-inner-inner {
+    font-family: Roboto, "PT Sans", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    line-height: $height;
+  }
+
+  .city-section .city-select .dropdown-item {
+    font-family: Roboto, "PT Sans", sans-serif;
+    padding: 0 10px 0 21px;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 31px;
+    color: $fontColorLight;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .city-section .city-select .dropdown-item.active {
+    color: $fontColorLight;
+    background: none;
+  }
+
+  .city-section .city-select .dropdown-item:first-of-type.active {
+    display: none;
+  }
+
+  .city-section .city-select .dropdown-item:hover {
+    color: $red;
+    border-top: 1px solid $red;
+    border-bottom: 1px solid $red;
+  }
+
+  .city-section .city-select {
+    display: flex;
+  }
+}

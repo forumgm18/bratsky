@@ -805,6 +805,7 @@
 .desk {
 	display: none;
 		@include media-breakpoint-up(lg) { 			display: list-item;		}
+		>.nav-link {padding-left: 0!important;}
 		.mcatalog-content {
 			.dropdown-menu.show { padding-top: 15px;	background-color: #fff;
 //				border: 1px solid red;

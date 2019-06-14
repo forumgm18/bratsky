@@ -1,0 +1,25 @@
+// Навигация по страницам
+@mixin pagination($mediaMaxWidthPagination) {
+	.pagination-section {
+		.filter-option-inner-inner {
+			// для firefox
+			line-height: 2em;
+		}
+	}
+
+	.pagination {
+		margin-right: 160px;
+	}
+
+	.page-select {
+		> span {
+			color: $fontColor;
+		}
+	}
+
+	@media screen and (max-width: $mediaMaxWidthPagination) {
+		.pagination {
+			margin-right: 0;
+		}
+	}
+}

@@ -1694,6 +1694,7 @@ footer {
 .breadcrumb {
 	background-color: $sectBgrGray1;
 	margin-bottom: 0;
+	padding: 18px 0 5px 0;
 	display: none;
 		@include media-breakpoint-up(lg) {display: flex;}
 

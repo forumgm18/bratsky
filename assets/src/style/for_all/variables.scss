@@ -1,0 +1,228 @@
+// Variables Bootstrap 4
+
+$red:    #E30613;
+$green:  #2ecc71;
+$yellow: #FFCD19;
+$white:  #fff;
+$blue:   #3B70C6;
+$blackBtn: #333333;
+$borderGray: #BDBDBD;
+$borderGray2: #EDEDED;
+$borderGray3: #E0E0E0;
+$sectBgrGray1: #F6F6F6;
+$sectBgrGray2: #EDEDED;
+$sectBgrGray3: #e0e0e0;
+$bradius: 3px;
+$headFFamily: 'Montserrat Alternates', sans-serif;
+$textFFamily: 'PT Sans', sans-serif;
+$labelFFamily: 'Roboto', 'PT Sans', sans-serif;
+$fontColor: #333333;
+$fontColor2: #373736;
+$fontColorLight: #828282;
+$fontColorLight2: #BDBDBD;
+$fontColorLight3: #C4C4C4;
+$fontColorLight4: #4F4F4F;
+$fontColorLight5: #C1C1C1;
+// Дополнительные переменные
+$textFFamily2: 'Roboto', 'PT Sans', sans-serif;
+$siteWidth: 1170px;
+$mapBg: #ededeb;
+$personalMenuBg: #F7F7F7;
+$retailTextColor: #232323;
+$mainPaddingLeftRight: 5vh;
+//============== Меню =========================
+$menuMI_1PR_WKor: 15px;									// Desktop Menu Толщина верхней границы
+
+$menuBorderTop: 3px;									// Desktop Menu Толщина верхней границы
+$menuTriangleWidth: 11px;							// Desktop Menu Размер треугольника
+$menuMaxHeight: 468px;								// Desktop Menu Высота 
+$menuDesktopPT: 17px;               	// Desktop Menu Padding-Top
+//=========== Zapchasti (Меню Запчасти) ==============================================
+$menuZapchastiGrayWidth: 852px;	  		// Desktop Menu Zapchasti Щирина серой части
+$menuZapchastiGrayWidth_lg: 690px;		// Desktop Menu Zapchasti Щирина серой части
+$menuZapchastiPB: 140px;							// Desktop Menu Zapchasti Padding-Bottom
+$menuZapchastiPL: 43px;								// Desktop Menu Zapchasti Padding-Left крайний правый блок (Фильтры)
+$menuZapchastiHeight_block2: 220px;		// Desktop Menu Zapchasti Высота блока 2
+$menuZapchastiMR_block1: 114px;				// Desktop Menu Zapchasti Margin-Right блока 1	
+$menuZapchastiCatalogHeight_MI1_lg: 230px; //40%;		// Desktop Menu Zapchasti Высота блока 1 для брэкпоинта lg
+$menuZapchastiCatalogHeight_MI2_lg: 270px; //50%;		// Desktop Menu Zapchasti Высота блока 2 для брэкпоинта lg
+$menuZapchastiCatalogHeight_MI1_xl: 320px;		// Desktop Menu Zapchasti Высота блока 1 для брэкпоинта xl
+$menuZapchastiCatalogHeight_MI2_xl: 260px;		// Desktop Menu Zapchasti Высота блока 2 для брэкпоинта xl
+//=========== Akkum (Меню Аккумуляторы) ==============================================
+$menuAkkumPB: 60px;										// Desktop Menu Akkum Padding-Bottom
+$menuAkkumPL: 52px;										// Desktop Menu Akkum Padding-Right крайний правый блок (бренды)
+$menuAkkumPR: 65px;										// Desktop Menu Akkum Padding-Right крайний правый блок (бренды)
+$menuAkkumMI2_PL: 39px;										// Desktop Menu Akkum Padding-Right крайний правый блок (бренды)
+$menuAkkumBrandW: 194px;							// Desktop Menu Akkum Ширина крайний правый блок (бренды)
+$menuAkkumGrayWidth: 367px;						// Desktop Menu Akkum Щирина серой части
+$menuAkkumGrayWidth_lg: 300px;						// Desktop Menu Akkum Щирина серой части
+$menuAkkumHeight: 392px;						// Desktop Menu Akkum Щирина серой части
+//=========== Smazki (Меню Смазки) ==============================================
+$menuSmazkiPB: 15px;										// Desktop Menu Padding-Bottom
+$menuSmazkiPL: 45px;										// Desktop Menu Padding-Left
+$menuSmazkiMI2_PL: 33px;								// Desktop Menu Padding-Left
+$menuSmazkiPR: 60px;										// Desktop Menu Padding-Right крайний правый блок (бренды)
+$menuSmazkiBrandW: 90px; 								// Desktop Menu Ширина крайний правый блок (бренды)
+$menuSmazkiGrayWidth: 704px;						// Desktop Menu Щирина серой части
+$menuSmazkiGrayWidth_lg: 610px;						// Desktop Menu Щирина серой части
+$menuSmazkiCatalogHeight: 450px;  			// Desktop Menu высота блока mi-1 в каталоге
+//=========== Avtohim (Меню Автохимия) ==============================================
+$menuAvtohimPB: 15px;										// Desktop Menu Padding-Bottom
+$menuAvtohimPL: 44px;										// Desktop Menu Padding-Left
+$menuAvtohim_MI2_PL: 56px;										// Desktop Menu Padding-Left
+$menuAvtohimPR: 60px;										// Desktop Menu Padding-Right крайний правый блок (бренды)
+$menuAvtohimBrandW: 90px; 							// Desktop Menu Ширина крайний правый блок (бренды)
+$menuAvtohimGrayWidth: 496px;						// Desktop Menu Щирина серой части
+$menuAvtohimGrayWidth_lg: 400px;						// Desktop Menu Щирина серой части
+$menuAvtohimHeight: 392px;						// Desktop Menu Akkum Щирина серой части
+$menuAvtohimCatalogHeight: 510px;						// Desktop Menu Akkum Щирина серой части
+//=========== Aksessuar (Меню Аксессуары) ==============================================
+$menuAksessuarPB: 15px;										// Desktop Menu Padding-Bottom
+$menuAksessuarPL: 46px;										// Desktop Menu Padding-Left
+$menuAksessuar_MI2_PL: 45px;										// Desktop Menu Padding-Left
+$menuAksessuarPR: 20px;										// Desktop Menu Padding-Right крайний правый блок (бренды)
+$menuAksessuarBrandW: 90px; 							// Desktop Menu Ширина крайний правый блок (бренды)
+$menuAksessuarGrayWidth: 705px;						// Desktop Menu Щирина серой части
+$menuAksessuarGrayWidth_lg: 570px;						// Desktop Menu Щирина серой части
+$menuAksessuarMH: 560px;									// Desktop Menu Щирина серой части
+$menuAksessuarCatalogH_lg: 530px;									// Desktop Menu Щирина серой части
+$menuAksessuarCatalogH_xl: 540px;									// Desktop Menu Щирина серой части
+//=========== Instrument (Меню Инструменты) ==============================================
+$menuInstrumentPB: 15px;										// Desktop Menu Padding-Bottom
+$menuInstrumentPL: 46px;										// Desktop Menu Padding-Left
+$menuInstrument_MI2_PL: 45px;										// Desktop Menu Padding-Left
+$menuInstrumentPR: 20px;										// Desktop Menu Padding-Right крайний правый блок (бренды)
+$menuInstrumentBrandW: 90px; 							// Desktop Menu Ширина крайний правый блок (бренды)
+$menuInstrumentGrayWidth: 705px;						// Desktop Menu Щирина серой части
+$menuInstrumentGrayWidth_lg: 570px;						// Desktop Menu Щирина серой части
+$menuInstrumentMH: 560px;									// Desktop Menu Щирина серой части
+$menuInstrumentCatalogHeight_lg: 530px;						// Desktop Menu Akkum Щирина серой части
+$menuInstrumentCatalogHeight_xl: 540px;						// Desktop Menu Akkum Щирина серой части
+//=========== Svechi (Меню Свечи) ==============================================
+
+
+
+
+//=========== Catalog (Меню Каталог) ==============================================
+$menuCatalogHeight: 598px;										// Desktop Menu Padding-top
+$menuCatalogPT: 0px;										// Desktop Menu Padding-top
+$menuCatalogPB: 15px;										// Desktop Menu Padding-Bottom
+$menuCatalogPL: 0px;										// Desktop Menu Padding-Left
+$menuCatalogContentPL: 24px;										// Desktop Menu Padding-Left
+$menuCatalog_MI2_PL: 45px;										// Desktop Menu Padding-Left
+$menuCatalogPR: 20px;										// Desktop Menu Padding-Right крайний правый блок (бренды)
+$menuCatalogBrandW: 90px; 							// Desktop Menu Ширина крайний правый блок (бренды)
+$menuCatalogGrayWidth: 208px;						// Desktop Menu Щирина серой части
+$menuCatalogAvtoElHeight: 526px;				// Desktop Menu высота блока mi-1 Автосвет
+
+$menuTechZidCatalogHeight: 350px;						// Desktop Menu Akkum Щирина серой части
+$menuFiltersCatalogHeight: 350px;						// Desktop Menu Akkum Щирина серой части
+$menuShetkiCatalogHeight: 350px;						// Desktop Menu Akkum Щирина серой части
+
+$mobMenuLH: 35px;
+$topHeight:61px;
+$bottomHeight:45px;
+
+@mixin df-sb-aic-wr () {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+@mixin dFlex($js,$ai,$fd,$fw) {
+	display: flex;
+	justify-content: $js;
+	align-items: $ai;
+	flex-direction: $fd;
+	flex-wrap: $fw;
+}
+
+@mixin setFont ($ff,$fs,$fw,$fz,$fc) {
+	font-family: $ff;
+	font-style: $fs;
+	font-weight: $fw;
+	font-size: $fz;
+	color: $fc;
+}
+@mixin Border ($c){	border: 1px solid $c;}	
+@mixin Border2 ($w,$c){	border: $w solid $c;}	
+@mixin boxShadow (){	box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);}	
+@mixin boxShadow2 (){	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);}	
+@mixin boxShadow3 (){	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);}	
+@mixin boxShadow4 (){	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);}	
+@mixin boxShadowCatalogLeft (){	box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.1);}	
+@mixin footerCardBgr (){	background: rgba(51, 51, 51, 0.5);}
+@mixin footerCardBgr2 (){	background: rgba(130, 130, 130, 0.5);}
+@mixin setMenuContentBgr ($c1,$c2,$w){background: linear-gradient(to right, $c1 15px, $c2 15px, $c2 $w, $c1 $w, $c1 100%);}
+@mixin menuArrow ($sz, $bw, $bc, $r, $mr ) {
+	display:block;
+	content:" ";
+	width: $sz;
+	height: $sz;
+	border: none;
+	border-top: $bw solid $bc;
+	border-left: $bw solid $bc;
+	transform: rotate($r);
+	margin-right:$mr;
+}
+
+%tpl_border-effects-clear {
+	border: none;
+	outline: 0;
+	box-shadow: none;
+
+}
+
+%tpl_nav_mobile_line {
+  width: 100%;
+  height: 2px;
+  transition: all .5s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+  background-color: $red;
+}
+
+%tpl_input_textarea {
+	@include setFont ($textFFamily,normal,normal,14px,$fontColor);	
+	background: #fff;
+	border-radius: 2px;
+	border: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid $borderGray;
+}
+
+
+
+%menu-arrow-next{
+	@include menuArrow (7px, 1px, $fontColor, 135deg, 18px );
+	// display:block;
+	// content:" ";
+	// width:7px;
+	// height:7px;
+	// border: none;
+	// border-top: 1px solid $fontColor;
+	// border-left: 1px solid $fontColor;
+	// transform: rotate(135deg);
+	// margin-right:18px;
+}						 		
+%menu-arrow-prev{
+	@include menuArrow (7px, 2px, $red, -45deg, 7px );
+	// display:block;
+	// content:" ";
+	// width:7px;
+	// height:7px;
+	// border: none;
+	// border-top: 2px solid $red;
+	// border-left: 2px solid $red;
+	// transform: rotate(-45deg);
+	// margin-right:7px;
+}						 		
+
+%brands-logo-span {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0px -37px;
+	width: 114px;height: 37px;
+	
+}
