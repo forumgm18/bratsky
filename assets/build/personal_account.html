@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
 <link rel="stylesheet" href="css/main.min.css">
 
-  <link rel="stylesheet" href="css/other/personal_account-style.min.css">
+  <!-- <link rel="stylesheet" href="css/other/personal_account-style.min.css"> -->
 </head>
 
 <body>
@@ -2412,13 +2412,8 @@
 		</nav>
 	</section>
 </header>
-  <main class="main">
-    <input type="radio" name="personal_menu" class="hidden" id="PERSONAL-DATA" checked>
-    <input type="radio" name="personal_menu" class="hidden" id="PERSONAL-FAVORITES">
-    <input type="radio" name="personal_menu" class="hidden" id="PERSONAL-ORDERS">
-    <input type="radio" name="personal_menu" class="hidden" id="PERSONAL-HISTORY">
-    <input type="radio" name="personal_menu" class="hidden" id="PERSONAL-GARAGE">
-    <div class="breadcrumb">
+  <main >
+    <section class="breadcrumb">
       <div class="container">
         <div class="row">
           <nav class="col">
@@ -2434,133 +2429,162 @@
           </nav>
         </div>
       </div>
-    </div>
-    <header class="main__header">
-      <h1 class="title title-h1">Мои данные</h1>
-      <h1 class="title title-h1">Избранное</h1>
-      <h1 class="title title-h1">Мои заказы</h1>
-      <h1 class="title title-h1">История заказов</h1>
-      <h1 class="title title-h1">Мой гараж</h1>
-    </header>
-    <nav class="personal-menu">
-      <ol class="personal-menu__list">
-        <li class="personal-menu__item"><label for="PERSONAL-DATA">Мои данные</label></li>
-        <li class="personal-menu__item"><label for="PERSONAL-FAVORITES">Избранное</label></li>
-        <li class="personal-menu__item"><label for="PERSONAL-ORDERS">Мои заказы (<span>1</span>)</label></li>
-        <li class="personal-menu__item"><label for="PERSONAL-HISTORY">История заказов</label></li>
-        <li class="personal-menu__item"><label for="PERSONAL-GARAGE">Мой гараж</label></li>
-      </ol>
-    </nav>
-    <section class="my-data-section">
-      <h2 class="hidden">Информация о пользователе</h2>
-      <div class="my-data__photo-bonus">
-        <div class="my-data__photo">
-          <p>Загрузить ваше фото</p>
-          <label class="my-data__file-photo">
-            <input type="file" class="hidden">
-          </label>
-        </div>
-        <div class="my-data__bonus">
-          <p class="my-data__text">Бонусов на счету</p>
-          <strong class="my-data__count">480</strong>
-          <p><a href="#" class="my-data__how-link">Как получить?</a></p>
-          <p><a href="#" class="my-data__how-link">Как потратить?</a></p>
-        </div>
-      </div>
-      <div class="my-data__personal-wp">
-        <p class="my-data__text">Личные данные</p>
-        <div class="my-data__details">
-          <div class="input-fio">
-            <p class="my-data__txt_grey">Ваше ФИО</p>
-            <p class="my-data__text">Иванов Иван Иванович</p>
+    </section>
+    <section class="main__header">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 data-label="PERSONAL-DATA" class="d-block">Мои данные</h1>
+            <h1 data-label="PERSONAL-FAVORITES">Избранное</h1>
+            <h1 data-label="PERSONAL-ORDERS">Мои заказы (<span>1</span>)</h1>
+            <h1 data-label="PERSONAL-HISTORY">История заказов</h1>
+            <h1 data-label="PERSONAL-GARAGE">Мой гараж</h1>
           </div>
-          <div class="input-sex">
-            <p class="my-data__txt_grey">Ваш пол</p>
-            <p class="my-data__text">Мужской</p>
-          </div>
-          <div class="input-birth">
-            <p class="my-data__txt_grey">Дата рождения</p>
-            <p class="my-data__text">18.09.2018</p>
-          </div>
-          <div class="input-tel">
-            <p class="my-data__txt_grey">Дополнительный номер для связи</p>
-            <p class="my-data__text">+ 7 (912) 456-78-90</p>
-          </div>
-          <div class="input-email">
-            <p class="my-data__txt_grey">E-mail</p>
-            <p class="my-data__text">login@gmail.com</p>
-          </div>
-          <div class="my-data__inn-wp">
-            <div class="input-inn">
-              <p class="my-data__txt_grey">ИНН</p>
-              <p class="my-data__text">123987123098</p>
-            </div>
-            <a href="#" class="my-data__save-btn">Сохранить</a>
-            <!--						<a href="#" class="my-data__edit-btn">Изменить данные</a>-->
-            <button class="my-data__edit-btn" id="SHOW-EDIT-MY-DATA">Изменить данные</button>
-          </div>
-        </div>
-        <form action="/" class="my-data__form">
-          <input type="text" placeholder="Ваше ФИО" class="my-data__input input-fio">
-          <select name="sex-select" id="SEX" class="my-data__input input-sex">
-            <option value="default">Ваш пол</option>
-            <option value="man">Мужской</option>
-            <option value="woman">Женский</option>
-          </select>
-          <input type="text" placeholder="Дата рождения" class="my-data__input input-birth">
-          <input type="tel" placeholder="Дополнительный номер для связи" class="my-data__input input-tel">
-          <input type="email" placeholder="E-mail" class="my-data__input input-email">
-          <div class="my-data__inn-wp">
-            <input type="text" placeholder="ИНН" class="my-data__input input-inn">
-            <input type="submit" value="Сохранить" class="my-data__save-btn">
-          </div>
-        </form>
-        <div class="my-data__login-wp">
-          <div>
-            <p class="my-data__txt_grey">Логин</p>
-            <p class="my-data__text">+ 7 (912) 456-78-90</p>
-          </div>
-          <a href="#" class="my-data__edit-btn">Изменить пароль</a>
-        </div>
-        <div class="my-data__social">
-          <p class="my-data__text">Привязать соцсети</p>
-          <p class="my-data__txt_grey">Подключите свой профиль в социальной сети, чтобы авторизоваться без ввода пароля в дальнейшем.</p>
-          <ul class="my-data__social-list">
-            <li>
-              <p class="my-data__txt_grey">ВКонтакте</p>
-              <a href="#" class="my-data__connect-btn">Привязать</a>
-            </li>
-            <li>
-              <p class="my-data__txt_grey">Facebook</p>
-              <a href="#" class="my-data__connect-btn">Привязать</a>
-            </li>
-            <li>
-              <p class="my-data__txt_grey">Twitter</p>
-              <a href="#" class="my-data__connect-btn">Привязать</a>
-            </li>
-            <li>
-              <p class="my-data__txt_grey">Google+</p>
-              <a href="#" class="my-data__connect-btn">Привязать</a>
-            </li>
-            <li>
-              <p class="my-data__txt_grey">Mail.ru</p>
-              <a href="#" class="my-data__connect-btn">Привязать</a>
-            </li>
-            <li>
-              <p class="my-data__txt_grey">Yandex</p>
-              <a href="#" class="my-data__connect-btn">Привязать</a>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
-    <section class="favorites-section">
-      <header>
-        <h2 class="hidden">Список избранных товаров</h2>
-        <a href="#" class="favorites__del-all">Удалить все товары</a>
-      </header>
-      <div class="favorites__list">
-        								  <div class="product-item">
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <aside class="col-3">
+            <nav class="personal-menu">
+              <ol class="personal-menu__list">
+                <li class="personal-menu__item active" data-label="PERSONAL-DATA">Мои данные</li>
+                <li class="personal-menu__item" data-label="PERSONAL-FAVORITES">Избранное</li>
+                <li class="personal-menu__item" data-label="PERSONAL-ORDERS">Мои заказы (<span>1</span>)</li>
+                <li class="personal-menu__item" data-label="PERSONAL-HISTORY">История заказов</li>
+                <li class="personal-menu__item" data-label="PERSONAL-GARAGE">Мой гараж</li>
+              </ol>
+            </nav>
+          </aside>
+          <article class="col">
+            <section class="my-data-section d-block" data-label="PERSONAL-DATA">
+              <h2 class="d-none">Информация о пользователе</h2>
+              <div class="row">
+                <div class="col-3 my-data__photo-bonus">
+                  <div class="my-data__photo">
+                    <p>Загрузить ваше фото</p>
+                    <label class="my-data__file-photo">
+                      <input type="file" class="d-none">
+                    </label>
+                  </div>
+                  <div class="my-data__bonus">
+                    <p class="my-data__text">Бонусов на счету</p>
+                    <strong class="my-data__count">480</strong>
+                    <p><a href="#" class="my-data__how-link">Как получить?</a></p>
+                    <p><a href="#" class="my-data__how-link">Как потратить?</a></p>
+                  </div>
+                </div>
+                <div class="col my-data__personal-wp">
+                  <p class="my-data__text">Личные данные</p>
+                  <div class="my-data__details">
+                    <div class="row">
+                      <div class="col input-fio">
+                        <p class="my-data__txt_grey">Ваше ФИО</p>
+                        <p class="my-data__text">Иванов Иван Иванович</p>
+                      </div>
+                      <div class="col-3 input-sex">
+                        <p class="my-data__txt_grey">Ваш пол</p>
+                        <p class="my-data__text">Мужской</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-3 input-birth">
+                        <p class="my-data__txt_grey">Дата рождения</p>
+                        <p class="my-data__text">18.09.2018</p>
+                      </div>
+                      <div class="col input-tel">
+                        <p class="my-data__txt_grey">Дополнительный номер для связи</p>
+                        <p class="my-data__text">+ 7 (912) 456-78-90</p>
+                      </div>
+                      <div class="col-3 input-email">
+                        <p class="my-data__txt_grey">E-mail</p>
+                        <p class="my-data__text">login@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col my-data__inn-wp">
+                        <a href="#" class="my-data__save-btn">Сохранить</a>
+                        <button class="my-data__edit-btn" id="SHOW-EDIT-MY-DATA">Изменить данные</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <form action="/" class="my-data__form">
+                        <input type="text" placeholder="Ваше ФИО" class="my-data__input input-fio">
+                        <select name="sex-select" id="SEX" class="my-data__input input-sex">
+                          <option value="default">Ваш пол</option>
+                          <option value="man">Мужской</option>
+                          <option value="woman">Женский</option>
+                        </select>
+
+                        
+                        <input type="text" placeholder="Дата рождения" class="my-data__input input-birth">
+                        <input type="tel" placeholder="Дополнительный номер для связи" class="my-data__input input-tel">
+                        <input type="email" placeholder="E-mail" class="my-data__input input-email">
+
+
+                        <div class="my-data__inn-wp">
+                          <input type="text" placeholder="ИНН" class="my-data__input input-inn">
+                          <input type="submit" value="Сохранить" class="my-data__save-btn">
+                        </div>
+                      </form>
+                      
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col my-data__login-wp">
+                      <div>
+                        <p class="my-data__txt_grey">Логин</p>
+                        <p class="my-data__text">+ 7 (912) 456-78-90</p>
+                      </div>
+                      <a href="#" class="my-data__edit-btn">Изменить пароль</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-9 my-data__social">
+                  <p class="my-data__text">Привязать соцсети</p>
+                  <p class="my-data__txt_grey">Подключите свой профиль в социальной сети, чтобы авторизоваться без ввода пароля в дальнейшем.</p>
+                  <ul class="my-data__social-list">
+                    <li>
+                      <p class="my-data__txt_grey">ВКонтакте</p>
+                      <a href="#" class="my-data__connect-btn">Привязать</a>
+                    </li>
+                    <li>
+                      <p class="my-data__txt_grey">Facebook</p>
+                      <a href="#" class="my-data__connect-btn">Привязать</a>
+                    </li>
+                    <li>
+                      <p class="my-data__txt_grey">Twitter</p>
+                      <a href="#" class="my-data__connect-btn">Привязать</a>
+                    </li>
+                    <li>
+                      <p class="my-data__txt_grey">Google+</p>
+                      <a href="#" class="my-data__connect-btn">Привязать</a>
+                    </li>
+                    <li>
+                      <p class="my-data__txt_grey">Mail.ru</p>
+                      <a href="#" class="my-data__connect-btn">Привязать</a>
+                    </li>
+                    <li>
+                      <p class="my-data__txt_grey">Yandex</p>
+                      <a href="#" class="my-data__connect-btn">Привязать</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <section class="favorites-section" data-label="PERSONAL-FAVORITES">
+              <header>
+                <h2 class="d-none">Список избранных товаров</h2>
+                <a href="#" class="favorites__del-all">Удалить все товары</a>
+              </header>
+              <div class="favorites__list">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -2627,7 +2651,7 @@
 								  	</div>
 									</div>
 
-        								  <div class="product-item">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -2694,7 +2718,7 @@
 								  	</div>
 									</div>
 
-        								  <div class="product-item">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -2761,7 +2785,7 @@
 								  	</div>
 									</div>
 
-        								  <div class="product-item">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -2828,7 +2852,7 @@
 								  	</div>
 									</div>
 
-        								  <div class="product-item">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -2895,7 +2919,7 @@
 								  	</div>
 									</div>
 
-        								  <div class="product-item">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -2962,7 +2986,7 @@
 								  	</div>
 									</div>
 
-        								  <div class="product-item">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -3029,7 +3053,7 @@
 								  	</div>
 									</div>
 
-        								  <div class="product-item">
+                								  <div class="product-item">
 								  		<div class="b0 d-md-none">
 									  		<a class="prod-name" href="#">Легковой аккумулятор Varta Blue E23 70R 630A, обратная полярность</a>
 								  		</div>
@@ -3096,218 +3120,222 @@
 								  	</div>
 									</div>
 
-      </div>
-      <div class="pagination-section">
-        <div class="zaglushka"></div>
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link prev" href="#"></a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link next" href="#"></a></li>
-          <li class="page-item"><a class="page-link" href="#">50</a></li>
-        </ul>
-        <div class="page-select">
-          <span>товаров на странице</span>
-          <select class="selectpicker" name="page_num" id="page_num">
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-          </select>
+              </div>
+              <div class="pagination-section">
+                <div class="zaglushka"></div>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link prev" href="#"></a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link next" href="#"></a></li>
+                  <li class="page-item"><a class="page-link" href="#">50</a></li>
+                </ul>
+                <div class="page-select">
+                  <span>товаров на странице</span>
+                  <select class="selectpicker" name="page_num" id="page_num">
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+            <section class="orders-section" data-label="PERSONAL-ORDERS">
+              <h2 class="d-none">Информация о заказах</h2>
+              <div class="orders__table-wp">
+                <table class="account__table orders__table">
+                  <thead>
+                    <tr>
+                      <th>Номер/дата заказа</th>
+                      <th>Сумма</th>
+                      <th>Статус заказа</th>
+                      <th>Способ оплаты</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table_min_height">
+                      <td>10005/14.08.18</td>
+                      <td>16 000 р</td>
+                      <td>Ожидает получения в магазине</td>
+                      <td>
+                        <label class="control control-radio">Оплата банковской картой
+                          <input type="radio" name="payment_method" id="PAY-CARD" class="d-none">
+                          <span class="control_indicator"></span>
+                        </label>
+                        <label class="control control-radio">Наличный расчет
+                          <input type="radio" name="payment_method" id="PAY-CASH" class="d-none">
+                          <span class="control_indicator"></span>
+                        </label>
+                      </td>
+                      <td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
+                    </tr>
+                    <tr class="table__spoiler-body table_brder_top">
+                      <th>Наименование товара</th>
+                      <th>Кол-во</th>
+                      <th>Цена</th>
+                      <th>Стоимость</th>
+                      <th>Срок резервирования товара</th>
+                    </tr>
+                    <tr class="table__spoiler-body">
+                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+                      <td>2</td>
+                      <td>8 000 р</td>
+                      <td>16 000 р</td>
+                      <td>До 08.10</td>
+                    </tr>
+                  </tbody>
+                  <tr class="separator">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tbody>
+                    <tr class="table_min_height">
+                      <td>10005/14.08.18</td>
+                      <td>16 000 р</td>
+                      <td>Ожидает получения в магазине</td>
+                      <td><label class="control control-radio">Оплата банковской картой
+                          <input type="radio" name="payment_method-2" id="PAY-CARD-2" class="d-none">
+                          <span class="control_indicator"></span>
+                        </label>
+                        <label class="control control-radio">Наличный расчет
+                          <input type="radio" name="payment_method-2" id="PAY-CASH-2" class="d-none">
+                          <span class="control_indicator"></span>
+                        </label></td>
+                      <td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
+                    </tr>
+                    <tr class="table__spoiler-body table_brder_top">
+                      <th>Наименование товара</th>
+                      <th>Кол-во</th>
+                      <th>Цена</th>
+                      <th>Стоимость</th>
+                      <th>Срок резервирования товара</th>
+                    </tr>
+                    <tr class="table__spoiler-body">
+                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+                      <td>2</td>
+                      <td>8 000 р</td>
+                      <td>16 000 р</td>
+                      <td>До 08.10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="history-section" data-label="PERSONAL-HISTORY">
+              <h2 class="d-none">Информация о прошлых заказах</h2>
+              <div class="histoty__table-wp">
+                <table class="account__table histoty__table">
+                  <thead>
+                    <tr>
+                      <th>Номер/дата заказа</th>
+                      <th>Сумма</th>
+                      <th>Статус заказа</th>
+                      <th>Способ оплаты</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table_min_height">
+                      <td>10005/14.08.18</td>
+                      <td>16 000 р</td>
+                      <td>Заказ получен</td>
+                      <td></td>
+                      <td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
+                    </tr>
+                    <tr class="table__spoiler-body table_brder_top">
+                      <th>Наименование товара</th>
+                      <th>Кол-во</th>
+                      <th>Цена</th>
+                      <th>Стоимость</th>
+                      <th></th>
+                    </tr>
+                    <tr class="table__spoiler-body">
+                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+                      <td>2</td>
+                      <td>8 000 р</td>
+                      <td>16 000 р</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                  <tr class="separator">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tbody>
+                    <tr class="table_min_height">
+                      <td>10005/14.08.18</td>
+                      <td>16 000 р</td>
+                      <td>Заказ получен</td>
+                      <td></td>
+                      <td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
+                    </tr>
+                    <tr class="table__spoiler-body table_brder_top">
+                      <th>Наименование товара</th>
+                      <th>Кол-во</th>
+                      <th>Цена</th>
+                      <th>Стоимость</th>
+                      <th></th>
+                    </tr>
+                    <tr class="table__spoiler-body">
+                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
+                      <td>2</td>
+                      <td>8 000 р</td>
+                      <td>16 000 р</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="garage-section" data-label="PERSONAL-GARAGE">
+              <h2 class="d-none">Список автомобилей</h2>
+              <p class="garage__del-all-wp"><a href="#" class="garage__del-all">Удалить все</a></p>
+              <ol class="garage__list">
+                <li class="garage__item" tabindex="0">
+                  <h3 class="garage__title">Nissan Almera</h3>
+                  <div class="garage__data-wp">
+                    <p class="garage__data">2006</p>
+                    <p class="garage__data">Nissan</p>
+                    <p class="garage__data">Almera</p>
+                    <p class="garage__data">1.4</p>
+                  </div>
+                  <button class="garage__del-btn"></button>
+                </li>
+                <li class="garage__item" tabindex="0">
+                  <h3 class="garage__title">Skoda Octavia</h3>
+                  <div class="garage__data-wp">
+                    <p class="garage__data">2006</p>
+                    <p class="garage__data">Skoda</p>
+                    <p class="garage__data">Octavia</p>
+                    <p class="garage__data">2.0 TDi</p>
+                  </div>
+                  <button class="garage__del-btn"></button>
+                </li>
+                <li class="garage__item" tabindex="0">
+                  <h3 class="garage__title">+ Добавить авто в гараж</h3>
+                  <form action="/" class="garage__data-wp">
+                    <input type="text" placeholder="Год" class="garage__data">
+                    <input type="text" placeholder="Марка" class="garage__data">
+                    <input type="text" placeholder="Модель" class="garage__data">
+                    <input type="text" placeholder="Модификация" class="garage__data">
+                  </form>
+                </li>
+              </ol>
+              <a href="#" class="garage__save">Сохранить</a>
+            </section>
+          </article>
         </div>
       </div>
-    </section>
-    <section class="orders-section">
-      <h2 class="hidden">Информация о заказах</h2>
-      <div class="orders__table-wp">
-        <table class="account__table orders__table">
-          <thead>
-            <tr>
-              <th>Номер/дата заказа</th>
-              <th>Сумма</th>
-              <th>Статус заказа</th>
-              <th>Способ оплаты</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="table_min_height">
-              <td>10005/14.08.18</td>
-              <td>16 000 р</td>
-              <td>Ожидает получения в магазине</td>
-              <td>
-                <label class="control control-radio">Оплата банковской картой
-                  <input type="radio" name="payment_method" id="PAY-CARD" class="hidden">
-                  <span class="control_indicator"></span>
-                </label>
-                <label class="control control-radio">Наличный расчет
-                  <input type="radio" name="payment_method" id="PAY-CASH" class="hidden">
-                  <span class="control_indicator"></span>
-                </label>
-              </td>
-              <td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
-            </tr>
-            <tr class="table__spoiler-body table_brder_top">
-              <th>Наименование товара</th>
-              <th>Кол-во</th>
-              <th>Цена</th>
-              <th>Стоимость</th>
-              <th>Срок резервирования товара</th>
-            </tr>
-            <tr class="table__spoiler-body">
-              <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-              <td>2</td>
-              <td>8 000 р</td>
-              <td>16 000 р</td>
-              <td>До 08.10</td>
-            </tr>
-          </tbody>
-          <tr class="separator">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tbody>
-            <tr class="table_min_height">
-              <td>10005/14.08.18</td>
-              <td>16 000 р</td>
-              <td>Ожидает получения в магазине</td>
-              <td><label class="control control-radio">Оплата банковской картой
-                  <input type="radio" name="payment_method-2" id="PAY-CARD-2" class="hidden">
-                  <span class="control_indicator"></span>
-                </label>
-                <label class="control control-radio">Наличный расчет
-                  <input type="radio" name="payment_method-2" id="PAY-CASH-2" class="hidden">
-                  <span class="control_indicator"></span>
-                </label></td>
-              <td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
-            </tr>
-            <tr class="table__spoiler-body table_brder_top">
-              <th>Наименование товара</th>
-              <th>Кол-во</th>
-              <th>Цена</th>
-              <th>Стоимость</th>
-              <th>Срок резервирования товара</th>
-            </tr>
-            <tr class="table__spoiler-body">
-              <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-              <td>2</td>
-              <td>8 000 р</td>
-              <td>16 000 р</td>
-              <td>До 08.10</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <section class="history-section">
-      <h2 class="hidden">Информация о прошлых заказах</h2>
-      <div class="histoty__table-wp">
-        <table class="account__table histoty__table">
-          <thead>
-            <tr>
-              <th>Номер/дата заказа</th>
-              <th>Сумма</th>
-              <th>Статус заказа</th>
-              <th>Способ оплаты</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="table_min_height">
-              <td>10005/14.08.18</td>
-              <td>16 000 р</td>
-              <td>Заказ получен</td>
-              <td></td>
-              <td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
-            </tr>
-            <tr class="table__spoiler-body table_brder_top">
-              <th>Наименование товара</th>
-              <th>Кол-во</th>
-              <th>Цена</th>
-              <th>Стоимость</th>
-              <th></th>
-            </tr>
-            <tr class="table__spoiler-body">
-              <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-              <td>2</td>
-              <td>8 000 р</td>
-              <td>16 000 р</td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tr class="separator">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tbody>
-            <tr class="table_min_height">
-              <td>10005/14.08.18</td>
-              <td>16 000 р</td>
-              <td>Заказ получен</td>
-              <td></td>
-              <td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
-            </tr>
-            <tr class="table__spoiler-body table_brder_top">
-              <th>Наименование товара</th>
-              <th>Кол-во</th>
-              <th>Цена</th>
-              <th>Стоимость</th>
-              <th></th>
-            </tr>
-            <tr class="table__spoiler-body">
-              <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-              <td>2</td>
-              <td>8 000 р</td>
-              <td>16 000 р</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <section class="garage-section">
-      <h2 class="hidden">Список автомобилей</h2>
-      <p class="garage__del-all-wp"><a href="#" class="garage__del-all">Удалить все</a></p>
-      <ol class="garage__list">
-        <li class="garage__item" tabindex="0">
-          <h3 class="garage__title">Nissan Almera</h3>
-          <div class="garage__data-wp">
-            <p class="garage__data">2006</p>
-            <p class="garage__data">Nissan</p>
-            <p class="garage__data">Almera</p>
-            <p class="garage__data">1.4</p>
-          </div>
-          <button class="garage__del-btn"></button>
-        </li>
-        <li class="garage__item" tabindex="0">
-          <h3 class="garage__title">Skoda Octavia</h3>
-          <div class="garage__data-wp">
-            <p class="garage__data">2006</p>
-            <p class="garage__data">Skoda</p>
-            <p class="garage__data">Octavia</p>
-            <p class="garage__data">2.0 TDi</p>
-          </div>
-          <button class="garage__del-btn"></button>
-        </li>
-        <li class="garage__item" tabindex="0">
-          <h3 class="garage__title">+ Добавить авто в гараж</h3>
-          <form action="/" class="garage__data-wp">
-            <input type="text" placeholder="Год" class="garage__data">
-            <input type="text" placeholder="Марка" class="garage__data">
-            <input type="text" placeholder="Модель" class="garage__data">
-            <input type="text" placeholder="Модификация" class="garage__data">
-          </form>
-        </li>
-      </ol>
-      <a href="#" class="garage__save">Сохранить</a>
-    </section>
+   </section> 
   </main>
   <footer>
 		<div class="container">
