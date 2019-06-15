@@ -13502,8 +13502,10 @@ $(window).on('load resize', function(){
   // if ($(window).width()<576) {
   if ($(window).width()<480) {
       $('.main-products .tab-content').addClass('list'); 
+      $('.favorites__list').addClass('list'); 
   } else {
       $('.main-products .tab-content').removeClass('list'); 
+      $('.favorites__list').removeClass('list'); 
   }
 
 });

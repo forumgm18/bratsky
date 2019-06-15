@@ -43,22 +43,22 @@
     <section>
       <div class="container">
         <div class="row">
-          <aside class="col-3">
+          <aside class="col-12 col-md-4 col-lg-3">
             <nav class="personal-menu">
               <ol class="personal-menu__list">
-                <li class="personal-menu__item active" data-label="PERSONAL-DATA">Мои данные</li>
-                <li class="personal-menu__item" data-label="PERSONAL-FAVORITES">Избранное</li>
-                <li class="personal-menu__item" data-label="PERSONAL-ORDERS">Мои заказы (<span>1</span>)</li>
-                <li class="personal-menu__item" data-label="PERSONAL-HISTORY">История заказов</li>
-                <li class="personal-menu__item" data-label="PERSONAL-GARAGE">Мой гараж</li>
+                <li class="personal-menu__item active" data-label="PERSONAL-DATA"><div>Мои данные</div></li>
+                <li class="personal-menu__item" data-label="PERSONAL-FAVORITES"><div>Избранное</div></li>
+                <li class="personal-menu__item" data-label="PERSONAL-ORDERS"><div>Мои заказы (<span>1</span>)</div></li>
+                <li class="personal-menu__item" data-label="PERSONAL-HISTORY"><div>История заказов</div></li>
+                <li class="personal-menu__item" data-label="PERSONAL-GARAGE"><div>Мой гараж</div></li>
               </ol>
             </nav>
           </aside>
-          <article class="col">
+          <article class="col-12 col-md-8 col-lg-9">
             <section class="my-data-section d-block" data-label="PERSONAL-DATA">
               <h2 class="d-none">Информация о пользователе</h2>
               <div class="row">
-                <div class="col-3 my-data__photo-bonus">
+                <div class=" col-12 col-lg-4 col-xl-3 my-data__photo-bonus">
                   <div class="my-data__photo">
                     <p>Загрузить ваше фото</p>
                     <label class="my-data__file-photo">
@@ -80,13 +80,13 @@
                         <p class="my-data__txt_grey">Ваше ФИО</p>
                         <p class="my-data__text">Иванов Иван Иванович</p>
                       </div>
-                      <div class="col-3 input-sex">
+                      <div class="col-12 col-sm-5 col-md-3 input-sex">
                         <p class="my-data__txt_grey">Ваш пол</p>
                         <p class="my-data__text">Мужской</p>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-3 input-birth">
+                      <div class="col-12 col-sm-3 col-md-3 input-birth">
                         <p class="my-data__txt_grey">Дата рождения</p>
                         <p class="my-data__text">18.09.2018</p>
                       </div>
@@ -94,7 +94,7 @@
                         <p class="my-data__txt_grey">Дополнительный номер для связи</p>
                         <p class="my-data__text">+ 7 (912) 456-78-90</p>
                       </div>
-                      <div class="col-3 input-email">
+                      <div class="col-12 col-sm-4 col-md-3 input-email">
                         <p class="my-data__txt_grey">E-mail</p>
                         <p class="my-data__text">login@gmail.com</p>
                       </div>
@@ -110,8 +110,8 @@
                     <div class="col">
                       <form action="/" class="my-data__form">
                         <input type="text" placeholder="Ваше ФИО" class="my-data__input input-fio">
-                        <select name="sex-select" id="SEX" class="my-data__input input-sex">
-                          <option value="default">Ваш пол</option>
+                        <select class="selectpicker" data-style="bs-select-first my-data__input input-sex" title="Ваш пол" name="sex-select" id="SEX">
+                          <!-- <option value="default">Ваш пол</option> -->
                           <option value="man">Мужской</option>
                           <option value="woman">Женский</option>
                         </select>
@@ -123,7 +123,7 @@
 
 
                         <div class="my-data__inn-wp">
-                          <input type="text" placeholder="ИНН" class="my-data__input input-inn">
+                          <!-- <input type="text" placeholder="ИНН" class="my-data__input input-inn"> -->
                           <input type="submit" value="Сохранить" class="my-data__save-btn">
                         </div>
                       </form>
@@ -142,7 +142,8 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-9 my-data__social">
+                <div class="col-12 col-xl-3"></div>
+                <div class="col-12 col-xl-9 my-data__social">
                   <p class="my-data__text">Привязать соцсети</p>
                   <p class="my-data__txt_grey">Подключите свой профиль в социальной сети, чтобы авторизоваться без ввода пароля в дальнейшем.</p>
                   <ul class="my-data__social-list">
@@ -175,38 +176,44 @@
               </div>
             </section>
             <section class="favorites-section" data-label="PERSONAL-FAVORITES">
-              <header>
-                <h2 class="d-none">Список избранных товаров</h2>
-                <a href="#" class="favorites__del-all">Удалить все товары</a>
-              </header>
-              <div class="favorites__list">
-                @@include('./template/catalog-product-card-akk.html')
-                @@include('./template/catalog-product-card-akk.html')
-                @@include('./template/catalog-product-card-akk.html')
-                @@include('./template/catalog-product-card-akk.html')
-                @@include('./template/catalog-product-card-akk.html')
-                @@include('./template/catalog-product-card-akk.html')
-                @@include('./template/catalog-product-card-akk.html')
-                @@include('./template/catalog-product-card-akk.html')
+              <h2 class="d-none">Список избранных товаров</h2>
+              <div class="row">
+                <div class="col">
+                  <a href="#" class="favorites__del-all">Удалить все товары</a>
+                </div>
+              </div>  
+              <div class="row">
+                <div class="col favorites__list">
+                  @@include('./template/catalog-product-card-akk.html')
+                  @@include('./template/catalog-product-card-akk.html')
+                  @@include('./template/catalog-product-card-akk.html')
+                  @@include('./template/catalog-product-card-akk.html')
+                  @@include('./template/catalog-product-card-akk.html')
+                  @@include('./template/catalog-product-card-akk.html')
+                  @@include('./template/catalog-product-card-akk.html')
+                  @@include('./template/catalog-product-card-akk.html')
+                </div>
               </div>
-              <div class="pagination-section">
-                <div class="zaglushka"></div>
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link prev" href="#"></a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                  <li class="page-item"><a class="page-link next" href="#"></a></li>
-                  <li class="page-item"><a class="page-link" href="#">50</a></li>
-                </ul>
-                <div class="page-select">
-                  <span>товаров на странице</span>
-                  <select class="selectpicker" name="page_num" id="page_num">
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                    <option value="30">30</option>
-                  </select>
+              <div class="row">
+                <div class="col pagination-section">
+                  <div class="zaglushka"></div>
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link prev" href="#"></a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link next" href="#"></a></li>
+                    <li class="page-item"><a class="page-link" href="#">50</a></li>
+                  </ul>
+                  <div class="page-select">
+                    <span>товаров на странице</span>
+                    <select class="selectpicker" name="page_num" id="page_num">
+                      <option value="20">20</option>
+                      <option value="25">25</option>
+                      <option value="30">30</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </section>

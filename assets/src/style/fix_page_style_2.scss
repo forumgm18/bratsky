@@ -262,9 +262,14 @@
 }
 
 .main__header {
+	margin-top: 20px;
+		@include media-breakpoint-up(lg) {margin-top: 0;}
+
 	h1 {
-	  margin-bottom: .778em;
+	  margin-bottom: 20px;
+	  padding-bottom: 0;
 	  display: none;
+			@include media-breakpoint-up(lg) {margin-bottom: 0;}
 	}
 }
 
@@ -284,28 +289,58 @@
 
 	@include setFont ($textFFamily,normal,normal,13px,$fontColor);
   background: $personalMenuBg;
-  @include boxShadow2;
+  margin-bottom: 30px;
+		@include media-breakpoint-up(md) {@include boxShadow2;}
 }
 
-.personal-menu__list { margin: 0;}
+.personal-menu__list { 
+	margin: 0;
+	@include dFlex(flex-start,center,row,wrap);
+
+		@include media-breakpoint-up(md) {display: block;}
+
+}
 
 .personal-menu__item {
-  margin: 0;
-  padding: 0 25px 0 27px;
+  min-width: 145px;
+  
   background: $personalMenuBg;
-  margin: 0;
-  padding: 0 0 0 19px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding: 0; 
   display: block;
   height: 46px;
   line-height: 46px;
-  user-select: none;
-  border-top: 1px solid $borderGray3;
+  // user-select: none;
+  border: 1px solid $borderGray3;
+  text-align: center;
 
-  &:hover { background: darken($personalMenuBg, 3%);  }
-	
-	&.active{  background: $fontColor;  color: #fff;}	
+		@include media-breakpoint-up(md) {
+			border-top: 1px solid $borderGray3;
+			text-align: left;
+			margin: 0;
+			padding: 0 25px;
+			border:none;
+		}
+		>div {
 
-  // &:first-of-type label {  border: none; }
+			@include media-breakpoint-up(md) {
+				border-top: 1px solid $borderGray3;
+				padding: 0 20px;
+
+			}	
+		}
+
+		&:first-child >div {
+			@include media-breakpoint-up(md) {border: none;}
+		}
+		&:last-child {margin-right: auto;}
+	  &:hover { background: darken($personalMenuBg, 3%);  }
+		&.active{  
+			background: $fontColor;  color: #fff;
+			>div {border: none;}
+		}	
+
 
 }
 
@@ -319,14 +354,24 @@
   display: none;
 }
 
+.my-data__photo-bonus {
+	@include dFlex(flex-start,flex-start,row,wrap);
+		@include media-breakpoint-up(lg) {display: block;}
+
+
+}
 
 .my-data__photo {
   background: #FFFFFF;
   border: 1px solid $borderGray;
   box-sizing: border-box;
-  width: 170px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
   position: relative;
+  margin-right: 30px;
+  margin-bottom: 20px;
+		@include media-breakpoint-up(x400) {width: 170px;  height: 170px;}
+		@include media-breakpoint-up(lg) {margin-right: 0;margin-bottom: 0;}
 
   p {
 		@include setFont ($textFFamily,normal,normal,14px,$fontColor);
@@ -355,8 +400,9 @@
 }
 
 .my-data__bonus {
-  margin-top: 16px;
+  
   display: block;
+		@include media-breakpoint-up(lg) {margin-top: 16px;}
 
   .my-data__text {  margin-bottom: 0; }
 }
@@ -387,6 +433,8 @@
   @include linkLikeBtn(44px, 224px, $red, #FFF, 14px);
   padding: 0;
   border: none;
+
+
 }
 
 .my-data__edit-btn {
@@ -411,26 +459,33 @@
   }
 }
 
-//.my-data__details {
-//	display: none;
-//}
+.my-data__personal-wp {
 
-.my-data__details,
-.my-data__form {
-  // display: grid;
-  // grid-template: 1fr 1fr auto / 170px auto 170px;
-  // grid-column-gap: 30px;
-  // grid-row-gap: 24px;
-  // grid-template-areas:
-  //   "fio fio sex"
-  //   "birth tel email"
-  //   "inn-wp inn-wp inn-wp";
+		@include media-breakpoint-up(lg) {margin-left: -45px;}
+		@include media-breakpoint-up(xl) {margin-left: -25px;}
+
 }
 
 .my-data__details {
   .my-data__txt_grey {  margin-top: 0; margin-bottom: 5px;}
+  .my-data__text { margin-bottom: 20px; }
+	
+	.input-sex, .input-birth, .input-email, .input-fio {
+		@include dFlex(flex-start,center,row,wrap);
+			@include media-breakpoint-up(sm) {display: block;}
+				p {
+					margin-bottom: 20px;
+						@include media-breakpoint-up(sm) {margin-bottom: inherit;}
+				}	
+				p:first-child {
+					margin-right: 20px;
+						@include media-breakpoint-up(sm) {margin-right: 0;}
+				}	
 
-  .my-data__text { margin-bottom: 0; margin-bottom: 20px;}
+			  .my-data__text { @include media-breakpoint-up(sm) {margin-bottom: 20px;} }
+
+	}
+
 }
 
 .my-data__form {
@@ -439,47 +494,102 @@
   
   display: none;
 
-  select {
-    appearance: none;
-    background: url(../../img/down.svg);
-    background-repeat: no-repeat;
-    background-size: 17px 10px;
-    background-position: 90% 45%;
-    margin-bottom: 20px;
-  }
   input {margin-bottom: 20px;}
 
-	.input-fio {max-width: 470px;margin-right: 30px;flex-grow: 1;} 
-	.input-birth {width: 170px;margin-right: 30px;}
-	.input-tel {margin-right: 30px;}
-	.input-email {width: 170px;}
+	.input-fio {
+		flex-grow: 1;
+			@include media-breakpoint-up(xl) {
+				max-width: 470px;
+				margin-right: 30px;
+			}
+	
+	} 
+	.input-birth {
+
+			@include media-breakpoint-up(md) {width: 48%;	}	
+			@include media-breakpoint-up(xl) {
+				width: 170px;
+				margin-right: 30px;
+			}	
+	}
+	.input-tel {
+			width: 100%;
+			@include media-breakpoint-up(md) {width: 48%;}	
+			
+			@include media-breakpoint-up(xl) {
+				width: auto;
+				flex-grow: 1; 
+				margin-right: 30px;
+			}	
+
+	}
+	.input-email {
+		width: 100%;
+			@include media-breakpoint-up(md) {width: 48%;}	
+			@include media-breakpoint-up(xl) {width: 170px;}	
+
+	}
+	.bootstrap-select {
+		width: 100%!important;
+		@include media-breakpoint-up(md) {width: 48%!important;}	
+		@include media-breakpoint-up(xl) {width: 170px!important;}	
+	}
+
+
   .input-sex {
-  	width: 170px;
+  	width: 100%;
     background-color: #fff;
+    appearance: none;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+			// @include media-breakpoint-up(lg) {width: 47%;}	
+			@include media-breakpoint-up(xl) {width: 170px;}	
+
+			&:after{
+		    background: url(../../img/down.svg);
+		    background-repeat: no-repeat;
+		    background-size: 17px 10px;
+		    background-position: 90% 45%;
+		    border: none;
+		    width: 15px;
+		    height: 11px;
+			}    
+
+	    &:focus {
+				outline: 0!important;
+		    border-color: inherit;
+		    box-shadow: none;
+	    }
+	    ~ .show {    border-radius: 2px;    }
+
   }
+  .input-inn {width: 170px;margin-right: 30px;}
 
-
+.my-data__save-btn { min-width: 224px;}
 
 }
 
 
-//   margin-bottom: 20px;
-// }
-.input-fio {
-  // grid-area: fio;
-  width: 100%;
-}
+.input-fio {  width: 100%;}
 
 .my-data__inn-wp {
-  // grid-area: inn-wp;
-  display: flex;
-}
+  flex-grow: 1;
+  display: block;
+		@include media-breakpoint-up(x480) {display: flex;justify-content: space-between;}
+		@include media-breakpoint-up(x550) {justify-content: flex-start;}
+	.my-data__save-btn, .my-data__edit-btn 	{
+		width: 100%;
+		max-width: unset;
+		min-width: unset;
+		margin: 0;
+		margin-bottom: 15px;
+			@include media-breakpoint-up(x480) {width: 48%;margin-bottom: 0;}
+			@include media-breakpoint-up(x550) {max-width: 224px;margin-right: 30px;}
 
-.my-data__form {
-  .input-inn {
-    margin-right: 30px;
-    max-width: 270px;
-  }
+	}
+
 }
 
 .my-data__details {
@@ -490,21 +600,43 @@
   }
 }
 
-.my-data__edit-btn {
-  margin-left: 21px;
-}
+.my-data__edit-btn {  margin-left: 21px; }
 
 .my-data__login-wp {
   margin-top: 41px;
-  display: flex;
-	>div {width: 224px;}
-  .my-data__edit-btn { margin-left: 21px; }
+  display: block;
+		@include media-breakpoint-up(x480) {display: flex;justify-content: space-between;}
+		@include media-breakpoint-up(x550) {justify-content: flex-start;}
+
+	>div {
+		width: 100%;
+		display: flex;
+			@include media-breakpoint-up(x480) {width: 48%;margin-bottom: 0;}
+			@include media-breakpoint-up(x550) {max-width: 224px;margin-right: 30px;}
+			@include media-breakpoint-up(lg) {display: block;}
+				p:first-child {
+					margin-right: 20px;
+						@include media-breakpoint-up(lg) {margin-right: 0;}
+				}	
+
+	}
+  .my-data__edit-btn { 
+		margin-left: 0;
+		width: 100%;
+		max-width: unset;
+		
+			@include media-breakpoint-up(x480) {width: 48%;margin-bottom: 0;}
+			@include media-breakpoint-up(x550) {max-width: 224px;margin-right: 30px;}
+
+  }
 }
 
 .my-data__social {
   margin-top: 70px;
   margin-bottom: 100px;
-  margin-left: auto;
+		// @include media-breakpoint-up(lg) {margin-left: -45px;}
+		@include media-breakpoint-up(xl) {margin-left: -25px;}
+  
 }
 
 .my-data__social-list {
@@ -515,8 +647,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 300px;
     margin-bottom: 24px;
+    min-width: 300px;
+			@include media-breakpoint-up(x450) {min-width: 200px;}
+			@include media-breakpoint-up(x550) {min-width: 230px;}
+			@include media-breakpoint-up(md) {min-width: 200px;}
+			@include media-breakpoint-up(lg) {min-width: 300px;}
 
     p {
       margin: 0;
@@ -526,7 +662,65 @@
 
 .my-data__connect-btn {
   @include linkLikeBtn(44px, 201px, #FFCD19, $fontColor, 14px);
+  
+			@include media-breakpoint-up(x450) {max-width: 120px;}
+			@include media-breakpoint-up(x550) {max-width: 150px;}
+			@include media-breakpoint-up(md) {max-width: 120px;}
+			@include media-breakpoint-up(lg) {max-width: 201px;}
 }
+
+
+.favorites-section {  
+	margin-bottom: 40px;
+	margin-top: -54px;
+			@include media-breakpoint-up(md) {margin-bottom: 85px;}
+
+}
+
+.favorites__del-all {
+  @include linkLikeBtn(44px, 100%, $red, #FFF, 14px);
+  margin: 30px 0 10px auto;
+			@include media-breakpoint-up(md) {margin-top: 0; width: 224px;}
+
+}
+
+
+.favorites__list {
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+			@include dFlex(space-around,center,row,wrap);
+		&.list {
+			margin: 0;
+			.main-product-card .btn-block {  
+				width: calc(100vw - 60px);
+					@include media-breakpoint-up(x400) {width: auto;}
+
+			}
+		}
+	  .product-item {
+	    font-size: 14px;
+		    .main-product-card {
+		      font-size: 14px;
+			      .b2 {
+			        font-size: 14px;
+				        .prod-name {font-size: 14px;}
+			      }
+		    }
+	  }
+}
+
+// @include mediaFavorites;
+
+.pagination-section {  font-size: 14px;}
+
+// @include pagination(800px);
+
+.pagination {  
+	margin-right: 10px;
+		@include media-breakpoint-up(lg) {margin-right: 85px;}
+
+}
+
 
 
 
