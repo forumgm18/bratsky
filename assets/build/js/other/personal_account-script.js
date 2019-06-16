@@ -1,10 +1,10 @@
 // Открытие спойлера таблицы 
 $(document).ready(function () {
-	$('.table__spoiler-body').hide()
-	$('.table__spoiler-btn').click(function () {
-		$(this).parent().parent().toggleClass("folded").toggleClass("unfolded").next().toggle('normal');
-		$(this).parent().parent().toggleClass("folded").toggleClass("unfolded").next().next().toggle('normal');
-	});
+// 	$('.table__spoiler-body').hide()
+// 	$('.table__spoiler-btn').click(function () {
+// 		$(this).parent().parent().toggleClass("folded").toggleClass("unfolded").next().toggle('normal');
+// 		$(this).parent().parent().toggleClass("folded").toggleClass("unfolded").next().next().toggle('normal');
+// 	});
 
 // При нажатии на кнопку "Изменить данные":
 // - скрыть данные о пользователе,
@@ -22,8 +22,11 @@ $(".personal-menu__item").on('click',function(e){
 	$('section '+dl).addClass('d-block').siblings().removeClass('d-block');
 	$('h1 '+dl).addClass('d-block').siblings().removeClass('d-block');
 	$(this).addClass('active').siblings().removeClass('active');;
-
-
 });
+
+$(".garage__del-all").on('click',function(e){
+	$(".garage__item input[type=checkbox]").prop("checked",true);
+});
+
 
 });

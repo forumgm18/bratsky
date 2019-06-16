@@ -2447,7 +2447,7 @@
     <section>
       <div class="container">
         <div class="row">
-          <aside class="col-12 col-md-4 col-lg-3">
+          <aside class="col-12 col-md-3 ">
             <nav class="personal-menu">
               <ol class="personal-menu__list">
                 <li class="personal-menu__item active" data-label="PERSONAL-DATA"><div>Мои данные</div></li>
@@ -2458,7 +2458,7 @@
               </ol>
             </nav>
           </aside>
-          <article class="col-12 col-md-8 col-lg-9">
+          <article class="col-12 col-md-9">
             <section class="my-data-section d-block" data-label="PERSONAL-DATA">
               <h2 class="d-none">Информация о пользователе</h2>
               <div class="row">
@@ -2540,7 +2540,7 @@
                         <p class="my-data__txt_grey">Логин</p>
                         <p class="my-data__text">+ 7 (912) 456-78-90</p>
                       </div>
-                      <a href="#" class="my-data__edit-btn">Изменить пароль</a>
+                      <a href="#" class="my-data__edit-btn" data-toggle="modal" data-target="#change-password">Изменить пароль</a>
                     </div>
                   </div>
                 </div>
@@ -3151,193 +3151,214 @@
             </section>
             <section class="orders-section" data-label="PERSONAL-ORDERS">
               <h2 class="d-none">Информация о заказах</h2>
-              <div class="orders__table-wp">
-                <table class="account__table orders__table">
-                  <thead>
-                    <tr>
-                      <th>Номер/дата заказа</th>
-                      <th>Сумма</th>
-                      <th>Статус заказа</th>
-                      <th>Способ оплаты</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table_min_height">
-                      <td>10005/14.08.18</td>
-                      <td>16 000 р</td>
-                      <td>Ожидает получения в магазине</td>
-                      <td>
-                        <label class="control control-radio">Оплата банковской картой
-                          <input type="radio" name="payment_method" id="PAY-CARD" class="d-none">
-                          <span class="control_indicator"></span>
-                        </label>
-                        <label class="control control-radio">Наличный расчет
-                          <input type="radio" name="payment_method" id="PAY-CASH" class="d-none">
-                          <span class="control_indicator"></span>
-                        </label>
-                      </td>
-                      <td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
-                    </tr>
-                    <tr class="table__spoiler-body table_brder_top">
-                      <th>Наименование товара</th>
-                      <th>Кол-во</th>
-                      <th>Цена</th>
-                      <th>Стоимость</th>
-                      <th>Срок резервирования товара</th>
-                    </tr>
-                    <tr class="table__spoiler-body">
-                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-                      <td>2</td>
-                      <td>8 000 р</td>
-                      <td>16 000 р</td>
-                      <td>До 08.10</td>
-                    </tr>
-                  </tbody>
-                  <tr class="separator">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tbody>
-                    <tr class="table_min_height">
-                      <td>10005/14.08.18</td>
-                      <td>16 000 р</td>
-                      <td>Ожидает получения в магазине</td>
-                      <td><label class="control control-radio">Оплата банковской картой
-                          <input type="radio" name="payment_method-2" id="PAY-CARD-2" class="d-none">
-                          <span class="control_indicator"></span>
-                        </label>
-                        <label class="control control-radio">Наличный расчет
-                          <input type="radio" name="payment_method-2" id="PAY-CASH-2" class="d-none">
-                          <span class="control_indicator"></span>
-                        </label></td>
-                      <td><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn">Подробнее</button></td>
-                    </tr>
-                    <tr class="table__spoiler-body table_brder_top">
-                      <th>Наименование товара</th>
-                      <th>Кол-во</th>
-                      <th>Цена</th>
-                      <th>Стоимость</th>
-                      <th>Срок резервирования товара</th>
-                    </tr>
-                    <tr class="table__spoiler-body">
-                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-                      <td>2</td>
-                      <td>8 000 р</td>
-                      <td>16 000 р</td>
-                      <td>До 08.10</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="row">
+                <div class="col table__flex">
+                  <div class="my__order table__header table__header__glob">
+                    <div>Номер/дата заказа</div>
+                    <div>Сумма</div>
+                    <div>Статус заказа</div>
+                    <div>Способ оплаты</div>
+                    <div></div>
+                  </div>      
+                  <div class="table__row">
+                    <div class="my__order">
+                      <div><span>Номер/дата заказа</span>10005/14.08.18</div>
+                      <div><span>Сумма</span>16 000 р</div>
+                      <div><span>Статус заказа</span>Ожидает получения в магазине</div>
+                      <div>
+                        <span>Способ оплаты</span>
+                        <div>
+                          <label class="control control-radio">Оплата банковской картой
+                            <input type="radio" name="payment_method" id="PAY-CARD" class="d-none">
+                            <span class="control_indicator"></span>
+                          </label>
+                          <label class="control control-radio">Наличный расчет
+                            <input type="radio" name="payment_method" id="PAY-CASH" class="d-none">
+                            <span class="control_indicator"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn" data-toggle="collapse" data-target="#my_order_1">Подробнее</button></div>
+                    </div>
+                    <div class="collapse" id="my_order_1">
+                      <div class="bbgray"></div>
+                      <div class="my__order table__header" >
+                        <div>Наименование товара</div>
+                        <div>Кол-во</div>
+                        <div>Цена</div>
+                        <div>Стоимость</div>
+                        <div>Срок резервирования товара</div>
+                      </div>
+                      <div class="my__order">
+                        <div><span>Наименование товара</span>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</div>
+                        <div><span>Кол-во</span>2</div>
+                        <div><span>Цена</span>8 000 р</div>
+                        <div><span>Стоимость</span>16 000 р</div>
+                        <div><span>Срок резервирования товара</span>До 08.10</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="my__order">
+                      <div><span>Номер/дата заказа</span>10005/14.08.18</div>
+                      <div><span>Сумма</span>16 000 р</div>
+                      <div><span>Статус заказа</span>Ожидает получения в магазине</div>
+                      <div>
+                        <span>Способ оплаты</span>
+                        <div>
+                          <label class="control control-radio">Оплата банковской картой
+                            <input type="radio" name="payment_method" id="PAY-CARD" class="d-none">
+                            <span class="control_indicator"></span>
+                          </label>
+                          <label class="control control-radio">Наличный расчет
+                            <input type="radio" name="payment_method" id="PAY-CASH" class="d-none">
+                            <span class="control_indicator"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn" data-toggle="collapse" data-target="#my_order_2" >Подробнее</button></div>
+                    </div>
+                    <div class="collapse" id="my_order_2">
+                      <div class="bbgray"></div>
+                      <div class="my__order table__header" >
+                        <div>Наименование товара</div>
+                        <div>Кол-во</div>
+                        <div>Цена</div>
+                        <div>Стоимость</div>
+                        <div>Срок резервирования товара</div>
+                      </div>
+                      <div class="my__order">
+                        <div><span>Наименование товара</span>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</div>
+                        <div><span>Кол-во</span>2</div>
+                        <div><span>Цена</span>8 000 р</div>
+                        <div><span>Стоимость</span>16 000 р</div>
+                        <div><span>Срок резервирования товара</span>До 08.10</div>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
               </div>
             </section>
             <section class="history-section" data-label="PERSONAL-HISTORY">
               <h2 class="d-none">Информация о прошлых заказах</h2>
-              <div class="histoty__table-wp">
-                <table class="account__table histoty__table">
-                  <thead>
-                    <tr>
-                      <th>Номер/дата заказа</th>
-                      <th>Сумма</th>
-                      <th>Статус заказа</th>
-                      <th>Способ оплаты</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table_min_height">
-                      <td>10005/14.08.18</td>
-                      <td>16 000 р</td>
-                      <td>Заказ получен</td>
-                      <td></td>
-                      <td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
-                    </tr>
-                    <tr class="table__spoiler-body table_brder_top">
-                      <th>Наименование товара</th>
-                      <th>Кол-во</th>
-                      <th>Цена</th>
-                      <th>Стоимость</th>
-                      <th></th>
-                    </tr>
-                    <tr class="table__spoiler-body">
-                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-                      <td>2</td>
-                      <td>8 000 р</td>
-                      <td>16 000 р</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                  <tr class="separator">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tbody>
-                    <tr class="table_min_height">
-                      <td>10005/14.08.18</td>
-                      <td>16 000 р</td>
-                      <td>Заказ получен</td>
-                      <td></td>
-                      <td class="table__btn-wp"><button class="table__spoiler-btn">Подробнее</button></td>
-                    </tr>
-                    <tr class="table__spoiler-body table_brder_top">
-                      <th>Наименование товара</th>
-                      <th>Кол-во</th>
-                      <th>Цена</th>
-                      <th>Стоимость</th>
-                      <th></th>
-                    </tr>
-                    <tr class="table__spoiler-body">
-                      <td>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</td>
-                      <td>2</td>
-                      <td>8 000 р</td>
-                      <td>16 000 р</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="row">
+                <div class="col table__flex">
+                  <div class="my__order table__header table__header__glob">
+                    <div>Номер/дата заказа</div>
+                    <div>Сумма</div>
+                    <div>Статус заказа</div>
+                    <div>Способ оплаты</div>
+                    <div></div>
+                  </div>      
+                  <div class="table__row">
+                    <div class="my__order">
+                      <div><span>Номер/дата заказа</span>10005/14.08.18</div>
+                      <div><span>Сумма</span>16 000 р</div>
+                      <div><span>Статус заказа</span>Заказ получен</div>
+                      <div><span>Способ оплаты</span>Оплата банковской картой</div>
+                      <div><button class="table__spoiler-btn" data-toggle="collapse" data-target="#my_history_order_1">Подробнее</button></div>
+                    </div>
+                    <div class="collapse" id="my_history_order_1">
+                      <div class="bbgray"></div>
+                      <div class="my__order table__header" >
+                        <div>Наименование товара</div>
+                        <div>Кол-во</div>
+                        <div>Цена</div>
+                        <div>Стоимость</div>
+                        <div></div>
+                      </div>
+                      <div class="my__order">
+                        <div><span>Наименование товара</span>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</div>
+                        <div><span>Кол-во</span>2</div>
+                        <div><span>Цена</span>8 000 р</div>
+                        <div><span>Стоимость</span>16 000 р</div>
+                        <div><span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table__row">
+                    <div class="my__order">
+                      <div><span>Номер/дата заказа</span>10005/14.08.18</div>
+                      <div><span>Сумма</span>16 000 р</div>
+                      <div><span>Статус заказа</span>Заказ получен</div>
+                      <div><span>Способ оплаты</span>Оплата банковской картой</div>
+                      <div><button class="table__spoiler-btn" data-toggle="collapse" data-target="#my_history_order_2">Подробнее</button></div>
+                    </div>
+                    <div class="collapse" id="my_history_order_2">
+                    <div class="bbgray"></div>
+                      <div class="my__order table__header" >
+                        <div>Наименование товара</div>
+                        <div>Кол-во</div>
+                        <div>Цена</div>
+                        <div>Стоимость</div>
+                        <div></div>
+                      </div>
+                      <div class="my__order">
+                        <div><span>Наименование товара</span>Автомобильный аккумулятор VARTA Blue Dynamic 74 А·ч 574012 Обратная полярность E11</div>
+                        <div><span>Кол-во</span>2</div>
+                        <div><span>Цена</span>8 000 р</div>
+                        <div><span>Стоимость</span>16 000 р</div>
+                        <div><span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
             <section class="garage-section" data-label="PERSONAL-GARAGE">
               <h2 class="d-none">Список автомобилей</h2>
-              <p class="garage__del-all-wp"><a href="#" class="garage__del-all">Удалить все</a></p>
-              <ol class="garage__list">
-                <li class="garage__item" tabindex="0">
-                  <h3 class="garage__title">Nissan Almera</h3>
-                  <div class="garage__data-wp">
-                    <p class="garage__data">2006</p>
-                    <p class="garage__data">Nissan</p>
-                    <p class="garage__data">Almera</p>
-                    <p class="garage__data">1.4</p>
-                  </div>
-                  <button class="garage__del-btn"></button>
-                </li>
-                <li class="garage__item" tabindex="0">
-                  <h3 class="garage__title">Skoda Octavia</h3>
-                  <div class="garage__data-wp">
-                    <p class="garage__data">2006</p>
-                    <p class="garage__data">Skoda</p>
-                    <p class="garage__data">Octavia</p>
-                    <p class="garage__data">2.0 TDi</p>
-                  </div>
-                  <button class="garage__del-btn"></button>
-                </li>
-                <li class="garage__item" tabindex="0">
-                  <h3 class="garage__title">+ Добавить авто в гараж</h3>
-                  <form action="/" class="garage__data-wp">
-                    <input type="text" placeholder="Год" class="garage__data">
-                    <input type="text" placeholder="Марка" class="garage__data">
-                    <input type="text" placeholder="Модель" class="garage__data">
-                    <input type="text" placeholder="Модификация" class="garage__data">
-                  </form>
-                </li>
-              </ol>
-              <a href="#" class="garage__save">Сохранить</a>
+              <div class="row">
+                <div class="col">
+                  <p class="garage__del-all-wp"><a href="#" class="garage__del-all">Удалить все</a></p>
+                  <form action="/">
+                    <ol class="garage__list">
+                      <li class="garage__item" tabindex="0">
+                        <input type="checkbox" id='my_car_1' name='my_car_1'/>
+                        <div>
+                          <h3 class="garage__title">Nissan Almera</h3>
+                          <div>
+                            <div class="garage__data-wp">
+                              <p class="garage__data">2006</p>
+                              <p class="garage__data">Nissan</p>
+                              <p class="garage__data">Almera</p>
+                              <p class="garage__data">1.4</p>
+                            </div>
+                            <label class="garage__del-btn" for="my_car_1"></label>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="garage__item" tabindex="0">
+                        <input type="checkbox" id='my_car_2' name='my_car_2'/>
+                        <div>
+                          <h3 class="garage__title">Skoda Octavia</h3>
+                          <div>
+                            <div class="garage__data-wp">
+                              <p class="garage__data">2006</p>
+                              <p class="garage__data">Skoda</p>
+                              <p class="garage__data">Octavia</p>
+                              <p class="garage__data">2.0 TDi</p>
+                            </div>
+                              <label class="garage__del-btn" for="my_car_2"></label>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="garage__item" tabindex="0">
+                        <h3 class="garage__title">+ Добавить авто в гараж</h3>
+                        <div>
+                        <div class="garage__data-wp">
+                          <input type="text" placeholder="Год" class="garage__data">
+                          <input type="text" placeholder="Марка" class="garage__data">
+                          <input type="text" placeholder="Модель" class="garage__data">
+                          <input type="text" placeholder="Модификация" class="garage__data">
+                        </div>  
+                        <div class="garazh__zaglushka"></div>
+                      </div>
+                      </li>
+                    </ol>
+                    <button type="submit" class="garage__save">Сохранить</button> 
+                   </form>
+                </div>
+              </div>
             </section>
           </article>
         </div>
@@ -4569,7 +4590,7 @@
 <script src="js/jquery.countdown-ru.js"></script>
 <script src="js/main.min.js"></script>
 
-  <script src="js/other/personal_account-script.js"></script>
+  <!-- <script src="js/other/personal_account-script.js"></script> -->
 </body>
 
 </html>

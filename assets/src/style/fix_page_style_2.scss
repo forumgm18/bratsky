@@ -263,13 +263,15 @@
 
 .main__header {
 	margin-top: 20px;
+	margin-bottom: 20px;
+
 		@include media-breakpoint-up(lg) {margin-top: 0;}
 
 	h1 {
-	  margin-bottom: 20px;
 	  padding-bottom: 0;
+	  margin-bottom: 0;
 	  display: none;
-			@include media-breakpoint-up(lg) {margin-bottom: 0;}
+			// @include media-breakpoint-up(lg) {margin-bottom: 0;}
 	}
 }
 
@@ -319,9 +321,10 @@
 			border-top: 1px solid $borderGray3;
 			text-align: left;
 			margin: 0;
-			padding: 0 25px;
 			border:none;
 		}
+		@include media-breakpoint-up(lg) {padding: 0 25px;}
+
 		>div {
 
 			@include media-breakpoint-up(md) {
@@ -352,6 +355,7 @@
 .history-section,
 .garage-section {
   display: none;
+  margin-bottom: 40px;
 }
 
 .my-data__photo-bonus {
@@ -686,8 +690,6 @@
 
 
 .favorites__list {
-  // display: grid;
-  // grid-template-columns: repeat(4, 1fr);
 			@include dFlex(space-around,center,row,wrap);
 		&.list {
 			margin: 0;
@@ -709,22 +711,512 @@
 	  }
 }
 
-// @include mediaFavorites;
 
 .pagination-section {  font-size: 14px;}
-
-// @include pagination(800px);
-
 .pagination {  
 	margin-right: 10px;
 		@include media-breakpoint-up(lg) {margin-right: 85px;}
+}
 
+.table__row {
+	@include boxShadow2;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 0px 8px 0px 8px;
+  .collapse .table__header {	padding-bottom: 0; }
+  .collapse.show .my__order {
+  	padding-top: 14px;
+	    &:nth-of-type(5) { font-size: 12px;}
+
+  }
+}  
+.my__order {
+	@include dFlex(space-between,flex-start,column,nowrap);
+	@include setFont ($textFFamily,normal,normal,12px,$fontColor);	
+  padding: 26px 0px 14px 0px;
+
+      	@include media-breakpoint-up(x550) {flex-direction: row;}
+
+		>div {
+			@include dFlex(flex-start,flex-start,row,nowrap);
+			width: 100%;
+			margin-bottom: 5px;
+      	@include media-breakpoint-up(x550) {width: initial;display: block;margin-bottom: 0;} 
+					>span{
+						display: inline-block;
+						font-weight: bold;
+						min-width: 40%;
+						width: 40%;
+						@include media-breakpoint-up(x550) {display: none;}
+					}
+			    &:nth-of-type(1) {
+			    	
+			      	@include media-breakpoint-up(x550) {width: 30%;padding-right: 10px;} 
+							@include media-breakpoint-up(md) {width: 20%;}
+							@include media-breakpoint-up(lg) {width: 32%;}
+							@include media-breakpoint-up(xl) {width: 32%;}
+			    }
+
+			    &:nth-of-type(2) {
+			      	@include media-breakpoint-up(x550) {width: 12%;} // 115
+			    }
+
+			    &:nth-of-type(3) {
+			      	@include media-breakpoint-up(x550) {width: 18%;} // 160
+			 				@include media-breakpoint-up(md) {width: 23%;}
+							@include media-breakpoint-up(lg) {width: 16%;}
+			    }
+
+			    &:nth-of-type(4) {
+			      	@include media-breakpoint-up(x550) {width: 20%;display: block;} // 170
+			 				@include media-breakpoint-up(md) {width: 25%;}
+							@include media-breakpoint-up(lg) {width: 20%;}
+							@include media-breakpoint-up(xl) {width: 18%;}
+
+							>div {
+								@include dFlex(flex-start,flex-start,column,nowrap);
+			      			@include media-breakpoint-up(x550) {display: block;}
+							}
+							label {margin-bottom: 0;}
+
+			    }
+			    &:nth-of-type(5) {
+						@include dFlex(flex-start,flex-start,row,wrap);
+			      font-size: 13px;
+			      	@include media-breakpoint-up(x550) {width: 20%;} // 170
+			      	.arders__cancel-btn {
+			      		margin-right: 15px;
+			      			@include media-breakpoint-up(x550) {margin-right: 0;}
+			      	}
+			    }
+		}
+		&.table__header {
+			color: $fontColorLight;
+			padding-top: 17px;
+			padding-bottom: 0;
+			display: none;
+			  @include media-breakpoint-up(x550) {display: flex;}
+		}
+		&.table__header__glob {
+				padding-top: 0;
+			padding-bottom: 12px;
+		}
+
+}
+
+
+.table__flex {
+		@include media-breakpoint-up(md) {padding-left: 0;}
+		@include media-breakpoint-up(lg) {padding-left: 15px;}
+
+}
+.control {
+  position: relative;
+  padding-left: 20px;
+		
+		input:checked ~ .control_indicator:before { display: block;}
+}
+
+.control_indicator {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  border: 1px solid $red;
+
+		&:after {
+		  box-sizing: unset;
+		  content: '';
+		  position: absolute;
+		  display: none;
+		}
+}
+
+
+.control-radio .control_indicator:before {
+  display: none;
+  line-height: 7px;
+  content: url(../../img/check_mark_red.svg);
+}
+
+/* *** */
+
+/* garage-section */
+
+.garage__del-all-wp {
+  text-align: right;
+  margin: 0;
+}
+
+.garage__del-all {
+  color: $red;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  &:hover,
+  &:focus {
+    color: darken($red, 5%);
+  }
+}
+
+.garage__item {
+  font-family: PT Sans;
+  display: block;
+  outline: none;
+  // padding-right: 35px;
+  position: relative;
+  margin-bottom: 22px;
+
+  &:focus {
+    .garage__data-wp {
+      border: 2px solid $fontColor;
+    }
+
+    .garage__title {
+      font-weight: bold;
+      color: $fontColor;
+    }
+  }
+  >div>div {	@include dFlex(flex-start,center,row,nowrap);	 }
+  input[type=checkbox] {display: none;}
+  input:checked ~ div { display: none;}
+  
+}
+
+.garage__title {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+  color: $fontColorLight;
+}
+
+.garage__data-wp {
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border: 2px solid #FFFFFF;
+  padding: 15px 12px;
+  margin-right: 15px;
+  flex-grow: 1;
+
+	@include dFlex(flex-start,flex-start,row,wrap);	
+		@include media-breakpoint-up(sm) { flex-wrap: nowrap; }
+
+  
+}
+
+.garage__data {
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
+  height: 40px;
+  max-height: 40px;
+  line-height: 40px;
+  line-height: (40px-2px);
+  font-style: normal;
+  font-weight: normal;
+  color: $fontColorLight;
+  border: 1px solid #F0F0F0;
+  padding: 0 11px;
+  margin-bottom: 10px;
+  width: 100%;
+		@include media-breakpoint-up(sm) { margin-right: 14px;margin-bottom: 0;}
+
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    @include media-breakpoint-up(sm) {width: 20%;}
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    @include media-breakpoint-up(sm) {width: 30%;}
+  }
+
+  &::placeholder {
+    color: $fontColorLight;
+  }
+}
+.garazh__zaglushka {
+  height: 19px;
+  width: 19px;
+
+}
+.garage__del-btn {
+  height: 19px;
+  width: 19px;
+  background: none;
+  border: 1px solid $red;
+  background-image: url(../../img/delite_icon_red.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.garage__save {
+  @include linkLikeBtn(44px, 100%, $red, #FFF, 14px);
+  border: none;
+   margin: 32px 26px 0 auto;
+		@include media-breakpoint-up(sm) { width: 224px; }
+		@include media-breakpoint-up(lg) { margin-right: 30px; }
+		@include media-breakpoint-up(xl) { margin-right: 34px; }
+
+  
 }
 
 
 
 
-
 //======================= personal_account.html End ==============================
+
+//======================= promotions.html  =================================
+.title-h1 {
+	margin-top: 20px;
+		@include media-breakpoint-up(lg) { margin-top: 0; }
+
+
+}
+.arrow-icon {
+	display: inline-block;
+	position: relative;
+	transform: rotate(135deg);
+	user-select: none;
+}
+
+/* *** */
+.main__content {margin-bottom: 40px;}
+.sale__content {margin-bottom: 40px;}
+.sale__list {
+	@include dFlex(space-between,flex-start,row,wrap);	
+  margin: 0;
+	margin-bottom: 40px;
+  font-size: 16px;
+  }
+
+  .sale__item {
+    width: 100%;
+    padding: 23px;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    transition: all .3s;
+    @include boxShadow2;
+			@include media-breakpoint-up(sm) { width: 48%;}
+			@include media-breakpoint-up(lg) { width: 270px;}
+
+
+    &:hover {
+      @include boxShadow;
+    }
+  }
+
+  .sale__link-wp {
+    font-family: $textFFamily2;
+    font-style: normal;
+  }
+
+  .sale__img {
+    max-width: 224px;
+    max-height: 157px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+
+  }
+
+  .sale__title {
+    font-weight: 500;
+    color: $fontColor;
+    	font-size: 14px;
+    	line-height: 16px;
+    	margin-bottom: 10px;
+    	margin-top: 13px;
+  }
+
+  .sale__address {
+    	font-size: 12px;
+    	line-height: 14px;
+    color: $fontColorLight2;
+  }
+
+  .sale__text {
+    margin-bottom: 0;
+    	font-size: 12px;
+    	line-height: 14px;
+    color: $fontColorLight;
+  }
+
+
+// @include mediaSale();
+// @include saleBloksMedia370px();
+
+//======================= promotions.html End ==============================
+
+//======================= question.html ==================================
+.arrow-icon {
+	display: inline-block;
+	position: relative;
+	transform: rotate(135deg);
+	transition: all .5s ease-in-out;
+}
+.arrow-icon_up {
+	transform: rotate(-45deg);
+	transition: all .5s ease-in-out;
+}
+.answers__content {
+	margin-bottom: 50px;
+		.tab__head li {
+			&:nth-of-type(1){
+				flex-grow: 1;
+				width: 100%;
+					@include media-breakpoint-up(lg) {order: 3;width: initial;}
+
+			}
+			&:nth-of-type(2){
+					@include media-breakpoint-up(lg) {order: 1;}
+
+			}
+			&:nth-of-type(3){
+					@include media-breakpoint-up(lg) {order: 2;}
+
+			}
+
+		}
+		.checkout__content .tab-pane {padding-top: 35px;}
+}
+
+.answers__label {
+	display: inline-block;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	color: $fontColor;
+		height: 67px;
+		width: 270px;
+	text-align: center;
+	position: relative;
+		margin-top: -30px;
+		margin-bottom: 30px;
+		padding: 24px 0;
+}
+
+.answers__leave-review {
+	@include linkLikeBtn(44px, 100%, $red, #FFFFFF, 14px);
+	margin: 0 0 15px auto;
+		@include media-breakpoint-up(xl) {width: 224px;}
+
+}
+
+/* *** */
+
+.answers__list {
+	font-style: normal;
+	font-weight: normal;
+		font-size: 14px;
+	line-height: normal;
+	color: #000000;
+	margin-bottom: 28px;
+}
+
+.answers__item {
+	background: #FFF;
+	margin-bottom: 9px;
+}
+
+.answers__question,
+.answers__answer {
+	@include dFlex(space-between,flex-start,column,nowrap);
+
+	background: #FFFFFF;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+	padding: 25px 25px 16px 27px;
+		@include media-breakpoint-up(x550) {flex-direction: row;}
+
+}
+
+.answers__question {	margin-bottom: 3px;}
+
+.answers__category {
+	// position: absolute;
+	color: $fontColor;
+	margin-bottom: 15px;
+	display: block;
+	width: 100%;
+		@include media-breakpoint-up(x550) {min-width: 80px;max-width: 80px;}
+		@include media-breakpoint-up(xl) {min-width: 100px;max-width: 100px;}
+
+}
+
+.answers__text-wp {	flex-grow: 1;}
+
+.answers__text {
+	margin-top: 0;
+	margin-bottom: auto;
+}
+
+.answers__spoiler {
+	overflow: hidden;
+	transition: all .5s ease-in-out;
+	max-height: 130px;
+}
+
+.answers__show {
+	transition: all 1.5s ease-in-out;
+	max-height: 999px;
+}
+
+.answers__autor {
+	margin: 1em 0 0 0;
+	color: $fontColorLight;
+}
+
+.answers__date {
+	color: $fontColorLight;
+}
+
+.answers__show-more {
+	@include dFlex(space-between,center,row,nowrap);
+	font-family: $textFFamily2;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: normal;
+	color: $fontColorLight;
+	
+	background: none;
+	border: none;
+	padding: 0;
+	margin: auto 0 auto auto;
+	user-select: none;
+}
+
+.filter__icon {
+	width: 7px;
+	height: 7px;
+	border-right: 1px solid $fontColorLight;
+	border-top: 1px solid $fontColorLight;
+	margin-left: 5px;
+	margin-bottom: .2em;
+	display: inline-block;
+}
+
+
+
+//======================= question.html End ==============================
 
 
