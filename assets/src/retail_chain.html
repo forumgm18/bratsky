@@ -3,13 +3,13 @@
 
 <head>
 	@@include('./template/head.html')
-	<link rel="stylesheet" href="css/other/retail_chain-style.min.css">
+	<!-- <link rel="stylesheet" href="css/other/retail_chain-style.min.css"> -->
 </head>
 
 <body>
 	@@include('./template/header.html')
-	<main class="main">
-		<div class="breadcrumb">
+	<main>
+		<section>
 			<div class="container">
 				<div class="row">
 					<nav class="col">
@@ -20,167 +20,178 @@
 					</nav>
 				</div>
 			</div>
-		</div>
-		<header>
-			<h1 class="title title-h1">Розничная сеть</h1>
-		</header>
+		</section>
 		<section class="addresses_shops">
-			<header class="hidden">
-				<h2>Контакты магазинов</h2>
-			</header>
-			<div class="cities">
-				<div class="pagination-section city-section">
-					<div class="page-select city-select">
-						<select class="selectpicker" name="city_select" id="city_select">
-							<option value="city_all">Все магазины</option>
-							<option value="city_1">Город 1</option>
-							<option value="city_2">Город 2</option>
-							<option value="city_3">Город 3</option>
-						</select>
+      <div class="container">
+        <div class="row">
+          <div class="col header-flex">
+						<h1>Розничная сеть</h1>
+					</div>
+				</div>		
+				<div class="row">
+					<div class="col-12 col-lg-5 col-xl-4 cities">
+						<div class="pagination-section city-section">
+							<div class="page-select city-select">
+								<select class="selectpicker" name="city_select" id="city_select">
+									<option value="city_all">Все магазины</option>
+									<option value="city_1">Город 1</option>
+									<option value="city_2">Город 2</option>
+									<option value="city_3">Город 3</option>
+								</select>
+							</div>
+						</div>
+						<ul class="cities__list" id="CITY-SCROLLBAR">
+							<li class="cities__item">
+								<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
+								<div class="cities__content">
+									<a href="#" class="cities__link-wp">
+										<b class="cities__city">г. Ижевск</b>
+										<b class="cities__address">ул. Маяковского, 11</b>
+									</a>
+									<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
+									<p class="cities__tel">тел. +7-965-842-20-03</p>
+									<a href="#" class="cities__more">подробнее о магазине</a>
+								</div>
+							</li>
+							<li class="cities__item">
+								<div class="cities__img-wp"><img src="img/shop_photo_4.png" alt="фото магазина" class="cities__img"></div>
+								<div class="cities__content">
+									<a href="#" class="cities__link-wp">
+										<b class="cities__city">г. Ижевск</b>
+										<b class="cities__address">ул. Маяковского, 11</b>
+									</a>
+									<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
+									<p class="cities__tel">тел. +7-965-842-20-03</p>
+									<a href="#" class="cities__more">подробнее о магазине</a>
+								</div>
+							</li>
+							<li class="cities__item">
+								<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
+								<div class="cities__content">
+									<a href="#" class="cities__link-wp">
+										<b class="cities__city">г. Ижевск</b>
+										<b class="cities__address">ул. Маяковского, 11</b>
+									</a>
+									<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
+									<p class="cities__tel">тел. +7-965-842-20-03</p>
+									<a href="#" class="cities__more">подробнее о магазине</a>
+								</div>
+							</li>
+							<li class="cities__item">
+								<div class="cities__img-wp"><img src="img/shop_photo_4.png" alt="фото магазина" class="cities__img"></div>
+								<div class="cities__content">
+									<a href="#" class="cities__link-wp">
+										<b class="cities__city">г. Ижевск</b>
+										<b class="cities__address">ул. Маяковского, 11</b>
+									</a>
+									<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
+									<p class="cities__tel">тел. +7-965-842-20-03</p>
+									<a href="#" class="cities__more">подробнее о магазине</a>
+								</div>
+							</li>
+							<li class="cities__item">
+								<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
+								<div class="cities__content">
+									<a href="#" class="cities__link-wp">
+										<b class="cities__city">г. Ижевск</b>
+										<b class="cities__address">ул. Маяковского, 11</b>
+									</a>
+									<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
+									<p class="cities__tel">тел. +7-965-842-20-03</p>
+									<a href="#" class="cities__more">подробнее о магазине</a>
+								</div>
+							</li>
+							<li class="cities__item">
+								<div class="cities__img-wp"><img src="img/shop_photo_4.png" alt="фото магазина" class="cities__img"></div>
+								<div class="cities__content">
+									<a href="#" class="cities__link-wp">
+										<b class="cities__city">г. Ижевск</b>
+										<b class="cities__address">ул. Маяковского, 11</b>
+									</a>
+									<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
+									<p class="cities__tel">тел. +7-965-842-20-03</p>
+									<a href="#" class="cities__more">подробнее о магазине</a>
+								</div>
+							</li>
+							<li class="cities__item">
+								<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
+								<div class="cities__content">
+									<a href="#" class="cities__link-wp">
+										<b class="cities__city">г. Ижевск</b>
+										<b class="cities__address">ул. Маяковского, 11</b>
+									</a>
+									<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
+									<p class="cities__tel">тел. +7-965-842-20-03</p>
+									<a href="#" class="cities__more">подробнее о магазине</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--			 <div id="map-canvas"></div>-->
+					<div class="col">	
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.5054147096976!2d53.20760041570537!3d56.83727408085728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e1394971386a17%3A0x43c96dd8e9eba6fd!2z0JHRgNCw0YLRgdC60LjQuQ!5e0!3m2!1sru!2sru!4v1556100333346!5m2!1sru!2sru" allowfullscreen class="map"></iframe>
 					</div>
 				</div>
-				<ul class="cities__list" id="CITY-SCROLLBAR">
-					<li class="cities__item">
-						<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
-						<div class="cities__content">
-							<a href="#" class="cities__link-wp">
-								<b class="cities__city">г. Ижевск</b>
-								<b class="cities__address">ул. Маяковского, 11</b>
-							</a>
-							<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
-							<p class="cities__tel">тел. +7-965-842-20-03</p>
-							<a href="#" class="cities__more">подробнее о магазине</a>
-						</div>
-					</li>
-					<li class="cities__item">
-						<div class="cities__img-wp"><img src="img/shop_photo_4.png" alt="фото магазина" class="cities__img"></div>
-						<div class="cities__content">
-							<a href="#" class="cities__link-wp">
-								<b class="cities__city">г. Ижевск</b>
-								<b class="cities__address">ул. Маяковского, 11</b>
-							</a>
-							<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
-							<p class="cities__tel">тел. +7-965-842-20-03</p>
-							<a href="#" class="cities__more">подробнее о магазине</a>
-						</div>
-					</li>
-					<li class="cities__item">
-						<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
-						<div class="cities__content">
-							<a href="#" class="cities__link-wp">
-								<b class="cities__city">г. Ижевск</b>
-								<b class="cities__address">ул. Маяковского, 11</b>
-							</a>
-							<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
-							<p class="cities__tel">тел. +7-965-842-20-03</p>
-							<a href="#" class="cities__more">подробнее о магазине</a>
-						</div>
-					</li>
-					<li class="cities__item">
-						<div class="cities__img-wp"><img src="img/shop_photo_4.png" alt="фото магазина" class="cities__img"></div>
-						<div class="cities__content">
-							<a href="#" class="cities__link-wp">
-								<b class="cities__city">г. Ижевск</b>
-								<b class="cities__address">ул. Маяковского, 11</b>
-							</a>
-							<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
-							<p class="cities__tel">тел. +7-965-842-20-03</p>
-							<a href="#" class="cities__more">подробнее о магазине</a>
-						</div>
-					</li>
-					<li class="cities__item">
-						<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
-						<div class="cities__content">
-							<a href="#" class="cities__link-wp">
-								<b class="cities__city">г. Ижевск</b>
-								<b class="cities__address">ул. Маяковского, 11</b>
-							</a>
-							<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
-							<p class="cities__tel">тел. +7-965-842-20-03</p>
-							<a href="#" class="cities__more">подробнее о магазине</a>
-						</div>
-					</li>
-					<li class="cities__item">
-						<div class="cities__img-wp"><img src="img/shop_photo_4.png" alt="фото магазина" class="cities__img"></div>
-						<div class="cities__content">
-							<a href="#" class="cities__link-wp">
-								<b class="cities__city">г. Ижевск</b>
-								<b class="cities__address">ул. Маяковского, 11</b>
-							</a>
-							<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
-							<p class="cities__tel">тел. +7-965-842-20-03</p>
-							<a href="#" class="cities__more">подробнее о магазине</a>
-						</div>
-					</li>
-					<li class="cities__item">
-						<div class="cities__img-wp"><img src="img/shop_photo_3.png" alt="фото магазина" class="cities__img"></div>
-						<div class="cities__content">
-							<a href="#" class="cities__link-wp">
-								<b class="cities__city">г. Ижевск</b>
-								<b class="cities__address">ул. Маяковского, 11</b>
-							</a>
-							<p class="cities__opn-hours">пн-вс с 10:00 до 21:00</p>
-							<p class="cities__tel">тел. +7-965-842-20-03</p>
-							<a href="#" class="cities__more">подробнее о магазине</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<!--			 <div id="map-canvas"></div>-->
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.5054147096976!2d53.20760041570537!3d56.83727408085728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e1394971386a17%3A0x43c96dd8e9eba6fd!2z0JHRgNCw0YLRgdC60LjQuQ!5e0!3m2!1sru!2sru!4v1556100333346!5m2!1sru!2sru" allowfullscreen class="map"></iframe>
+			</div>	
 		</section>
-		<section class="sale">
-			<header class="sale__header">
-				<h2 class="title">Акции магазинов</h2>
-				<a href="#" class="sale__all-promotions">Акции всех магазинов</a>
-				<div class="slider-arrows">
-					<button class="prev-slider"><span></span></button>
-					<p>4 из 12</p>
-					<button class="next-slider"><span></span></button>
+		<section class="retail__network__content">
+      <div class="container">
+        <div class="row">
+					<div class="col">
+					<header class="sale__header">
+						<h2 class="title">Акции магазинов</h2>
+						<a href="#" class="sale__all-promotions">Акции всех магазинов</a>
+						<div class="slider-arrows">
+							<button class="prev-slider"><span></span></button>
+							<p>4 из 12</p>
+							<button class="next-slider"><span></span></button>
+						</div>
+					</header>
+					<ul class="sale__list">
+						<li class="sale__item">
+							<a href="#" class="sale__link-wp">
+								<img src="img/shop_photo_1.png" alt="Акция" class="sale__img">
+								<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
+								<span class="sale__address">ул. карла либкхнехта, 6</span>
+								<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
+							</a>
+						</li>
+						<li class="sale__item">
+							<a href="#" class="sale__link-wp">
+								<img src="img/shop_photo_2.png" alt="Акция" class="sale__img">
+								<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
+								<span class="sale__address">ул. карла либкхнехта, 6</span>
+								<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
+							</a>
+						</li>
+						<li class="sale__item">
+							<a href="#" class="sale__link-wp">
+								<img src="img/shop_photo_1.png" alt="Акция" class="sale__img">
+								<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
+								<span class="sale__address">ул. карла либкхнехта, 6</span>
+								<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
+							</a>
+						</li>
+						<li class="sale__item">
+							<a href="#" class="sale__link-wp">
+								<img src="img/shop_photo_2.png" alt="Акция" class="sale__img">
+								<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
+								<span class="sale__address">ул. карла либкхнехта, 6</span>
+								<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
+							</a>
+						</li>
+						<li class="sale__item">
+							<a href="#" class="sale__link-wp">
+								<img src="img/shop_photo_1.png" alt="Акция" class="sale__img">
+								<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
+								<span class="sale__address">ул. карла либкхнехта, 6</span>
+								<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
+							</a>
+						</li>
+					</ul>
 				</div>
-			</header>
-			<ul class="sale__list">
-				<li class="sale__item">
-					<a href="#" class="sale__link-wp">
-						<img src="img/shop_photo_1.png" alt="Акция" class="sale__img">
-						<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
-						<span class="sale__address">ул. карла либкхнехта, 6</span>
-						<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
-					</a>
-				</li>
-				<li class="sale__item">
-					<a href="#" class="sale__link-wp">
-						<img src="img/shop_photo_2.png" alt="Акция" class="sale__img">
-						<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
-						<span class="sale__address">ул. карла либкхнехта, 6</span>
-						<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
-					</a>
-				</li>
-				<li class="sale__item">
-					<a href="#" class="sale__link-wp">
-						<img src="img/shop_photo_1.png" alt="Акция" class="sale__img">
-						<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
-						<span class="sale__address">ул. карла либкхнехта, 6</span>
-						<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
-					</a>
-				</li>
-				<li class="sale__item">
-					<a href="#" class="sale__link-wp">
-						<img src="img/shop_photo_2.png" alt="Акция" class="sale__img">
-						<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
-						<span class="sale__address">ул. карла либкхнехта, 6</span>
-						<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
-					</a>
-				</li>
-				<li class="sale__item">
-					<a href="#" class="sale__link-wp">
-						<img src="img/shop_photo_1.png" alt="Акция" class="sale__img">
-						<h3 class="sale__title">Купи аккумулятор и получи расширенную гарантию</h3>
-						<span class="sale__address">ул. карла либкхнехта, 6</span>
-						<p class="sale__text">Представитель Министерства промышленности и торговли РФ сообщает, что в скором времени возможно стоит ждать повышения</p>
-					</a>
-				</li>
-			</ul>
+			</div>
+		</div>	
 		</section>
 	</main>
 	@@include('./template/footer-block.html')

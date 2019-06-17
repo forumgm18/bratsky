@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
 <link rel="stylesheet" href="css/main.min.css">
 
-  <link rel="stylesheet" href="css/other/recent_event-style.min.css">
+  <!-- <link rel="stylesheet" href="css/other/recent_event-style.min.css"> -->
 </head>
 
 <body>
@@ -2412,8 +2412,8 @@
 		</nav>
 	</section>
 </header>
-  <main class="main">
-    <div class="breadcrumb">
+  <main>
+    <section>
       <div class="container">
         <div class="row">
           <nav class="col">
@@ -2425,58 +2425,49 @@
           </nav>
         </div>
       </div>
-    </div>
-    <header class="hidden main-header">
-      <h1 class="title-h1 title">Последние события</h1>
-    </header>
-    <div class="header-wp">
-      <h1 class="title-h1 title header-wp__h1">Последние события</h1>
-      <header class="recent-event__header">
-        <ul id="tabs-events" class="nav nav-tabs" role="tablist">
-          <li class="nav-item"><a id="tab-all-event" href="#all-event" class="nav-link active" data-toggle="tab" role="tab">Все</a></li>
-          <li class="nav-item"><a id="tab-news-event" href="#news-event" class="nav-link" data-toggle="tab" role="tab">Новости</a></li>
-          <li class="nav-item"><a id="tab-art-event" href="#art-event" class="nav-link" data-toggle="tab" role="tab">Статьи</a></li>
-          <li class="nav-item"><a id="tab-press-event" href="#press-event" class="nav-link" data-toggle="tab" role="tab">Пресс-релизы</a></li>
-          <li class="nav-item"><a id="tab-video-event" href="#video-event" class="nav-link" data-toggle="tab" role="tab">Видео</a></li>
-          <li class="nav-item"><a id="tab-action-event" href="#action-event" class="nav-link" data-toggle="tab" role="tab">Акции</a></li>
-        </ul>
-      </header>
-    </div>
-    <nav class="client-menu">
-      <ul class="client-menu__list">
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Для клиента</a></li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">О компании</a></li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Сертификаты</a></li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Услуги</a></li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Отзывы</a></li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Доставка и оплата</a></li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Вопрос-ответ</a></li>
-        <li class="client-menu__item active">Последние события</li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Бонусная система</a></li>
-        <li class="client-menu__item"><a href="#" class="client-menu__link">Как заказать товар</a></li>
-      </ul>
-    </nav>
+    </section>
+    <section class="main-events recent-event">
+      <div class="container">
+        <div class="row">
+          <div class="col header-flex">
+            <h1>Последние события</h1>
+            <ul id="tabs-events" class="nav nav-tabs" role="tablist">
+              <li class="nav-item"><a id="tab-all-event" href="#all-event"  class="nav-link active" data-toggle="tab" role="tab">Все</a></li>
+              <li class="nav-item"><a id="tab-news-event" href="#news-event"  class="nav-link" data-toggle="tab" role="tab">Новости</a></li>
+              <li class="nav-item"><a id="tab-art-event" href="#art-event"  class="nav-link" data-toggle="tab" role="tab">Статьи</a></li>
+              <li class="nav-item"><a id="tab-press-event" href="#press-event"  class="nav-link" data-toggle="tab" role="tab">Пресс-релизы</a></li>
+              <li class="nav-item"><a id="tab-video-event" href="#video-event"  class="nav-link" data-toggle="tab" role="tab">Видео</a></li>
+              <li class="nav-item"><a id="tab-action-event" href="#action-event"  class="nav-link" data-toggle="tab" role="tab">Акции</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-3 col-lg-2 col-xl-3"> 
+            <nav class="client-menu">
+              <ul class="client-menu__list">
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Для клиента</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">О компании</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Сертификаты</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Услуги</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Отзывы</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Доставка и оплата</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Вопрос-ответ</a></li>
+                <li class="client-menu__item active"><a href="#" class="client-menu__link">Последние события</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Бонусная система</a></li>
+                <li class="client-menu__item"><a href="#" class="client-menu__link">Как заказать товар</a></li>
+              </ul>
+            </nav>
+          </div>
 
-    <section class="recent-event">
-      <h2 class="hidden">Список последних событий</h2>
-      <section class="main-events">
-        <!--
-        <div class="container">
-          <div class="row">
-            <div class="row">
-              <div class="col">
--->
-        <div id="events" class="tab-content" role="tablist">
-          <div id="all-event" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-all-event">
-            <div class="card-header" role="tab" id="heading-all-event">
-              <a data-toggle="collapse" href="#collapse-all-event" aria-expanded="true" aria-controls="collapse-all-event">Все товары</a>
-            </div>
-            <div id="collapse-all-event" class="collapse show" data-parent="#events" role="tabpanel" aria-labelledby="heading-all-event">
-              <div class="card-body">
-
-                <!--								 	Тоже самое, но тут текста меньше
-                                       ...2019 года повышение акциза на бензин. -->
-								 	<div class="main-event-card">
+          <div class="col">
+            <div id="events" class="tab-content" role="tablist">
+              <div id="all-event" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-all-event">
+                <div class="card-header" role="tab" id="heading-all-event">
+                  <a data-toggle="collapse" href="#collapse-all-event" aria-expanded="true" aria-controls="collapse-all-event">Все</a>
+                </div>
+                <div id="collapse-all-event" class="collapse show" data-parent="#events" role="tabpanel" aria-labelledby="heading-all-event">
+                  <div class="card-body">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2501,7 +2492,7 @@
 								 			<a href="#"><h5>Новости</h5></a>
 								 			<div class="event-date">07.08.2018</div>
 								 			<a class="event-h" href="#">Счетная палата РФ обещает резкий рост цен на бензин в 2019 году.</a>
-								 			<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин.</a>
+								 			<a class="event-description" href="#">Запланированное на 1 января 2019 года повышение акциза на бензин может спровоцировать.</a>
 								 		</div>
 								 	</div>
 								 	<div class="main-event-card">
@@ -2535,17 +2526,17 @@
 								 	
 								 	<div class="w-100 bbgray"></div>		
 
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div id="news-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-news-event">
-            <div class="card-header" role="tab" id="heading-news-event">
-              <a class="collapsed" data-toggle="collapse" href="#collapse-news-event" aria-expanded="false" aria-controls="collapse-news-event">Аккумуляторы</a>
-            </div>
-            <div id="collapse-news-event" class="collapse" data-parent="#events" role="tabpanel" aria-labelledby="heading-news-event">
-              <div class="card-body">
-                								 	<div class="main-event-card">
+              <div id="news-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-news-event">
+                <div class="card-header" role="tab" id="heading-news-event">
+                  <a class="collapsed" data-toggle="collapse" href="#collapse-news-event" aria-expanded="false" aria-controls="collapse-news-event">Новости</a>
+                </div>
+                <div id="collapse-news-event" class="collapse" data-parent="#events" role="tabpanel" aria-labelledby="heading-news-event">
+                  <div class="card-body">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2565,7 +2556,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2585,7 +2576,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Новости</h5></a>
@@ -2605,17 +2596,17 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div id="art-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-art-event">
-            <div class="card-header" role="tab" id="heading-art-event">
-              <a class="collapsed" data-toggle="collapse" href="#collapse-art-event" aria-expanded="false" aria-controls="collapse-art-event">Автомасла и автохимия</a>
-            </div>
-            <div id="collapse-art-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-art-event">
-              <div class="card-body">
-                								 	<div class="main-event-card">
+              <div id="art-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-art-event">
+                <div class="card-header" role="tab" id="heading-art-event">
+                  <a class="collapsed" data-toggle="collapse" href="#collapse-art-event" aria-expanded="false" aria-controls="collapse-art-event">Статьи</a>
+                </div>
+                <div id="collapse-art-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-art-event">
+                  <div class="card-body">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Статьи</h5></a>
@@ -2635,7 +2626,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Статьи</h5></a>
@@ -2655,7 +2646,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Статьи</h5></a>
@@ -2675,16 +2666,16 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="press-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-press-event">
-            <div class="card-header" role="tab" id="heading-press-event">
-              <a class="collapsed" data-toggle="collapse" href="#collapse-press-event" aria-expanded="false" aria-controls="collapse-press-event">Аксессуары</a>
-            </div>
-            <div id="collapse-press-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-press-event">
-              <div class="card-body">
-                								 	<div class="main-event-card">
+              <div id="press-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-press-event">
+                <div class="card-header" role="tab" id="heading-press-event">
+                  <a class="collapsed" data-toggle="collapse" href="#collapse-press-event" aria-expanded="false" aria-controls="collapse-press-event">Пресс-релизы</a>
+                </div>
+                <div id="collapse-press-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-press-event">
+                  <div class="card-body">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Пресс-релиз</h5></a>
@@ -2704,7 +2695,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Пресс-релиз</h5></a>
@@ -2724,7 +2715,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/news1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Пресс-релиз</h5></a>
@@ -2744,16 +2735,16 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="video-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-video-event">
-            <div class="card-header" role="tab" id="heading-video-event">
-              <a class="collapsed" data-toggle="collapse" href="#collapse-video-event" aria-expanded="false" aria-controls="collapse-video-event">Аксессуары</a>
-            </div>
-            <div id="collapse-video-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-video-event">
-              <div class="card-body">
-                								 	<div class="main-event-card">
+              <div id="video-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-video-event">
+                <div class="card-header" role="tab" id="heading-video-event">
+                  <a class="collapsed" data-toggle="collapse" href="#collapse-video-event" aria-expanded="false" aria-controls="collapse-video-event">Видео</a>
+                </div>
+                <div id="collapse-video-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-video-event">
+                  <div class="card-body">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Видео</h5></a>
@@ -2773,7 +2764,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Видео</h5></a>
@@ -2793,7 +2784,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/video1-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Видео</h5></a>
@@ -2813,16 +2804,16 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="action-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-action-event">
-            <div class="card-header" role="tab" id="heading-action-event">
-              <a class="collapsed" data-toggle="collapse" href="#collapse-action-event" aria-expanded="false" aria-controls="collapse-action-event">Аксессуары</a>
-            </div>
-            <div id="collapse-action-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-action-event">
-              <div class="card-body">
-                								 	<div class="main-event-card">
+              <div id="action-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-action-event">
+                <div class="card-header" role="tab" id="heading-action-event">
+                  <a class="collapsed" data-toggle="collapse" href="#collapse-action-event" aria-expanded="false" aria-controls="collapse-action-event">Акции</a>
+                </div>
+                <div id="collapse-action-event" class="collapse" role="tabpanel" data-parent="#events" aria-labelledby="heading-action-event">
+                  <div class="card-body">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Акция</h5></a>
@@ -2842,7 +2833,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Акция</h5></a>
@@ -2862,7 +2853,7 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
-                								 	<div class="main-event-card">
+                    								 	<div class="main-event-card">
 								 		<a class="img-link" href="#"><img src="img/varta-evnt.png" alt=""></a>
 								 		<div class="content">
 								 			<a href="#"><h5>Акция</h5></a>
@@ -2882,20 +2873,14 @@
 								 	</div>
 								 	<div class="w-100 bbgray"></div>		
 
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!--
-              </div>
-            </div>
-          </div>
-        </div>
--->
-      </section>
-
-
-      <div class="pagination-section">
+        </div>  
+    <div class="row">
+      <div class="col pagination-section">
         <div class="zaglushka"></div>
         <ul class="pagination">
           <li class="page-item"><a class="page-link prev" href="#"></a></li>
@@ -2915,7 +2900,11 @@
           </select>
         </div>
       </div>
+    </div>  
+
+      </div>
     </section>
+    
   </main>
   <footer>
 		<div class="container">

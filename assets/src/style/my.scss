@@ -926,6 +926,8 @@ button:hover, button:focus {
 			@include dFlex(space-between,flex-start,row,wrap);	
 			background: $sectBgrGray1;
 		}	
+
+		.active .collapse {display: block;}
 }	
 .bbgray {border-bottom: 1px solid $borderGray;}
 .rec-description a {text-decoration: none;}
