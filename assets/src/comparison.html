@@ -3,13 +3,12 @@
 
 <head>
   @@include('./template/head.html')
-  <link rel="stylesheet" href="css/other/comparison-style.min.css">
 </head>
 
 <body>
   @@include('./template/header.html')
-  <main class="main">
-    <div class="breadcrumb wp-block">
+  <main class="comparison">
+    <div class="breadcrumb">
       <div class="container">
         <div class="row">
           <nav class="col">
@@ -21,149 +20,174 @@
         </div>
       </div>
     </div>
-    <header class="wp-block">
-      <h1 class="title-h1 title">Сравнение товара</h1>
-    </header>
-    <ul class="comparison__category-list wp-block">
-      <li>
-        <label class="comparison__category active">Аккумуялторы (2)
-          <input type="radio" name="category_product" checked>
-        </label>
-      </li>
-      <li>
-        <label class="comparison__category">Электроника (4)
-          <input type="radio" name="category_product">
-        </label>
-      </li>
-    </ul>
-    <div class="comparison__fixed wp-block">
+    <section class="headline">
+      <div class="container">
+        <div class="row">
+          <div class="col header-flex">
+            <h1>Сравнение товара</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <ul class="comparison__category-list">
+              <li>
+                <label class="comparison__category active">Аккумуялторы (2)
+                  <input class="hidden" type="radio" name="category_product" checked>
+                </label>
+              </li>
+              <li>
+                <label class="comparison__category">Электроника (4)
+                  <input class="hidden" type="radio" name="category_product">
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container comparison__fixed">
       <div class="comparison__fixed-content">
-        <div class="comparison__list-functions">
-          <form action="/" method="get" class="different-form">
-            <label class="different-form__switch">
-              <input type="checkbox" class="different-form__input" id="DIFFERENT-PRODUCTS">
-              <span></span>
-            </label>
-            <p class="different-form__text">Только различающиеся параметры</p>
-          </form>
-          <button class="comparison__clean-list">Очистить список</button>
+        <div class="row comparison__list-functions">
+          <div class="col-12 col-md-6">
+            <form class="different-form" action="/" method="get">
+              <label class="different-form__switch">
+                <input type="checkbox" class="different-form__input" id="DIFFERENT-PRODUCTS">
+                <span></span>
+              </label>
+              <p class="different-form__text">Только различающиеся параметры</p>
+            </form>
+          </div>
+          <div class="col-12 col-md-6">
+            <button class="comparison__clean-list">Очистить список</button>
+          </div>
         </div>
-        <div class="comparison__list">
-          @@include('./template/catalog-product-card-akk-del-btn.html')
-          @@include('./template/catalog-product-card-akk-del-btn.html')
-          @@include('./template/catalog-product-card-akk-del-btn.html')
-          @@include('./template/catalog-product-card-akk-del-btn.html')
-          @@include('./template/catalog-product-card-akk-del-btn.html')
-          @@include('./template/catalog-product-card-akk-del-btn.html')
-          @@include('./template/catalog-product-card-akk-del-btn.html')
+        <div class="row">
+          <div class="col">
+            <div class="comparison__list">
+              @@include('./template/catalog-product-card-akk-del-btn.html')
+              @@include('./template/catalog-product-card-akk-del-btn.html')
+              @@include('./template/catalog-product-card-akk-del-btn.html')
+              @@include('./template/catalog-product-card-akk-del-btn.html')
+              @@include('./template/catalog-product-card-akk-del-btn.html')
+              @@include('./template/catalog-product-card-akk-del-btn.html')
+              @@include('./template/catalog-product-card-akk-del-btn.html')
+            </div>
+          </div>
         </div>
-        <div class="slider-arrows">
-          <button class="prev-comparison"><span></span></button>
-          <p>4 из 12</p>
-          <button class="next-comparison"><span></span></button>
+        <div class="row">
+          <div class="col">
+            <div class="slider-arrows">
+              <button class="prev-comparison"><span></span></button>
+              <p>4 из 12</p>
+              <button class="next-comparison"><span></span></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="comparison__empty-block wp-block"></div>
-    <div class="wp-block">
-      <table class="comparison__table">
-        <tr class="table__spoiler-check">
-          <th colspan="5">Общие параметры</th>
-        </tr>
-        <tbody class="table__spoiler-body">
-          <tr class="table__grey">
-            <td colspan="5">Параметр</td>
-          </tr>
-          <tr>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-          </tr>
-        </tbody>
-        <tr class="table__spoiler-check">
-          <th colspan="5">Конструкция</th>
-        </tr>
-        <tbody class="table__spoiler-body">
-          <tr class="table__grey">
-            <td colspan="5">Полярность</td>
-          </tr>
-          <tr>
-            <td>прямая [+...-]</td>
-            <td>прямая [+...-]</td>
-            <td>прямая [+...-]</td>
-            <td>прямая [+...-]</td>
-            <td>прямая [+...-]</td>
-          </tr>
-          <tr class="table__grey">
-            <td colspan="5">Тип корпуса</td>
-          </tr>
-          <tr>
-            <td>европейский</td>
-            <td>европейский</td>
-            <td>европейский</td>
-            <td>европейский</td>
-            <td>европейский</td>
-          </tr>
-          <tr class="table__grey">
-            <td colspan="5">Типоразмер клемм</td>
-          </tr>
-          <tr>
-            <td>T1</td>
-            <td>T1</td>
-            <td>T1</td>
-            <td>T1</td>
-            <td>T1</td>
-          </tr>
-          <tr class="table__grey">
-            <td colspan="5">Буртик</td>
-          </tr>
-          <tr>
-            <td>нет</td>
-            <td>нет</td>
-            <td>нет</td>
-            <td>нет</td>
-            <td>нет</td>
-          </tr>
-        </tbody>
-        <tr class="table__spoiler-check">
-          <th colspan="5">Электрические характеристики</th>
-        </tr>
-        <tbody class="table__spoiler-body">
-          <tr class="table__grey">
-            <td colspan="5">Параметр</td>
-          </tr>
-          <tr>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-          </tr>
-        </tbody>
-        <tr class="table__spoiler-check">
-          <th colspan="5">Габариты, вес</th>
-        </tr>
-        <tbody class="table__spoiler-body">
-          <tr class="table__grey">
-            <td colspan="5">Параметр</td>
-          </tr>
-          <tr>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-            <td>текст</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="comparison__empty-block"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <table class="comparison__table">
+            <tr class="table__spoiler-check">
+              <th colspan="5">Общие параметры</th>
+            </tr>
+            <tbody class="table__spoiler-body">
+              <tr class="table__grey">
+                <td colspan="5">Параметр</td>
+              </tr>
+              <tr>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+              </tr>
+            </tbody>
+            <tr class="table__spoiler-check">
+              <th colspan="5">Конструкция</th>
+            </tr>
+            <tbody class="table__spoiler-body">
+              <tr class="table__grey">
+                <td colspan="5">Полярность</td>
+              </tr>
+              <tr>
+                <td>прямая [+...-]</td>
+                <td>прямая [+...-]</td>
+                <td>прямая [+...-]</td>
+                <td>прямая [+...-]</td>
+                <td>прямая [+...-]</td>
+              </tr>
+              <tr class="table__grey">
+                <td colspan="5">Тип корпуса</td>
+              </tr>
+              <tr>
+                <td>европейский</td>
+                <td>европейский</td>
+                <td>европейский</td>
+                <td>европейский</td>
+                <td>европейский</td>
+              </tr>
+              <tr class="table__grey">
+                <td colspan="5">Типоразмер клемм</td>
+              </tr>
+              <tr>
+                <td>T1</td>
+                <td>T1</td>
+                <td>T1</td>
+                <td>T1</td>
+                <td>T1</td>
+              </tr>
+              <tr class="table__grey">
+                <td colspan="5">Буртик</td>
+              </tr>
+              <tr>
+                <td>нет</td>
+                <td>нет</td>
+                <td>нет</td>
+                <td>нет</td>
+                <td>нет</td>
+              </tr>
+            </tbody>
+            <tr class="table__spoiler-check">
+              <th colspan="5">Электрические характеристики</th>
+            </tr>
+            <tbody class="table__spoiler-body">
+              <tr class="table__grey">
+                <td colspan="5">Параметр</td>
+              </tr>
+              <tr>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+              </tr>
+            </tbody>
+            <tr class="table__spoiler-check">
+              <th colspan="5">Габариты, вес</th>
+            </tr>
+            <tbody class="table__spoiler-body">
+              <tr class="table__grey">
+                <td colspan="5">Параметр</td>
+              </tr>
+              <tr>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+                <td>текст</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </main>
   @@include('./template/footer-block.html')
   @@include('./template/modal.html')
   @@include('./template/footer-scripts.html')
-  <!--  <script src="js/slick.min.js"></script>-->
   <script src="js/other/comparison-script.js"></script>
 </body>
 

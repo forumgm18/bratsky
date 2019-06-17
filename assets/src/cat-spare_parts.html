@@ -3,12 +3,11 @@
 
 <head>
   @@include('./template/head.html')
-  <link rel="stylesheet" href="css/other/cat-spare_parts-style.min.css">
 </head>
 
 <body>
   @@include('./template/header.html')
-  <main class="main">
+  <main class="cat-spare_parts">
     <div class="breadcrumb">
       <div class="container">
         <div class="row">
@@ -26,658 +25,677 @@
         </div>
       </div>
     </div>
-    <header class="main__header">
-      <h1 class="title-h1 title">Каталог оригинальных запчастей</h1>
-      <div class="titles-wp">
-        <div class="titles">
-          <h2 class="titles__h2 title">Модификации Nissan Almera</h2>
-          <h3 class="title-h3 title">Скрытый заголовок</h3>
-          <p class="titles__text">Выберите нужный вариант автомобиля</p>
+    <section class="headline">
+      <div class="container">
+        <div class="row">
+          <div class="col header-flex">
+            <h1>Каталог оригинальных запчастей</h1>
+          </div>
         </div>
-        <a href="#" class="titles__other-cars">Выбрать другое авто</a>
+        <div class="titles-wp">
+          <div class="titles">
+            <h2 class="titles__h2 title">Модификации Nissan Almera</h2>
+            <h3 class="title-h3 title">Скрытый заголовок</h3>
+            <p class="titles__text">Выберите нужный вариант автомобиля</p>
+          </div>
+          <a href="#" class="titles__other-cars">Выбрать другое авто</a>
+        </div>
       </div>
-    </header>
+    </section>
     <section class="modification">
-      <h2 class="hidden">Таблица модицикаций запчастей</h2>
-      <div class="modification__table-wp">
-        <table class="modification__table">
-          <thead>
-            <tr>
-              <th>Двигатель</th>
-              <th>Комплектация</th>
-              <th>Код модели</th>
-              <th>Наименование</th>
-              <th>Опции</th>
-              <th>Трансмиссия</th>
-              <th>Идентификатор</th>
-            </tr>
-          </thead>
-          <tr>
-            <td colspan="7" class="modification__hidden">Таблица модификаций</td>
-          </tr>
-          <tbody>
-            <tr class="modification__link">
-              <td data-label="Двигатель">CD20</td>
-              <td data-label="Комплектация">GX</td>
-              <td data-label="Код модели">N15</td>
-              <td data-label="Наименование">ALMERA</td>
-              <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
-              <td data-label="Трансмиссия">MT</td>
-              <td data-label="Идентификатор">189793</td>
-            </tr>
-            <tr class="modification__link">
-              <td data-label="Двигатель">CD20</td>
-              <td data-label="Комплектация">SLX</td>
-              <td data-label="Код модели">N15</td>
-              <td data-label="Наименование">ALMERA</td>
-              <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
-              <td data-label="Трансмиссия">MT</td>
-              <td data-label="Идентификатор">189796</td>
-            </tr>
-            <tr class="modification__link">
-              <td data-label="Двигатель">CD20</td>
-              <td data-label="Комплектация">LX</td>
-              <td data-label="Код модели">N15</td>
-              <td data-label="Наименование">ALMERA</td>
-              <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
-              <td data-label="Трансмиссия">MT</td>
-              <td data-label="Идентификатор">190090</td>
-            </tr>
-            <tr class="modification__link">
-              <td data-label="Двигатель">CD20</td>
-              <td data-label="Комплектация">GX</td>
-              <td data-label="Код модели">N15</td>
-              <td data-label="Наименование">ALMERA</td>
-              <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
-              <td data-label="Трансмиссия">MT</td>
-              <td data-label="Идентификатор">190094</td>
-            </tr>
-            <tr class="modification__link">
-              <td data-label="Двигатель">CD20</td>
-              <td data-label="Комплектация">SLX</td>
-              <td data-label="Код модели">N15</td>
-              <td data-label="Наименование">ALMERA</td>
-              <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
-              <td data-label="Трансмиссия">MT</td>
-              <td data-label="Идентификатор">189796</td>
-            </tr>
-            <tr class="modification__link">
-              <td data-label="Двигатель">CD20</td>
-              <td data-label="Комплектация">LX</td>
-              <td data-label="Код модели">N15</td>
-              <td data-label="Наименование">ALMERA</td>
-              <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
-              <td data-label="Трансмиссия">MT</td>
-              <td data-label="Идентификатор">190090</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="pagination-section">
-        <div class="zaglushka"></div>
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link prev" href="#"></a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link next" href="#"></a></li>
-          <li class="page-item"><a class="page-link" href="#">50</a></li>
-        </ul>
-        <div class="page-select">
-          <span>товаров на странице</span>
-          <select class="selectpicker" name="page_num" id="page_num">
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-          </select>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="hidden">Таблица модицикаций запчастей</h2>
+            <div class="modification__table-wp">
+              <table class="modification__table">
+                <thead>
+                  <tr>
+                    <th>Двигатель</th>
+                    <th>Комплектация</th>
+                    <th>Код модели</th>
+                    <th>Наименование</th>
+                    <th>Опции</th>
+                    <th>Трансмиссия</th>
+                    <th>Идентификатор</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td colspan="7" class="modification__hidden">Таблица модификаций</td>
+                </tr>
+                <tbody>
+                  <tr class="modification__link">
+                    <td data-label="Двигатель">CD20</td>
+                    <td data-label="Комплектация">GX</td>
+                    <td data-label="Код модели">N15</td>
+                    <td data-label="Наименование">ALMERA</td>
+                    <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
+                    <td data-label="Трансмиссия">MT</td>
+                    <td data-label="Идентификатор">189793</td>
+                  </tr>
+                  <tr class="modification__link">
+                    <td data-label="Двигатель">CD20</td>
+                    <td data-label="Комплектация">SLX</td>
+                    <td data-label="Код модели">N15</td>
+                    <td data-label="Наименование">ALMERA</td>
+                    <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
+                    <td data-label="Трансмиссия">MT</td>
+                    <td data-label="Идентификатор">189796</td>
+                  </tr>
+                  <tr class="modification__link">
+                    <td data-label="Двигатель">CD20</td>
+                    <td data-label="Комплектация">LX</td>
+                    <td data-label="Код модели">N15</td>
+                    <td data-label="Наименование">ALMERA</td>
+                    <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
+                    <td data-label="Трансмиссия">MT</td>
+                    <td data-label="Идентификатор">190090</td>
+                  </tr>
+                  <tr class="modification__link">
+                    <td data-label="Двигатель">CD20</td>
+                    <td data-label="Комплектация">GX</td>
+                    <td data-label="Код модели">N15</td>
+                    <td data-label="Наименование">ALMERA</td>
+                    <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
+                    <td data-label="Трансмиссия">MT</td>
+                    <td data-label="Идентификатор">190094</td>
+                  </tr>
+                  <tr class="modification__link">
+                    <td data-label="Двигатель">CD20</td>
+                    <td data-label="Комплектация">SLX</td>
+                    <td data-label="Код модели">N15</td>
+                    <td data-label="Наименование">ALMERA</td>
+                    <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
+                    <td data-label="Трансмиссия">MT</td>
+                    <td data-label="Идентификатор">189796</td>
+                  </tr>
+                  <tr class="modification__link">
+                    <td data-label="Двигатель">CD20</td>
+                    <td data-label="Комплектация">LX</td>
+                    <td data-label="Код модели">N15</td>
+                    <td data-label="Наименование">ALMERA</td>
+                    <td data-label="Опции">Регион/Привод:EUROPE C GROUP 2WD</td>
+                    <td data-label="Трансмиссия">MT</td>
+                    <td data-label="Идентификатор">190090</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-section">
+              <div class="zaglushka"></div>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link prev" href="#"></a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link next" href="#"></a></li>
+                <li class="page-item"><a class="page-link" href="#">50</a></li>
+              </ul>
+              <div class="page-select">
+                <span>товаров на странице</span>
+                <select class="selectpicker" name="page_num" id="page_num">
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="classifier-section">
-      <div>
-        <div class="filter-container filter-classifier">
-          <div class="filter-top-groupe">
-            <button class="black-btn" type="button" data-toggle="collapse" data-target="#classifierFilter">Классификатор</button>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-3">
+            <div class="filter-container filter-classifier">
+              <div class="filter-top-groupe">
+                <button class="black-btn" type="button" data-toggle="collapse" data-target="#classifierFilter">Классификатор</button>
+              </div>
+              <div class="filter-top-groupe2">
+                <h4>Классификатор</h4>
+                <button class="rc-btn " type="button" data-toggle="collapse" data-target="#classifierFilter"></button>
+              </div>
+              <form class="filter-form collapse show" id="classifierFilter">
+                <div class="filter-search">
+                  <input type="text" class="form-control" placeholder="Поиск">
+                  <a href="#" class="filter-search-btn"></a>
+                </div>
+                <div class="card-body top" id="CLASSIFIER-INPUTS-FILTER">
+                  <label class="radio"><input type="radio" name="class" value="general"><span class="radio-text">Общий</span></label>
+                  <label class="radio"><input type="radio" name="class" value="producer" checked><span class="radio-text">От производителя</span></label>
+                </div>
+                <div class="filter-block filter-producer">
+                  <div class="card-body top">
+                    <label class="radio"><input type="radio" name="ff" value="ff" checked><span class="radio-text">Двигатель</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Топливная система</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Выхлопная система и охлаждение</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Электрика двигателя</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Электрика кузова</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Трансмиссия</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Ходовая часть</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Тормозная система</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Рулевое управление</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Кузов (перед,крыша и пол)</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Кузов (боковая и задняя часть)</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Сиденья</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Кузов (задняя дверь)</span></label>
+                    <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Прочее</span></label>
+                  </div>
+                </div>
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#bodywork-type-item">Кузов</button>
+                  <div id="bodywork-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">Общая схема кузовные детали</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">Автомобиль, передняя часть</summary>
+                      <ul>
+                        <li class="filter-general__subtext">Крыло, навесные части</li>
+                        <li class="filter-general__subtext">Топливный бак, комплектующие</li>
+                        <li class="filter-general__subtext">Капот двигателя, составляющие, изоляция</li>
+                        <li class="filter-general__subtext">Кожух двигателя</li>
+                        <li class="filter-general__subtext">Переднее стекло</li>
+                      </ul>
+                    </details>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">Кабина пассажира</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">Автомобиль, задняя часть</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">Детали кузова, крыло, бампер</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">Крышки, капоты, двери, сдвижная крыша, складная крыша</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">Облицовка, защита, оформление, эмблемы, защита распыл</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#engine-type-item">Двигатель</button>
+                  <div id="engine-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#filter-type-item">Фильтр</button>
+                  <div id="filter-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#belt-drive-type-item">Ременный привод</button>
+                  <div id="belt-drive-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#fuel-system-type-item">Система подачи топлива</button>
+                  <div id="fuel-system-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#fuel-mixture-type-item">Подготовка топливной смеси</button>
+                  <div id="fuel-mixture-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#exhaust-system-type-item">Система выпуска</button>
+                  <div id="exhaust-system-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#cooling-system-type-item">Система охлаждения</button>
+                  <div id="cooling-system-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#clutch-system-type-item">Система сцепления, навесные части</button>
+                  <div id="clutch-system-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#transmission-type-item">Коробка передач</button>
+                  <div id="transmission-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#wheel-drive-type-item">Привод колеса</button>
+                  <div id="wheel-drive-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#main-transmission-type-item">Главная передача</button>
+                  <div id="main-transmission-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#brake-system-type-item">Тормозная система</button>
+                  <div id="brake-system-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#suspension-type-item">Подвеска, амортизация</button>
+                  <div id="suspension-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#suspension-system-type-item">Подвеска оси, система подвески, колеса</button>
+                  <div id="suspension-system-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#transmission-type-item2">Коробка передач</button>
+                  <div id="transmission-type-item2" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#steering-type-item">Рулевое управление</button>
+                  <div id="steering-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#electric-type-item">Электрика</button>
+                  <div id="electric-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#ignition-system-type-item">Система зажигания, накаливания</button>
+                  <div id="ignition-system-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#ventilation-type-item">Отопление, вентиляция</button>
+                  <div id="ventilation-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <!--          ********************-->
+                <div class="filter-block filter-general">
+                  <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#conditioner-type-item">Кондиционер</button>
+                  <div id="conditioner-type-item" class="card-body border collapse" data-parent="">
+                    <p class="filter-general__text">текст</p>
+                    <details class="spoiler-filter">
+                      <summary class="filter-general__summary filter-general__text">текст</summary>
+                      <ul>
+                        <li class="filter-general__subtext">текст</li>
+                        <li class="filter-general__subtext">текст</li>
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+                <div class="filter-block-btngroup">
+                  <a href="#" id="clear_filters" class="white-btn">Сбросить</a>
+                  <button class="red-btn" type="button">Найти</button>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="filter-top-groupe2">
-            <h4>Классификатор</h4>
-            <button class="rc-btn " type="button" data-toggle="collapse" data-target="#classifierFilter"></button>
+          <div class="col-12 col-lg-9">
+            <ul class="classifier__list">
+              <li><a class="classifier__item" href="#bodywork">Кузов</a></li>
+              <li><a class="classifier__item" href="#engine">Двигатель</a></li>
+              <li><a class="classifier__item" href="#filter">Фильтр</a></li>
+              <li><a class="classifier__item" href="#belt-drive">Ременный привод</a></li>
+              <li><a class="classifier__item" href="#fuel-system">Система подачи топлива</a></li>
+              <li><a class="classifier__item" href="#fuel-mixture">Подготовка топливной смеси</a></li>
+              <li><a class="classifier__item" href="#exhaust-system">Система выпуска</a></li>
+              <li><a class="classifier__item" href="#cooling-system">Система охлаждения</a></li>
+              <li><a class="classifier__item" href="#clutch-system">Система сцепления, навесные части</a></li>
+              <li><a class="classifier__item" href="#transmission">Коробка передач</a></li>
+              <li><a class="classifier__item" href="#wheel-drive">Привод колеса</a></li>
+              <li><a class="classifier__item" href="#main-transmission">Главная передача</a></li>
+              <li><a class="classifier__item" href="#brake-system">Тормозная система</a></li>
+              <li><a class="classifier__item" href="#suspension">Подвеска, амортизация</a></li>
+              <li><a class="classifier__item" href="#suspension-system">Подвеска оси, система подвески, колеса</a></li>
+              <li><a class="classifier__item" href="#steering">Рулевое управление</a></li>
+              <li><a class="classifier__item" href="#electric">Электрика</a></li>
+              <li><a class="classifier__item" href="#ignition-system">Система зажигания, накаливания</a></li>
+              <li><a class="classifier__item" href="#ventilation">Отопление, вентиляция</a></li>
+              <li><a class="classifier__item" href="#conditioner">Кондиционер</a></li>
+            </ul>
+            <ul class="classifier__list2">
+              <li><a class="classifier__item2" href="#">Прокладки</a></li>
+              <li><a class="classifier__item2" href="#">Головка цилиндра</a></li>
+              <li><a class="classifier__item2" href="#">Система подачи воздуха</a></li>
+              <li><a class="classifier__item2" href="#">Механизм газораспределения</a></li>
+              <li><a class="classifier__item2" href="#">Блок-картер</a></li>
+              <li><a class="classifier__item2" href="#">Электроника двигателя</a></li>
+              <li><a class="classifier__item2" href="#">Кривошипношатунный механизм</a></li>
+              <li><a class="classifier__item2" href="#">Система смазки</a></li>
+              <li><a class="classifier__item2" href="#">Крепление двигателя</a></li>
+              <li><a class="classifier__item2" href="#">Система отчистки ог</a></li>
+              <li><a class="classifier__item2" href="#">Двигатель в сборе, отдельные части двигателя</a></li>
+              <li><a class="classifier__item2" href="#">Кожух двигателя</a></li>
+            </ul>
+            <ul class="classifier__list3">
+              <li><a class="classifier__item3" href="#">Прокладка головки цилиндра</a></li>
+              <li><a class="classifier__item3" href="#">Крышка головки цилиндра, прокладка</a></li>
+              <li><a class="classifier__item3" href="#">Прокладка, уплотнитель, кольцо впускного, выпускного коллектора</a></li>
+              <li><a class="classifier__item3" href="#">Направляющая клапана, прокладка, регулировка</a></li>
+              <li><a class="classifier__item3" href="#">Болт головки блока цилиндра</a></li>
+              <li><a class="classifier__item3" href="#">Крышка головки цилиндра,прокладка</a></li>
+              <li><a class="classifier__item3" href="#">Головка цилиндра</a></li>
+              <li><a class="classifier__item3" href="#">Сальник вала</a></li>
+            </ul>
+            <div class="found-parts">
+              <ul class="found-parts__list"> 
+                <li class="found-parts__item">
+                  <a href="#" class="found-parts__wp1">
+                    <h4 class="found-parts__title">Блок цилиндров и поддон картера; FITTING PARTS; COMPONENT PARTS</h4>
+                    <div class="found-parts__img-wp">
+                      <img src="img/min-diagram1.png" alt="Схема" class="found-parts__img">
+                    </div>
+                  </a>
+                  <div class="found-parts__wp2">
+                    <p class="found-parts__p">Деталь найдена в узле 110B 002</p>
+                    <ul class="found-parts__list-found">
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">11121Z</span>
+                        <a href="#" class="found-parts__link">Герметик</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="found-parts__item">
+                  <a href="#" class="found-parts__wp1">
+                    <h4 class="found-parts__title">Блок цилиндров и поддон картера; FITTING PARTS; COMPONENT PARTS</h4>
+                    <div class="found-parts__img-wp">
+                      <img src="img/min-diagram2.png" alt="Схема" class="found-parts__img">
+                    </div>
+                  </a>
+                  <div class="found-parts__wp2">
+                    <p class="found-parts__p">Деталь найдена в узле 111B 001</p>
+                    <ul class="found-parts__list2">
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13264J</span>
+                        <a href="#" class="found-parts__link">Резиновая втулка крышки клапанов двигателя</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13264J</span>
+                        <a href="#" class="found-parts__link">Резиновая втулка крышки клапанов двигателя</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13270</span>
+                        <a href="#" class="found-parts__link">Уплотнительная накладка клапанов двигателя</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13270</span>
+                        <a href="#" class="found-parts__link">Уплотнительная накладка клапанов двигателя</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13270N</span>
+                        <a href="#" class="found-parts__link">Уплотнительная накладка клапанов двигателя</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13270Z</span>
+                        <a href="#" class="found-parts__link">Герметик</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13270Z</span>
+                        <a href="#" class="found-parts__link">Герметик</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13270Z</span>
+                        <a href="#" class="found-parts__link">Герметик</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13276</span>
+                        <a href="#" class="found-parts__link">Сальник крышки клапанов двигателя</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13276</span>
+                        <a href="#" class="found-parts__link">Сальник крышки клапанов двигателя</a>
+                      </li>
+                      <li class="found-parts__detail">
+                        <span class="found-parts__number">13276</span>
+                        <a href="#" class="found-parts__link">Сальник крышки клапанов двигателя</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <form class="filter-form collapse show" id="classifierFilter">
-            <div class="filter-search">
-              <input type="text" class="form-control" placeholder="Поиск">
-              <a href="#" class="filter-search-btn"></a>
-            </div>
-            <div class="card-body top" id="CLASSIFIER-INPUTS-FILTER">
-              <label class="radio"><input type="radio" name="class" value="general"><span class="radio-text">Общий</span></label>
-              <label class="radio"><input type="radio" name="class" value="producer" checked><span class="radio-text">От производителя</span></label>
-            </div>
-            <div class="filter-block filter-producer">
-              <div class="card-body top">
-                <label class="radio"><input type="radio" name="ff" value="ff" checked><span class="radio-text">Двигатель</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Топливная система</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Выхлопная система и охлаждение</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Электрика двигателя</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Электрика кузова</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Трансмиссия</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Ходовая часть</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Тормозная система</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Рулевое управление</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Кузов (перед,крыша и пол)</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Кузов (боковая и задняя часть)</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Сиденья</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Кузов (задняя дверь)</span></label>
-                <label class="radio"><input type="radio" name="ff" value="ff"><span class="radio-text">Прочее</span></label>
-              </div>
-            </div>
-
-
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#bodywork-type-item">Кузов</button>
-              <div id="bodywork-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">Общая схема кузовные детали</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">Автомобиль, передняя часть</summary>
-                  <ul>
-                    <li class="filter-general__subtext">Крыло, навесные части</li>
-                    <li class="filter-general__subtext">Топливный бак, комплектующие</li>
-                    <li class="filter-general__subtext">Капот двигателя, составляющие, изоляция</li>
-                    <li class="filter-general__subtext">Кожух двигателя</li>
-                    <li class="filter-general__subtext">Переднее стекло</li>
-                  </ul>
-                </details>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">Кабина пассажира</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">Автомобиль, задняя часть</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">Детали кузова, крыло, бампер</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">Крышки, капоты, двери, сдвижная крыша, складная крыша</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">Облицовка, защита, оформление, эмблемы, защита распыл</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#engine-type-item">Двигатель</button>
-              <div id="engine-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#filter-type-item">Фильтр</button>
-              <div id="filter-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#belt-drive-type-item">Ременный привод</button>
-              <div id="belt-drive-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#fuel-system-type-item">Система подачи топлива</button>
-              <div id="fuel-system-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#fuel-mixture-type-item">Подготовка топливной смеси</button>
-              <div id="fuel-mixture-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#exhaust-system-type-item">Система выпуска</button>
-              <div id="exhaust-system-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#cooling-system-type-item">Система охлаждения</button>
-              <div id="cooling-system-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#clutch-system-type-item">Система сцепления, навесные части</button>
-              <div id="clutch-system-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#transmission-type-item">Коробка передач</button>
-              <div id="transmission-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#wheel-drive-type-item">Привод колеса</button>
-              <div id="wheel-drive-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#main-transmission-type-item">Главная передача</button>
-              <div id="main-transmission-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#brake-system-type-item">Тормозная система</button>
-              <div id="brake-system-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#suspension-type-item">Подвеска, амортизация</button>
-              <div id="suspension-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#suspension-system-type-item">Подвеска оси, система подвески, колеса</button>
-              <div id="suspension-system-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#transmission-type-item2">Коробка передач</button>
-              <div id="transmission-type-item2" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#steering-type-item">Рулевое управление</button>
-              <div id="steering-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#electric-type-item">Электрика</button>
-              <div id="electric-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#ignition-system-type-item">Система зажигания, накаливания</button>
-              <div id="ignition-system-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#ventilation-type-item">Отопление, вентиляция</button>
-              <div id="ventilation-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <!--          ********************-->
-            <div class="filter-block filter-general">
-              <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#conditioner-type-item">Кондиционер</button>
-              <div id="conditioner-type-item" class="card-body border collapse" data-parent="">
-                <p class="filter-general__text">текст</p>
-                <details class="spoiler-filter">
-                  <summary class="filter-general__summary filter-general__text">текст</summary>
-                  <ul>
-                    <li class="filter-general__subtext">текст</li>
-                    <li class="filter-general__subtext">текст</li>
-                  </ul>
-                </details>
-              </div>
-            </div>
-            <div class="filter-block-btngroup">
-              <a href="#" id="clear_filters" class="white-btn">Сбросить</a>
-              <button class="red-btn" type="button">Найти</button>
-            </div>
-          </form>
         </div>
-      </div>
-      <ul class="classifier__list">
-        <li><a class="classifier__item" href="#bodywork">Кузов</a></li>
-        <li><a class="classifier__item" href="#engine">Двигатель</a></li>
-        <li><a class="classifier__item" href="#filter">Фильтр</a></li>
-        <li><a class="classifier__item" href="#belt-drive">Ременный привод</a></li>
-        <li><a class="classifier__item" href="#fuel-system">Система подачи топлива</a></li>
-        <li><a class="classifier__item" href="#fuel-mixture">Подготовка топливной смеси</a></li>
-        <li><a class="classifier__item" href="#exhaust-system">Система выпуска</a></li>
-        <li><a class="classifier__item" href="#cooling-system">Система охлаждения</a></li>
-        <li><a class="classifier__item" href="#clutch-system">Система сцепления, навесные части</a></li>
-        <li><a class="classifier__item" href="#transmission">Коробка передач</a></li>
-        <li><a class="classifier__item" href="#wheel-drive">Привод колеса</a></li>
-        <li><a class="classifier__item" href="#main-transmission">Главная передача</a></li>
-        <li><a class="classifier__item" href="#brake-system">Тормозная система</a></li>
-        <li><a class="classifier__item" href="#suspension">Подвеска, амортизация</a></li>
-        <li><a class="classifier__item" href="#suspension-system">Подвеска оси, система подвески, колеса</a></li>
-        <li><a class="classifier__item" href="#steering">Рулевое управление</a></li>
-        <li><a class="classifier__item" href="#electric">Электрика</a></li>
-        <li><a class="classifier__item" href="#ignition-system">Система зажигания, накаливания</a></li>
-        <li><a class="classifier__item" href="#ventilation">Отопление, вентиляция</a></li>
-        <li><a class="classifier__item" href="#conditioner">Кондиционер</a></li>
-      </ul>
-
-      <ul class="classifier__list2">
-        <li><a class="classifier__item2" href="#">Прокладки</a></li>
-        <li><a class="classifier__item2" href="#">Головка цилиндра</a></li>
-        <li><a class="classifier__item2" href="#">Система подачи воздуха</a></li>
-        <li><a class="classifier__item2" href="#">Механизм газораспределения</a></li>
-        <li><a class="classifier__item2" href="#">Блок-картер</a></li>
-        <li><a class="classifier__item2" href="#">Электроника двигателя</a></li>
-        <li><a class="classifier__item2" href="#">Кривошипношатунный механизм</a></li>
-        <li><a class="classifier__item2" href="#">Система смазки</a></li>
-        <li><a class="classifier__item2" href="#">Крепление двигателя</a></li>
-        <li><a class="classifier__item2" href="#">Система отчистки ог</a></li>
-        <li><a class="classifier__item2" href="#">Двигатель в сборе, отдельные части двигателя</a></li>
-        <li><a class="classifier__item2" href="#">Кожух двигателя</a></li>
-      </ul>
-
-      <ul class="classifier__list3">
-        <li><a class="classifier__item3" href="#">Прокладка головки цилиндра</a></li>
-        <li><a class="classifier__item3" href="#">Крышка головки цилиндра, прокладка</a></li>
-        <li><a class="classifier__item3" href="#">Прокладка, уплотнитель, кольцо впускного, выпускного коллектора</a></li>
-        <li><a class="classifier__item3" href="#">Направляющая клапана, прокладка, регулировка</a></li>
-        <li><a class="classifier__item3" href="#">Болт головки блока цилиндра</a></li>
-        <li><a class="classifier__item3" href="#">Крышка головки цилиндра,прокладка</a></li>
-        <li><a class="classifier__item3" href="#">Головка цилиндра</a></li>
-        <li><a class="classifier__item3" href="#">Сальник вала</a></li>
-      </ul>
-
-      <div class="found-parts">
-        <ul class="found-parts__list">
-          <li class="found-parts__item">
-            <a href="#" class="found-parts__wp1">
-              <h4 class="found-parts__title">Блок цилиндров и поддон картера; FITTING PARTS; COMPONENT PARTS</h4>
-              <div class="found-parts__img-wp">
-                <img src="img/min-diagram1.png" alt="Схема" class="found-parts__img">
-              </div>
-            </a>
-            <div class="found-parts__wp2">
-              <p class="found-parts__p">Деталь найдена в узле 110B 002</p>
-              <ul class="found-parts__list-found">
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">11121Z</span>
-                  <a href="#" class="found-parts__link">Герметик</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="found-parts__item">
-            <a href="#" class="found-parts__wp1">
-              <h4 class="found-parts__title">Блок цилиндров и поддон картера; FITTING PARTS; COMPONENT PARTS</h4>
-              <div class="found-parts__img-wp">
-                <img src="img/min-diagram2.png" alt="Схема" class="found-parts__img">
-              </div>
-            </a>
-            <div class="found-parts__wp2">
-              <p class="found-parts__p">Деталь найдена в узле 111B 001</p>
-              <ul class="found-parts__list2">
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13264J</span>
-                  <a href="#" class="found-parts__link">Резиновая втулка крышки клапанов двигателя</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13264J</span>
-                  <a href="#" class="found-parts__link">Резиновая втулка крышки клапанов двигателя</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13270</span>
-                  <a href="#" class="found-parts__link">Уплотнительная накладка клапанов двигателя</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13270</span>
-                  <a href="#" class="found-parts__link">Уплотнительная накладка клапанов двигателя</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13270N</span>
-                  <a href="#" class="found-parts__link">Уплотнительная накладка клапанов двигателя</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13270Z</span>
-                  <a href="#" class="found-parts__link">Герметик</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13270Z</span>
-                  <a href="#" class="found-parts__link">Герметик</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13270Z</span>
-                  <a href="#" class="found-parts__link">Герметик</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13276</span>
-                  <a href="#" class="found-parts__link">Сальник крышки клапанов двигателя</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13276</span>
-                  <a href="#" class="found-parts__link">Сальник крышки клапанов двигателя</a>
-                </li>
-                <li class="found-parts__detail">
-                  <span class="found-parts__number">13276</span>
-                  <a href="#" class="found-parts__link">Сальник крышки клапанов двигателя</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
       </div>
     </section>
     <section class="diagram-section">
-      <div>
-        <div class="filter-container filter-number">
-          <div class="filter-top-groupe">
-            <button class="black-btn" type="button" data-toggle="collapse" data-target="#collapseFilter">Номер, описание</button>
-            <button class="red-btn" type="button">Найти</button>
-          </div>
-          <div class="filter-top-groupe2">
-            <h4>Номер, описание</h4>
-            <button class="rc-btn " type="button" data-toggle="collapse" data-target="#collapseFilter"></button>
-          </div>
-          <form class="filter-form collapse show" id="collapseFilter">
-            <div class="card-body top" id="MASLO-INPUTS-FILTER">
-              <label class="radio"><input type="checkbox" name="number" value="numb-11010" checked><span class="radio-text">11010 Блок цилиндров</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11038"><span class="radio-text">11038 Перегородка картера двигателя</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11110"><span class="radio-text">11110 Поддон картера (в сборе)</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11110B"><span class="radio-text">11110B Болт</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11110F"><span class="radio-text">11110F Болт</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11121Z" checked><span class="radio-text">11121Z Герметик</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11128"><span class="radio-text">11128 Сливная пробка</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11128A"><span class="radio-text">11128A Шайба сливной пробки</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11140"><span class="radio-text">11140 Датчик уровня масла</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11251"><span class="radio-text">11251 Задняя пластина двигателя</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-11251A"><span class="radio-text">11251A Болт</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-12279"><span class="radio-text">12279 Задний сальник коленвала</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-12296"><span class="radio-text">12296 Задний фиксатор сальника</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-15146"><span class="radio-text">15146 Направляющая датчика уровня масла</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-15213P"><span class="radio-text">15213P Шпилька масляного фильтра</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-15241" checked><span class="radio-text">15241 Клапана регулировки давления масла</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-0812061428"><span class="radio-text">0812061428</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-0891533610"><span class="radio-text">0891533610</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-0891120610"><span class="radio-text">0891120610</span></label>
-              <label class="radio"><input type="checkbox" name="number" value="numb-0812061628"><span class="radio-text">0812061628</span></label>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-3">
+            <div class="filter-container filter-number">
+              <div class="filter-top-groupe">
+                <button class="black-btn" type="button" data-toggle="collapse" data-target="#collapseFilter">Номер, описание</button>
+                <button class="red-btn" type="button">Найти</button>
+              </div>
+              <div class="filter-top-groupe2">
+                <h4>Номер, описание</h4>
+                <button class="rc-btn " type="button" data-toggle="collapse" data-target="#collapseFilter"></button>
+              </div>
+              <form class="filter-form collapse show" id="collapseFilter">
+                <div class="card-body top" id="MASLO-INPUTS-FILTER">
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11010" checked><span class="radio-text">11010 Блок цилиндров</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11038"><span class="radio-text">11038 Перегородка картера двигателя</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11110"><span class="radio-text">11110 Поддон картера (в сборе)</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11110B"><span class="radio-text">11110B Болт</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11110F"><span class="radio-text">11110F Болт</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11121Z" checked><span class="radio-text">11121Z Герметик</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11128"><span class="radio-text">11128 Сливная пробка</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11128A"><span class="radio-text">11128A Шайба сливной пробки</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11140"><span class="radio-text">11140 Датчик уровня масла</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11251"><span class="radio-text">11251 Задняя пластина двигателя</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-11251A"><span class="radio-text">11251A Болт</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-12279"><span class="radio-text">12279 Задний сальник коленвала</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-12296"><span class="radio-text">12296 Задний фиксатор сальника</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-15146"><span class="radio-text">15146 Направляющая датчика уровня масла</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-15213P"><span class="radio-text">15213P Шпилька масляного фильтра</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-15241" checked><span class="radio-text">15241 Клапана регулировки давления масла</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-0812061428"><span class="radio-text">0812061428</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-0891533610"><span class="radio-text">0891533610</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-0891120610"><span class="radio-text">0891120610</span></label>
+                  <label class="radio"><input type="checkbox" name="number" value="numb-0812061628"><span class="radio-text">0812061628</span></label>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
+          <div class="col-12 col-xl-9">
+            <div class="diagram-wp">
+              <img src="img/diagram-cylinder_block.png" class="diagram-img" alt="Схема">
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="diagram-wp">
-        <img src="img/diagram-cylinder_block.png" class="diagram-img" alt="Схема">
       </div>
     </section>
   </main>
