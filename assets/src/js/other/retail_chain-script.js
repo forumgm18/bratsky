@@ -1,7 +1,7 @@
 // Наши услуги, слайдер
 $('.sale__list').slick({
 	slidesToShow: 4,
-	slidesToScroll: 2,
+	slidesToScroll: 1,
 	variableWidth: true,
 	prevArrow: $('.prev-slider'),
 	nextArrow: $('.next-slider'),
@@ -18,7 +18,6 @@ $('.sale__list').slick({
 			breakpoint: 375,
 			settings: {
 				slidesToShow: 1,
-				slidesToScroll: 1,
 				variableWidth: false
 			}
     }

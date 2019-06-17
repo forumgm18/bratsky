@@ -1,14 +1,15 @@
-$('.slider-for').slick({
+$('.slider_for').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	arrows: false,
 	fade: true,
-	asNavFor: '.slider-nav'
+	asNavFor: '.slider_nav'
 });
 
-$('.slider-nav').slick({
+$('.slider_nav').slick({
 	slidesToShow: 3,
 	slidesToScroll: 1,
-	asNavFor: '.slider-for',
+	asNavFor: '.slider_for',
+  arrows: false,
 	focusOnSelect: true
 });

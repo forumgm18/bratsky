@@ -1320,7 +1320,11 @@
 //===================== recent_event.html End ======================
 
 //===================== retail_chain.html ==========================
+.addresses_shops {
+	margin-top: 20px;
+		@include media-breakpoint-up(lg) { margin-top: 0;}
 
+}
 .city-section {
 	margin: 0;
 }
@@ -1336,13 +1340,14 @@
 .cities__list {
 	margin: 0;
 	overflow-y: scroll;
-	height: 280px;
+	height: 270px;
 	width: 100%;
 	max-width: 100%;
 	//для firefox
 	scrollbar-color: $fontColorLight $fontColorLight3;
 	scrollbar-width: 15px;
 	//для firefox end
+		@include media-breakpoint-up(x400) {height: 280px;}
 		@include media-breakpoint-up(lg) { height: 681px;}
 		
 
@@ -1384,10 +1389,12 @@
 }
 
 .cities__item {
+	@include dFlex(flex-start,flex-start,row,wrap);	
+
 	padding: 15px 12px;
-	display: grid;
-	grid-template-columns: 149px auto;
-	grid-column-gap: 24px;
+	// display: grid;
+	// grid-template-columns: 149px auto;
+	// grid-column-gap: 24px;
 	background: #FFFFFF;
 	border-bottom: 1px solid $borderGray3;
 
@@ -1419,11 +1426,18 @@
 .cities__img-wp {
 	height: 109px;
 	width: 149px;
+	margin-right: 20px;
+	display: none;
+		@include media-breakpoint-up(x400) {display: block;}
+
+
 }
 
 .cities__img {
 	max-width: 100%;
 	max-height: 100%;
+	width: 100%;
+	height: auto;
 	margin: 0 auto;
 	display: block;
 }
@@ -1460,9 +1474,10 @@
 /* *** */
 .map {
 	width: 100%;
-	height: 100%;
+	height: 100vw;
 	border: none;
-	
+		@include media-breakpoint-up(lg) { height: 100%; }
+
 }
 .retail__network__content {
 	margin: 50px 0;
@@ -1471,19 +1486,24 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-wrap: wrap;
 			margin: 0 0 32px 0;
+					@include media-breakpoint-up(md) {flex-wrap: nowrap;}
 
 			.title {
 				margin: 0;
 			}
 
 			.slider-arrows {
-				display: flex;
+				display: none;
 				justify-content: space-between;
 				align-items: center;
 				position: relative;
 				width: 140px;
-				 p {margin-bottom: 0;}
+
+					@include media-breakpoint-up(md) {display: flex;}
+
+				 		p {margin-bottom: 0;}
 			}
 
 			.prev-slider {
@@ -1502,7 +1522,8 @@
 			color: $blue;
 			justify-self: flex-end;
 			display: block;
-			margin: 0 0 0 96px;
+			margin: 0 0 0 auto;
+			@include media-breakpoint-up(md) {margin-left: 96px;}
 		}
 
 		@include saleBloks();
@@ -1515,3 +1536,198 @@
 }
 
 //===================== retail_chain.html End ======================
+//===================== retail_shop.html ===========================
+
+.retail__shop {
+
+.shop {
+	margin-top: 20px;
+		@include media-breakpoint-up(lg) { margin-top: 0;}
+
+}
+.map-wp {
+	p {margin-bottom: 5px;}
+}
+
+.shop__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0 0 30px 0;
+	margin: 0;
+
+	.title {
+		max-width: 800px;
+		margin: 0;
+		padding-bottom: 25px;
+	}
+}
+
+.shop__link {
+	@include linkLikeBtn(44px, 224px, $red, #fff, 14px);
+	align-self: flex-end;
+}
+
+.shop__arrow {
+	display: inline-block;
+	border-left: 1px solid #fff;
+	border-top: 1px solid #fff;
+	height: 9px;
+	width: 9px;
+	transform: rotate(-45deg);
+	margin-right: 4px;
+}
+
+// Если слайд-превью не нажат, то он затемняется
+.slider_nav {
+	margin: 0 -12px;
+	// width: 100%;
+
+	.slick-active{
+
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(000, 000, 000, 0.5);
+		}
+	}
+
+	.slick-current::before {
+		background: none;
+	}
+}
+
+.slider-nav__item {
+	padding: 0;
+	margin: 0 12px;
+	// height: 140px;
+	width: 140px;
+
+
+	img {
+		padding: 0;
+		margin: 0 auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.slider_for {
+	margin: 0 0 20px 0;
+	// width: 100%;
+	.slick-track {display: flex;min-height: 100%;}
+	.slider-for__item {margin: 0 auto;}
+}
+
+
+.slider-for__item {
+	max-height: 353px;
+	max-width: 470px;
+	width: 100%;
+	height: auto;
+
+	img {
+		max-height: 100%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.slider__block {
+	margin-top: 20px;
+		@include media-breakpoint-up(lg) { display: block; margin-top: 0;}
+}
+
+.contact {
+	@include dFlex(space-between,flex-start,row,wrap);	
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	line-height: normal;
+	color: $fontColor;
+	margin-bottom: 19px;
+	margin-top: 20px;
+		@include media-breakpoint-up(lg) { display: block; margin-top: 0;}
+
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 13px;
+		margin-right: 10px;
+				@include media-breakpoint-up(md) {margin-right: 0;}
+
+
+		&:last-of-type {
+			margin-bottom: 15px;
+				@include media-breakpoint-up(md) {margin-bottom: 5px;}
+		}
+	}
+
+	span {
+		display: block;
+	}
+	.contact__address {
+		display: none;
+		@include media-breakpoint-up(lg) { display: block; }
+
+	}
+	.callback {
+		width: 100%;
+		max-width: 100%;
+			@include media-breakpoint-up(md) { max-width: 224px; }
+
+	}
+}
+
+.contact__link {
+	color: inherit;
+	display: block;
+}
+
+.contact__cat {
+	color: $fontColorLight;
+	//	margin-top: 1em;
+	font-size: 14px;
+	line-height: 18px;
+	color: $fontColorLight;
+}
+
+.callback {
+	@include linkLikeBtnBorder(44px, 224px, $red, $red, 14px);
+}
+
+.map {
+	background-color: $mapBg;
+	width: 100%;
+	height: 217px;
+	display: block;
+	border: none;
+}
+
+.sale__list__content {
+		@include dFlex(space-between,flex-start,row,wrap);	
+}
+.sale__header {
+	@include dFlex(space-between,baseline,row,wrap);	
+	margin: 42px 0 30px 0;
+
+	.sale__link {color:$blue;}
+
+}
+
+}
+
+//===================== retail_shop.html End ======================
