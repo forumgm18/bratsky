@@ -1,5 +1,5 @@
 // слайдер
-$('.sale__list').slick({
+$('.discount_sale__list').slick({
 	slidesToShow: 4,
 	slidesToScroll: 2,
 	variableWidth: true,

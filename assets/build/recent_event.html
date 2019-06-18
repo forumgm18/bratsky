@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
 <link rel="stylesheet" href="css/main.min.css">
 
-  <!-- <link rel="stylesheet" href="css/other/recent_event-style.min.css"> -->
 </head>
 
 <body>
@@ -2432,17 +2431,17 @@
           <div class="col header-flex">
             <h1>Последние события</h1>
             <ul id="tabs-events" class="nav nav-tabs" role="tablist">
-              <li class="nav-item"><a id="tab-all-event" href="#all-event"  class="nav-link active" data-toggle="tab" role="tab">Все</a></li>
-              <li class="nav-item"><a id="tab-news-event" href="#news-event"  class="nav-link" data-toggle="tab" role="tab">Новости</a></li>
-              <li class="nav-item"><a id="tab-art-event" href="#art-event"  class="nav-link" data-toggle="tab" role="tab">Статьи</a></li>
-              <li class="nav-item"><a id="tab-press-event" href="#press-event"  class="nav-link" data-toggle="tab" role="tab">Пресс-релизы</a></li>
-              <li class="nav-item"><a id="tab-video-event" href="#video-event"  class="nav-link" data-toggle="tab" role="tab">Видео</a></li>
-              <li class="nav-item"><a id="tab-action-event" href="#action-event"  class="nav-link" data-toggle="tab" role="tab">Акции</a></li>
+              <li class="nav-item"><a id="tab-all-event" href="#all-event" class="nav-link active" data-toggle="tab" role="tab">Все</a></li>
+              <li class="nav-item"><a id="tab-news-event" href="#news-event" class="nav-link" data-toggle="tab" role="tab">Новости</a></li>
+              <li class="nav-item"><a id="tab-art-event" href="#art-event" class="nav-link" data-toggle="tab" role="tab">Статьи</a></li>
+              <li class="nav-item"><a id="tab-press-event" href="#press-event" class="nav-link" data-toggle="tab" role="tab">Пресс-релизы</a></li>
+              <li class="nav-item"><a id="tab-video-event" href="#video-event" class="nav-link" data-toggle="tab" role="tab">Видео</a></li>
+              <li class="nav-item"><a id="tab-action-event" href="#action-event" class="nav-link" data-toggle="tab" role="tab">Акции</a></li>
             </ul>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-md-3 col-lg-2 col-xl-3"> 
+          <div class="col-12 col-md-3 col-lg-2 col-xl-3">
             <nav class="client-menu">
               <ul class="client-menu__list">
                 <li class="client-menu__item"><a href="#" class="client-menu__link">Для клиента</a></li>
@@ -2458,7 +2457,6 @@
               </ul>
             </nav>
           </div>
-
           <div class="col">
             <div id="events" class="tab-content" role="tablist">
               <div id="all-event" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-all-event">
@@ -2529,7 +2527,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="news-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-news-event">
                 <div class="card-header" role="tab" id="heading-news-event">
                   <a class="collapsed" data-toggle="collapse" href="#collapse-news-event" aria-expanded="false" aria-controls="collapse-news-event">Новости</a>
@@ -2599,7 +2596,6 @@
                   </div>
                 </div>
               </div>
-
               <div id="art-event" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-art-event">
                 <div class="card-header" role="tab" id="heading-art-event">
                   <a class="collapsed" data-toggle="collapse" href="#collapse-art-event" aria-expanded="false" aria-controls="collapse-art-event">Статьи</a>
@@ -2878,33 +2874,31 @@
               </div>
             </div>
           </div>
-        </div>  
-    <div class="row">
-      <div class="col pagination-section">
-        <div class="zaglushka"></div>
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link prev" href="#"></a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link next" href="#"></a></li>
-          <li class="page-item"><a class="page-link" href="#">50</a></li>
-        </ul>
-        <div class="page-select">
-          <span>товаров на странице</span>
-          <select class="selectpicker" name="page_num" id="page_num">
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-          </select>
+        </div>
+        <div class="row">
+          <div class="col pagination-section">
+            <div class="zaglushka"></div>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link prev" href="#"></a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link next" href="#"></a></li>
+              <li class="page-item"><a class="page-link" href="#">50</a></li>
+            </ul>
+            <div class="page-select">
+              <span>товаров на странице</span>
+              <select class="selectpicker" name="page_num" id="page_num">
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
-    </div>  
-
-      </div>
     </section>
-    
   </main>
   <footer>
 		<div class="container">
@@ -4131,8 +4125,6 @@
 <script src="js/jquery.countdown-ru.js"></script>
 <script src="js/main.min.js"></script>
 
-  <!--	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>-->
-  <script src="js/other/recent_event-script.js"></script>
 </body>
 
 </html>

@@ -3,15 +3,12 @@
 
 <head>
   @@include('./template/head.html')
-  <link rel="stylesheet" href="css/other/spare_parts_search-style.min.css">
 </head>
 
 <body class="рroduct-сard-page">
-  <!--<body>-->
   @@include('./template/header.html')
-    <main class="search__page main">
-  <!--  <main class="main">-->
-<!--  <main>-->
+  <main class="spare_parts_search_page">
+    <!--  <main>-->
     <div class="breadcrumb">
       <div class="container">
         <div class="row">
@@ -30,7 +27,6 @@
         </div>
       </div>
     </div>
-
     <section class="recom__sect">
       <div class="container">
         <div class="row">
@@ -59,7 +55,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-12 col-lg-4">
             <div class="recomendation b-yellow">
               <div class="flag">
@@ -78,7 +73,6 @@
                 <!-- <div></div> -->
                 <button class="red-btn"></button>
               </div>
-
             </div>
           </div>
           <div class="col-12 col-lg-4">
@@ -103,10 +97,7 @@
           </div>
         </div>
       </div>
-
     </section>
-
-
     <section class="analogs">
       <div class="container">
         <div class="row">
@@ -124,7 +115,6 @@
                     <a href="#" class="filter-search-btn"></a>
                   </div>
                 </div>
-
                 <div id="filter-accordion">
                   <div class="filter-block">
                     <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#price-item">Цена, руб</button>
@@ -133,7 +123,7 @@
                       <div class="range">
                         <input id="price" name="price" type="text" class="range" value="0,3642" data-provide='slider' data-slider-min="0" data-slider-max="3642" data-slider-step="5" data-slider-value="[100,3642]" data-slider-tooltip="hide" data-slider-handle='square' />
                       </div>
-                      <!-- <input id="ex2" type="text" class="span2" value="[250,450]" data-slider-min="10" 	data-slider-max="1000" data-slider-step="5" 	data-slider-value="[250,450]"	/>	 -->
+                      <!-- <input id="ex2" type="text" class="span2" value="[250,450]" data-slider-min="10"   data-slider-max="1000" data-slider-step="5"   data-slider-value="[250,450]" />   -->
                       <div class="range-description"><span>от</span><span>до</span></div>
                     </div>
                   </div>
@@ -157,13 +147,13 @@
                       <div class="range-description"><span>от</span><span>до</span></div>
                     </div>
                   </div>
-                  <!-- 						  
-						  <div class="filter-block">
-								<label class="radio"><input type="checkbox" name="artikul" value="artikul"><span class="radio-text">Искомый артикул</span></label>
-								<label class="radio"><input type="checkbox" name="artikul" value="artikul_other"><span class="radio-text">Замена искомого артикула</span></label>
-								<label class="radio"><input type="checkbox" name="artikul" value="analog"><span class="radio-text">Аналоги</span></label>
-							</div>
-						 -->
+                  <!--              
+              <div class="filter-block">
+                <label class="radio"><input type="checkbox" name="artikul" value="artikul"><span class="radio-text">Искомый артикул</span></label>
+                <label class="radio"><input type="checkbox" name="artikul" value="artikul_other"><span class="radio-text">Замена искомого артикула</span></label>
+                <label class="radio"><input type="checkbox" name="artikul" value="analog"><span class="radio-text">Аналоги</span></label>
+              </div>
+             -->
                   <div class="filter-block">
                     <button class="filter-groupe-btn collapsed" type="button" data-toggle="collapse" data-target="#pick_up_address-item">Где забрать?</button>
                     <div id="pick_up_address-item" class="card-body border collapse" data-parent="">
@@ -180,16 +170,11 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="filter-block-btngroup">
-
                   <a href="#" id="clear_filters" class="white-btn">Сбросить</a>
                   <button class="red-btn" type="button">Найти</button>
                 </div>
               </form>
-
-
-
             </div>
           </div>
           <div class="col col-lg-8 col-xl-9">
@@ -234,13 +219,11 @@
                 @@include('./template/search-res-row4.html')
               </div>
             </div>
-
           </div>
         </div>
       </div>
-      <!-- </div>		 -->
+      <!-- </div>    -->
     </section>
-
   </main>
   @@include('./template/footer-block.html')
   @@include('./template/modal.html')

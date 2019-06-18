@@ -22,7 +22,7 @@ $(document).ready(function () {
 });
 
 // Сравнение товаров, слайдер
-$('.comparison__list').slick({
+$('.comparison__list_slider').slick({
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 2,
@@ -51,8 +51,8 @@ $('.comparison__list').slick({
 
 // Открытие спойлера таблицы 
 $(document).ready(function () {
-  $('.table__spoiler-body').hide()
-  $('.table__spoiler-check').click(function () {
+  $('.comparison_table__spoiler-body').hide()
+  $('.comparison_table__spoiler-check').click(function () {
     $(this).parent().toggleClass("folded").toggleClass("unfolded").next().toggle('normal');
     $(this).toggleClass("open-position");
   })
@@ -62,22 +62,8 @@ $(document).ready(function () {
 // Удалить все товары с списке сравниваемых товаров
 $(document).ready(function () {
   $('.comparison__clean-list').click(function () {
-    $('.comparison__list').remove();
-    $('.slider-arrows').remove();
-  })
-});
-
-
-// Удалить товар в списке сравниваемых товаров
-$(document).ready(function () {
-  $('.btn-item-delite').click(function () {
-    $(this).parent().remove();
-  })
-});
-// тоже самое, но для фиксированного меню
-$(document).ready(function () {
-  $('.btn-item-delite-fixed').click(function () {
-    $(this).parent().parent().parent().remove();
+    $('.comparison__list_slider').remove();
+    $('.comparison_slider-arrows').remove();
   })
 });
 
@@ -89,7 +75,7 @@ jQuery(document).ready(function ($) {
   var
     $window = $(window), // Основное окно
     $target = $(".comparison__fixed"), // Блок, который нужно фиксировать при прокрутке
-    $target2 = $('.comparison__list'),
+    $target2 = $('.comparison__list_slider'),
     $h = $target2.offset().top; // Определяем координаты верха нужного блока 
 
   $window.on('scroll', function () {

@@ -3,12 +3,11 @@
 
 <head>
   @@include('./template/head.html')
-  <!-- <link rel="stylesheet" href="css/other/personal_account-style.min.css"> -->
 </head>
 
 <body>
   @@include('./template/header.html')
-  <main >
+  <main class="personal_account_page">
     <section class="breadcrumb">
       <div class="container">
         <div class="row">
@@ -39,18 +38,27 @@
         </div>
       </div>
     </section>
-
     <section>
       <div class="container">
         <div class="row">
           <aside class="col-12 col-md-3 ">
             <nav class="personal-menu">
               <ol class="personal-menu__list">
-                <li class="personal-menu__item active" data-label="PERSONAL-DATA"><div>Мои данные</div></li>
-                <li class="personal-menu__item" data-label="PERSONAL-FAVORITES"><div>Избранное</div></li>
-                <li class="personal-menu__item" data-label="PERSONAL-ORDERS"><div>Мои заказы (<span>1</span>)</div></li>
-                <li class="personal-menu__item" data-label="PERSONAL-HISTORY"><div>История заказов</div></li>
-                <li class="personal-menu__item" data-label="PERSONAL-GARAGE"><div>Мой гараж</div></li>
+                <li class="personal-menu__item active" data-label="PERSONAL-DATA">
+                  <div>Мои данные</div>
+                </li>
+                <li class="personal-menu__item" data-label="PERSONAL-FAVORITES">
+                  <div>Избранное</div>
+                </li>
+                <li class="personal-menu__item" data-label="PERSONAL-ORDERS">
+                  <div>Мои заказы (<span>1</span>)</div>
+                </li>
+                <li class="personal-menu__item" data-label="PERSONAL-HISTORY">
+                  <div>История заказов</div>
+                </li>
+                <li class="personal-menu__item" data-label="PERSONAL-GARAGE">
+                  <div>Мой гараж</div>
+                </li>
               </ol>
             </nav>
           </aside>
@@ -115,19 +123,14 @@
                           <option value="man">Мужской</option>
                           <option value="woman">Женский</option>
                         </select>
-
-                        
                         <input type="text" placeholder="Дата рождения" class="my-data__input input-birth">
                         <input type="tel" placeholder="Дополнительный номер для связи" class="my-data__input input-tel">
                         <input type="email" placeholder="E-mail" class="my-data__input input-email">
-
-
                         <div class="my-data__inn-wp">
                           <!-- <input type="text" placeholder="ИНН" class="my-data__input input-inn"> -->
                           <input type="submit" value="Сохранить" class="my-data__save-btn">
                         </div>
                       </form>
-                      
                     </div>
                   </div>
                   <div class="row">
@@ -181,7 +184,7 @@
                 <div class="col">
                   <a href="#" class="favorites__del-all">Удалить все товары</a>
                 </div>
-              </div>  
+              </div>
               <div class="row">
                 <div class="col favorites__list">
                   @@include('./template/catalog-product-card-akk.html')
@@ -227,7 +230,7 @@
                     <div>Статус заказа</div>
                     <div>Способ оплаты</div>
                     <div></div>
-                  </div>      
+                  </div>
                   <div class="table__row">
                     <div class="my__order">
                       <div><span>Номер/дата заказа</span>10005/14.08.18</div>
@@ -250,7 +253,7 @@
                     </div>
                     <div class="collapse" id="my_order_1">
                       <div class="bbgray"></div>
-                      <div class="my__order table__header" >
+                      <div class="my__order table__header">
                         <div>Наименование товара</div>
                         <div>Кол-во</div>
                         <div>Цена</div>
@@ -284,11 +287,11 @@
                           </label>
                         </div>
                       </div>
-                      <div><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn" data-toggle="collapse" data-target="#my_order_2" >Подробнее</button></div>
+                      <div><button class="arders__cancel-btn">Отменить заказ</button><button class="table__spoiler-btn" data-toggle="collapse" data-target="#my_order_2">Подробнее</button></div>
                     </div>
                     <div class="collapse" id="my_order_2">
                       <div class="bbgray"></div>
-                      <div class="my__order table__header" >
+                      <div class="my__order table__header">
                         <div>Наименование товара</div>
                         <div>Кол-во</div>
                         <div>Цена</div>
@@ -304,7 +307,7 @@
                       </div>
                     </div>
                   </div>
-                 </div>
+                </div>
               </div>
             </section>
             <section class="history-section" data-label="PERSONAL-HISTORY">
@@ -317,7 +320,7 @@
                     <div>Статус заказа</div>
                     <div>Способ оплаты</div>
                     <div></div>
-                  </div>      
+                  </div>
                   <div class="table__row">
                     <div class="my__order">
                       <div><span>Номер/дата заказа</span>10005/14.08.18</div>
@@ -328,7 +331,7 @@
                     </div>
                     <div class="collapse" id="my_history_order_1">
                       <div class="bbgray"></div>
-                      <div class="my__order table__header" >
+                      <div class="my__order table__header">
                         <div>Наименование товара</div>
                         <div>Кол-во</div>
                         <div>Цена</div>
@@ -353,8 +356,8 @@
                       <div><button class="table__spoiler-btn" data-toggle="collapse" data-target="#my_history_order_2">Подробнее</button></div>
                     </div>
                     <div class="collapse" id="my_history_order_2">
-                    <div class="bbgray"></div>
-                      <div class="my__order table__header" >
+                      <div class="bbgray"></div>
+                      <div class="my__order table__header">
                         <div>Наименование товара</div>
                         <div>Кол-во</div>
                         <div>Цена</div>
@@ -381,7 +384,7 @@
                   <form action="/">
                     <ol class="garage__list">
                       <li class="garage__item" tabindex="0">
-                        <input type="checkbox" id='my_car_1' name='my_car_1'/>
+                        <input type="checkbox" id='my_car_1' name='my_car_1' />
                         <div>
                           <h3 class="garage__title">Nissan Almera</h3>
                           <div>
@@ -396,7 +399,7 @@
                         </div>
                       </li>
                       <li class="garage__item" tabindex="0">
-                        <input type="checkbox" id='my_car_2' name='my_car_2'/>
+                        <input type="checkbox" id='my_car_2' name='my_car_2' />
                         <div>
                           <h3 class="garage__title">Skoda Octavia</h3>
                           <div>
@@ -406,37 +409,36 @@
                               <p class="garage__data">Octavia</p>
                               <p class="garage__data">2.0 TDi</p>
                             </div>
-                              <label class="garage__del-btn" for="my_car_2"></label>
+                            <label class="garage__del-btn" for="my_car_2"></label>
                           </div>
                         </div>
                       </li>
                       <li class="garage__item" tabindex="0">
                         <h3 class="garage__title">+ Добавить авто в гараж</h3>
                         <div>
-                        <div class="garage__data-wp">
-                          <input type="text" placeholder="Год" class="garage__data">
-                          <input type="text" placeholder="Марка" class="garage__data">
-                          <input type="text" placeholder="Модель" class="garage__data">
-                          <input type="text" placeholder="Модификация" class="garage__data">
-                        </div>  
-                        <div class="garazh__zaglushka"></div>
-                      </div>
+                          <div class="garage__data-wp">
+                            <input type="text" placeholder="Год" class="garage__data">
+                            <input type="text" placeholder="Марка" class="garage__data">
+                            <input type="text" placeholder="Модель" class="garage__data">
+                            <input type="text" placeholder="Модификация" class="garage__data">
+                          </div>
+                          <div class="garazh__zaglushka"></div>
+                        </div>
                       </li>
                     </ol>
-                    <button type="submit" class="garage__save">Сохранить</button> 
-                   </form>
+                    <button type="submit" class="garage__save">Сохранить</button>
+                  </form>
                 </div>
               </div>
             </section>
           </article>
         </div>
       </div>
-   </section> 
+    </section>
   </main>
   @@include('./template/footer-block.html')
   @@include('./template/modal.html')
   @@include('./template/footer-scripts.html')
-  <!-- <script src="js/other/personal_account-script.js"></script> -->
 </body>
 
 </html>

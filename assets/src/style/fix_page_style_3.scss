@@ -2044,6 +2044,10 @@
 	.contacts {
 		margin-bottom: 50px;
 
+		.feedback {
+			margin-bottom: 20px;
+		}
+
 		.feedback>.container {
 			padding: 0;
 		}
@@ -3085,9 +3089,6 @@
 	//}
 	.found-parts__item {
 		margin-bottom: 18px;
-		// display: grid;
-		// grid-template: auto / 214px auto;
-
 		display: flex;
 	}
 
@@ -3480,13 +3481,14 @@
 		.vin_page_form {
 			align-items: center;
 		}
+
+		.form__btn {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
 	}
 
-	.form__btn {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-	}
 }
 
 @media screen and (max-width: 400px) {
@@ -3729,3 +3731,227 @@
 }
 
 //======================= shopping_page.html End ==============================
+
+
+
+//======================= search__page.html Start ==============================
+// .search__page {
+.recom__sect {
+	padding-top: 20px;
+
+	@include media-breakpoint-up(lg) {
+		padding-top: 0;
+	}
+
+	h1 {
+		padding-bottom: 0;
+		margin-bottom: 5px;
+	}
+
+	.search__query {
+		@include setFont ($textFFamily, normal, normal, 24px, $fontColor);
+		line-height: 31px;
+		margin-bottom: 20px;
+	}
+
+	.b-yellow {
+		box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.analog-section {
+		margin-bottom: 5px;
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.recomendation {
+		padding: 10px 10px 10px 15px;
+		margin-bottom: 15px;
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+
+		.price-block {
+			right: 0;
+			bottom: 0;
+
+			.red-btn {
+				width: 38px;
+				margin-bottom: 0;
+
+				&:before {
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+}
+
+.search__page {
+	.analogs {
+		.analog-btn-block {
+
+			.yellow-btn,
+			.yellow-transparent-btn {
+				text-transform: none;
+				color: #000;
+			}
+		}
+	}
+}
+
+.sort__section {
+	input {
+		display: none;
+	}
+
+	.sort__filter {
+		background-color: #fff;
+		padding: 8px 15px;
+		margin-bottom: 15px;
+
+		@include Border($borderGray3);
+		@include dFlex(flex-start, flex-start, row, wrap);
+
+		@include media-breakpoint-up(md) {
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+
+		@include media-breakpoint-up(lg) {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+
+		@include media-breakpoint-up(xl) {
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+		}
+
+		.sort__item {
+			@include setFont ($labelFFamily, normal, normal, 14px, $fontColor);
+			@include dFlex(flex-start, flex-start, row, wrap);
+
+			@include media-breakpoint-up(sm) {
+				flex-wrap: nowrap;
+			}
+
+			&:first-child {
+				margin-bottom: 10px;
+
+				@include media-breakpoint-up(md) {
+					margin-bottom: 0;
+				}
+
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 10px;
+				}
+
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 0;
+				}
+			}
+
+			>div {
+				margin-right: 30px;
+
+				@include media-breakpoint-up(md) {
+					margin-right: 10px;
+				}
+
+				@include media-breakpoint-up(lg) {
+					margin-right: 30px;
+				}
+
+			}
+
+			label {
+				margin-bottom: 0;
+				cursor: pointer;
+				color: $fontColorLight;
+
+				&.b {
+					color: $fontColor;
+				}
+			}
+
+		}
+	}
+}
+
+// }
+
+//======================= search__page.html End ==============================
+
+//======================= spare_parts_search_page.html Start ==============================
+.spare_parts_search_page {
+
+	// Тормозные колодки
+	div.breadcrumb {
+		height: auto;
+	}
+
+	.sort__item div label input {
+		display: none;
+	}
+}
+
+//======================= spare_parts_search_page.html End ==============================
+
+
+//======================= question_page.html Start ==============================
+
+.question_page {
+	.checkout__content {
+		border: none;
+	}
+}
+
+//======================= question_page.html End ==============================
+
+//======================= personal_account.html Start ==============================
+.personal_account_page {
+	.my__order>div:nth-of-type(n) {
+
+		.arders__cancel-btn,
+		.table__spoiler-btn {
+			background: none;
+			border: none;
+			text-decoration-line: underline;
+		}
+
+	}
+
+	.table__spoiler-btn {
+		color: $blue;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.personal_account_page {
+		.my-data__social-list {
+			li {
+				min-width: 100%;
+			}
+		}
+	}
+}
+
+//======================= personal_account.html End ==============================
+
+
+
+//======================= retail__shop_page.html Start ==============================
+@media screen and (max-width: 576px){
+.retail__shop {
+.slider-container {
+	max-width: 450px;
+	overflow: hidden;
+}
+}
+}
+
+//======================= retail__shop_page.html End ==============================
