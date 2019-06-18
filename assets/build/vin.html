@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="css/OverlayScrollbars.min.css">
 <link rel="stylesheet" href="css/main.min.css">
 
-	<link rel="stylesheet" href="css/other/vin-style.min.css">
 </head>
 
 <body>
@@ -2412,7 +2411,7 @@
 		</nav>
 	</section>
 </header>
-	<main class="main">
+	<main class="vin_page">
 		<div class="breadcrumb">
 			<div class="container">
 				<div class="row">
@@ -2425,65 +2424,85 @@
 				</div>
 			</div>
 		</div>
-		<h1 class="title-h1">Запрос запчасти по VIN автомобиля</h1>
-		<form action="/" method="post" class="form" id="HOW-TO-CONTACT">
-			<strong class="form__title">Как с вами связаться</strong>
-			<label class="form__wp">
-				<input type="text" name="name" id="FORM-NAME" class="form__input" required maxlength='50'>
-				<span class="form__placeholder">Имя<span>*</span></span>
-			</label>
-			<label class="form__wp">
-				<input type="text" name="surname" id="FORM-SURNAME" class="form__input" required maxlength='50'>
-				<span class="form__placeholder">Фамилия<span>*</span></span>
-			</label>
-			<label class="form__wp">
-				<input type="text" name="patronymic" id="FORM-PATRONYMIC" class="form__input" required maxlength='50'>
-				<span class="form__placeholder">Отчество<span>*</span></span>
-			</label>
-			<label class="form__wp">
-				<input type="text" name="email" id="FORM-EMAIL" class="form__input" required maxlength='50'>
-				<span class="form__placeholder">Email<span>*</span></span>
-			</label>
-			<label class="form__wp">
-				<input type="text" name="tel" id="FORM-TEL" class="form__input" required maxlength='15'>
-				<span class="form__placeholder">Номер&nbsp;телефона<span>*</span></span>
-			</label>
-		</form>
-		<form action="/" method="post" class="form" id="VEHICLE">
-			<strong class="form__title">Данные автомобиля</strong>
-			<label class="form__wp">
-				<input type="text" name="vin" id="FORM-VIN" class="form__input" required maxlength="17">
-				<span class="form__placeholder">VIN&nbsp;номер<span>*</span></span>
-			</label>
-			<label class="form__wp">
-				<input type="text" name="manufacturer" id="FORM-MANUFACTURER" class="form__input" required>
-				<span class="form__placeholder">Производитель<span>*</span></span>
-			</label>
-			<input type="text" name="model" id="FORM-MODEL" class="form__input" placeholder="Модель">
-			<input type="text" name="production_date" id="FORM-PRODUCTION-DATE" class="form__input" placeholder="Дата производства">
-			<input type="text" name="engine_volume" id="FORM-ENGINE-VOLUME" class="form__input" placeholder="Объем двигателя">
-		</form>
-		<form action="/" method="post" class="form" id="AUTOPARTS">
-			<strong class="form__title">Необходимые вам запчасти и их количество</strong>
-			<label class="form__wp">
-				<input type="text" name="part_name" id="FORM-PART-NAME" class="form__input" required>
-				<span class="form__placeholder">Название&nbsp;детали<span>*</span></span>
-			</label>
-			<label class="form__wp">
-				<input type="text" name="part_model" id="FORM-PART-MODEL" class="form__input" required>
-				<span class="form__placeholder">Модель<span>*</span></span>
-			</label>
-			<div class="form__select-wp">
-				<select size="1" class="form__select">
-					<option>Предпочтение</option>
-					<option value="original">Только оригинал</option>
-					<option value="value_quality">Цена качества</option>
-					<option value="min_price">Минимальная цена</option>
-				</select>
+		<section class="headline">
+			<div class="container">
+				<div class="row">
+					<div class="col header-flex">
+						<h1>Запрос запчасти по VIN автомобиля</h1>
+					</div>
+				</div>
 			</div>
-			<textarea name="message" rows="1" id="FORM-MESSAGE" placeholder="Примечание" class="form__textarea"></textarea>
-		</form>
-		<input type="submit" value="Отправить запрос" class="form__btn">
+		</section>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-6">
+					<form action="/" method="post" class="vin_page_form" id="HOW-TO-CONTACT">
+						<strong class="form__title">Как с вами связаться</strong>
+						<label class="form__wp">
+							<input type="text" name="name" id="FORM-NAME" class="form__input" required maxlength='50'>
+							<span class="form__placeholder">Имя<span>*</span></span>
+						</label>
+						<label class="form__wp">
+							<input type="text" name="surname" id="FORM-SURNAME" class="form__input" required maxlength='50'>
+							<span class="form__placeholder">Фамилия<span>*</span></span>
+						</label>
+						<label class="form__wp">
+							<input type="text" name="patronymic" id="FORM-PATRONYMIC" class="form__input" required maxlength='50'>
+							<span class="form__placeholder">Отчество<span>*</span></span>
+						</label>
+						<label class="form__wp">
+							<input type="text" name="email" id="FORM-EMAIL" class="form__input" required maxlength='50'>
+							<span class="form__placeholder">Email<span>*</span></span>
+						</label>
+						<label class="form__wp">
+							<input type="text" name="tel" id="FORM-TEL" class="form__input" required maxlength='15'>
+							<span class="form__placeholder">Номер&nbsp;телефона<span>*</span></span>
+						</label>
+					</form>
+				</div>
+				<div class="col-12 col-lg-6">
+					<form action="/" method="post" class="vin_page_form" id="VEHICLE">
+						<strong class="form__title">Данные автомобиля</strong>
+						<label class="form__wp">
+							<input type="text" name="vin" id="FORM-VIN" class="form__input" required maxlength="17">
+							<span class="form__placeholder">VIN&nbsp;номер<span>*</span></span>
+						</label>
+						<label class="form__wp">
+							<input type="text" name="manufacturer" id="FORM-MANUFACTURER" class="form__input" required>
+							<span class="form__placeholder">Производитель<span>*</span></span>
+						</label>
+						<input type="text" name="model" id="FORM-MODEL" class="form__input" placeholder="Модель">
+						<input type="text" name="production_date" id="FORM-PRODUCTION-DATE" class="form__input" placeholder="Дата производства">
+						<input type="text" name="engine_volume" id="FORM-ENGINE-VOLUME" class="form__input" placeholder="Объем двигателя">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<form action="/" method="post" class="vin_page_form" id="AUTOPARTS">
+						<strong class="form__title">Необходимые вам запчасти и их количество</strong>
+						<label class="form__wp">
+							<input type="text" name="part_name" id="FORM-PART-NAME" class="form__input" required>
+							<span class="form__placeholder">Название&nbsp;детали<span>*</span></span>
+						</label>
+						<label class="form__wp">
+							<input type="text" name="part_model" id="FORM-PART-MODEL" class="form__input" required>
+							<span class="form__placeholder">Модель<span>*</span></span>
+						</label>
+						<div class="form__select-wp">
+							<select size="1" class="form__select">
+								<option>Предпочтение</option>
+								<option value="original">Только оригинал</option>
+								<option value="value_quality">Цена качества</option>
+								<option value="min_price">Минимальная цена</option>
+							</select>
+						</div>
+						<textarea name="message" rows="1" id="FORM-MESSAGE" placeholder="Примечание" class="form__textarea"></textarea>
+					</form>
+					<input type="submit" value="Отправить запрос" class="form__btn">
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer>
 		<div class="container">
