@@ -256,24 +256,52 @@ $(document).ready(function(){
   });
 
 //=========== Слайдер картинок в карточке товара ========================
-$('.full-img-slider').slick({
+$('.card_slider_for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
   fade: true,
-  asNavFor: '.mini-img-slider'
+  asNavFor: '.card_slider_nav'
 });
-$('.mini-img-slider').slick({
+$('.card_slider_nav').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  asNavFor: '.full-img-slider',
+  asNavFor: '.card_slider_for',
   dots: false,
-  centerMode: false,
+  // centerMode: false,
   focusOnSelect: true,
   centerMode: true,
   centerPadding: '0px',
 });
 //=======================================================================
+
+$('.slider_for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider_nav'
+});
+
+$('.slider_nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider_for',
+  dots: false,
+  arrows: false,
+  centerMode: true,
+  centerPadding: '0px',
+  focusOnSelect: true
+});
+
+
+
+
+
+
+
+
+
 $('.sale__list').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -884,6 +912,33 @@ $(".garage__del-all").on('click',function(e){
     $(this).children('span.filter__icon').toggleClass("arrow-icon_up");
     return false;
   });
+
+
+// Скрыть всплывающее меню нажатием на другое место документа 
+$(document).mouseup(function (e) { // событие клика по веб-документу
+  var div = $('.filter__evaluation'); // класс элемента
+  if (!div.is(e.target) // если клик был не по блоку
+    &&
+    div.has(e.target).length === 0) { // и не по его дочерним элементам
+    $("#EVALUATION-CHECK").prop("checked",false);
+  }
+  
+  var div = $('.filter__date'); // класс элемента
+  if (!div.is(e.target) // если клик был не по блоку
+    &&
+    div.has(e.target).length === 0) { // и не по его дочерним элементам
+    $("#DATE-CHECK").prop("checked",false);
+  }
+});
+
+$(document).mouseup(function (e) { // событие клика по веб-документу
+  var div = $('.sort__repair'); // класс элемента
+  if (!div.is(e.target) // если клик был не по блоку
+    &&
+    div.has(e.target).length === 0) { // и не по его дочерним элементам
+    $("#SORT-REPAIR").prop("checked",false);
+  } 
+});
 
 
 });

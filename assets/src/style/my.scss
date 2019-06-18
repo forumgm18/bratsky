@@ -3628,6 +3628,8 @@ footer {
 		}
 	.red {color:$red;font-weight: bold;}
 }
+		.radio-text.red:before {border-color: $red;width: 13px;height: 13px;}
+		.radio-text.red:after {background: $red;width: 7px;height: 7px;}
 
 //======!!!!!!!!!!!!!!!!!!!!!!!!=====================
 .body {
