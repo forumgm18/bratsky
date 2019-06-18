@@ -3694,3 +3694,38 @@
 }
 
 //======================= wholesale_client.html End ==============================
+
+
+//======================= shopping_page.html Start ==============================
+
+.shopping_page {
+	.img-banner {
+		max-width: 100%;
+		max-height: 218px;
+		margin-bottom: 1em;
+	}
+
+	.text__wp {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 13px;
+		line-height: normal;
+		color: $fontColor;
+		margin-bottom: 50px;
+	}
+
+	.text__p {
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.shopping_page {
+		.img-banner {
+			margin-bottom: 28px;
+		}
+	}
+}
+
+//======================= shopping_page.html End ==============================
